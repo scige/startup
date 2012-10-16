@@ -1,119 +1,25 @@
-<div id="doc">
-    <div id="hdw">
-        <div id="hd">
-            <div id="site-top" class="cf">
-                <h1><a href="http://bj.meituan.com/"><img src="/assets/logo.png" title="美团网，每天团购一次" alt="美团网，每天团购一次" height="66" width="108"></a></h1>
-                <div class="city-info">
-                    <h2>北京</h2>
-                    <a href="http://www.meituan.com/index/changecity">[切换城市]</a>
-                </div>
-                <div class="site-info">
-                    <ul>
-                        <li><a class="subscribe" href="http://www.meituan.com/maillist/subscribe">邮件订阅</a></li>
-                        <li><a class="fav" id="favorite" href="javascript:void(0);">加入收藏夹</a></li>
-                        <li><a class="mobile" href="http://www.meituan.com/mobile" target="_blank">下载手机版</a></li>
-                        <li><a class="refer" href="http://www.meituan.com/account/referrals" target="_blank">邀请好友</a></li>
-                        <li class="last"><a href="http://www.meituan.com/help/faq">常见问题</a></li>
-                    </ul>
-                </div>
-                <div class="search cf">
-                    <form id="yui_3_5_1_1_1350142560308_13" action="/s/" name="searchForm" method="get">
-                        <input name="w" autocomplete="off" class="s-text" x-webkit-speech="" placeholder="请输入商品名称、地址等" type="text">
-                        <input class="s-submit" hidefocus="true" value="搜索" type="submit">
-                    </form>
-                </div>
-            </div>
-            <div id="site-nav" class="site-nav">
-                <div class="nav-wrapper cf">
-                    <ul class="nav">
-                        <li><a href="http://bj.meituan.com/" class="hover">今日团购</a></li>
-                        <li><a href="http://bj.meituan.com/meishi/all" >美食</a></li>
-                        <li><a href="http://bj.meituan.com/yule/all">娱乐</a></li>
-                        <li><a href="http://bj.meituan.com/dianying/all">电影</a></li>
-                        <li><a href="http://bj.meituan.com/shenghuo/all">生活</a></li>
-                        <li><a href="http://bj.meituan.com/lvyou/all">酒店旅游</a></li>
-                        <li><a href="http://www.meituan.com/mobile">手机版</a></li>
-                    </ul>
-                    <ul class="user-info">
-                        <li class="account"><a class="my-account" href="http://www.meituan.com/orders/">我的美团<i class="tri"></i></a>
-                            <div id="yui_3_5_1_1_1350142560308_21" class="account-menu" style="display:none">
-                                <ul class="comment-info">
-                                    <li><a href="http://www.meituan.com/orders/list/unused" class="first">未使用</a></li>
-                                    <li><a href="http://www.meituan.com/orders/list/unpaid" class="first">待付款</a></li>
-                                    <li><a href="http://www.meituan.com/rates">待评价</a></li>
-                                    <li><a href="http://www.meituan.com/collections">我的收藏</a></li>
-                                    <li class="space"></li>
-                                </ul>
-                                <ul class="base-info">
-                                    <li><a href="http://www.meituan.com/orders/" class="first">我的订单</a></li>
-                                    <li><a href="http://www.meituan.com/account/credit">美团余额</a></li>
-                                    <li><a href="http://www.meituan.com/account/charge">余额充值</a></li>
-                                    <li><a href="http://www.meituan.com/account/points">积分/邀请</a></li>
-                                    <li><a href="http://www.meituan.com/account/settings" class="last">账户设置</a></li>
-                                </ul>
-                            </div>
-                        </li>       
-                        <li class="login"><a href="http://www.meituan.com/account/login">登录</a></li>
-                        <li class="login last"><a href="http://www.meituan.com/account/signup">注册</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div> <!-- hd end -->
-    </div> <!-- hdw end -->
     <div id="bdw" class="bdw">
         <div id="bd" class="cf">
             <div id="filter">
             </div>
             <div id="content" class="normal-deal-list cf">
-                <div class="item" id="yui_3_5_1_2_1350142560308_122">
-                    <div class="cover" id="yui_3_5_1_1_1350142560308_54">
-                        <a target="_blank" class="trade-geo" href="http://bj.meituan.com/deal/297298.html"><span class="geo-title">商圈：</span>亚运村、酒仙桥</a>
-                        <a href="http://bj.meituan.com/deal/297298.html" target="_blank" id="yui_3_5_1_1_1350142560308_53"><img width="312" height="189" src="http://p0.meituan.net/312.189/deal/201209/03/CGV.jpg" title="点击查看详情" alt="电影票1张，2D/3D可兑，可升级" id="yui_3_5_1_1_1350142560308_52"></a>
+                <div class="item">
+                    <div class="cover">
+                        <a href="http://bj.meituan.com/deal/297298.html" target="_blank"><img width="312" height="189" src=<%= @products.image_path %> title="点击查看详情" alt="电影票1张，2D/3D可兑，可升级"></a>
                     </div>
                     <h3>
-                        <a href="http://bj.meituan.com/deal/297298.html" target="_blank">【2店通用】CGV星星国际影城：电影票1张，2D/3D可兑，可升级</a>
+                        <a href="http://bj.meituan.com/deal/297298.html" target="_blank"><%= "【" + @products.district_name + "】" + @products.product_name %></a>
                     </h3>
                     <p class="detail">
                         <a href="http://bj.meituan.com/deal/297298.html" target="_blank" hidefocus="true" class="buy" rel="nofollow">去看看</a>
-                        <em class="price num">¥28</em>
-                        <span class="bypast">价值 <span class="num"><span>¥</span>100</span></span>
+                        <em class="price num">¥<%= @products.sale_price %></em>
+                        <span class="bypast">价值 <span class="num"><span>¥</span><%= @products.original_price %></span></span>
                     </p>
-                    <p class="total"><strong class="num">29145</strong>人已购买</p>
+                    <p class="total"><strong class="num"><%= @products.sale_count %></strong>人已购买</p>
                 </div>
-                <div class="item odd" id="yui_3_5_1_2_1350142560308_136">
-                    <div class="cover" id="yui_3_5_1_1_1350142560308_48">
-                        <a target="_blank" class="trade-geo" href="http://www.meituan.com/deal/862110.html" id="yui_3_5_1_1_1350142560308_47"><span class="geo-title">商圈：</span>东四、建国门/北京站、菜市口、广内大街</a>
-                        <a href="http://www.meituan.com/deal/862110.html" target="_blank" id="yui_3_5_1_1_1350142560308_50"><img width="312" height="189" src="http://p1.meituan.net/312.189/deal/201209/25/_0925114707.jpg" title="点击查看详情" alt="住宿1晚，美团券可叠加使用" id="yui_3_5_1_1_1350142560308_49"></a>
-                    </div>
-                    <h3>
-                        <a href="http://www.meituan.com/deal/862110.html" target="_blank">【北京】轻联富润酒店：住宿1晚，美团券可叠加使用</a>
-                    </h3>
-                    <p class="detail">
-                        <a href="http://www.meituan.com/deal/862110.html" target="_blank" hidefocus="true" class="buy" rel="nofollow">去看看</a>
-                        <em class="price num">¥128</em>
-                        <span class="bypast">价值 <span class="num"><span>¥</span>328</span></span>
-                    </p>
-                    <p class="total"><strong class="num">1457</strong>人已购买</p>
-                </div>
-                <div class="item" id="yui_3_5_1_2_1350142560308_122">
-                    <div class="cover" id="yui_3_5_1_1_1350142560308_54">
-                        <a target="_blank" class="trade-geo" href="http://bj.meituan.com/deal/297298.html"><span class="geo-title">商圈：</span>亚运村、酒仙桥</a>
-                        <a href="http://bj.meituan.com/deal/297298.html" target="_blank" id="yui_3_5_1_1_1350142560308_53"><img width="312" height="189" src="http://p0.meituan.net/312.189/deal/201209/03/CGV.jpg" title="点击查看详情" alt="电影票1张，2D/3D可兑，可升级" id="yui_3_5_1_1_1350142560308_52"></a>
-                    </div>
-                    <h3>
-                        <a href="http://bj.meituan.com/deal/297298.html" target="_blank">【2店通用】CGV星星国际影城：电影票1张，2D/3D可兑，可升级</a>
-                    </h3>
-                    <p class="detail">
-                        <a href="http://bj.meituan.com/deal/297298.html" target="_blank" hidefocus="true" class="buy" rel="nofollow">去看看</a>
-                        <em class="price num">¥28</em>
-                        <span class="bypast">价值 <span class="num"><span>¥</span>100</span></span>
-                    </p>
-                    <p class="total"><strong class="num">29145</strong>人已购买</p>
-                </div>
-                <div class="item odd" id="yui_3_5_1_2_1350142560308_136">
-                    <div class="cover" id="yui_3_5_1_1_1350142560308_48">
-                        <a target="_blank" class="trade-geo" href="http://www.meituan.com/deal/862110.html" id="yui_3_5_1_1_1350142560308_47"><span class="geo-title">商圈：</span>东四、建国门/北京站、菜市口、广内大街</a>
-                        <a href="http://www.meituan.com/deal/862110.html" target="_blank" id="yui_3_5_1_1_1350142560308_50"><img width="312" height="189" src="http://p1.meituan.net/312.189/deal/201209/25/_0925114707.jpg" title="点击查看详情" alt="住宿1晚，美团券可叠加使用" id="yui_3_5_1_1_1350142560308_49"></a>
+                <div class="item odd">
+                    <div class="cover">
+                        <a href="http://www.meituan.com/deal/862110.html" target="_blank"><img width="312" height="189" src="http://p1.meituan.net/312.189/deal/201209/25/_0925114707.jpg" title="点击查看详情" alt="住宿1晚，美团券可叠加使用"></a>
                     </div>
                     <h3>
                         <a href="http://www.meituan.com/deal/862110.html" target="_blank">【北京】轻联富润酒店：住宿1晚，美团券可叠加使用</a>
@@ -130,61 +36,3 @@
             </div>
         </div> <!-- bd end -->
     </div> <!-- bdw end -->
-    <div id="ftw">
-        <div id="ft">
-            <div class="ftbox">
-                <h3>用户帮助</h3>
-                <ul>
-                    <li><a href="http://www.meituan.com/help/faq">常见问题</a></li>
-                    <li><a href="http://www.meituan.com/deal/exchanges/default">求购转让</a></li>
-                    <li><a href="http://bj.meituan.com/deals">往期北京团购</a></li>
-                    <li><a href="http://www.meituan.com/help/email">邮箱白名单设置</a></li>
-                    <li><a href="http://www.meituan.com/help/api">开放API</a></li>
-                    <li><a href="http://www.meituan.com/about/anticheat">反诈骗公告</a></li>
-                </ul>
-            </div>
-            <div class="ftbox">
-                <h3>获取更新</h3>
-                <ul>
-                    <li><a href="http://www.meituan.com/maillist/subscribe">邮件订阅</a></li>
-                    <li><a href="http://www.meituan.com/mobile/">iPhone/Android</a></li>
-                    <li><a rel="nofollow" href="http://user.qzone.qq.com/97231705" target="_blank">美团QQ空间</a></li>
-                    <li><a rel="nofollow" href="http://t.sina.com.cn/meituanbj" target="_blank">美团新浪微博</a></li>
-                    <li><a rel="nofollow" href="http://t.qq.com/meituan" target="_blank">美团腾讯微博</a></li>
-                    <li><a href="http://www.meituan.com/feed/beijing" target="_blank">RSS订阅</a></li>
-                </ul>
-            </div>
-            <div class="ftbox">
-                <h3>商务合作</h3>
-                <ul>
-                    <li><a href="http://www.meituan.com/feedback/seller">提供团购信息</a></li>
-                    <li><a href="http://www.meituan.com/about#contact">市场合作</a></li>
-                    <li><a href="http://union.meituan.com/" target="_blank">美团联盟</a></li>
-                    <li><a href="http://www.meituan.com/about/copyright">版权声明</a></li>
-                </ul>
-            </div>
-            <div class="ftbox">
-                <h3>公司信息</h3>
-                <ul>
-                    <li><a href="http://www.meituan.com/about/">关于美团</a></li>
-                    <li><a href="http://www.meituan.com/commitment/">美团承诺</a></li>
-                    <li><a href="http://www.meituan.com/about/press">媒体报道</a></li>
-                    <li><a href="http://www.meituan.com/about/job">加入我们</a></li>
-                    <li><a href="http://www.meituan.com/about/privacy">隐私声明</a></li>
-                </ul>
-            </div>
-            <div class="ftbox service">
-                <i class="hotline"></i>
-                <p class="desc">客服电话(免长途费)</p>
-                <p class="num">400-660-5335</p>
-                <p class="time">周一到周日8:00-22:00</p>
-            </div>
-            <div id="yui_3_5_1_1_1350142560308_56" class="copyright">
-                <p>©<span title="I:3; Q:7; S:4; C:36; F:0; T:173.32; H:e18">2012</span> meituan.com <a href="http://www.miibeian.gov.cn/" target="_blank">京ICP证070791号</a> 京公网安备110105002099号</p>
-            </div>
-                
-            <ul class="cert cf">
-            </ul>
-        </div> <!-- ft end -->
-    </div> <!-- bdw end -->
-</div> <!-- doc end -->
