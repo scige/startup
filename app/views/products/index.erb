@@ -1,49 +1,49 @@
-    <div id="bdw" class="bdw">
-        <div id="bd" class="cf">
-            <div id="filter">
-            </div>
-            <div id="content" class="normal-deal-list cf">
-                <% @products.each do |product| %>
-                <% if product.id % 2 == 1 %>
-                    <div class="item">
-                <% else %>
-                    <div class="item odd">
-                <% end %>
-                        <div class="cover">
-                            <%= link_to image_tag( product.cover_path, 
-                                                   :width => "312", 
-                                                   :height => "189",
-                                                   :title => "点击查看详情",
-                                                   :alt => product.cover_title ),
-                                        { :controller => "products",
-                                          :action => "show",
-                                          :id => product.id },
-                                        { :target => "_blank" } %>
-                        </div>
-                        <h3>
-                            <%= link_to "【" + product.district_name + "】" + product.cover_title,
-                                        { :controller => "products",
-                                          :action => "show",
-                                          :id => product.id },
-                                        { :target => "_blank" } %>
-                        </h3>
-                        <p class="detail">
-                            <%= link_to "去看看",
-                                        { :controller => "products",
-                                          :action => "show",
-                                          :id => product.id },
-                                        { :target => "_blank",
-                                          :hidefocus=>"true",
-                                          :class=>"buy",
-                                          :rel=>"nofollow" } %>
-                            <em class="price num">¥<%= product.sale_price %></em>
-                            <span class="bypast">价值 <span class="num"><span>¥</span><%= product.original_price %></span></span>
-                        </p>
-                        <p class="total"><strong class="num"><%= product.sale_count %></strong>人已购买</p>
+<div id="bdw" class="bdw">
+    <div id="bd" class="cf">
+        <div id="filter">
+        </div>
+        <div id="content" class="normal-deal-list cf">
+            <% @products.each do |product| %>
+            <% if product.id % 2 == 1 %>
+                <div class="item">
+            <% else %>
+                <div class="item odd">
+            <% end %>
+                    <div class="cover">
+                        <%= link_to image_tag( product.cover_path, 
+                                               :width => "312", 
+                                               :height => "189",
+                                               :title => "点击查看详情",
+                                               :alt => product.cover_title ),
+                                    { :controller => "products",
+                                      :action => "show",
+                                      :id => product.id },
+                                    { :target => "_blank" } %>
                     </div>
-                <% end %>
-            </div>
-            <div id="sidebar">
-            </div>
-        </div> <!-- bd end -->
-    </div> <!-- bdw end -->
+                    <h3>
+                        <%= link_to "【" + product.district_name + "】" + product.cover_title,
+                                    { :controller => "products",
+                                      :action => "show",
+                                      :id => product.id },
+                                    { :target => "_blank" } %>
+                    </h3>
+                    <p class="detail">
+                        <%= link_to "去看看",
+                                    { :controller => "products",
+                                      :action => "show",
+                                      :id => product.id },
+                                    { :target => "_blank",
+                                      :hidefocus=>"true",
+                                      :class=>"buy",
+                                      :rel=>"nofollow" } %>
+                        <em class="price num">¥<%= product.sale_price %></em>
+                        <span class="bypast">价值 <span class="num"><span>¥</span><%= product.original_price %></span></span>
+                    </p>
+                    <p class="total"><strong class="num"><%= product.sale_count %></strong>人已购买</p>
+                </div>
+            <% end %>
+        </div>
+        <div id="sidebar">
+        </div>
+    </div> <!-- bd end -->
+</div> <!-- bdw end -->
