@@ -136,21 +136,21 @@ span.required {
 }
 .fold-lnk {
 	padding-right:10px;
-	background:url(i/fold-arrow.png) right center no-repeat
+	background:url(/assets/fold-arrow.png) right center no-repeat
 }
 .unfold-lnk {
 	padding-right:10px;
-	background:url(i/unfold-arrow.png) right center no-repeat
+	background:url(/assets/unfold-arrow.png) right center no-repeat
 }
 .up-lnk {
 	padding-left:10px;
 	text-decoration:none;
-	background:url(i/double-up-arrow.png) left center no-repeat
+	background:url(/assets/double-up-arrow.png) left center no-repeat
 }
 .down-lnk {
 	padding-left:10px;
 	text-decoration:none;
-	background:url(i/double-down-arrow.png) left center no-repeat
+	background:url(/assets/double-down-arrow.png) left center no-repeat
 }
 .clear {
 	clear:both
@@ -314,7 +314,7 @@ button.formbutton {
 	width:57px;
 	height:57px;
 	overflow:hidden!important;
-	background:url(i/sp-deal.png?v=3) no-repeat -85px 0;
+	background:url(/assets/sp-deal.png?v=3) no-repeat -85px 0;
 	outline:0;
 	text-indent:-9999px;
 	opacity:.8;
@@ -384,11 +384,11 @@ button.formbutton {
 }
 .page-nav .previous a {
 	padding-left:15px;
-	background:#FFF url(i/sp-deal.png?v=3) no-repeat -85px -70px
+	background:#FFF url(/assets/sp-deal.png?v=3) no-repeat -85px -70px
 }
 .page-nav .next a {
 	padding-right:15px;
-	background:#FFF url(i/sp-deal.png?v=3) no-repeat right -70px
+	background:#FFF url(/assets/sp-deal.png?v=3) no-repeat right -70px
 }
 .button-strip {
 	position:relative;
@@ -430,7 +430,7 @@ button.formbutton {
 }
 .button-strip-item-asc span,.button-strip-item-asc-active span,.button-strip-item-desc span,.button-strip-item-desc-active span {
 	padding-right:10px;
-	background:url(i/sort-arrow.png) right 4px no-repeat
+	background:url(/assets/sort-arrow.png) right 4px no-repeat
 }
 .button-strip-item-asc-active span {
 	background-position:right -26px
@@ -495,7 +495,7 @@ to {
 	top:0;
 	right:20px;
 	padding-right:16px;
-	background:url(i/bg-sysmsg-close.gif) 100% 50% no-repeat;
+	background:url(/assets/bg-sysmsg-close.gif) 100% 50% no-repeat;
 	font-size:12px;
 	cursor:pointer
 }
@@ -515,10 +515,10 @@ to {
 	color:#690
 }
 #sysmsg-error .sysmsg {
-	background:url(i/bg-sysmsg-error.gif) no-repeat 0 0
+	background:url(/assets/bg-sysmsg-error.gif) no-repeat 0 0
 }
 #sysmsg-success .sysmsg {
-	background:url(i/bg-sysmsg-success.gif) no-repeat 0 0
+	background:url(/assets/bg-sysmsg-success.gif) no-repeat 0 0
 }
 #sysmsg-tip {
 	position:relative;
@@ -535,7 +535,7 @@ to {
 	_top:12px;
 	right:20px;
 	padding-left:16px;
-	background:url(i/bg-icons.png?v=7) -242px -204px no-repeat;
+	background:url(/assets/bg-icons.png?v=7) -242px -204px no-repeat;
 	font-size:12px;
 	color:#699701;
 	cursor:pointer
@@ -559,7 +559,7 @@ to {
 	width:165px;
 	height:60px;
 	padding:12px 35px;
-	background:url(i/bg-sysmsg-tip-focus.png?v=1) no-repeat 0 0;
+	background:url(/assets/bg-sysmsg-tip-focus.png?v=1) no-repeat 0 0;
 	font-weight:bold
 }
 #sysmsg-tip .deal-close .body {
@@ -582,7 +582,7 @@ to {
 #sysmsg-tip .deal-close .commit {
 	width:51px;
 	height:28px;
-	background:url(i/button-subscribe-b.gif) no-repeat 0 0;
+	background:url(/assets/button-subscribe-b.gif) no-repeat 0 0;
 	text-indent:-999em;
 	border:0
 }
@@ -599,7 +599,7 @@ to {
 	padding-top:25px;
 	width:959px;
 	height:129px;
-	background:url(i/bg-newbie-guide.png) no-repeat 0 0
+	background:url(/assets/bg-newbie-guide.png) no-repeat 0 0
 }
 #sysmsg-guide .link {
 	display:block;
@@ -620,7 +620,7 @@ to {
 	*padding-top:2px;
 	_padding-top:0;
 	padding-right:20px;
-	background:url(i/bg-newbie-close.gif) no-repeat center right;
+	background:url(/assets/bg-newbie-close.gif) no-repeat center right;
 	font-size:12px;
 	color:#666
 }
@@ -639,14 +639,14 @@ to {
 	_top:12px;
 	right:20px;
 	padding-left:16px;
-	background:url(i/bg-commontip-close.png) left center no-repeat;
+	background:url(/assets/bg-commontip-close.png) left center no-repeat;
 	font-size:12px;
 	color:#699701;
 	cursor:pointer;
 	filter:inherit
 }
 .common-msg {
-	background:#ffffe5 url(i/bg-common-msg.png) no-repeat 10px -888px;
+	background:#ffffe5 url(/assets/bg-common-msg.png) no-repeat 10px -888px;
 	border:1px solid #ffcc7f;
 	margin:0 10px 10px;
 	padding:17px 50px
@@ -669,7 +669,7 @@ to {
 	border:3px dashed transparent
 }
 #hd {
-	background:#3e4141 url(i/sp-hd.png?v=1) repeat-x 0 -80px
+	background:#3e4141 url(/assets/sp-hd.png?v=1) repeat-x 0 -80px
 }
 #hd #site-top {
 	height:104px;
@@ -677,7 +677,7 @@ to {
 	width:960px
 }
 #hd .site-info .subscribe,#hd .site-info .fav,#hd .site-info .mobile,#hd .search {
-	background:url(i/sp-hd.png?v=1) no-repeat
+	background:url(/assets/sp-hd.png?v=1) no-repeat
 }
 #hd h1 {
 	float:left;
@@ -765,7 +765,7 @@ to {
 	cursor:pointer
 }
 #hd .site-nav {
-	background:#0a9e9d url(i/sp-hd.png?v=1) repeat-x 0 -184px
+	background:#0a9e9d url(/assets/sp-hd.png?v=1) repeat-x 0 -184px
 }
 #hd .site-nav .nav-wrapper {
 	width:960px;
@@ -911,7 +911,7 @@ to {
 	border-left:1px solid #4f9a9d
 }
 #hd .nj-site-top .site-info .subscribe,#hd .nj-site-top .site-info .fav,#hd .nj-site-top .site-info .mobile,#hd .nj-site-top .search {
-	background-image:url(i/sp-hd-nj.png?v=1)
+	background-image:url(/assets/sp-hd-nj.png?v=1)
 }
 #hd .nj-site-top .commitment a {
 	float:right;
@@ -920,7 +920,7 @@ to {
 	height:26px;
 	line-height:80px;
 	overflow:hidden;
-	background:url(i/sp-commitment.png) no-repeat;
+	background:url(/assets/sp-commitment.png) no-repeat;
 	outline:0
 }
 #hd .nj-site-top .commitment a:hover {
@@ -994,7 +994,7 @@ to {
 	margin-top:-2px;
 	width:71px;
 	height:32px;
-	background-image:url(i/sp-deal-nj.png)
+	background-image:url(/assets/sp-deal-nj.png)
 }
 #nj-deal-list .item .total {
 	clear:right;
@@ -1015,7 +1015,7 @@ to {
 	width:47px;
 	height:47px;
 	overflow:hidden!important;
-	background:url(i/sp-deal-nj.png?v=3) no-repeat -85px 0;
+	background:url(/assets/sp-deal-nj.png?v=3) no-repeat -85px 0;
 	outline:0;
 	text-indent:-9999px;
 	opacity:.8;
@@ -1025,10 +1025,11 @@ to {
 	opacity:1
 }
 #change-column-2 {
-	background:url(i/sp-change-column.png) no-repeat
+	background:url(/assets/sp-change-column.png) no-repeat
 }
 #change-column-3 {
-	background:url(i/sp-change-column.png) no-repeat 0 -50px
+	background:url(/assets/sp-change-column.png) no-repeat 0 -50px;
+	zoom:1
 }
 #banner-easyrefund {
 	position:relative
@@ -1059,7 +1060,7 @@ to {
 	clear:both
 }
 #ft .cert li,#ft .service .hotline {
-	background:url(i/sp-ft.png) no-repeat
+	background:url(/assets/sp-ft.png) no-repeat
 }
 #ft .ftbox {
 	float:left;
@@ -1161,7 +1162,7 @@ to {
 }
 #ft .cert .idinfo {
 	width:37px;
-	background:url(i/shaoxing-idinfo.png) no-repeat
+	background:url(/assets/shaoxing-idinfo.png) no-repeat
 }
 #bd {
 	width:960px;
@@ -1220,7 +1221,7 @@ to {
 	margin-bottom:5px
 }
 #content .box-topic h2 {
-	background:url(i/content-title-bg.png) 0 center repeat-x;
+	background:url(/assets/content-title-bg.png) 0 center repeat-x;
 	border-bottom:1px solid #e5e5e5;
 	font-size:30px;
 	margin:-20px -20px 0;
@@ -1262,7 +1263,7 @@ to {
 	line-height:0;
 	text-indent:-9999px;
 	overflow:hidden;
-	background:url(i/sys-icons-48.png?v=1) no-repeat 0 0
+	background:url(/assets/sys-icons-48.png?v=1) no-repeat 0 0
 }
 #content .result-tip i {
 	background-position:0 -100px
@@ -1315,11 +1316,11 @@ to {
 }
 .mine .filter .more a {
 	padding:1px 12px 1px 3px;
-	background:#FFF url(i/unfold-arrow.png) 29px center no-repeat
+	background:#FFF url(/assets/unfold-arrow.png) 29px center no-repeat
 }
 .mine .filter .more a.hover {
 	padding:0 11px 1px 2px;
-	background-image:url(i/fold-arrow.png);
+	background-image:url(/assets/fold-arrow.png);
 	border:1px solid #CCC;
 	border-bottom:0
 }
@@ -1394,7 +1395,7 @@ to {
 }
 #sidebar .mobile label {
 	position:absolute;
-	background:url(i/bg-icons.png?v=7) -196px -130px no-repeat;
+	background:url(/assets/bg-icons.png?v=7) -196px -130px no-repeat;
 	width:46px;
 	height:43px;
 	top:-2px;
@@ -1411,7 +1412,7 @@ to {
 	display:block;
 	width:236px;
 	height:86px;
-	background:url(i/mobile-banner.png) no-repeat top left;
+	background:url(/assets/mobile-banner.png) no-repeat top left;
 	text-indent:-9999px;
 	outline:0
 }
@@ -1428,7 +1429,7 @@ to {
 	text-decoration:none
 }
 #sidebar .invite {
-	background:#eff8ff url(i/bg-deal-default-icons.gif) 12px 43px no-repeat
+	background:#eff8ff url(/assets/bg-deal-default-icons.gif) 12px 43px no-repeat
 }
 #sidebar .invite p {
 	padding:0 0 0 60px
@@ -1444,7 +1445,7 @@ to {
 #sidebar .lottery .label {
 	display:block;
 	height:80px;
-	background:url(i/bg-banner-lottery.png?v=2) no-repeat;
+	background:url(/assets/bg-banner-lottery.png?v=2) no-repeat;
 	margin-top:10px;
 	outline:0;
 	text-indent:-9999px
@@ -1477,7 +1478,7 @@ to {
 	position:absolute;
 	width:50px;
 	height:46px;
-	background:url(i/banner-icon-lottery.png?v=1) no-repeat;
+	background:url(/assets/banner-icon-lottery.png?v=1) no-repeat;
 	right:9px;
 	top:9px;
 	text-indent:-9999px
@@ -1493,7 +1494,7 @@ to {
 	display:block;
 	width:49px;
 	height:48px;
-	background:url(i/bg-icons.png?v=7) 0 -130px
+	background:url(/assets/bg-icons.png?v=7) 0 -130px
 }
 #sidebar .service p {
 	padding:0 0 0 60px;
@@ -1508,7 +1509,7 @@ to {
 }
 #sidebar .business p {
 	padding:0 0 0 56px;
-	background:url(i/bg-business.png?v=7) no-repeat left center
+	background:url(/assets/bg-business.png?v=7) no-repeat left center
 }
 #sidebar .notice ul {
 	margin-left:16px
@@ -1538,7 +1539,7 @@ to {
 	display:block;
 	width:48px;
 	height:41px;
-	background:url(i/bg-icons.png?v=7) -146px -130px
+	background:url(/assets/bg-icons.png?v=7) -146px -130px
 }
 #sidebar .vote .votenow {
 	display:block;
@@ -1546,20 +1547,20 @@ to {
 	width:147px;
 	height:28px;
 	line-height:28px;
-	background:url(i/bg-icons.png?v=7) -90px -264px;
+	background:url(/assets/bg-icons.png?v=7) -90px -264px;
 	text-align:center;
 	color:#FFF;
 	margin:10px 0 0
 }
 #sidebar .consult .sideinner {
-	background:url(i/icon-faq.png) no-repeat 12px 12px
+	background:url(/assets/icon-faq.png) no-repeat 12px 12px
 }
 #sidebar .consult p {
 	padding:0 0 0 60px;
 	color:#ccc
 }
 #sidebar .save .sideinner {
-	background:url(i/bg-account-save-money.gif) no-repeat 8px 6px
+	background:url(/assets/bg-account-save-money.gif) no-repeat 8px 6px
 }
 #sidebar .save p {
 	padding:0 0 0 60px
@@ -1655,7 +1656,7 @@ to {
 	display:block;
 	width:64px;
 	height:25px;
-	background:url(i/bg-deals.png) no-repeat -220px -72px;
+	background:url(/assets/bg-deals.png) no-repeat -220px -72px;
 	text-indent:-9999px;
 	position:absolute;
 	right:0;
@@ -1712,7 +1713,7 @@ to {
 	display:block;
 	width:73px;
 	height:24px;
-	background:url(i/btn-side-deal-see.png) 0 0 no-repeat;
+	background:url(/assets/btn-side-deal-see.png) 0 0 no-repeat;
 	text-indent:-9999px;
 	outline:0
 }
@@ -1753,7 +1754,7 @@ to {
 	height:126px
 }
 #sidebar .cardcode-trigger {
-	background:url(i/blue_arrow.gif) no-repeat 0 5px;
+	background:url(/assets/blue_arrow.gif) no-repeat 0 5px;
 	padding-left:12px
 }
 #sidebar .cardcode .code {
@@ -1784,7 +1785,7 @@ to {
 	text-align:center;
 	text-decoration:none;
 	color:#333;
-	background:url(i/bg-icons.png?v=7) -112px -88px no-repeat;
+	background:url(/assets/bg-icons.png?v=7) -112px -88px no-repeat;
 	height:34px;
 	width:98px
 }
@@ -1794,7 +1795,7 @@ to {
 #sidebar .custom-service .phone,#sidebar .custom-service .phone-only {
 	margin:0 15px;
 	padding:36px 0 0 0;
-	background:url(i/bg-icons.png?v=7) 0 -420px no-repeat
+	background:url(/assets/bg-icons.png?v=7) 0 -420px no-repeat
 }
 #sidebar .custom-service .phone-only {
 	margin-top:5px;
@@ -1867,7 +1868,7 @@ to {
 }
 #sidebar .side-consult .inner-box {
 	height:25px;
-	background:url(i/icon-faq-new.png) no-repeat
+	background:url(/assets/icon-faq-new.png) no-repeat
 }
 #sidebar .side-consult p {
 	padding:0 0 0 40px;
@@ -1924,7 +1925,7 @@ to {
 	width:147px;
 	height:28px;
 	line-height:28px;
-	background:url(i/bg-icons.png?v=7) -90px -264px;
+	background:url(/assets/bg-icons.png?v=7) -90px -264px;
 	text-align:center;
 	color:#FFF;
 	margin:10px 0 0
@@ -1988,7 +1989,7 @@ to {
 	margin:0 auto 10px;
 	outline:0;
 	text-indent:-9999px;
-	background:url(i/bg-side-movie-info-download.png) no-repeat
+	background:url(/assets/bg-side-movie-info-download.png) no-repeat
 }
 #sidebar .side-movie-info-download .iphone {
 	background-position:-17px -6px
@@ -2020,14 +2021,14 @@ to {
 	float:left;
 	height:27px;
 	padding:7px 7px 0 17px;
-	background:url(i/bg-dashboard-tab.png?v=1) no-repeat 0 -200px;
+	background:url(/assets/bg-dashboard-tab.png?v=1) no-repeat 0 -200px;
 	outline:0
 }
 .dashboard li span {
 	float:left;
 	width:10px;
 	height:34px;
-	background:url(i/bg-dashboard-tab.png?v=1) no-repeat -161px -300px
+	background:url(/assets/bg-dashboard-tab.png?v=1) no-repeat -161px -300px
 }
 .dashboard li.current a {
 	background-position:0 0
@@ -2041,7 +2042,7 @@ to {
 	right:0;
 	width:23px;
 	height:12px;
-	background:url(i/icon-sprite.png) -13px -20px no-repeat
+	background:url(/assets/icon-sprite.png) -13px -20px no-repeat
 }
 .coupons-table {
 	margin:10px 10px 30px
@@ -2396,7 +2397,7 @@ to {
 .field-group-type .inline-tip,.field-group-ok .inline-tip,.field-group-error .inline-tip {
 	padding:5px 8px 5px 24px;
 	color:#666;
-	background:#e5f5ff url(i/sys-icons-16.png) 5px -93px no-repeat;
+	background:#e5f5ff url(/assets/sys-icons-16.png) 5px -93px no-repeat;
 	border:1px solid #a4dbfe
 }
 .field-group-ok .inline-tip {
@@ -2423,7 +2424,7 @@ to {
 .field-group-error .block-tip {
 	padding-left:18px;
 	color:#D00;
-	background:url(i/sys-icons-16.png) 0 -199px no-repeat
+	background:url(/assets/sys-icons-16.png) 0 -199px no-repeat
 }
 .field-group-error input.f-text,.field-group-error input.f-text:hover,.field-group-error .f-textarea,.field-group-error .f-textarea:hover,.field-group-error textarea,.field-group-error textarea:hover {
 	border-color:#ee4d3d;
@@ -2499,7 +2500,7 @@ to {
 #coupons .coupons-table .sort {
 	display:block;
 	padding-right:15px;
-	background:url(i/bg-coupons-sort.gif) no-repeat 0 0;
+	background:url(/assets/bg-coupons-sort.gif) no-repeat 0 0;
 	color:#000
 }
 #coupons .coupons-table .order-asc {
@@ -2744,7 +2745,7 @@ to {
 #orders .coupons-table .sort {
 	display:block;
 	padding-right:15px;
-	background:url(i/bg-coupons-sort.gif) no-repeat 0 0;
+	background:url(/assets/bg-coupons-sort.gif) no-repeat 0 0;
 	color:#000
 }
 #orders .coupons-table .order-asc {
@@ -2764,6 +2765,9 @@ to {
 }
 #orders .coupons-table .sendsms-failure {
 	color:#c00
+}
+#orders .coupons-table .op-rate {
+	width:65%
 }
 #orders .coupons-table .op .feedback {
 	overflow:hidden;
@@ -2807,13 +2811,19 @@ to {
 	text-align:center
 }
 #orders .coupons-table .op .order-rating-form .want-more {
-	margin-top:10px
+	margin:10px 0
 }
 #orders .coupons-table .op .order-rating-form .want-more label {
 	padding:0 10px 0 5px
 }
-#orders .coupons-table .op .order-rating-form .comment {
-	margin-top:10px
+#orders .coupons-table .op .order-rating-form .comment-box {
+	margin:10px auto auto 2em
+}
+#orders .coupons-table .op .order-rating-form .comment-title {
+	float:left
+}
+#orders .coupons-table .op .order-rating-form .comment-content {
+	margin-left:50px
 }
 #orders .coupons-table .op .order-rating-form .comment label {
 	display:inline-block;
@@ -2821,7 +2831,7 @@ to {
 	width:30px
 }
 #orders .coupons-table .op .order-rating-form .f-textarea {
-	width:255px;
+	width:322px;
 	font-size:12px
 }
 #orders .coupons-table .op .order-rating-form .act {
@@ -2836,6 +2846,26 @@ to {
 }
 #orders .coupons-table .op .order-rating-form .body {
 	*zoom:1
+}
+#orders .coupons-table .op .rate-area {
+	margin-left:2em;
+	padding-bottom:8px;
+	height:18px;
+	overflow:hidden
+}
+#orders .coupons-table .op .rate-area ins {
+	font-size:12px
+}
+#orders .coupons-table .op .open {
+	float:right;
+	margin:10px 10px 0 0
+}
+#orders .coupons-table .op .open input {
+	vertical-align:middle
+}
+#orders .coupons-table .op em {
+	padding-right:5px;
+	color:#C30
 }
 #orders .coupons-table .op a {
 	display:inline-block;
@@ -2858,13 +2888,13 @@ to {
 #orders .coupons-table a.more {
 	position:relative;
 	padding:1px 14px 1px 5px;
-	background:url(i/unfold-arrow.png) 30px center no-repeat;
+	background:url(/assets/unfold-arrow.png) 30px center no-repeat;
 	z-index:2
 }
 #orders .coupons-table a.hover {
 	padding:0 13px 1px 4px;
 	background-color:#FFF;
-	background-image:url(i/fold-arrow.png);
+	background-image:url(/assets/fold-arrow.png);
 	border:1px solid #CCC;
 	border-bottom:0
 }
@@ -2970,7 +3000,7 @@ to {
 	font-weight:normal
 }
 #refund .refund-box h3 {
-	background:url(i/sys-icons-48.png) no-repeat 0 -98px;
+	background:url(/assets/sys-icons-48.png) no-repeat 0 -98px;
 	height:52px;
 	line-height:52px;
 	font-size:20px;
@@ -3114,13 +3144,13 @@ to {
 	height:45px;
 	padding-left:255px;
 	padding-top:50px;
-	background:url(i/bg-pay-return-success.gif) no-repeat 145px 25px
+	background:url(/assets/bg-pay-return-success.gif) no-repeat 145px 25px
 }
 #content div.error {
 	height:57px;
 	padding-left:232px;
 	padding-top:38px;
-	background:url(i/bg-pay-return-error.gif) no-repeat 145px 25px
+	background:url(/assets/bg-pay-return-error.gif) no-repeat 145px 25px
 }
 #content div.success h2,#content div.error h2 {
 	font-size:28px;
@@ -3232,7 +3262,7 @@ to {
 	margin:5px 0 0;
 	padding-left:28px;
 	padding-right:10px;
-	background:#fff2e9 url(i/bg-sys-icons.gif) no-repeat 5px 5px
+	background:#fff2e9 url(/assets/bg-sys-icons.gif) no-repeat 5px 5px
 }
 #content .address-field-list .address-province {
 	width:140px;
@@ -3348,7 +3378,7 @@ to {
 	margin:5px 0 0;
 	padding-left:28px;
 	padding-right:10px;
-	background:#fff2e9 url(i/bg-sys-icons.gif) no-repeat 5px 5px
+	background:#fff2e9 url(/assets/bg-sys-icons.gif) no-repeat 5px 5px
 }
 #filter {
 	margin:0 0 10px 0;
@@ -3445,7 +3475,7 @@ to {
 	padding:3px 0 3px 15px;
 	color:#333;
 	text-align:center;
-	background:url(i/form-elements.png) 0 6px no-repeat
+	background:url(/assets/form-elements.png) 0 6px no-repeat
 }
 #filter .sort-bar .new-deal:hover {
 	font-weight:bold;
@@ -3462,7 +3492,7 @@ to {
 	color:#333;
 	text-decoration:none;
 	text-align:center;
-	background:url(i/sp-booking.png) 0 -66px no-repeat;
+	background:url(/assets/sp-booking.png) 0 -66px no-repeat;
 	vertical-align:top;
 	outline:0
 }
@@ -3471,7 +3501,7 @@ to {
 	top:-4px;
 	width:23px;
 	height:12px;
-	background:url(i/icon-sprite.png) -13px -20px no-repeat
+	background:url(/assets/icon-sprite.png) -13px -20px no-repeat
 }
 #filter .sort-bar .booking-nocheck:hover {
 	text-decoration:none;
@@ -3653,7 +3683,7 @@ to {
 	top:3px;
 	height:15px;
 	width:15px;
-	background:url(i/icon-biz.png) no-repeat
+	background:url(/assets/icon-biz.png) no-repeat
 }
 #biz-subscribe-area .biz-item .tags {
 	margin-bottom:10px;
@@ -3737,7 +3767,7 @@ to {
 	z-index:9;
 	width:63px;
 	height:57px;
-	background:url(i/sp-deal.png?v=3) no-repeat -145px 0
+	background:url(/assets/sp-deal.png?v=3) no-repeat -145px 0
 }
 .normal-deal-list .item .new-tag a {
 	display:block;
@@ -3810,7 +3840,7 @@ to {
 	height:33px;
 	line-height:99px;
 	overflow:hidden;
-	background:url(i/sp-deal.png?v=3) no-repeat
+	background:url(/assets/sp-deal.png?v=3) no-repeat
 }
 .normal-deal-list .item .buy:hover {
 	background-position:0 -35px
@@ -3933,7 +3963,7 @@ to {
 	margin-top:30px;
 	width:73px;
 	height:24px;
-	background:url(i/btn-side-deal-see.png) 0 0 no-repeat
+	background:url(/assets/btn-side-deal-see.png) 0 0 no-repeat
 }
 #search .deals-list .see:hover {
 	background-position:0 -30px
@@ -3971,7 +4001,7 @@ to {
 	padding-left:20px;
 	line-height:16px;
 	*line-height:18px;
-	background:url(i/icons-share.gif?v=7) no-repeat 0 0;
+	background:url(/assets/icons-share.gif?v=7) no-repeat 0 0;
 	color:#000;
 	font-size:12px;
 	font-family:Helvetica,arial,sans-serif;
@@ -4005,7 +4035,7 @@ to {
 	background-position:0 -320px
 }
 #deal-share a.collapse {
-	background:url(i/icon-arrow.png) no-repeat 29px -22px;
+	background:url(/assets/icon-arrow.png) no-repeat 29px -22px;
 	float:right;
 	padding:10px 20px 0 0;
 	color:#399;
@@ -4043,10 +4073,36 @@ to {
 	bottom:10px;
 	right:11px
 }
+#deal-rating {
+	padding:12px 15px;
+	margin-bottom:10px;
+	background-color:#FFF;
+	border:1px solid #d4d4d4
+}
+#deal-rating em {
+	font-family:arial,sans-serif;
+	font-weight:bold;
+	color:#C30
+}
+#deal-rating .stars,#deal-rating .rate-stars {
+	display:inline-block;
+	*zoom:1;
+	height:18px;
+	background:url(/assets/bg-rate-stars.png) repeat-x 0 0;
+	overflow:hidden
+}
+#deal-rating .stars {
+	margin:1px 6px;
+	width:80px;
+	vertical-align:top;
+	*vertical-align:0;
+	background-position:0 -18px
+}
 #deal-other-biz {
 	padding:16px 15px;
 	margin-bottom:10px;
-	background-color:#FFF
+	background-color:#FFF;
+	border:1px solid #d4d4d4
 }
 #deal-other-biz h3 {
 	margin-bottom:10px
@@ -4108,7 +4164,7 @@ to {
 	height:49px;
 	border-bottom:1px dashed #dbecf5;
 	text-indent:-9999px;
-	background:url(i/bg-mtsaid.png) 0 0 no-repeat
+	background:url(/assets/bg-mtsaid.png) 0 0 no-repeat
 }
 #deal-mtsaid div.content {
 	float:left;
@@ -4136,7 +4192,7 @@ to {
 #deal-mtsaid div.content .voice-share a {
 	padding:3px 0 3px 20px;
 	margin-right:12px;
-	background:url(i/icons-share.gif?v=4) 0 -200px no-repeat
+	background:url(/assets/icons-share.gif?v=4) 0 -200px no-repeat
 }
 #deal-mtsaid div.content .voice-share a.qq {
 	background-position:0 -277px
@@ -4181,7 +4237,7 @@ to {
 	_height:70px;
 	padding-left:70px;
 	padding-right:35px;
-	background:url(i/bg-deal-voice-quote.gif) no-repeat 0 0;
+	background:url(/assets/bg-deal-voice-quote.gif) no-repeat 0 0;
 	color:#666
 }
 #deal-intro .deal-detail-t {
@@ -4222,19 +4278,19 @@ to {
 #deal-intro h1 span {
 	font-family:arial,sans-serif
 }
-#deal-intro h1.district-title {
+#deal-intro h1.deal-brand {
 	padding:9px 20px 5px 0;
 	font-size:28px;
 	line-height:1.4;
 	font-family:'Microsoft Yahei','黑体',Tahoma,Helvetica,arial,sans-serif;
 	color:#000
 }
-#deal-intro h1.abtest-title {
+#deal-intro h2.deal-title {
 	padding:0 20px 20px 9px;
 	font-size:20px;
 	line-height:1.4;
 	font-family:'Microsoft Yahei','黑体',Tahoma,Helvetica,arial,sans-serif;
-	color:#333
+	color:#777
 }
 #deal-intro .main .deal-buy {
 	position:absolute;
@@ -4244,16 +4300,16 @@ to {
 	height:75px;
 	padding-left:55px;
 	z-index:1;
-	background:url(i/sp-detail.png) 0 0
+	background:url(/assets/sp-detail.png) 0 0
 }
 #deal-intro .main .deal-price-tag-lottery a {
-	background:url(i/sp-detail.png) no-repeat -155px -80px
+	background:url(/assets/sp-detail.png) no-repeat -155px -80px
 }
 #deal-intro .main .deal-price-tag-expired .over {
-	background:url(i/sp-detail.png) no-repeat -155px -135px
+	background:url(/assets/sp-detail.png) no-repeat -155px -135px
 }
 #deal-intro .main .deal-price-tag-soldout .over {
-	background:url(i/sp-detail.png) no-repeat -155px -190px
+	background:url(/assets/sp-detail.png) no-repeat -155px -190px
 }
 #deal-intro .main .deal-buy strong {
 	font:normal 32px arial;
@@ -4349,7 +4405,7 @@ to {
 	width:32px;
 	height:27px;
 	margin-bottom:5px;
-	background:url(i/consumer-protection-icons02.png) 0 0 no-repeat;
+	background:url(/assets/consumer-protection-icons02.png) 0 0 no-repeat;
 	zoom:1
 }
 #deal-intro .main .consumer-protection li a {
@@ -4406,7 +4462,7 @@ to {
 	border:1px solid #99b2d1;
 	border-radius:3px;
 	zoom:1;
-	background:url(i/bg-add-favorite.png) 0 0 repeat-x
+	background:url(/assets/bg-add-favorite.png) 0 0 repeat-x
 }
 #deal-intro .side .add-favorite:hover {
 	background-position:0 -24px
@@ -4422,7 +4478,7 @@ to {
 	margin-right:5px;
 	line-height:0;
 	font-size:0;
-	background:url(i/icon-sprite.png) 0 -20px no-repeat;
+	background:url(/assets/icon-sprite.png) 0 -20px no-repeat;
 	vertical-align:text-bottom;
 	zoom:1
 }
@@ -4447,7 +4503,7 @@ to {
 	height:16px;
 	text-indent:-9999px;
 	outline:0;
-	background:url(i/icon-sprite.png) no-repeat 0 0
+	background:url(/assets/icon-sprite.png) no-repeat 0 0
 }
 #deal-intro .side .deal-share .sina {
 	background-position:-16px 0
@@ -4465,7 +4521,7 @@ to {
 	background-position:-80px 0
 }
 #deal-intro .side .deal-share a.collapse {
-	background:url(i/icon-arrow.png) no-repeat 29px -22px;
+	background:url(/assets/icon-arrow.png) no-repeat 29px -22px;
 	float:right;
 	padding:10px 20px 0 0;
 	color:#399;
@@ -4499,7 +4555,7 @@ to {
 	width:80px;
 	height:15px;
 	margin-top:13px;
-	background:url(i/bg-business-grade.png) no-repeat 0 0
+	background:url(/assets/bg-business-grade.png) no-repeat 0 0
 }
 #side-business .g45 {
 	background-position:0 -100px
@@ -4530,7 +4586,7 @@ to {
 #side-business .mapbody .link {
 	height:29px;
 	line-height:29px;
-	background:url(i/bg-side-business-map.png) repeat-x 0 0;
+	background:url(/assets/bg-side-business-map.png) repeat-x 0 0;
 	padding-left:70px;
 	font-size:12px;
 	color:#000
@@ -4555,7 +4611,7 @@ to {
 	margin:5px 0
 }
 #side-business #lottery-promotion ul {
-	background:url(i/bg-lottery-promotion.png) no-repeat;
+	background:url(/assets/bg-lottery-promotion.png) no-repeat;
 	height:67px
 }
 #side-business #lottery-promotion li {
@@ -4600,7 +4656,7 @@ to {
 }
 #side-business .mobile h5 {
 	padding-left:15px;
-	background:url(i/bg-icons.png?v=7) no-repeat -245px -285px;
+	background:url(/assets/bg-icons.png?v=7) no-repeat -245px -285px;
 	_background-position-y:-284px;
 	color:#399;
 	line-height:17px;
@@ -4639,7 +4695,7 @@ to {
 	*line-height:0;
 	*overflow:hidden;
 	zoom:1;
-	background:url(i/bg-deal-guarantee.png) 0 0 no-repeat
+	background:url(/assets/bg-deal-guarantee.png) 0 0 no-repeat
 }
 #deal-default .deal-guarantee .status .seven {
 	border-right:1px solid #e4eef6;
@@ -4748,7 +4804,7 @@ to {
 	height:40px;
 	text-indent:-9999px;
 	outline:0;
-	background:url(i/sp-detail.png) no-repeat 0 -80px
+	background:url(/assets/sp-detail.png) no-repeat 0 -80px
 }
 #deal-stuff .deal-buy-bottom a:hover {
 	background-position:0 -120px
@@ -4824,7 +4880,7 @@ to {
 	height:64px;
 	width:491px;
 	left:-27px;
-	background:url(i/bg-voice.png) no-repeat;
+	background:url(/assets/bg-voice.png) no-repeat;
 	text-indent:-9999px;
 	border:0
 }
@@ -4841,7 +4897,7 @@ to {
 #deal-stuff .main .voice-share a {
 	padding:3px 0 3px 20px;
 	margin-right:12px;
-	background:url(i/icons-share.gif?v=4) 0 -200px no-repeat
+	background:url(/assets/icons-share.gif?v=4) 0 -200px no-repeat
 }
 #deal-stuff .main .voice-share a.qq {
 	background-position:0 -277px
@@ -4886,7 +4942,7 @@ to {
 	margin:10px 0 2px
 }
 #deal-stuff ul.review li {
-	background:url(i/quote.gif) no-repeat 0 2px;
+	background:url(/assets/quote.gif) no-repeat 0 2px;
 	margin-bottom:10px;
 	padding:0 0 0 20px
 }
@@ -5445,13 +5501,13 @@ to {
 	cursor:pointer;
 	font-size:14px;
 	font-weight:normal;
-	background-image:url(i/fold-arrow.png);
+	background-image:url(/assets/fold-arrow.png);
 	background-position:0 8px;
 	background-repeat:no-repeat;
 	zoom:1
 }
 #sidebar .sideinner .toggle-title-unfold {
-	background-image:url(i/unfold-arrow.png)
+	background-image:url(/assets/unfold-arrow.png)
 }
 #sidebar .sideinner .toggle-content {
 	margin-bottom:15px;
@@ -5475,7 +5531,7 @@ to {
 	height:32px;
 	margin-left:5px;
 	border:1px solid #DDD;
-	background-image:url(i/banklist.png?v=4);
+	background-image:url(/assets/banklist.png?v=4);
 	background-repeat:no-repeat;
 	cursor:pointer;
 	text-indent:-9999px
@@ -5881,13 +5937,13 @@ to {
 	bottom:-5px
 }
 .common-deals .status-open {
-	background:url(i/bg-dealstatus-open.png) no-repeat
+	background:url(/assets/bg-dealstatus-open.png) no-repeat
 }
 .common-deals .status-soldout {
-	background:url(i/bg-dealstatus-soldout.png) no-repeat
+	background:url(/assets/bg-dealstatus-soldout.png) no-repeat
 }
 .common-deals .status-over {
-	background:url(i/bg-dealstatus-over.png) no-repeat
+	background:url(/assets/bg-dealstatus-over.png) no-repeat
 }
 .common-deals .info {
 	float:left;
@@ -6009,7 +6065,7 @@ to {
 }
 #order-detail .order-delivery-loading {
 	padding-left:20px;
-	background:url(i/icon-loading16x16.gif) no-repeat center left
+	background:url(/assets/icon-loading16x16.gif) no-repeat center left
 }
 #order-detail .order-delivery-info-wrapper {
 	margin-left:60px
@@ -6035,7 +6091,7 @@ to {
 	margin:20px 0 10px;
 	border:1px solid #fec46f;
 	padding:4px 10px 4px 30px;
-	background:#fff5e5 url(i/sys-icons-16.png) no-repeat 8px -295px
+	background:#fff5e5 url(/assets/sys-icons-16.png) no-repeat 8px -295px
 }
 #order-detail .order-delivery-info-wrapper .common-form {
 	border:1px solid #CCC;
@@ -6260,7 +6316,7 @@ to {
 	display:block;
 	width:15px;
 	height:15px;
-	background-image:url(i/slide_nav.gif);
+	background-image:url(/assets/slide_nav.gif);
 	background-position:0 0;
 	background-repeat:no-repeat;
 	overflow:hidden;
@@ -6322,7 +6378,7 @@ body.yui-skin-sam .yui-panel .bd {
 	right:20px;
 	width:35px;
 	padding-right:12px;
-	background:url(i/bg-newbie-close.gif) no-repeat 100% 50%;
+	background:url(/assets/bg-newbie-close.gif) no-repeat 100% 50%;
 	*background-position:100% 45%;
 	color:#2f2f2f;
 	cursor:pointer;
@@ -6384,7 +6440,7 @@ body.yui-skin-sam .yui-panel .bd {
 	right:20px;
 	width:35px;
 	padding-right:12px;
-	background:url(i/bg-newbie-close.gif) no-repeat 100% 50%;
+	background:url(/assets/bg-newbie-close.gif) no-repeat 100% 50%;
 	*background-position:100% 45%;
 	color:#2f2f2f;
 	cursor:pointer;
@@ -6417,7 +6473,7 @@ body.yui-skin-sam .yui-panel .bd {
 .normal-dialog .loading {
 	margin:20px 0;
 	color:#333;
-	background:url(i/icon-loading16x16.gif) no-repeat center center
+	background:url(/assets/icon-loading16x16.gif) no-repeat center center
 }
 .normal-dialog .average-point {
 	font-weight:bold
@@ -6489,7 +6545,7 @@ body.yui-skin-sam .yui-panel .bd {
 	right:8px;
 	width:24px;
 	height:24px;
-	background:url(i/dialog-close.png?v=1) no-repeat 50% 7px;
+	background:url(/assets/dialog-close.png?v=1) no-repeat 50% 7px;
 	text-indent:-9999px;
 	outline:0;
 	z-index:1;
@@ -6515,7 +6571,7 @@ body.yui-skin-sam .yui-panel .bd {
 	top:1px;
 	right:10px;
 	width:16px;
-	background:url(i/sys-icons-16.png?v=1) no-repeat 0 -476px;
+	background:url(/assets/sys-icons-16.png?v=1) no-repeat 0 -476px;
 	text-indent:-9999px;
 	cursor:pointer;
 	font-weight:normal
@@ -6531,7 +6587,7 @@ body.yui-skin-sam .yui-panel .bd {
 	_height:50px;
 	margin:10px auto;
 	padding-left:60px;
-	background:url(i/sys-icons-48.png?v=1) no-repeat 0 -2px;
+	background:url(/assets/sys-icons-48.png?v=1) no-repeat 0 -2px;
 	zoom:1
 }
 .mt-dialog .no-tip {
@@ -6581,7 +6637,7 @@ body.yui-skin-sam .yui-panel .bd {
 .mt-dialog .loading {
 	margin:20px 0;
 	color:#333;
-	background:url(i/icon-loading16x16.gif) no-repeat center center
+	background:url(/assets/icon-loading16x16.gif) no-repeat center center
 }
 .mt-dialog .average-point {
 	font-weight:bold
@@ -6629,7 +6685,7 @@ body.yui-skin-sam .yui-panel .bd {
 	right:8px;
 	width:24px;
 	height:24px;
-	background:url(i/dialog-close.png) no-repeat 50% 7px;
+	background:url(/assets/dialog-close.png) no-repeat 50% 7px;
 	text-indent:-9999px;
 	outline:0;
 	z-index:1
@@ -6652,7 +6708,7 @@ body.yui-skin-sam .yui-panel .bd {
 	position:absolute;
 	top:3px;
 	right:30px;
-	background:url(i/bg-icons.png?v=7) no-repeat -245px -285px;
+	background:url(/assets/bg-icons.png?v=7) no-repeat -245px -285px;
 	_background-position-y:-284px;
 	padding-left:15px;
 	font-size:12px;
@@ -6711,7 +6767,7 @@ body.yui-skin-sam .yui-panel .bd {
 	margin:14px 15px 30px;
 	height:56px;
 	padding:4px 0 0 80px;
-	background:url(i/bg-sys-icon-info.gif) no-repeat 0 0;
+	background:url(/assets/bg-sys-icon-info.gif) no-repeat 0 0;
 	font-size:16px;
 	font-family:'黑体',arial,sans-serif
 }
@@ -6962,7 +7018,7 @@ body.yui-skin-sam .yui-panel .bd {
 	padding-top:15px;
 	min-height:51px;
 	_height:51px;
-	background:url(i/bg-sys-icon-succ.gif) no-repeat 0 0;
+	background:url(/assets/bg-sys-icon-succ.gif) no-repeat 0 0;
 	zoom:1
 }
 #order-feedback-dialog .new {
@@ -6971,7 +7027,7 @@ body.yui-skin-sam .yui-panel .bd {
 	padding-top:5px;
 	min-height:51px;
 	_height:51px;
-	background:url(i/bg-sys-icon-succ.gif) no-repeat 0 0;
+	background:url(/assets/bg-sys-icon-succ.gif) no-repeat 0 0;
 	zoom:1
 }
 #order-feedback-dialog .new p {
@@ -7081,11 +7137,11 @@ body.yui-skin-sam .yui-panel .bd {
 	padding-left:73px;
 	min-height:60px;
 	_height:60px;
-	background:url(i/bg-sys-icon-succ.png) no-repeat left center;
+	background:url(/assets/bg-sys-icon-succ.png) no-repeat left center;
 	zoom:1
 }
 #send-sms-dialog .fail {
-	background-image:url(i/bg-sys-icon-fail.png)
+	background-image:url(/assets/bg-sys-icon-fail.png)
 }
 #send-sms-dialog .title {
 	padding-top:3px;
@@ -7103,7 +7159,7 @@ body.yui-skin-sam .yui-panel .bd {
 #send-sms-dialog .mobile {
 	margin-left:60px;
 	padding-left:15px;
-	background:url(i/bg-icons.png?v=7) no-repeat -245px -285px;
+	background:url(/assets/bg-icons.png?v=7) no-repeat -245px -285px;
 	_background-position-y:-284px;
 	line-height:18px;
 	font-size:12px
@@ -7173,7 +7229,7 @@ body.yui-skin-sam .yui-panel .bd {
 #order-send-sms-dialog .mobile {
 	margin-left:60px;
 	padding-left:15px;
-	background:url(i/bg-icons.png?v=7) no-repeat -245px -285px;
+	background:url(/assets/bg-icons.png?v=7) no-repeat -245px -285px;
 	_background-position-y:-284px;
 	line-height:18px;
 	font-size:12px
@@ -7237,7 +7293,7 @@ body.yui-skin-sam .yui-panel .bd {
 #order-view-coupon-dialog .mobile {
 	margin-left:60px;
 	padding-left:15px;
-	background:url(i/bg-icons.png?v=7) no-repeat -245px -285px;
+	background:url(/assets/bg-icons.png?v=7) no-repeat -245px -285px;
 	_background-position-y:-284px;
 	line-height:18px;
 	font-size:12px
@@ -7342,7 +7398,7 @@ body.yui-skin-sam .yui-panel .bd {
 	line-height:21px;
 	font-size:12px;
 	color:#666;
-	background:url(i/oauth-small-btn.png?v=1) 0 0 no-repeat
+	background:url(/assets/oauth-small-btn.png?v=1) 0 0 no-repeat
 }
 #deal-login-dialog #open-auth li a.qq {
 	width:30px;
@@ -7426,7 +7482,7 @@ body.yui-skin-sam .yui-panel .bd {
 	line-height:21px;
 	font-size:12px;
 	color:#666;
-	background:url(i/oauth-small-btn.png?v=1) 0 0 no-repeat
+	background:url(/assets/oauth-small-btn.png?v=1) 0 0 no-repeat
 }
 #common-login-dialog #open-auth li a.qq {
 	width:30px;
@@ -7478,12 +7534,12 @@ body.yui-skin-sam .yui-panel .bd {
 	padding-top:8px;
 	min-height:51px;
 	_height:51px;
-	background:url(i/bg-sys-icon-succ.png) no-repeat 0 0;
+	background:url(/assets/bg-sys-icon-succ.png) no-repeat 0 0;
 	overflow:hidden;
 	zoom:1
 }
 #apply-withdraw-dialog .fail {
-	background-image:url(i/bg-sys-icon-fail.png)
+	background-image:url(/assets/bg-sys-icon-fail.png)
 }
 #apply-withdraw-dialog .title {
 	font-size:16px;
@@ -7516,11 +7572,11 @@ body.yui-skin-sam .yui-panel .bd {
 	padding-top:8px;
 	min-height:51px;
 	_height:51px;
-	background:url(i/bg-sys-icon-succ.png) no-repeat 0 0;
+	background:url(/assets/bg-sys-icon-succ.png) no-repeat 0 0;
 	zoom:1
 }
 #modify-withdraw-dialog .fail {
-	background-image:url(i/bg-sys-icon-fail.png)
+	background-image:url(/assets/bg-sys-icon-fail.png)
 }
 #modify-withdraw-dialog .title {
 	padding-top:6px;
@@ -7706,7 +7762,7 @@ body.yui-skin-sam .yui-panel .bd {
 	line-height:21px;
 	font-size:12px;
 	color:#666;
-	background:url(i/oauth-small-btn.png?v=1) 0 0 no-repeat
+	background:url(/assets/oauth-small-btn.png?v=1) 0 0 no-repeat
 }
 #open-auth li a:hover {
 	color:#333;
@@ -7749,7 +7805,7 @@ body.yui-skin-sam .yui-panel .bd {
 	position:relative
 }
 #deal-subscribe .banner {
-	background:url(i/banner-deal-subscribe.jpg) center center no-repeat;
+	background:url(/assets/banner-deal-subscribe.jpg) center center no-repeat;
 	height:60px;
 	text-indent:-9999px;
 	margin:0 0 20px
@@ -7802,7 +7858,7 @@ body.yui-skin-sam .yui-panel .bd {
 	padding:20px
 }
 #deal-subscribe-success .success-msg {
-	background:url(i/sys-icons-48-s.png) 45px 13px no-repeat;
+	background:url(/assets/sys-icons-48-s.png) 45px 13px no-repeat;
 	padding:10px 30px 10px 110px
 }
 #deal-subscribe-success .success-msg h3 {
