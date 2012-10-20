@@ -10,18 +10,18 @@
                     <div class="item odd">
                 <% end %>
                         <div class="cover">
-                            <%= link_to image_tag( product.image_path, 
+                            <%= link_to image_tag( product.cover_path, 
                                                    :width => "312", 
                                                    :height => "189",
                                                    :title => "点击查看详情",
-                                                   :alt => product.image_title ),
+                                                   :alt => product.cover_title ),
                                         { :controller => "products",
                                           :action => "show",
                                           :id => product.id },
                                         { :target => "_blank" } %>
                         </div>
                         <h3>
-                            <%= link_to "【" + product.district_name + "】" + product.image_title,
+                            <%= link_to "【" + product.district_name + "】" + product.cover_title,
                                         { :controller => "products",
                                           :action => "show",
                                           :id => product.id },
