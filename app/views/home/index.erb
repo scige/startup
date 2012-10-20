@@ -3,34 +3,45 @@
             <div id="filter">
             </div>
             <div id="content" class="normal-deal-list cf">
-                <div class="item">
-                    <div class="cover">
-                        <a href="http://bj.meituan.com/deal/297298.html" target="_blank"><img width="312" height="189" src=<%= @products.image_path %> title="点击查看详情" alt="电影票1张，2D/3D可兑，可升级"></a>
+                <% @products.each do |product| %>
+                <% if product.id % 2 == 1 %>
+                    <div class="item">
+                <% else %>
+                    <div class="item odd">
+                <% end %>
+                        <div class="cover">
+                            <%= link_to image_tag( product.image_path, 
+                                                   :width => "312", 
+                                                   :height => "189",
+                                                   :title => "点击查看详情",
+                                                   :alt => product.image_title ),
+                                        { :controller => "product",
+                                          :action => "show",
+                                          :id => product.id },
+                                        { :target => "_blank" } %>
+                        </div>
+                        <h3>
+                            <%= link_to "【" + product.district_name + "】" + product.image_title,
+                                        { :controller => "product",
+                                          :action => "show",
+                                          :id => product.id },
+                                        { :target => "_blank" } %>
+                        </h3>
+                        <p class="detail">
+                            <%= link_to "去看看",
+                                        { :controller => "product",
+                                          :action => "show",
+                                          :id => product.id },
+                                        { :target => "_blank",
+                                          :hidefocus=>"true",
+                                          :class=>"buy",
+                                          :rel=>"nofollow" } %>
+                            <em class="price num">¥<%= product.sale_price %></em>
+                            <span class="bypast">价值 <span class="num"><span>¥</span><%= product.original_price %></span></span>
+                        </p>
+                        <p class="total"><strong class="num"><%= product.sale_count %></strong>人已购买</p>
                     </div>
-                    <h3>
-                        <a href="http://bj.meituan.com/deal/297298.html" target="_blank"><%= "【" + @products.district_name + "】" + @products.product_name %></a>
-                    </h3>
-                    <p class="detail">
-                        <a href="http://bj.meituan.com/deal/297298.html" target="_blank" hidefocus="true" class="buy" rel="nofollow">去看看</a>
-                        <em class="price num">¥<%= @products.sale_price %></em>
-                        <span class="bypast">价值 <span class="num"><span>¥</span><%= @products.original_price %></span></span>
-                    </p>
-                    <p class="total"><strong class="num"><%= @products.sale_count %></strong>人已购买</p>
-                </div>
-                <div class="item odd">
-                    <div class="cover">
-                        <a href="http://www.meituan.com/deal/862110.html" target="_blank"><img width="312" height="189" src="http://p1.meituan.net/312.189/deal/201209/25/_0925114707.jpg" title="点击查看详情" alt="住宿1晚，美团券可叠加使用"></a>
-                    </div>
-                    <h3>
-                        <a href="http://www.meituan.com/deal/862110.html" target="_blank">【北京】轻联富润酒店：住宿1晚，美团券可叠加使用</a>
-                    </h3>
-                    <p class="detail">
-                        <a href="http://www.meituan.com/deal/862110.html" target="_blank" hidefocus="true" class="buy" rel="nofollow">去看看</a>
-                        <em class="price num">¥128</em>
-                        <span class="bypast">价值 <span class="num"><span>¥</span>328</span></span>
-                    </p>
-                    <p class="total"><strong class="num">1457</strong>人已购买</p>
-                </div>
+                <% end %>
             </div>
             <div id="sidebar">
             </div>
