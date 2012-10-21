@@ -10,8 +10,8 @@
 
 Product.create(
       :category => "美食",
-      :district => "船营区",
-      :district_name => "船营区",
+      :district => "朝阳区",
+      :district_name => "朝阳区",
       :shop_name => "金源福城肥牛",
       :product_name => "仅售88元！最高价值252.4元的金源福城肥牛（远大路金源店）2-3人套餐。大厅消费赠送燕京特制啤酒、北京二锅头白酒无限畅饮，全场酸梅汤、豆浆、小布丁、口香糖免费，女士另赠银耳羹1份。",
       :image_path => "/assets/products/1.jpg",
@@ -26,8 +26,8 @@ Product.create(
 
 Product.create(
       :category => "酒店",
-      :district => "船营区",
-      :district_name => "船营区",
+      :district => "朝阳区",
+      :district_name => "朝阳区",
       :shop_name => "轻联富润酒店",
       :product_name => "仅售158元！价值328元的轻联富润酒店住宿1晚（标准双人间/标准大床房2选1），美团券可叠加使用。",
       :image_path => "/assets/products/2.jpg",
