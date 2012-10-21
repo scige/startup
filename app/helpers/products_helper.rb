@@ -1,6 +1,6 @@
 module ProductsHelper
-    def integer_sale_price
-        "%d" % @product.sale_price
+    def integer_of_value(value)
+        value.to_i
     end
 
     def discount

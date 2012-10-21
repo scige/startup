@@ -36,7 +36,7 @@
                                       :hidefocus=>"true",
                                       :class=>"buy",
                                       :rel=>"nofollow" } %>
-                        <em class="price num">¥<%= product.sale_price %></em>
+                        <em class="price num">¥<%= integer_of_value product.sale_price %></em>
                         <span class="bypast">价值 <span class="num"><span>¥</span><%= product.original_price %></span></span>
                     </p>
                     <p class="total"><strong class="num"><%= product.sale_count %></strong>人已购买</p>

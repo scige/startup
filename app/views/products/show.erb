@@ -9,7 +9,7 @@
                 <h2 class="deal-title"><%= @product.product_name %></h2>
                 <div class="main">
                     <div class="deal-buy deal-price-tag-open">
-                        <strong>¥ <%= integer_sale_price %></strong><a rel="nofollow" href="http://bj.meituan.com/deal/buy/720541">抢购</a>
+                        <strong>¥ <%= integer_of_value @product.sale_price %></strong><a rel="nofollow" href="http://bj.meituan.com/deal/buy/720541">抢购</a>
                     </div>
                     <div class="deal-info">
                         <table class="deal-discount">
@@ -27,7 +27,7 @@
                             </tbody>
                         </table>
                         <div class="deal-status">
-                            <p class="deal-status-count"><strong><%= @product.sale_count %></strong> 人已购买</p><p class="deal-status-time-left deal-on" id="deal-timeleft-720541" diff="6048891">剩余<span id="counter-720541"><strong>3</strong>天以上</span></p>
+                            <p class="deal-status-count"><strong><%= @product.sale_count %></strong> 人已购买</p><p class="deal-status-time-left deal-on">剩余<span><strong>3</strong>天以上</span></p>
                         </div>
                         <p>拉长测试</p>
                         <p>拉长测试</p>
@@ -47,7 +47,7 @@
             <div id="deal-stuff">
                 <div class="mainbox cf">
                     <div class="main">
-                        <h2 id="blk-deal-detail-720541">本单详情</h2>
+                        <h2>本单详情</h2>
                         <div class="blk detail">
                             <style>
                             .standard-bar { padding:3px 6px; color:#fff; border-radius:3px; font-weight:bold; }
@@ -65,7 +65,7 @@
                     <div class="side">
                     </div>
                     <div class="deal-buy-bottom">
-                        <span class="price num">¥<%= integer_sale_price %></span><a rel="nofollow" href="http://bj.meituan.com/deal/buy/720541" hidefocus="true">抢购</a>
+                        <span class="price num">¥<%= integer_of_value @product.sale_price %></span><a rel="nofollow" href="http://bj.meituan.com/deal/buy/720541" hidefocus="true">抢购</a>
                         <ul class="cf">
                             <li>价值<br><del class="num"><span>¥</span><%= @product.original_price %></del></li>
                             <li>折扣<br><span class="num"><%= discount %>折</span></li>
