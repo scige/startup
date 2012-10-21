@@ -1,7 +1,7 @@
 <div id="bdw" class="bdw">
     <div id="bd" class="cf">
         <div class="bread-nav">
-            <a href="http://bj.meituan.com/">北京团购</a><span>»</span><a href="http://bj.meituan.com/category/all/haidianqu">海淀区</a><span>»</span><a href="http://bj.meituan.com/category/all/yuandalu">远大路</a><span>»</span><a href="http://bj.meituan.com/category/meishi/yuandalu">美食</a><span>»</span><a href="http://bj.meituan.com/category/huoguo/yuandalu">火锅</a><span>»</span>金源福城肥牛2-3人套餐
+            <%= link_to "北京团购", "/" %><span>»</span><%= link_to "海淀区", "/category/all/haidianqu" %><span>»</span><%= link_to "远大路", "/category/all/yuandalu" %><span>»</span><%= link_to "美食", "/category/meishi/yuandalu" %><span>»</span><%= link_to "火锅", "/category/huoguo/yuandalu" %><span>»</span>金源福城肥牛2-3人套餐
         </div>
         <div id="content">
             <div id="deal-intro" class="cf">
@@ -9,7 +9,7 @@
                 <h2 class="deal-title"><%= @product.product_name %></h2>
                 <div class="main">
                     <div class="deal-buy deal-price-tag-open">
-                        <strong>¥ <%= integer_of_value @product.sale_price %></strong><a rel="nofollow" href="http://bj.meituan.com/deal/buy/720541">抢购</a>
+                        <strong>¥ <%= integer_of_value @product.sale_price %></strong><%= link_to "抢购", "/deal/buy/720541", {:rel=>"nofollow"} %>
                     </div>
                     <div class="deal-info">
                         <table class="deal-discount">
@@ -52,7 +52,7 @@
                             <style>
                             .standard-bar { padding:3px 6px; color:#fff; border-radius:3px; font-weight:bold; }
                             </style>
-                            <p class="standard-bar" style="background-color:#37adb1;">就知道你俩至少有一个被火锅俘虏了</p><p>在美团网，仅需88元即可享受最高价值252.4元的金源福城肥牛2-3人套餐，每人消费约29元哟！</p>
+                            <p class="standard-bar" style="background-color:#37adb1;">就知道你俩至少有一个被火锅俘虏了</p><p>仅需88元即可享受最高价值252.4元的金源福城肥牛2-3人套餐，每人消费约29元哟！</p>
                             <p class="standard-bar" style="background-color:#37adb1;">火锅公开课</p>
                             <p>据江湖高人统计：在情侣吵架的理由中，因为吃火锅时选萝卜还是白菜而闹翻的比例高到令人咋舌。火锅也有色彩心理学，了解他/她的色彩，让爱情的小火锅沸腾。</p>
                             <ul class="list">
@@ -65,7 +65,7 @@
                     <div class="side">
                     </div>
                     <div class="deal-buy-bottom">
-                        <span class="price num">¥<%= integer_of_value @product.sale_price %></span><a rel="nofollow" href="http://bj.meituan.com/deal/buy/720541" hidefocus="true">抢购</a>
+                        <span class="price num">¥<%= integer_of_value @product.sale_price %></span><%= link_to "抢购", "/deal/buy/720541", {:rel=>"nofollow", :hidefocus=>"true"} %>
                         <ul class="cf">
                             <li>价值<br><del class="num"><span>¥</span><%= @product.original_price %></del></li>
                             <li>折扣<br><span class="num"><%= discount %>折</span></li>

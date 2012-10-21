@@ -2,28 +2,24 @@
 <html>
 <head>
   <title>Startup</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "application", :media=>"all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body id="deal-default">
 
+<body id="deal-default">
 <div id="doc">
     <div id="hdw">
         <div id="hd">
             <div id="site-top" class="cf">
-                <h1><a href="http://bj.meituan.com/"><img src="/assets/logo.png" title="美团网，每天团购一次" alt="美团网，每天团购一次" height="66" width="108"></a></h1>
-                <div class="city-info">
-                    <h2>北京</h2>
-                    <a href="http://www.meituan.com/index/changecity">[切换城市]</a>
-                </div>
+                <h1><%= link_to image_tag("/assets/logo.png", :width=>"108", :height=>"66", :title=>"每天团购一次", :alt=>"每天团购一次"), "/" %></h1>
                 <div class="site-info">
                     <ul>
-                        <li><a class="subscribe" href="http://www.meituan.com/maillist/subscribe">邮件订阅</a></li>
-                        <li><a class="fav" id="favorite" href="javascript:void(0);">加入收藏夹</a></li>
-                        <li><a class="mobile" href="http://www.meituan.com/mobile" target="_blank">下载手机版</a></li>
-                        <li><a class="refer" href="http://www.meituan.com/account/referrals" target="_blank">邀请好友</a></li>
-                        <li class="last"><a href="http://www.meituan.com/help/faq">常见问题</a></li>
+                        <li><%= link_to "邮件订阅", "/subscribe", {:class=>"subscribe"} %></li>
+                        <li><%= link_to "加入收藏夹", "javascript:void(0);", {:class=>"fav", :id=>"favorite"} %></li>
+                        <li><%= link_to "下载手机版", "/mobile", {:class=>"mobile", :target=>"_blank"} %></li>
+                        <li><%= link_to "邀请好友", "/referrals", {:class=>"refer", :target=>"_blank"} %></li>
+                        <li><%= link_to "常见问题", "/faq", {:class=>"last"} %></li>
                     </ul>
                 </div>
                 <div class="search cf">
@@ -36,35 +32,35 @@
             <div id="site-nav" class="site-nav">
                 <div class="nav-wrapper cf">
                     <ul class="nav">
-                        <li><a href="http://bj.meituan.com/" class="hover">今日团购</a></li>
-                        <li><a href="http://bj.meituan.com/meishi/all" >美食</a></li>
-                        <li><a href="http://bj.meituan.com/yule/all">娱乐</a></li>
-                        <li><a href="http://bj.meituan.com/dianying/all">电影</a></li>
-                        <li><a href="http://bj.meituan.com/shenghuo/all">生活</a></li>
-                        <li><a href="http://bj.meituan.com/lvyou/all">酒店旅游</a></li>
-                        <li><a href="http://www.meituan.com/mobile">手机版</a></li>
+                        <li><%= link_to "今日团购", "/", {:class=>"hover"} %></li>
+                        <li><%= link_to "美食", "/meishi/all" %></li>
+                        <li><%= link_to "娱乐", "/yule/all" %></li>
+                        <li><%= link_to "电影", "/dianying/all" %></li>
+                        <li><%= link_to "生活", "/shenghuo/all" %></li>
+                        <li><%= link_to "酒店旅游", "/lvyou/all" %></li>
+                        <li><%= link_to "手机版", "/mobile" %></li>
                     </ul>
                     <ul class="user-info">
-                        <li class="account"><a class="my-account" href="http://www.meituan.com/orders/">我的美团<i class="tri"></i></a>
+                        <li class="account"><%= link_to "个人中心", "/orders", {:class=>"my-account"} %><i class="tri"></i>
                             <div id="yui_3_5_1_1_1350142560308_21" class="account-menu" style="display:none">
                                 <ul class="comment-info">
-                                    <li><a href="http://www.meituan.com/orders/list/unused" class="first">未使用</a></li>
-                                    <li><a href="http://www.meituan.com/orders/list/unpaid" class="first">待付款</a></li>
-                                    <li><a href="http://www.meituan.com/rates">待评价</a></li>
-                                    <li><a href="http://www.meituan.com/collections">我的收藏</a></li>
+                                    <li><%= link_to "未使用", "/orders/list/unused", {:class=>"first"} %></li>
+                                    <li><%= link_to "待付款", "/orders/list/unpaid" %></li>
+                                    <li><%= link_to "待评价", "/rates" %></li>
+                                    <li><%= link_to "我的收藏", "/collections" %></li>
                                     <li class="space"></li>
                                 </ul>
                                 <ul class="base-info">
-                                    <li><a href="http://www.meituan.com/orders/" class="first">我的订单</a></li>
-                                    <li><a href="http://www.meituan.com/account/credit">美团余额</a></li>
-                                    <li><a href="http://www.meituan.com/account/charge">余额充值</a></li>
-                                    <li><a href="http://www.meituan.com/account/points">积分/邀请</a></li>
-                                    <li><a href="http://www.meituan.com/account/settings" class="last">账户设置</a></li>
+                                    <li><%= link_to "我的订单", "/orders/", {:class=>"first"} %></li>
+                                    <li><%= link_to "账户余额", "/account/credit" %></li>
+                                    <li><%= link_to "余额充值", "/account/charge" %></li>
+                                    <li><%= link_to "积分/邀请", "/account/points" %></li>
+                                    <li><%= link_to "账户设置", "/account/settings", {:class=>"last"} %></li>
                                 </ul>
                             </div>
                         </li>       
-                        <li class="login"><a href="http://www.meituan.com/account/login">登录</a></li>
-                        <li class="login last"><a href="http://www.meituan.com/account/signup">注册</a></li>
+                        <li class="login"><%= link_to "登录", "/login" %></li>
+                        <li class="login last"><%= link_to "注册", "/signup" %></li>
                     </ul>
                 </div>
             </div>
@@ -78,52 +74,52 @@
             <div class="ftbox">
                 <h3>用户帮助</h3>
                 <ul>
-                    <li><a href="http://www.meituan.com/help/faq">常见问题</a></li>
-                    <li><a href="http://www.meituan.com/deal/exchanges/default">求购转让</a></li>
-                    <li><a href="http://bj.meituan.com/deals">往期北京团购</a></li>
-                    <li><a href="http://www.meituan.com/help/email">邮箱白名单设置</a></li>
-                    <li><a href="http://www.meituan.com/help/api">开放API</a></li>
-                    <li><a href="http://www.meituan.com/about/anticheat">反诈骗公告</a></li>
+                    <li><%= link_to "常见问题", "/help/faq" %></li>
+                    <li><%= link_to "求购转让", "/deal/exchanges/default" %></li>
+                    <li><%= link_to "往期北京团购", "/deals" %></li>
+                    <li><%= link_to "邮箱白名单设置", "/help/email" %></li>
+                    <li><%= link_to "开放API", "/help/api" %></li>
+                    <li><%= link_to "反诈骗公告", "/about/anticheat" %></li>
                 </ul>
             </div>
             <div class="ftbox">
                 <h3>获取更新</h3>
                 <ul>
-                    <li><a href="http://www.meituan.com/maillist/subscribe">邮件订阅</a></li>
-                    <li><a href="http://www.meituan.com/mobile/">iPhone/Android</a></li>
-                    <li><a rel="nofollow" href="http://user.qzone.qq.com/97231705" target="_blank">美团QQ空间</a></li>
-                    <li><a rel="nofollow" href="http://t.sina.com.cn/meituanbj" target="_blank">美团新浪微博</a></li>
-                    <li><a rel="nofollow" href="http://t.qq.com/meituan" target="_blank">美团腾讯微博</a></li>
-                    <li><a href="http://www.meituan.com/feed/beijing" target="_blank">RSS订阅</a></li>
+                    <li><%= link_to "邮件订阅", "/maillist/subscribe" %></li>
+                    <li><%= link_to "iPhone/Android", "/mobile/" %></li>
+                    <li><%= link_to "QQ空间", "http://user.qzone.qq.com/97231705", {:rel=>"nofollow", :target=>"_blank"} %></li>
+                    <li><%= link_to "新浪微博", "http://t.sina.com.cn/scige", {:rel=>"nofollow", :target=>"_blank"} %></li>
+                    <li><%= link_to "腾讯微博", "http://t.qq.com/sciget", {:rel=>"nofollow", :target=>"_blank"} %></li>
+                    <li><%= link_to "RSS订阅", "/feed/beijing", {:target=>"_blank"} %></li>
                 </ul>
             </div>
             <div class="ftbox">
                 <h3>商务合作</h3>
                 <ul>
-                    <li><a href="http://www.meituan.com/feedback/seller">提供团购信息</a></li>
-                    <li><a href="http://www.meituan.com/about#contact">市场合作</a></li>
-                    <li><a href="http://union.meituan.com/" target="_blank">美团联盟</a></li>
-                    <li><a href="http://www.meituan.com/about/copyright">版权声明</a></li>
+                    <li><%= link_to "提供团购信息", "/feedback/seller" %></li>
+                    <li><%= link_to "市场合作", "/about#contact" %></li>
+                    <li><%= link_to "商家联盟", "/", :target=>"_blank" %></li>
+                    <li><%= link_to "版权声明", "/about/copyright" %></li>
                 </ul>
             </div>
             <div class="ftbox">
                 <h3>公司信息</h3>
                 <ul>
-                    <li><a href="http://www.meituan.com/about/">关于美团</a></li>
-                    <li><a href="http://www.meituan.com/commitment/">美团承诺</a></li>
-                    <li><a href="http://www.meituan.com/about/press">媒体报道</a></li>
-                    <li><a href="http://www.meituan.com/about/job">加入我们</a></li>
-                    <li><a href="http://www.meituan.com/about/privacy">隐私声明</a></li>
+                    <li><%= link_to "关于我们", "/about/" %></li>
+                    <li><%= link_to "我们承诺", "/commitment/" %></li>
+                    <li><%= link_to "媒体报道", "/about/press" %></li>
+                    <li><%= link_to "加入我们", "/about/job" %></li>
+                    <li><%= link_to "隐私声明", "/about/privacy" %></li>
                 </ul>
             </div>
             <div class="ftbox service">
                 <i class="hotline"></i>
                 <p class="desc">客服电话(免长途费)</p>
-                <p class="num">400-660-5335</p>
+                <p class="num">400-660-5500</p>
                 <p class="time">周一到周日8:00-22:00</p>
             </div>
             <div id="yui_3_5_1_1_1350142560308_56" class="copyright">
-                <p>©<span title="I:3; Q:7; S:4; C:36; F:0; T:173.32; H:e18">2012</span> meituan.com <a href="http://www.miibeian.gov.cn/" target="_blank">京ICP证070791号</a> 京公网安备110105002099号</p>
+                <p>©<span title="I:3; Q:7; S:4; C:36; F:0; T:173.32; H:e18">2012</span> startup.com <%= link_to "京ICP证100001号", "http://www.miibeian.gov.cn/", {:target=>"_blank"} %> 京公网安备100000000001号</p>
             </div>
                 
             <ul class="cert cf">
