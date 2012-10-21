@@ -21,9 +21,6 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: startup_production
+  database: postgres://cjvnfaphksiqdc:CILAN07SvgAoGgYxPzEHh1jClp@ec2-54-243-226-226.compute-1.amazonaws.com:5432/d21c4vvbm3u39r
   pool: 5
-  host: localhost
-  username: sanbaoyuan
-  password: 123456
   timeout: 5000
