@@ -6,7 +6,7 @@ class Product < ActiveRecord::Base
   attr_accessible :product_name
   attr_accessible :image_path
   attr_accessible :cover_path
-  attr_accessible :cover_title
+  attr_accessible :cover_name
   attr_accessible :sale_price
   attr_accessible :original_price
   attr_accessible :sale_count

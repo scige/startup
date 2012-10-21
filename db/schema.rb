@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20121016155314) do
     t.string   "product_name"
     t.string   "image_path"
     t.string   "cover_path"
-    t.string   "cover_title"
+    t.string   "cover_name"
     t.float    "sale_price"
     t.float    "original_price"
     t.integer  "sale_count"

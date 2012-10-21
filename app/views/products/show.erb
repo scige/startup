@@ -5,11 +5,11 @@
         </div>
         <div id="content">
             <div id="deal-intro" class="cf">
-                <h1 class="deal-brand">【远大路】金源福城肥牛</h1>
-                <h2 class="deal-title">仅售88元！最高价值252.4元的金源福城肥牛（远大路金源店）2-3人套餐。大厅消费赠送燕京特制啤酒、北京二锅头白酒无限畅饮，全场酸梅汤、豆浆、小布丁、口香糖免费，女士另赠银耳羹1份。</h2>
+                <h1 class="deal-brand"><%= "【" + @product.district_name + "】" + @product.shop_name %></h1>
+                <h2 class="deal-title"><%= @product.product_name %></h2>
                 <div class="main">
                     <div class="deal-buy deal-price-tag-open">
-                        <strong>¥ 88</strong><a rel="nofollow" href="http://bj.meituan.com/deal/buy/720541">抢购</a>
+                        <strong>¥ <%= integer_sale_price %></strong><a rel="nofollow" href="http://bj.meituan.com/deal/buy/720541">抢购</a>
                     </div>
                     <div class="deal-info">
                         <table class="deal-discount">
@@ -20,14 +20,14 @@
                                     <th>节省</th>
                                 </tr>
                                 <tr>
-                                    <td><del><span>¥</span>252.4</del></td>
-                                    <td>3.5折</td>
-                                    <td>¥164.4</td>
+                                    <td><del><span>¥</span><%= @product.original_price %></del></td>
+                                    <td><%= discount %>折</td>
+                                    <td>¥<%= save_price %></td>
                                 </tr>
                             </tbody>
                         </table>
                         <div class="deal-status">
-                            <p class="deal-status-count"><strong>702</strong> 人已购买</p><p class="deal-status-time-left deal-on" id="deal-timeleft-720541" diff="6048891">剩余<span id="counter-720541"><strong>3</strong>天以上</span></p>
+                            <p class="deal-status-count"><strong><%= @product.sale_count %></strong> 人已购买</p><p class="deal-status-time-left deal-on" id="deal-timeleft-720541" diff="6048891">剩余<span id="counter-720541"><strong>3</strong>天以上</span></p>
                         </div>
                         <p>拉长测试</p>
                         <p>拉长测试</p>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="side">
                     <div class="deal-buy-cover-img">
-                        <img src="/assets/products/1.jpg">
+                        <%= image_tag "/assets/products/1.jpg" %>
                     </div>
                 </div>
             </div>
@@ -65,11 +65,11 @@
                     <div class="side">
                     </div>
                     <div class="deal-buy-bottom">
-                        <span class="price num">¥88</span><a rel="nofollow" href="http://bj.meituan.com/deal/buy/720541" hidefocus="true">抢购</a>
+                        <span class="price num">¥<%= integer_sale_price %></span><a rel="nofollow" href="http://bj.meituan.com/deal/buy/720541" hidefocus="true">抢购</a>
                         <ul class="cf">
-                            <li>价值<br><del class="num"><span>¥</span>252.4</del></li>
-                            <li>折扣<br><span class="num">3.5折</span></li>
-                            <li>已购买<br><span class="num">702人</span></li>
+                            <li>价值<br><del class="num"><span>¥</span><%= @product.original_price %></del></li>
+                            <li>折扣<br><span class="num"><%= discount %>折</span></li>
+                            <li>已购买<br><span class="num"><%= @product.sale_count %>人</span></li>
                         </ul>
                     </div>
                 </div>

@@ -14,14 +14,14 @@
                                                :width => "312", 
                                                :height => "189",
                                                :title => "点击查看详情",
-                                               :alt => product.cover_title ),
+                                               :alt => product.cover_name ),
                                     { :controller => "products",
                                       :action => "show",
                                       :id => product.id },
                                     { :target => "_blank" } %>
                     </div>
                     <h3>
-                        <%= link_to "【" + product.district_name + "】" + product.cover_title,
+                        <%= link_to "【" + product.district_name + "】" + product.cover_name,
                                     { :controller => "products",
                                       :action => "show",
                                       :id => product.id },
