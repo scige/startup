@@ -1,0 +1,80 @@
+<div id="bdw" class="bdw">
+    <div id="bd" class="cf">
+        <div id="content" class="coupons-box"><div id="content-admin">
+            <div class="dashboard" id="dashboard">
+                <ul>
+                    <li class="current"><%= link_to "商品管理", "/orders/" %><span></span></li>
+                    <li><a href="http://www.meituan.com/collections/">我的收藏</a><span></span></li>
+                    <li><a href="http://www.meituan.com/rates/">我的评价</a><span></span></li>
+                    <li><a href="http://www.meituan.com/account/points">积分/邀请</a><span></span></li>
+                    <li><a href="http://www.meituan.com/account/credit">美团余额</a><span></span></li>
+                    <li><a href="http://www.meituan.com/account/settings">账户设置</a><span></span></li>
+                </ul>
+            </div>
+            <div class="mainbox mine">
+                <h2>我的订单</h2>
+                <ul class="filter">
+                    <li class="label">分类: </li>
+                    <li class="current"><a href="http://www.meituan.com/orders/list/all" >全部</a></li>
+                    <li><a href="http://www.meituan.com/orders/list/unused" >未使用</a></li>
+                    <li><a href="http://www.meituan.com/orders/list/expired" >已过期</a></li>
+                    <li><a href="http://www.meituan.com/orders/list/refund" >已退款</a></li>
+                    <li><a href="http://www.meituan.com/orders/list/feedback" >待评价</a></li>
+                    <li><a href="http://www.meituan.com/orders/lottery" >美梦成真</a></li>
+                    <li class="more"><a href="http://www.meituan.com/orders/?_nsfiltermore=1">更多</a></li>
+                </ul>
+                <ul class="filter-more-list" style="display:none">
+                    <li><a href="http://www.meituan.com/orders/list/unpaid" >未付款</a></li>
+                    <li><a href="http://www.meituan.com/orders/list/expiring" >即将到期</a></li>
+                    <li><a href="http://www.meituan.com/orders/list/used" >已使用</a></li>
+                </ul>
+
+                <table id="order-list" class="coupons-table" cellpadding="0" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <th width="auto">编号</th>
+                            <th width="60">商品名称</th>
+                            <th width="60">商家名称</th>
+                            <th width="60">类别</th>
+                            <th width="60">区域</th>
+                            <th width="60">销售价格</th>
+                            <th width="60">市场价格</th>
+                            <th width="60">销售数量</th>
+                            <th width="60">结束时间</th>
+                            <th width="112">操作</th>
+                        </tr>
+                        <% @products.each do |product| %>
+                        <% if product.id % 2 == 1 %>
+                            <tr class="alt">
+                        <% else %>
+                            <tr>
+                        <% end %>
+                                <td><%= product.id %></td>
+                                <td><%= product.cover_name %></td>
+                                <td><%= product.shop_name %></td>
+                                <td><%= product.category %></td>
+                                <td><%= product.district %></td>
+                                <td><%= product.sale_price %></td>
+                                <td><%= product.original_price %></td>
+                                <td><%= product.sale_count %></td>
+                                <td><%= product.overtime_at %></td>
+                                <td>
+                                    <%= link_to "编辑", { :controller => "admin/products",
+                                                      :action => "edit",
+                                                      :id => product.id } %>
+                                     | 
+                                    <%= link_to "删除", { :controller => "admin/products",
+                                                      :action => "destroy",
+                                                      :id => product.id } %>
+                                </td>
+                            </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+
+            </div>
+        </div></div>
+        <div id="sidebar">
+        </div>
+    </div> <!-- bd end -->
+</div> <!-- bdw end -->

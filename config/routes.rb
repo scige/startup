@@ -55,4 +55,10 @@ Startup::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   match ':controller(/:action(/:id))(.:format)'
+
+  # route for namespace :admin
+  namespace :admin do
+    root :to => 'products#index'
+  end
+  match ':controller(/:action(/:id))(.:format)', controller: /admin\/[^\/]+/
 end
