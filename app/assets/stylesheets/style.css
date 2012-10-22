@@ -1187,6 +1187,9 @@ to {
 	_display:inline;
 	padding:0
 }
+#content-admin {
+	width:906px;
+}
 #content .mainbox {
 	background:#FFF;
 	border:2px solid #89b4d6;
