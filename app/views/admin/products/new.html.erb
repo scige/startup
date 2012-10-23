@@ -1,0 +1,53 @@
+<div id="bdw" class="bdw">
+    <div id="bd" class="cf">
+        <div id="content" class="coupons-box"><div id="content-admin">
+            <div class="dashboard" id="dashboard">
+                <ul>
+                    <li class="current">
+                        <%= link_to "商品管理", { :controller => "admin/products",
+                                                  :action => "index" } %><span></span>
+                    </li>
+                    <li>
+                        <%= link_to "商家管理", { :controller => "admin/shops",
+                                                  :action => "index" } %><span></span>
+                    </li>
+                    <li>
+                        <%= link_to "用户管理", { :controller => "admin/users",
+                                                  :action => "index" } %><span></span>
+                    </li>
+                    <li>
+                        <%= link_to "订单管理", { :controller => "admin/orders",
+                                                  :action => "index" } %><span></span>
+                    </li>
+                    <li>
+                        <%= link_to "分类管理", { :controller => "admin/categorys",
+                                                  :action => "index" } %><span></span>
+                    </li>
+                    <li>
+                        <%= link_to "区域管理", { :controller => "admin/districts",
+                                                  :action => "index" } %><span></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="mainbox mine">
+                <h2>新增商品</h2>               <!--小功能标题-->
+                <ul class="filter">             <!--小功能按钮-->
+                    <li>                        <!--未点亮小功能-->
+                        <%= link_to "全部商品", { :controller => "admin/products",
+                                                  :action => "index" } %>
+                    </li>
+                    <li class="current">        <!--点亮小功能-->
+                        <%= link_to "新增商品", { :controller => "admin/products",
+                                                  :action => "new" } %>
+                    </li>
+                </ul>
+
+                <!--添加view内容-->
+                <%= render :partial => "form", :locals => { :form_type => "new"} %>
+
+            </div>
+        </div></div>
+        <div id="sidebar">
+        </div>
+    </div> <!-- bd end -->
+</div> <!-- bdw end -->

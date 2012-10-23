@@ -3,30 +3,43 @@
         <div id="content" class="coupons-box"><div id="content-admin">
             <div class="dashboard" id="dashboard">
                 <ul>
-                    <li class="current"><%= link_to "商品管理", "/orders/" %><span></span></li>
-                    <li><a href="http://www.meituan.com/collections/">我的收藏</a><span></span></li>
-                    <li><a href="http://www.meituan.com/rates/">我的评价</a><span></span></li>
-                    <li><a href="http://www.meituan.com/account/points">积分/邀请</a><span></span></li>
-                    <li><a href="http://www.meituan.com/account/credit">美团余额</a><span></span></li>
-                    <li><a href="http://www.meituan.com/account/settings">账户设置</a><span></span></li>
+                    <li class="current">
+                        <%= link_to "商品管理", { :controller => "admin/products",
+                                                  :action => "index" } %><span></span>
+                    </li>
+                    <li>
+                        <%= link_to "商家管理", { :controller => "admin/shops",
+                                                  :action => "index" } %><span></span>
+                    </li>
+                    <li>
+                        <%= link_to "用户管理", { :controller => "admin/users",
+                                                  :action => "index" } %><span></span>
+                    </li>
+                    <li>
+                        <%= link_to "订单管理", { :controller => "admin/orders",
+                                                  :action => "index" } %><span></span>
+                    </li>
+                    <li>
+                        <%= link_to "分类管理", { :controller => "admin/categorys",
+                                                  :action => "index" } %><span></span>
+                    </li>
+                    <li>
+                        <%= link_to "区域管理", { :controller => "admin/districts",
+                                                  :action => "index" } %><span></span>
+                    </li>
                 </ul>
             </div>
             <div class="mainbox mine">
-                <h2>我的订单</h2>
+                <h2>全部商品</h2>
                 <ul class="filter">
-                    <li class="label">分类: </li>
-                    <li class="current"><a href="http://www.meituan.com/orders/list/all" >全部</a></li>
-                    <li><a href="http://www.meituan.com/orders/list/unused" >未使用</a></li>
-                    <li><a href="http://www.meituan.com/orders/list/expired" >已过期</a></li>
-                    <li><a href="http://www.meituan.com/orders/list/refund" >已退款</a></li>
-                    <li><a href="http://www.meituan.com/orders/list/feedback" >待评价</a></li>
-                    <li><a href="http://www.meituan.com/orders/lottery" >美梦成真</a></li>
-                    <li class="more"><a href="http://www.meituan.com/orders/?_nsfiltermore=1">更多</a></li>
-                </ul>
-                <ul class="filter-more-list" style="display:none">
-                    <li><a href="http://www.meituan.com/orders/list/unpaid" >未付款</a></li>
-                    <li><a href="http://www.meituan.com/orders/list/expiring" >即将到期</a></li>
-                    <li><a href="http://www.meituan.com/orders/list/used" >已使用</a></li>
+                    <li class="current">
+                        <%= link_to "全部商品", { :controller => "admin/products",
+                                                  :action => "index" } %>
+                    </li>
+                    <li>
+                        <%= link_to "新增商品", { :controller => "admin/products",
+                                                  :action => "new" } %>
+                    </li>
                 </ul>
 
                 <table id="order-list" class="coupons-table" cellpadding="0" cellspacing="0" border="0">
