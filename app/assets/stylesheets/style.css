@@ -7897,9 +7897,12 @@ body.yui-skin-sam .yui-panel .bd {
 /* the following add by scige */
 
 #admin-products-table{
-    margin: 10px 10px 30px;
+    margin: 10px 10px 10px 10px;
 }
 #admin-products-table td{
     text-align: right;
+}
+#admin-products-table-submit td{
+	text-align: left;
 }
 

@@ -46,6 +46,12 @@
         <tr>
             <td>详细内容：</td><td><%= f.text_area :content, :cols=>80, :rows=>20 %></td>
         </tr>
+        <tr>
+            <td></td>
+            <td id="admin-products-table-submit">
+                <%= f.submit "提交" %>
+                <%= f.submit "预览", :name => "preview" %>
+            </td>
+        </tr>
     </table>
-    <%= f.submit "提交" %>
 <% end %>
