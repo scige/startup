@@ -4,18 +4,46 @@
 <% end %>
 
 <%= form_for @product, :url => form_action do |f| %>
-    商品名称：<%= f.text_field :product_name %><br/>
-    商家名称：<%= f.text_field :shop_name %><br/>
-    类别：<%= f.text_field :category %><br/>
-    区域：<%= f.text_field :district %><br/>
-    区域名称：<%= f.text_field :district_name %><br/>
-    商品图片：<%= f.text_field :image_path %><br/>
-    封面图片：<%= f.text_field :cover_path %><br/>
-    封面名称：<%= f.text_field :cover_name %><br/>
-    销售价格：<%= f.text_field :sale_price %><br/>
-    市场价格：<%= f.text_field :original_price %><br/>
-    销售数量：<%= f.text_field :sale_count %><br/>
-    失效时间：<%= f.text_field :overtime_at %><br/>
-    详细内容：<%= f.text_field :content %><br/>
+    <table id="admin-products-table">
+        <tr>
+            <td>商品名称：</td><td><%= f.text_field :product_name %></td>
+        </tr>
+        <tr>
+            <td>商家名称：</td><td><%= f.text_field :shop_name %></td>
+        </tr>
+        <tr>
+            <td>类别：</td><td><%= f.text_field :category %></td>
+        </tr>
+        <tr>
+            <td>区域：</td><td><%= f.text_field :district %></td>
+        </tr>
+        <tr>
+            <td>区域名称：</td><td><%= f.text_field :district_name %></td>
+        </tr>
+        <tr>
+            <td>商品图片：</td><td><%= f.text_field :image_path %></td>
+        </tr>
+        <tr>
+            <td>封面图片：</td><td><%= f.text_field :cover_path %></td>
+        </tr>
+        <tr>
+            <td>封面名称：</td><td><%= f.text_field :cover_name %></td>
+        </tr>
+        <tr>
+            <td>销售价格：</td><td><%= f.text_field :sale_price %></td>
+        </tr>
+        <tr>
+            <td>市场价格：</td><td><%= f.text_field :original_price %></td>
+        </tr>
+        <tr>
+            <td>销售数量：</td><td><%= f.text_field :sale_count %></td>
+        </tr>
+        <tr>
+            <td>结束时间：</td><td><%= f.text_field :overtime_at %></td>
+        </tr>
+        <tr>
+            <td>详细内容：</td><td><%= f.text_field :content %></td>
+        </tr>
+    </table>
     <%= f.submit "提交" %>
 <% end %>

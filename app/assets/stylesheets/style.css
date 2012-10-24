@@ -1187,9 +1187,6 @@ to {
 	_display:inline;
 	padding:0
 }
-#content-admin {
-	width:960px;
-}
 #content .mainbox {
 	background:#FFF;
 	border:2px solid #89b4d6;
@@ -1284,6 +1281,12 @@ to {
 }
 #content .result-operation {
 	margin-top:20px
+}
+#content-admin {
+	width:960px;
+}
+#content-admin th, #content-admin td {
+    text-align: center;
 }
 .mine {
 	position:relative;
@@ -7889,5 +7892,14 @@ body.yui-skin-sam .yui-panel .bd {
 	padding:10px;
 	background:#fffbcc;
 	border:1px solid #ffec19
+}
+
+/* the following add by scige */
+
+#admin-products-table{
+    margin: 10px 10px 30px;
+}
+#admin-products-table td{
+    text-align: right;
 }
 
