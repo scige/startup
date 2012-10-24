@@ -71,6 +71,11 @@
                             <td><%= product.sale_count %></td>
                             <td><%= product.overtime_at %></td>
                             <td>
+                                <!--使用前台的products/show显示-->
+                                <%= link_to "显示", { :controller => "/products",
+                                                  :action => "show",
+                                                  :id => product.id } %>
+                                 | 
                                 <%= link_to "编辑", { :controller => "admin/products",
                                                   :action => "edit",
                                                   :id => product.id } %>
@@ -78,7 +83,7 @@
                                 <%= link_to "删除", { :controller => "admin/products",
                                                   :action => "destroy",
                                                   :id => product.id }, 
-                                            confirm: "删除后不可回复，确定删除？" %>
+                                            confirm: "删除后不可恢复，确定删除？" %>
                             </td>
                         </tr>
                     <% end %>
