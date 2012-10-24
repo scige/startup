@@ -28,4 +28,10 @@ class Admin::ProductsController < ApplicationController
             render :action => "edit"
         end
     end
+
+    def destroy
+        @product = Product.find(params[:id])
+        @product.destroy
+        redirect_to :action => "index"
+    end
 end
