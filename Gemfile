@@ -43,8 +43,10 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+gem 'haml'
 gem 'redcarpet'
 
 gem "carrierwave"
 gem "mini_magick"
 gem 'ckeditor'
+
