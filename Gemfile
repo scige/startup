@@ -45,6 +45,3 @@ gem 'jquery-rails'
 
 gem 'redcarpet'
 
-gem "carrierwave"
-gem "mini_magick"
-gem 'ckeditor'

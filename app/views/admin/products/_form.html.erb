@@ -44,11 +44,7 @@
     </table>
     <table id="admin-products-table">
         <tr>
-            <td>详细内容：</td>
-            <td>
-                <%= javascript_include_tag "ckeditor/init" %>
-                <%= f.cktext_area :content %>
-            </td>
+            <td>详细内容：</td><td><%= f.text_area :content, :cols=>80, :rows=>20 %></td>
         </tr>
         <tr>
             <td></td>
@@ -59,4 +55,3 @@
         </tr>
     </table>
 <% end %>
-
