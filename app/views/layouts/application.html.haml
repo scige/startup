@@ -1,10 +1,10 @@
 !!!
 %html
-%head
-  %title Startup
-  = stylesheet_link_tag "application", :media=>"all"
-  = javascript_include_tag "application"
-  = csrf_meta_tags
+  %head
+    %title Startup
+    = stylesheet_link_tag "application", :media=>"all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
 
   %body#deal-default
     #doc
@@ -52,6 +52,7 @@
                       %li= link_to "账户设置", "/account/settings", {:class=>"last"}
                 %li.login= link_to "登录", "/login"
                 %li.login.last= link_to "注册", "/signup"
+
       = yield
 
       #ftw
