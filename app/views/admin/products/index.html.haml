@@ -1,0 +1,85 @@
+#bdw.bdw
+  #bd.cf
+    #content.coupons-box
+      #content-admin
+        .dashboard
+          %ul
+            %li.current
+              = link_to "商品管理", { :controller => "admin/products", :action => "index" }
+              %span
+            %li
+              = link_to "商家管理", { :controller => "admin/shops", :action => "index" }
+              %span
+            %li
+              = link_to "用户管理", { :controller => "admin/users", :action => "index" }
+              %span
+            %li
+              = link_to "订单管理", { :controller => "admin/orders", :action => "index" }
+              %span
+            %li
+              = link_to "分类管理", { :controller => "admin/categorys", :action => "index" }
+              %span
+            %li
+              = link_to "区域管理", { :controller => "admin/districts", :action => "index" }
+              %span
+        .mainbox.mine
+          %h2 全部商品
+          %ul.filter
+            %li.current
+              = link_to "全部商品", { :controller => "admin/products", :action => "index" }
+            %li
+              = link_to "新增商品", { :controller => "admin/products", :action => "new" }
+
+          %table#order-list.coupons-table{:cellpadding=>"0", :cellspacing=>"0", :border=>"0"}
+            %tr
+              %th{:width=>"auto"} 编号
+              %th{:width=>"60"} 封面名称
+              %th{:width=>"60"} 商家名称
+              %th{:width=>"60"} 类别
+              %th{:width=>"60"} 区域
+              %th{:width=>"60"} 销售价格
+              %th{:width=>"60"} 市场价格
+              %th{:width=>"60"} 销售数量
+              %th{:width=>"60"} 结束时间
+              %th{:width=>"112"} 操作
+
+            - @products.each do |product|
+              - if product.id % 2 == 1
+                %tr.alt
+                  %td= product.id
+                  %td= product.cover_name
+                  %td= product.shop_name
+                  %td= product.category
+                  %td= product.district
+                  %td= product.sale_price
+                  %td= product.original_price
+                  %td= product.sale_count
+                  %td= product.overtime_at
+                  %td
+                    - #使用前台的products/show显示
+                    = link_to "显示", { :controller => "/products", :action => "show", :id => product.id }
+                    | 
+                    = link_to "编辑", { :controller => "admin/products", :action => "edit", :id => product.id }
+                    | 
+                    = link_to "删除", { :controller => "admin/products", :action => "destroy", :id => product.id }, confirm: "删除后不可恢复，确定删除？"
+              - else
+                -# 代码重复，需要重构
+                %tr
+                  %td= product.id
+                  %td= product.cover_name
+                  %td= product.shop_name
+                  %td= product.category
+                  %td= product.district
+                  %td= product.sale_price
+                  %td= product.original_price
+                  %td= product.sale_count
+                  %td= product.overtime_at
+                  %td
+                    - #使用前台的products/show显示
+                    = link_to "显示", { :controller => "/products", :action => "show", :id => product.id }
+                    | 
+                    = link_to "编辑", { :controller => "admin/products", :action => "edit", :id => product.id }
+                    | 
+                    = link_to "删除", { :controller => "admin/products", :action => "destroy", :id => product.id }, confirm: "删除后不可恢复，确定删除？"
+
+    #sidebar
