@@ -7896,6 +7896,15 @@ body.yui-skin-sam .yui-panel .bd {
 
 /* the following add by scige */
 
+#admin-product-info{
+    float: left;
+}
+#admin-product-image{
+    float: right;
+}
+#admin-product-detail{
+    clear: both;
+}
 #admin-products-table{
     margin: 10px 10px 10px 10px;
 }

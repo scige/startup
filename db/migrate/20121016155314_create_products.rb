@@ -7,7 +7,6 @@ class CreateProducts < ActiveRecord::Migration
       t.string   :shop_name
       t.string   :product_name
       t.string   :image_path
-      t.string   :cover_path
       t.string   :cover_name
       t.float    :sale_price
       t.float    :original_price
