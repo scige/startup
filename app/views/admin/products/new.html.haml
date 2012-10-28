@@ -2,26 +2,7 @@
   #bd.cf
     #content.coupons-box
       #content-admin
-        .dashboard
-          %ul
-            %li.current
-              = link_to "商品管理", { :controller => "admin/products", :action => "index" }
-              %span
-            %li
-              = link_to "商家管理", { :controller => "admin/shops", :action => "index" }
-              %span
-            %li
-              = link_to "用户管理", { :controller => "admin/users", :action => "index" }
-              %span
-            %li
-              = link_to "订单管理", { :controller => "admin/orders", :action => "index" }
-              %span
-            %li
-              = link_to "分类管理", { :controller => "admin/categorys", :action => "index" }
-              %span
-            %li
-              = link_to "区域管理", { :controller => "admin/districts", :action => "index" }
-              %span
+        = render :partial => "dashboard", :locals => {:dashboard_select => "products"}
         .mainbox.mine
           %h2 新增商品
           %uj.filter
