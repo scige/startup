@@ -30,17 +30,17 @@
                 %tr
                   %td
                     %del
-                      %span= "¥#{@product.original_price}"
+                      %span= "¥#{integer_of_value @product.original_price}"
                   %td= "#{discount}折"
-                  %td= "¥#{save_price}"
+                  %td= "¥#{integer_of_value save_price}"
             .deal-status
               %p.deal-status-count
                 %strong= @product.sale_count
                 人已购买
               %p.deal-status-time-left.deal-on
                 剩余
-                %span
-                  %strong 3
+                %span>
+                  %strong> 3
                   天以上
             %p 拉长测试
             %p 拉长测试
@@ -57,7 +57,22 @@
           .main
             %h2 本单详情
             .blk.detail
-              = @product.content
+              :css
+                .standard-table { background-color:#c0dcf3; width:100%; border:0; border-collapse:separate; border-spacing:1px; table-layout:fixed; margin-top:5px; }
+                .standard-table .center { text-align:center; }
+                .standard-table .right { text-align:right; }
+                .standard-table th { padding:3px 5px; background-color:#d2e8f9; color:#333; }
+                .standard-table td { padding:3px 5px; word-break:break-all; word-wrap:break-word; }
+                .standard-table tr.comment { background-color:#edf6fd; color:#666; font-weight:bold; }
+                .standard-table tr.normal { background-color:#fff; color:#666; }
+              :css
+                .standard-center { text-align:center; }
+                .standard-bar { padding:3px 6px; color:#fff; border-radius:3px; font-weight:bold; }
+                .standard-list-title { margin:5px 0; }
+                .standard-image { display:block; margin:10px auto; }
+                .standard-image-wrap { display:block; width:100%; }
+              / 应该去掉markdown
+              /= @product.content
               = markdown @product.content
           .side
           .deal-buy-bottom
@@ -68,7 +83,7 @@
                 价值
                 %br
                 %del.num
-                  %span= "¥#{@product.original_price}"
+                  %span= "¥#{integer_of_value @product.original_price}"
               %li
                 折扣
                 %br
