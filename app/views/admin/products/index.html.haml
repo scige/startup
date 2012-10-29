@@ -24,8 +24,10 @@
               %th{:width=>"60"} 结束时间
               %th{:width=>"112"} 操作
 
+            - count = 0
             - @products.each do |product|
-              - if product.id % 2 == 1
+              - count += 1
+              - if count % 2 == 1
                 %tr.alt
                   %td= product.id
                   %td= product.cover_name

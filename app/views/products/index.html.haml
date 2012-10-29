@@ -2,8 +2,10 @@
   #bd.cf
     #filter
     #content.normal-deal-list.cf
+      - count = 0
       - @products.each do |product|
-        - if product.id % 2 == 1
+        - count += 1
+        - if count % 2 == 1
           .item
             .cover
               = link_to image_tag( product.image_path_url(:thumb), :width => "312", :height => "189", :title => "点击查看详情", :alt => product.cover_name ), product_path(product), { :target => "_blank" }
