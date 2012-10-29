@@ -6,13 +6,10 @@
         - if product.id % 2 == 1
           .item
             .cover
-              = link_to image_tag( product.image_path_url(:thumb), :width => "312", :height => "189", :title => "点击查看详情", :alt => product.cover_name ), { :controller => "products", :action => "show", :id => product.id }, { :target => "_blank" }
-            %h3= link_to "【#{product.district_name}】#{product.cover_name}", { :controller => "products", :action => "show", :id => product.id }, { :target => "_blank" }
+              = link_to image_tag( product.image_path_url(:thumb), :width => "312", :height => "189", :title => "点击查看详情", :alt => product.cover_name ), product_path(product), { :target => "_blank" }
+            %h3= link_to "【#{product.district_name}】#{product.cover_name}", product_path(product), { :target => "_blank" }
             %p.detail
-              = link_to "去看看",
-                        { :controller => "products",
-                          :action => "show",
-                          :id => product.id },
+              = link_to "去看看", product_path(product),
                         { :target => "_blank",
                           :hidefocus=>"true",
                           :class=>"buy",
@@ -29,13 +26,10 @@
           .item.odd
             -# 代码重复
             .cover
-              = link_to image_tag( product.image_path_url(:thumb), :width => "312", :height => "189", :title => "点击查看详情", :alt => product.cover_name ), { :controller => "products", :action => "show", :id => product.id }, { :target => "_blank" }
-            %h3= link_to "【#{product.district_name}】#{product.cover_name}", { :controller => "products", :action => "show", :id => product.id }, { :target => "_blank" }
+              = link_to image_tag( product.image_path_url(:thumb), :width => "312", :height => "189", :title => "点击查看详情", :alt => product.cover_name ), product_path(product), { :target => "_blank" }
+            %h3= link_to "【#{product.district_name}】#{product.cover_name}", product_path(product), { :target => "_blank" }
             %p.detail
-              = link_to "去看看",
-                        { :controller => "products",
-                          :action => "show",
-                          :id => product.id },
+              = link_to "去看看", product_path(product),
                         { :target => "_blank",
                           :hidefocus=>"true",
                           :class=>"buy",

@@ -44,9 +44,11 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem 'haml'
+
 gem 'redcarpet'
 
-gem "carrierwave"
 gem "mini_magick"
+gem "carrierwave"
+
 gem 'ckeditor'
 

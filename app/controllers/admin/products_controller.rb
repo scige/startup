@@ -17,7 +17,7 @@ class Admin::ProductsController < ApplicationController
         else
             @product = Product.new(params[:product])
             if @product.save
-                redirect_to :action => "index"
+                redirect_to admin_products_url
             else
                 render :action => "new"
             end
@@ -30,7 +30,7 @@ class Admin::ProductsController < ApplicationController
         else
             @product = Product.find(params[:id])
             if @product.update_attributes(params[:product])
-                redirect_to :action => "index"
+                redirect_to admin_products_url
             else
                 render :action => "edit"
             end
@@ -40,7 +40,7 @@ class Admin::ProductsController < ApplicationController
     def destroy
         @product = Product.find(params[:id])
         @product.destroy
-        redirect_to :action => "index"
+        redirect_to admin_products_url
     end
 
     private #TODO: 似乎不生效?

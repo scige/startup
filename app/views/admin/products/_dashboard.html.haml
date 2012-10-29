@@ -2,55 +2,55 @@
   %ul
     - if dashboard_select == "products"
       %li.current
-        = link_to "商品管理", { :controller => "admin/products", :action => "index" }
+        = link_to "商品管理", admin_products_path
         %span
     - else
       %li
-        = link_to "商品管理", { :controller => "admin/products", :action => "index" }
+        = link_to "商品管理", admin_products_path
         %span
 
     - if dashboard_select == "shops"
       %li.current
-        = link_to "商家管理", { :controller => "admin/shops", :action => "index" }
+        = link_to "商家管理", admin_products_path
         %span
     - else
       %li
-        = link_to "商家管理", { :controller => "admin/shops", :action => "index" }
+        = link_to "商家管理", admin_products_path
         %span
 
     - if dashboard_select == "users"
       %li.current
-        = link_to "用户管理", { :controller => "admin/users", :action => "index" }
+        = link_to "用户管理", admin_products_path
         %span
     - else
       %li
-        = link_to "用户管理", { :controller => "admin/users", :action => "index" }
+        = link_to "用户管理", admin_products_path
         %span
 
     - if dashboard_select == "orders"
       %li.current
-        = link_to "订单管理", { :controller => "admin/orders", :action => "index" }
+        = link_to "订单管理", admin_products_path
         %span
     - else
       %li
-        = link_to "订单管理", { :controller => "admin/orders", :action => "index" }
+        = link_to "订单管理", admin_products_path
         %span
 
     - if dashboard_select == "categorys"
       %li.current
-        = link_to "分类管理", { :controller => "admin/categorys", :action => "index" }
+        = link_to "分类管理", admin_products_path
         %span
     - else
       %li
-        = link_to "分类管理", { :controller => "admin/categorys", :action => "index" }
+        = link_to "分类管理", admin_products_path
         %span
 
     - if dashboard_select == "districts"
       %li.current
-        = link_to "区域管理", { :controller => "admin/districts", :action => "index" }
+        = link_to "区域管理", admin_products_path
         %span
     - else
       %li
-        = link_to "区域管理", { :controller => "admin/districts", :action => "index" }
+        = link_to "区域管理", admin_products_path
         %span
 

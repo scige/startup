@@ -7,9 +7,9 @@
           %h2 全部商品
           %ul.filter
             %li.current
-              = link_to "全部商品", { :controller => "admin/products", :action => "index" }
+              = link_to "全部商品", admin_products_path
             %li
-              = link_to "新增商品", { :controller => "admin/products", :action => "new" }
+              = link_to "新增商品", new_admin_product_path
 
           %table#order-list.coupons-table{:cellpadding=>"0", :cellspacing=>"0", :border=>"0"}
             %tr
@@ -38,11 +38,11 @@
                   %td= product.overtime_at
                   %td
                     - #使用前台的products/show显示
-                    = link_to "显示", { :controller => "/products", :action => "show", :id => product.id }
+                    = link_to "显示", product_path(product), { :target => "_blank" }
                     | 
-                    = link_to "编辑", { :controller => "admin/products", :action => "edit", :id => product.id }
+                    = link_to "编辑", edit_admin_product_path(product)
                     | 
-                    = link_to "删除", { :controller => "admin/products", :action => "destroy", :id => product.id }, confirm: "删除后不可恢复，确定删除？"
+                    = link_to "删除", admin_product_path(product), :method => :delete, :confirm => "删除后不可恢复，确定删除？"
               - else
                 -# 代码重复，需要重构
                 %tr
@@ -57,10 +57,10 @@
                   %td= product.overtime_at
                   %td
                     - #使用前台的products/show显示
-                    = link_to "显示", { :controller => "/products", :action => "show", :id => product.id }
+                    = link_to "显示", product_path(product), { :target => "_blank" }
                     | 
-                    = link_to "编辑", { :controller => "admin/products", :action => "edit", :id => product.id }
+                    = link_to "编辑", edit_admin_product_path(product)
                     | 
-                    = link_to "删除", { :controller => "admin/products", :action => "destroy", :id => product.id }, confirm: "删除后不可恢复，确定删除？"
+                    = link_to "删除", admin_product_path(product), :method => :delete, :confirm => "删除后不可恢复，确定删除？"
 
     #sidebar
