@@ -46,6 +46,6 @@ class Admin::ProductsController < ApplicationController
     private #TODO: 似乎不生效?
     def preview
         @product = Product.new(params[:product])
-        render :action => "preview"
+        render "products/show"
     end
 end
