@@ -24,45 +24,23 @@
               %th{:width=>"60"} 结束时间
               %th{:width=>"112"} 操作
 
-            - count = 0
             - @products.each do |product|
-              - count += 1
-              - if count % 2 == 1
-                %tr.alt
-                  %td= product.id
-                  %td= product.cover_name
-                  %td= product.shop_name
-                  %td= product.category
-                  %td= product.district
-                  %td= product.sale_price
-                  %td= product.original_price
-                  %td= product.sale_count
-                  %td= product.overtime_at
-                  %td
-                    - #使用前台的products/show显示
-                    = link_to "显示", product_path(product), { :target => "_blank" }
-                    | 
-                    = link_to "编辑", edit_admin_product_path(product)
-                    | 
-                    = link_to "删除", admin_product_path(product), :method => :delete, :confirm => "删除后不可恢复，确定删除？"
-              - else
-                -# 代码重复，需要重构
-                %tr
-                  %td= product.id
-                  %td= product.cover_name
-                  %td= product.shop_name
-                  %td= product.category
-                  %td= product.district
-                  %td= product.sale_price
-                  %td= product.original_price
-                  %td= product.sale_count
-                  %td= product.overtime_at
-                  %td
-                    - #使用前台的products/show显示
-                    = link_to "显示", product_path(product), { :target => "_blank" }
-                    | 
-                    = link_to "编辑", edit_admin_product_path(product)
-                    | 
-                    = link_to "删除", admin_product_path(product), :method => :delete, :confirm => "删除后不可恢复，确定删除？"
+              %tr{:class => cycle("alt", "")}
+                %td= product.id
+                %td= product.cover_name
+                %td= product.shop_name
+                %td= product.category
+                %td= product.district
+                %td= product.sale_price
+                %td= product.original_price
+                %td= product.sale_count
+                %td= product.overtime_at
+                %td
+                  - #使用前台的products/show显示
+                  = link_to "显示", product_path(product), { :target => "_blank" }
+                  | 
+                  = link_to "编辑", edit_admin_product_path(product)
+                  | 
+                  = link_to "删除", admin_product_path(product), :method => :delete, :confirm => "删除后不可恢复，确定删除？"
 
     #sidebar
