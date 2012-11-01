@@ -1,5 +1,6 @@
 class Product < ActiveRecord::Base
-  attr_accessible :category
+  belongs_to :category
+
   attr_accessible :district
   attr_accessible :district_name
   attr_accessible :shop_name
@@ -11,6 +12,7 @@ class Product < ActiveRecord::Base
   attr_accessible :sale_count
   attr_accessible :overtime_at
   attr_accessible :content
+  attr_accessible :category
 
   mount_uploader :image_path, ImageUploader
 end

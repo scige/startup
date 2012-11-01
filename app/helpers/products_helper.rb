@@ -4,10 +4,16 @@ module ProductsHelper
     end
 
     def discount
+        if !@product.sale_price || !@product.original_price
+            return ""
+        end
         "%.1f" % (@product.sale_price / @product.original_price * 10)
     end
 
     def save_price
+        if !@product.original_price || !@product.sale_price
+            return ""
+        end
         @product.original_price - @product.sale_price
     end
 end

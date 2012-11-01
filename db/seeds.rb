@@ -8,8 +8,33 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Category.create(
+      :en_name => "meishi",
+      :cn_name => "美食",
+      :parent_id => 0
+)
+
+Category.create(
+      :en_name => "yule",
+      :cn_name => "娱乐",
+      :parent_id => 0
+)
+
+Category.create(
+      :en_name => "dianying",
+      :cn_name => "电影",
+      :parent_id => 0
+)
+
+Category.create(
+      :en_name => "jiudian",
+      :cn_name => "酒店",
+      :parent_id => 0
+)
+
+c1 = Category.find_by_cn_name("美食");
+
 Product.create(
-      :category => "美食",
       :district => "朝阳区",
       :district_name => "朝阳区",
       :shop_name => "金源福城肥牛",
@@ -20,8 +45,11 @@ Product.create(
       :original_price => 252.4,
       :sale_count => 308,
       :overtime_at => "2012-10-18",
-      :content => "本单详情"
+      :content => "本单详情",
+      :category => c1
 )
+
+c2 = Category.find_by_cn_name("酒店");
 
 Product.create(
       :category => "酒店",
@@ -35,5 +63,7 @@ Product.create(
       :original_price => 328,
       :sale_count => 1641,
       :overtime_at => "2012-10-28",
-      :content => "本单详情"
+      :content => "本单详情",
+      :category => c2,
 )
+

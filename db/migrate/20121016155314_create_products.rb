@@ -1,7 +1,6 @@
 class CreateProducts < ActiveRecord::Migration
   def change
     create_table :products do |t|
-      t.string   :category
       t.string   :district
       t.string   :district_name
       t.string   :shop_name
@@ -13,6 +12,7 @@ class CreateProducts < ActiveRecord::Migration
       t.integer  :sale_count
       t.datetime :overtime_at
       t.text     :content
+      t.references :category
 
       t.timestamps
     end

@@ -1,9 +1,9 @@
 module Admin::ProductsHelper
     def form_action(form_type)
         if form_type == "edit"
-            return admin_product_path(@product)
+            return {:url => admin_product_path(@product), :method => :put}
         else
-            return admin_products_path
+            return {:url => admin_products_path, :method => :post}
         end
     end
 

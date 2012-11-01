@@ -1,4 +1,4 @@
-= form_for @product, :url => form_action(form_type), :method => :put do |f|
+= form_for @product, form_action(form_type) do |f|
   #admin-product-info
     %table#admin-products-table
       %tr
@@ -9,7 +9,7 @@
         %td= f.text_field :shop_name, :size=>40
       %tr
         %td 类别：
-        %td= f.text_field :category, :size=>40
+        %td= f.text_field :category, :value => @product.category.cn_name, :size=>40
       %tr
         %td 区域：
         %td= f.text_field :district, :size=>40
