@@ -1,26 +1,26 @@
 .dashboard
   %ul
-    %li{:class => dashboard_select_products(dashboard_select)}
+    %li{:class => (controller_name == "products" ? "current" : nil)}
       = link_to "商品管理", admin_products_path
       %span
 
-    %li{:class => dashboard_select_shops(dashboard_select)}
+    %li{:class => (controller_name == "shops" ? "current" : nil)}
       = link_to "商家管理", admin_products_path
       %span
 
-    %li{:class => dashboard_select_users(dashboard_select)}
+    %li{:class => (controller_name == "users" ? "current" : nil)}
       = link_to "用户管理", admin_products_path
       %span
 
-    %li{:class => dashboard_select_orders(dashboard_select)}
+    %li{:class => (controller_name == "orders" ? "current" : nil)}
       = link_to "订单管理", admin_products_path
       %span
 
-    %li{:class => dashboard_select_categorys(dashboard_select)}
+    %li{:class => (controller_name == "categories" ? "current" : nil)}
       = link_to "分类管理", admin_products_path
       %span
 
-    %li{:class => dashboard_select_districts(dashboard_select)}
+    %li{:class => (controller_name == "districts" ? "current" : nil)}
       = link_to "区域管理", admin_products_path
       %span
 
