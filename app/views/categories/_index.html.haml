@@ -1,0 +1,33 @@
+#filter
+  .filter-section.type
+    %span.label 分类：
+    %ul
+      %li.current= link_to "全部", "/"
+      %li 
+        %a{:href => "category/new"}
+          今日新单
+          %span> (30)
+      - @categories.each do |category|
+        %li 
+          / 怎样能用link_to?
+          /= link_to "", category_path(category)
+          %a{:href => category_path(category)}
+            = category.cn_name
+            %span>= "(#{category.products.size})"
+  .filter-section
+    %span.label 区域：
+    %ul
+      %li.current= link_to "全部", "/"
+      %li 
+        %a{:href => "category/all/chaoyangqu"}
+          朝阳区
+          %span> (30)
+      %li 
+        %a{:href => "category/all/haidianqu"}
+          海淀区
+          %span> (30)
+      %li 
+        %a{:href => "category/all/xichengqu"}
+          西城区
+          %span> (30)
+

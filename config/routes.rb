@@ -51,6 +51,7 @@ Startup::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root :to => 'home#index'
+  resources :categories
   resources :products
 
   namespace :admin do
