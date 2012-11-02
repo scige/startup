@@ -19,8 +19,19 @@ test:
   timeout: 5000
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: postgres://cjvnfaphksiqdc:CILAN07SvgAoGgYxPzEHh1jClp@ec2-54-243-226-226.compute-1.amazonaws.com:5432/d21c4vvbm3u39r
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: startup
   pool: 5
-  timeout: 5000
+  username: webuser
+  password: "ddppff"
+  host: localhost
+
+#production:
+#  adapter: postgresql
+#  encoding: unicode
+#  database: postgres://cjvnfaphksiqdc:CILAN07SvgAoGgYxPzEHh1jClp@ec2-54-243-226-226.compute-1.amazonaws.com:5432/d21c4vvbm3u39r
+#  pool: 5
+#  timeout: 5000
+
