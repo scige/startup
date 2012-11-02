@@ -2,13 +2,14 @@
   .filter-section.type
     %span.label 分类：
     %ul
-      %li.current= link_to "全部", "/"
+      %li{:class => (controller_name == "home" ? "current" : nil)}
+        = link_to "全部", "/"
       %li 
         %a{:href => "category/new"}
           今日新单
           %span> (30)
       - @categories.each do |category|
-        %li 
+        %li{:class => (params[:id].to_i == category.id ? "current" : nil)}
           / 怎样能用link_to?
           /= link_to "", category_path(category)
           %a{:href => category_path(category)}
