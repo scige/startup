@@ -1,16 +1,15 @@
-#bdw.bdw
-  #bd.cf
-    #content.coupons-box
-      #content-admin
-        = render :partial => "dashboard", :locals => {:dashboard_select => "products"}
-        .mainbox.mine
-          %h2 新增商品
-          %uj.filter
-            %li
-              = link_to "全部商品", admin_products_path
-            %li.current
-              = link_to "新增商品", new_admin_product_path
-          -# 添加view内容
-          = render :partial => "form", :locals => { :form_type => "new"}
+#content.coupons-box
+  #content-admin
+    = render :partial => "dashboard", :locals => {:dashboard_select => "products"}
+    .mainbox.mine
+      %h2 新增商品
+      %uj.filter
+        %li
+          = link_to "全部商品", admin_products_path
+        %li.current
+          = link_to "新增商品", new_admin_product_path
+      -# 添加view内容
+      = render :partial => "form", :locals => { :form_type => "new"}
 
-    #sidebar
+#sidebar
+

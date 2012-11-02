@@ -35,10 +35,7 @@
     %table#admin-products-table
       %tr
         %td
-          - image_path = @product.image_path_url(:normal)
-          - if image_path == nil
-            - image_path = "/assets/noimg.gif"
-          = image_tag image_path, :width => "440", :height => "267"
+          = image_tag @product.image_path_url(:normal), :width => "440", :height => "267"
       %tr
         %td
           上传图片：
