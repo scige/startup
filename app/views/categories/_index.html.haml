@@ -4,10 +4,10 @@
     %ul
       %li{:class => (controller_name == "home" ? "current" : nil)}
         = link_to "全部", "/"
-      %li 
-        %a{:href => "category/new"}
+      %li{:class => (action_name == "today" ? "current" : nil)}
+        %a{:href => today_categories_path}
           今日新单
-          %span> (30)
+          %span>= "(#{@products.size})"
       - @categories.each do |category|
         %li{:class => (params[:id].to_i == category.id ? "current" : nil)}
           / 怎样能用link_to?
