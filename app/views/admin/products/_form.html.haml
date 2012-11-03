@@ -1,4 +1,4 @@
-= form_for @product, form_action(form_type) do |f|
+= form_for [:admin, @product] do |f|
   #admin-product-info
     %table#admin-products-table
       %tr
@@ -8,7 +8,7 @@
         %td 商家名称：
         %td= f.text_field :shop_name, :size=>40
       %tr
-        %td 类别：
+        %td 分类：
         %td= f.text_field :category, :value => @product.category.cn_name, :size=>40
       %tr
         %td 区域：
