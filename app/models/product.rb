@@ -2,7 +2,6 @@ class Product < ActiveRecord::Base
   belongs_to :category
   belongs_to :district
 
-  attr_accessible :district_name
   attr_accessible :shop_name
   attr_accessible :product_name
   attr_accessible :image_path

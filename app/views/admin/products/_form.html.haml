@@ -12,10 +12,7 @@
         %td= f.select :category, @categories.map{|c| [c.cn_name, c.id]}, :selected => (@product.category==nil ? nil : @product.category.id)
       %tr
         %td 区域：
-        %td= f.text_field :district, :size=>40
-      %tr
-        %td 区域名称：
-        %td= f.text_field :district_name, :size=>40
+        %td= f.select :district, @districts.map{|c| [c.cn_name, c.id]}, :selected => (@product.district==nil ? nil : @product.district.id)
       %tr
         %td 封面名称：
         %td= f.text_field :cover_name, :size=>40

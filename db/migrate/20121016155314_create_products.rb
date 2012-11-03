@@ -1,8 +1,6 @@
 class CreateProducts < ActiveRecord::Migration
   def change
     create_table :products do |t|
-      t.string   :district
-      t.string   :district_name
       t.string   :shop_name
       t.string   :product_name
       t.string   :image_path
