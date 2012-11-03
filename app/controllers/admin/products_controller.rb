@@ -6,13 +6,13 @@ class Admin::ProductsController < ApplicationController
     end
 
     def new
-        category = Category.new(:cn_name => "美食")
         @product = Product.new
-        @product.category = category
+        @categories = Category.all
     end
 
     def edit
         @product = Product.find(params[:id])
+        @categories = Category.all
     end
 
     def create
@@ -20,11 +20,12 @@ class Admin::ProductsController < ApplicationController
             preview
         else
             temp = params[:product]
-            category = Category.find_by_cn_name(temp[:category])
+            category = Category.find_by_id(temp[:category].to_i)
             # 分类不正确，不保存
             if !category
-                temp[:category] = Category.new(:cn_name => temp[:category])
+                temp[:category] = nil
                 @product = Product.new(temp)
+                @categories = Category.all
                 render :action => "new"
                 return
             end
@@ -34,6 +35,7 @@ class Admin::ProductsController < ApplicationController
             if @product.save
                 redirect_to admin_products_url
             else
+                @categories = Category.all
                 render :action => "new"
             end
         end
@@ -44,17 +46,14 @@ class Admin::ProductsController < ApplicationController
             preview
         else
             @product = Product.find(params[:id])
-
             temp = params[:product]
-            category = Category.find_by_cn_name(temp[:category])
+            category = Category.find_by_id(temp[:category].to_i)
             # 分类不正确，不更新
             if !category
-                # 下面的代码不行，why???
-                #temp[:category] = Category.new(:cn_name => temp[:category])
-                #@product = Product.new(temp)
-                #logger.debug "[DEBUG] #{@product}"
-
-                @product.category = Category.new(:cn_name => temp[:category])
+                # 恢复上次其他的修改
+                temp[:category] = @product.category
+                @product = Product.new(temp)
+                @categories = Category.all
                 render :action => "edit"
                 return
             end
@@ -63,6 +62,10 @@ class Admin::ProductsController < ApplicationController
             if @product.update_attributes(temp)
                 redirect_to admin_products_url
             else
+                # 恢复上次其他的修改
+                temp[:category] = @product.category
+                @product = Product.new(temp)
+                @categories = Category.all
                 render :action => "edit"
             end
         end
