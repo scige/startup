@@ -1,0 +1,14 @@
+%h2
+  - case action_name 
+  - when "index"
+    全部区域
+  - when "new"
+    新增区域
+  - when "edit"
+    编辑区域
+%uj.filter
+  %li{:class => (action_name == "index" ? "current" : nil)}
+    = link_to "全部区域", admin_districts_path
+  %li{:class => (action_name == "new" ? "current" : nil)}
+    = link_to "新增区域", new_admin_district_path
+

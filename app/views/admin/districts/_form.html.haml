@@ -1,11 +1,11 @@
-= form_for [:admin, @category] do |f|
+= form_for [:admin, @district] do |f|
   #admin-product-info
     %table#admin-products-table
       %tr
-        %td 中文分类：
+        %td 中文区域：
         %td= f.text_field :cn_name, :size=>40
       %tr
-        %td 英文分类：
+        %td 英文区域：
         %td= f.text_field :en_name, :size=>40
       %tr
         %td 父类编号：

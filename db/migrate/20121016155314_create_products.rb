@@ -13,6 +13,7 @@ class CreateProducts < ActiveRecord::Migration
       t.datetime :overtime_at
       t.text     :content
       t.references :category
+      t.references :district
 
       t.timestamps
     end

@@ -1,0 +1,38 @@
+class Admin::DistrictsController < ApplicationController
+    def index
+        @districts = District.all
+    end
+
+    def new
+        @district = District.new
+    end
+
+    def edit
+        @district = District.find(params[:id])
+    end
+
+    def create
+        @district = District.new(params[:district])
+        if @district.save
+            redirect_to admin_districts_url
+        else
+            render :action => "new"
+        end
+    end
+
+    def update
+        @district = District.find(params[:id])
+        if @district.update_attributes(params[:district])
+            redirect_to admin_districts_url
+        else
+            render :action => "edit"
+        end
+    end
+
+    def destroy
+        # TODO: 该分类下没有商品才能删除
+        @district = District.find(params[:id])
+        @district.destroy
+        redirect_to admin_districts_url
+    end
+end

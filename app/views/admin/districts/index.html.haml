@@ -1,0 +1,26 @@
+#content.coupons-box
+  #content-admin
+    = render "admin/shared/dashboard"
+    .mainbox.mine
+      = render "subbar"
+      %table#order-list.coupons-table{:cellpadding=>"0", :cellspacing=>"0", :border=>"0"}
+        %tr
+          %th{:width=>"auto"} 编号
+          %th{:width=>"100"} 中文区域
+          %th{:width=>"100"} 英文区域
+          %th{:width=>"100"} 父类编号
+          %th{:width=>"100"} 操作
+
+        - @districts.each do |district|
+          %tr{:class => cycle("alt", "")}
+            %td= district.id
+            %td= district.cn_name
+            %td= district.en_name
+            %td= district.parent_id
+            %td
+              = link_to "编辑", edit_admin_district_path(district)
+              | 
+              = link_to "删除", admin_district_path(district), :method => :delete, :confirm => "删除后不可恢复，确定删除？"
+
+#sidebar
+

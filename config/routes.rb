@@ -54,17 +54,20 @@ Startup::Application.routes.draw do
 
   resources :products
 
-  resources :categories do
+  resources :filters do
     collection do
         get :today
+        get :category
+        get :district
+        #get 'category/:id', :action => 'cetegory'
     end
   end
-
 
   namespace :admin do
     root :to => 'products#index'
     resources :products
     resources :categories
+    resources :districts
   end
 
   # See how all your routes lay out with "rake routes"
