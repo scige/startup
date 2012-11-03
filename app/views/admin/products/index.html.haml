@@ -1,14 +1,8 @@
 #content.coupons-box
   #content-admin
-    = render "dashboard"
+    = render "admin/shared/dashboard"
     .mainbox.mine
-      %h2 全部商品
-      %ul.filter
-        %li.current
-          = link_to "全部商品", admin_products_path
-        %li
-          = link_to "新增商品", new_admin_product_path
-
+      = render "subbar"
       %table#order-list.coupons-table{:cellpadding=>"0", :cellspacing=>"0", :border=>"0"}
         %tr
           %th{:width=>"auto"} 编号

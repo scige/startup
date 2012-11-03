@@ -1,0 +1,14 @@
+%h2
+  - case action_name 
+  - when "index"
+    全部商品
+  - when "new"
+    新增商品
+  - when "edit"
+    编辑商品
+%uj.filter
+  %li{:class => (action_name == "index" ? "current" : nil)}
+    = link_to "全部商品", admin_products_path
+  %li{:class => (action_name == "new" ? "current" : nil)}
+    = link_to "新增商品", new_admin_product_path
+
