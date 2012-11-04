@@ -1,15 +1,11 @@
 .bread-nav
-  = link_to "北京团购", "/"
+  = link_to "今日优惠", "/"
   %span> »
-  = link_to "海淀区", "/category/all/haidianqu"
+  = link_to "#{@product.district.cn_name}", district_filter_path(@product.district)
   %span> »
-  = link_to "远大路", "/category/all/yuandalu"
+  = link_to "#{@product.category.cn_name}", category_filter_path(@product.category)
   %span> »
-  = link_to "美食", "/category/meishi/yuandalu"
-  %span> »
-  = link_to "火锅", "/category/huoguo/yuandalu"
-  %span> »
-  金源福城肥牛2-3人套餐
+  = @product.shop_name
 #content
   #deal-intro.cf
     %h1.deal-brand= "【#{@product.district.cn_name}】#{@product.shop_name}"
