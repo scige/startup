@@ -69,9 +69,8 @@
             .standard-list-title { margin:5px 0; }
             .standard-image { display:block; margin:10px auto; }
             .standard-image-wrap { display:block; width:100%; }
-          / 应该去掉markdown
-          /= @product.content
-          = markdown @product.content
+          /= markdown @product.content
+          = @product.content.html_safe
       .side
       .deal-buy-bottom
         %span.price.num= "¥#{integer_of_value @product.sale_price}"

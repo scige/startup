@@ -55,12 +55,9 @@ Startup::Application.routes.draw do
   resources :products
 
   resources :filters do
-    collection do
-        get :today
-        get :category
-        get :district
-        #get 'category/:id', :action => 'cetegory'
-    end
+    get :today, :on => :collection
+    get :category, :on => :member
+    get :district, :on => :member
   end
 
   namespace :admin do
