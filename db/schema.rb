@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121103150341) do
+ActiveRecord::Schema.define(:version => 20121105151723) do
 
   create_table "categories", :force => true do |t|
     t.string   "en_name"
@@ -46,8 +46,6 @@ ActiveRecord::Schema.define(:version => 20121103150341) do
   end
 
   create_table "products", :force => true do |t|
-    t.string   "district"
-    t.string   "district_name"
     t.string   "shop_name"
     t.string   "product_name"
     t.string   "image_path"
@@ -61,6 +59,16 @@ ActiveRecord::Schema.define(:version => 20121103150341) do
     t.integer  "district_id"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "password"
+    t.string   "password_confirmation"
+    t.string   "email"
+    t.string   "mobile"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
   end
 
 end

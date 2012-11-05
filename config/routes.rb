@@ -52,9 +52,15 @@ Startup::Application.routes.draw do
   # just remember to delete public/index.html.
   root :to => 'home#index'
 
-  resources :products
+  get 'signup' => 'users#new', :as => :signup
+  get 'login' => 'user_sessions#new', :as => :login
+  delete 'logout' => 'user_sessions#destroy', :as => :logout
+  resources :users, :only => [:create]
+  resources :user_sessions, :only => [:create]
 
-  resources :filters do
+  resources :products, :only => [:show]
+
+  resources :filters, :only => [] do
     get :today, :on => :collection
     get :category, :on => :member
     get :district, :on => :member
@@ -62,9 +68,9 @@ Startup::Application.routes.draw do
 
   namespace :admin do
     root :to => 'products#index'
-    resources :products
-    resources :categories
-    resources :districts
+    resources :products, :except => [:show]
+    resources :categories, :except => [:show]
+    resources :districts, :except => [:show]
   end
 
   # See how all your routes lay out with "rake routes"

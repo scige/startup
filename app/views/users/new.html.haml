@@ -1,0 +1,19 @@
+#content
+  .mainbox
+    %h2 注册
+    = form_for @user, :url => users_path, :html => {:id=>"signup-form", :class=>"common-form"} do |f|
+      .field-group
+        = f.label :name, "用户名"
+        = f.text_field :name, :class=>"f-text"
+      .field-group
+        = f.label :password, "创建密码"
+        = f.text_field :password, :class=>"f-text"
+      .field-group
+        = f.label :password, "确认密码"
+        = f.text_field :password, :class=>"f-text"
+      .field-group
+        = f.label :email, "邮箱"
+        = f.text_field :email, :class=>"f-text"
+      .field-group
+        = f.submit "注册", :class=>"form-button"
+

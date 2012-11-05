@@ -38,6 +38,6 @@
             %li= link_to "余额充值", "/account/charge"
             %li= link_to "积分/邀请", "/account/points"
             %li= link_to "账户设置", "/account/settings", {:class=>"last"}
-      %li.login= link_to "登录", "/login"
-      %li.login.last= link_to "注册", "/signup"
+      %li.login= link_to "登录", login_path
+      %li.login.last= link_to "注册", signup_path
 

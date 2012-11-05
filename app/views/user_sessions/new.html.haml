@@ -1,0 +1,17 @@
+#content.pg-login
+  .mainbox
+    %h2 注册
+    .signup-section
+      = form_tag user_sessions_path, :html => {:id=>"login-form", :class=>"common-form"} do |f|
+        .field-group
+          = label_tag :name, "账号"
+          = text_field_tag :name, nil, :class=>"f-text"
+        .field-group
+          = label_tag :name, "密码"
+          = text_field_tag :password, nil, :class=>"f-text"
+        .field-group.auto-login
+          = check_box_tag :remember, "yes", false, :class=>"f-check"
+          下次自动登录
+        .field-group
+          = submit_tag "登录", :class=>"form-button"
+
