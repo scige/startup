@@ -31,7 +31,7 @@ class Admin::ProductsController < ApplicationController
                 @product = Product.new(temp)
                 @categories = Category.all
                 @districts = District.all
-                render :action => "new"
+                render "new"
                 return
             end
 
@@ -43,7 +43,7 @@ class Admin::ProductsController < ApplicationController
             else
                 @categories = Category.all
                 @districts = District.all
-                render :action => "new"
+                render "new"
             end
         end
     end
@@ -64,7 +64,7 @@ class Admin::ProductsController < ApplicationController
                 @product = Product.new(temp)
                 @categories = Category.all
                 @districts = District.all
-                render :action => "edit"
+                render "edit"
                 return
             end
 
@@ -79,7 +79,7 @@ class Admin::ProductsController < ApplicationController
                 @product = Product.new(temp)
                 @categories = Category.all
                 @districts = District.all
-                render :action => "edit"
+                render "edit"
             end
         end
     end

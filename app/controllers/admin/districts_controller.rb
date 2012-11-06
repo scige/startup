@@ -16,7 +16,7 @@ class Admin::DistrictsController < ApplicationController
         if @district.save
             redirect_to admin_districts_url
         else
-            render :action => "new"
+            render "new"
         end
     end
 
@@ -25,7 +25,7 @@ class Admin::DistrictsController < ApplicationController
         if @district.update_attributes(params[:district])
             redirect_to admin_districts_url
         else
-            render :action => "edit"
+            render "edit"
         end
     end
 

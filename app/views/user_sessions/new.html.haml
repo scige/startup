@@ -8,8 +8,9 @@
           = text_field_tag :name, nil, :class=>"f-text"
         .field-group
           = label_tag :name, "密码"
-          = text_field_tag :password, nil, :class=>"f-text"
+          = password_field_tag :password, nil, :class=>"f-text"
         .field-group.auto-login
+          / 默认选择checkbox参数不生效
           = check_box_tag :remember, "yes", false, :class=>"f-check"
           下次自动登录
         .field-group

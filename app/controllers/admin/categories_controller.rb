@@ -16,7 +16,7 @@ class Admin::CategoriesController < ApplicationController
         if @category.save
             redirect_to admin_categories_url
         else
-            render :action => "new"
+            render "new"
         end
     end
 
@@ -25,7 +25,7 @@ class Admin::CategoriesController < ApplicationController
         if @category.update_attributes(params[:category])
             redirect_to admin_categories_url
         else
-            render :action => "edit"
+            render "edit"
         end
     end
 
