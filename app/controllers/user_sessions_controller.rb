@@ -9,8 +9,7 @@ class UserSessionsController < ApplicationController
 
     def create
         user = User.find_by_name(params[:name])
-        #if user and user.authenticate(params[:password])
-        if user and user.password == params[:password]
+        if user and user.authenticate(params[:password])
             login_as user
             redirect_back_or_default root_url
         else
