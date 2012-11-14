@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class User < ActiveRecord::Base
   attr_accessible :name
   attr_accessible :password
@@ -9,7 +11,7 @@ class User < ActiveRecord::Base
 
   validates :name,  :presence => true,
                     :uniqueness => {:case_sensitive => false},
-                    :format => {:with => /\A\w+\z/, :message => 'only A-Z, a-z, _ allowed'},
+                    :format => {:with => /\A\w+\z/},
                     :length => {:in => 3..20}
   validates :email, :presence => true,
                     :uniqueness => {:case_sensitive => false},

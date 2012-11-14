@@ -1,0 +1,7 @@
+- if @user.errors.any?
+  .common-tip
+    您的注册信息不满足以下要求：
+    %ul
+      - @user.errors.full_messages.each do |msg|
+        %li= "* #{msg}"
+
