@@ -8,51 +8,26 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Category.create(
-      :en_name => "meishi",
-      :cn_name => "美食",
-      :parent_id => 0
-)
+category = ["美食", "娱乐", "电影", "酒店"]
+category.each do |c|
+    Category.create(
+          :en_name => Pinyin.t(c, ""),
+          :cn_name => c,
+          :parent_id => 0
+    )
+end
 
-Category.create(
-      :en_name => "yule",
-      :cn_name => "娱乐",
-      :parent_id => 0
-)
-
-Category.create(
-      :en_name => "dianying",
-      :cn_name => "电影",
-      :parent_id => 0
-)
-
-Category.create(
-      :en_name => "jiudian",
-      :cn_name => "酒店",
-      :parent_id => 0
-)
-
-District.create(
-      :en_name => "chaoyangqu",
-      :cn_name => "朝阳区",
-      :parent_id => 0
-)
-
-District.create(
-      :en_name => "haidianqu",
-      :cn_name => "海淀区",
-      :parent_id => 0
-)
-
-District.create(
-      :en_name => "xichengqu",
-      :cn_name => "西城区",
-      :parent_id => 0
-)
+district = ["朝阳区", "海淀区", "西城区"]
+district.each do |d|
+    District.create(
+          :en_name => Pinyin.t(d, ""),
+          :cn_name => d,
+          :parent_id => 0
+    )
+end
 
 c1 = Category.find_by_cn_name("美食");
 d1 = District.find_by_cn_name("朝阳区");
-
 Product.create(
       :shop_name => "金源福城肥牛",
       :product_name => "仅售88元！最高价值252.4元的金源福城肥牛（远大路金源店）2-3人套餐。大厅消费赠送燕京特制啤酒、北京二锅头白酒无限畅饮，全场酸梅汤、豆浆、小布丁、口香糖免费，女士另赠银耳羹1份。",
@@ -69,7 +44,6 @@ Product.create(
 
 c2 = Category.find_by_cn_name("酒店");
 d2 = District.find_by_cn_name("海淀区");
-
 Product.create(
       :shop_name => "轻联富润酒店",
       :product_name => "仅售158元！价值328元的轻联富润酒店住宿1晚（标准双人间/标准大床房2选1），美团券可叠加使用。",

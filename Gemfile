@@ -61,3 +61,9 @@ gem 'ckeditor'
 # Encrypt
 gem 'bcrypt-ruby'
 
+# Pinyin
+gem 'chinese_pinyin'
+
+# Schema Annotate
+gem 'annotate'
+
