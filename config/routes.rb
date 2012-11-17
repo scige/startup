@@ -73,6 +73,7 @@ Startup::Application.routes.draw do
     resources :products, :except => [:show]
     resources :categories, :except => [:show]
     resources :districts, :except => [:show]
+    resources :users, :except => [:show]
   end
 
   # See how all your routes lay out with "rake routes"

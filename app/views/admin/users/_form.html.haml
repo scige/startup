@@ -1,0 +1,23 @@
+= form_for [:admin, @user] do |f|
+  #admin-product-info
+    %table#admin-products-table
+      %tr
+        %td 用户名：
+        %td= f.text_field :name, :size=>40
+      %tr
+        %td 邮箱：
+        %td= f.text_field :email, :size=>40
+      %tr
+        %td 手机：
+        %td= f.text_field :mobile, :size=>40
+      %tr
+        %td 密码：
+        %td= f.password_field :password, :size=>40
+      %tr
+        %td 确认密码：
+        %td= f.password_field :password_confirmation, :size=>40
+      %tr
+        %td
+        %td#admin-products-table-submit
+          = f.submit "提交"
+

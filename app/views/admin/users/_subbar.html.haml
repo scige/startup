@@ -1,18 +1,18 @@
 %h2
   - case action_name 
   - when "index"
-    全部区域
+    全部用户
   - when "new"
-    新增区域
+    新增用户
   - when "create"
-    新增区域
+    新增用户
   - when "edit"
-    编辑区域
+    编辑用户
   - when "update"
-    编辑区域
+    编辑用户
 %uj.filter
   %li{:class => (action_name == "index" ? "current" : nil)}
-    = link_to "全部区域", admin_districts_path
+    = link_to "全部用户", admin_users_path
   %li{:class => ((action_name == "new" or action_name == "create") ? "current" : nil)}
-    = link_to "新增区域", new_admin_district_path
+    = link_to "新增用户", new_admin_user_path
 
