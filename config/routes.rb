@@ -54,8 +54,9 @@ Startup::Application.routes.draw do
 
   get 'signup' => 'users#new', :as => :signup
   get 'login' => 'user_sessions#new', :as => :login
+  get 'account' => 'users#show', :as => :account
   delete 'logout' => 'user_sessions#destroy', :as => :logout
-  resources :users, :only => [:create]
+  resources :users, :only => [:create, :show, :edit, :update]
   resources :user_sessions, :only => [:create]
 
   resources :products, :only => [:show]

@@ -22,7 +22,6 @@ class UserSessionsController < ApplicationController
 
     def destroy
         logout
-        #flash[:success] = "logout success"
         redirect_to root_url
     end
 end

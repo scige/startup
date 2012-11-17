@@ -1,0 +1,14 @@
+%h2
+  - case action_name 
+  - when "show"
+    个人信息
+  - when "edit"
+    修改个人信息
+  - when "update"
+    修改个人信息
+%uj.filter
+  %li{:class => (action_name == "show" ? "current" : nil)}
+    = link_to "查看个人信息", user_path(current_user)
+  %li{:class => (action_name == "edit" or action_name == "update" ? "current" : nil)}
+    = link_to "修改个人信息", edit_user_path(current_user)
+

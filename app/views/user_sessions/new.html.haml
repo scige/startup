@@ -1,8 +1,8 @@
 #content.pg-login
   .mainbox
-    %h2 注册
+    %h2 登陆
     .signup-section
-      = form_tag user_sessions_path, :html => {:id=>"login-form", :class=>"common-form"} do |f|
+      = form_tag user_sessions_path do |f|
         .field-group
           = label_tag :name, "账号"
           = text_field_tag :name, nil, :class=>"f-text"
@@ -15,4 +15,7 @@
           下次自动登录
         .field-group
           = submit_tag "登录", :class=>"form-button"
+          %span#signup-span
+            尚未注册？
+            = link_to "免费注册", signup_path
 

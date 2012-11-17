@@ -5,6 +5,13 @@ class ApplicationController < ActionController::Base
 
     protected
 
+    def require_logined
+        unless logined?
+            store_location nil
+            redirect_to login_url
+        end
+    end
+
     def require_no_logined
         if logined?
             redirect_to root_url
