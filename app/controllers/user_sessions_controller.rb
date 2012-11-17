@@ -1,7 +1,7 @@
 # coding: utf-8
 
 class UserSessionsController < ApplicationController
-    before_filter :require_no_logined, :except => :destroy
+    before_filter :require_not_logined, :except => :destroy
 
     def new
         if request.referrer.present? and request.referrer != request.url

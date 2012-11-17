@@ -11,6 +11,6 @@
 %uj.filter
   %li{:class => (action_name == "index" ? "current" : nil)}
     = link_to "全部区域", admin_districts_path
-  %li{:class => (action_name == "new" or action_name == "create" ? "current" : nil)}
+  %li{:class => ((action_name == "new" or action_name == "create") ? "current" : nil)}
     = link_to "新增区域", new_admin_district_path
 

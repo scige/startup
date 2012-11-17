@@ -25,7 +25,12 @@
       - if logined?
         %li.name= "欢迎您，#{current_user.name}"
       %li.account
-        = link_to "我的信息", account_path, {:class=>"my-account"}
+        / 有了优惠券以后，去掉if判断，修改路由到coupon#index
+        /  = link_to "我的信息", account_path, {:class=>"my-account"}
+        - if logined?
+          = link_to "我的信息", user_path(current_user), {:class=>"my-account"}
+        - else
+          = link_to "我的信息", account_path, {:class=>"my-account"}
         %i.tri
         .account-menu{:style=>"display:none"}
           %ul.comment-info

@@ -11,6 +11,6 @@
 %uj.filter
   %li{:class => (action_name == "index" ? "current" : nil)}
     = link_to "全部分类", admin_categories_path
-  %li{:class => (action_name == "new" or action_name == "create" ? "current" : nil)}
+  %li{:class => ((action_name == "new" or action_name == "create") ? "current" : nil)}
     = link_to "新增分类", new_admin_category_path
 

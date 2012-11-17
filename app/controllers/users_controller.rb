@@ -1,8 +1,9 @@
 # coding: utf-8
 
 class UsersController < ApplicationController
-    before_filter :require_no_logined, :only => [:new, :create]
+    before_filter :require_not_logined, :only => [:new, :create]
     before_filter :require_logined, :only => [:show, :edit, :update]
+    before_filter :require_correct_user, :only => [:show, :edit, :update]
 
     def new
         @user = User.new
@@ -22,6 +23,11 @@ class UsersController < ApplicationController
     end
 
     def show
+        @user = User.find(params[:id])
+    end
+
+    def edit
+        @user = User.find(params[:id])
     end
 
     def update

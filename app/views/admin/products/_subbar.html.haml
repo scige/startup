@@ -11,6 +11,6 @@
 %uj.filter
   %li{:class => (action_name == "index" ? "current" : nil)}
     = link_to "全部商品", admin_products_path
-  %li{:class => (action_name == "new" or action_name == "create" ? "current" : nil)}
+  %li{:class => ((action_name == "new" or action_name == "create") ? "current" : nil)}
     = link_to "新增商品", new_admin_product_path
 

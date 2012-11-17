@@ -5,21 +5,30 @@ class ApplicationController < ActionController::Base
 
     protected
 
-    def require_logined
-        unless logined?
-            store_location nil
-            redirect_to login_url
-        end
-    end
-
-    def require_no_logined
+    def require_not_logined
         if logined?
             redirect_to root_url
         end
     end
 
+    def require_logined
+        unless logined?
+            store_location request.url
+            redirect_to login_url
+        end
+    end
+
+    def require_correct_user
+        @user = User.find(params[:id])
+        redirect_to root_path unless current_user?(@user)
+    end
+
     def current_user
       @current_user ||= User.find_by_id(session[:user_id])
+    end
+
+    def current_user?(user)
+        user == current_user
     end
 
     def logined?
@@ -32,7 +41,7 @@ class ApplicationController < ActionController::Base
     end
 
     def logout
-        session[:user_id] = nil
+        session.delete(:user_id)
         @current_user = nil
     end
 
@@ -42,7 +51,7 @@ class ApplicationController < ActionController::Base
 
     def redirect_back_or_default(default)
         redirect_to(session[:return_to] || default)
-        session[:return_to] = nil
+        session.delete(:return_to)
     end
 end
 

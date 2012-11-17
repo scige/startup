@@ -5,16 +5,16 @@
     %ul
       %li.field-group
         %label
-        = "第 #{current_user.id} 位会员"
+        = "第 #{@user.id} 位会员"
       %li.field-group
         %label 用户名:
-        %strong= current_user.name
+        %strong= @user.name
       %li.field-group
         %label 邮箱:
-        = current_user.email
+        = @user.email
       %li.field-group
         %label 注册时间:
-        = current_user.created_at.strftime("%Y年%m月%d日")
+        = @user.created_at.strftime("%Y年%m月%d日")
 
 #sidebar
 

@@ -2,7 +2,7 @@
   = render "shared/dashboard"
   .mainbox.mine
     = render "subbar"
-    = form_for current_user do |f|
+    = form_for @user do |f|
       .field-group
         = f.label :name, "用户名"
         = f.text_field :name, :class=>"f-text"
