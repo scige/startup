@@ -1,6 +1,9 @@
 # coding: utf-8
 
 class Admin::ProductsController < ApplicationController
+    before_filter :require_logined
+    before_filter :require_admin_user
+
     def index
         @products = Product.all
     end

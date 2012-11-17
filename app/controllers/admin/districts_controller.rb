@@ -1,4 +1,7 @@
 class Admin::DistrictsController < ApplicationController
+    before_filter :require_logined
+    before_filter :require_admin_user
+
     def index
         @districts = District.all
     end

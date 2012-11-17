@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class ApplicationController < ActionController::Base
     protect_from_forgery
 
@@ -13,6 +15,7 @@ class ApplicationController < ActionController::Base
 
     def require_logined
         unless logined?
+            flash[:error] = "您还没有登陆。"
             store_location request.url
             redirect_to login_url
         end
@@ -20,7 +23,16 @@ class ApplicationController < ActionController::Base
 
     def require_correct_user
         @user = User.find(params[:id])
-        redirect_to root_path unless current_user?(@user)
+        unless current_user?(@user)
+            redirect_to root_path
+        end
+    end
+
+    def require_admin_user
+        unless current_user.admin?
+            flash[:error] = "管理员才能使用管理后台。"
+            redirect_to root_path
+        end
     end
 
     def current_user
