@@ -16,4 +16,11 @@ class District < ActiveRecord::Base
   attr_accessible :cn_name
   attr_accessible :en_name
   attr_accessible :parent_id
+
+  validates :cn_name, :presence => true,
+                      :uniqueness => {:case_sensitive => false}
+  validates :en_name, :presence => true,
+                      :uniqueness => {:case_sensitive => false}
+  validates :parent_id, :presence => true,
+                        :numericality => {:only_integer => true}
 end
