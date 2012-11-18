@@ -24,23 +24,14 @@ class Admin::ProductsController < ApplicationController
         if params[:preview]
             preview
         else
-            temp = params[:product]
-            category = Category.find_by_id(temp[:category].to_i)
-            district = District.find_by_id(temp[:district].to_i)
-            # 分类或区域不正确，不保存
-            if !category || !district
-                temp[:category] = nil
-                temp[:district] = nil
-                @product = Product.new(temp)
-                @categories = Category.all
-                @districts = District.all
-                render "new"
-                return
-            end
-
-            temp[:category] = category
-            temp[:district] = district
+            temp = params[:product].dup
+            category_id = temp[:category_id].to_i
+            district_id = temp[:district_id].to_i
+            temp.delete(:category_id)
+            temp.delete(:district_id)
             @product = Product.new(temp)
+            @product.category = Category.find_by_id(category_id)
+            @product.district = District.find_by_id(district_id)
             if @product.save
                 redirect_to admin_products_url
             else
@@ -56,30 +47,17 @@ class Admin::ProductsController < ApplicationController
             preview
         else
             @product = Product.find(params[:id])
-            temp = params[:product]
-            category = Category.find_by_id(temp[:category].to_i)
-            district = District.find_by_id(temp[:district].to_i)
-            # 分类或区域不正确，不更新
-            if !category || !district
-                # 恢复上次其他的修改
-                temp[:category] = @product.category
-                temp[:district] = @product.district
-                @product = Product.new(temp)
-                @categories = Category.all
-                @districts = District.all
-                render "edit"
-                return
-            end
-
-            temp[:category] = category
-            temp[:district] = district
+            temp = params[:product].dup
+            category_id = temp[:category_id].to_i
+            district_id = temp[:district_id].to_i
+            temp.delete(:category_id)
+            temp.delete(:district_id)
+            @product.category = Category.find_by_id(category_id)
+            @product.district = District.find_by_id(district_id)
             if @product.update_attributes(temp)
                 redirect_to admin_products_url
             else
                 # 恢复上次其他的修改
-                temp[:category] = @product.category
-                temp[:district] = @product.district
-                @product = Product.new(temp)
                 @categories = Category.all
                 @districts = District.all
                 render "edit"
@@ -93,19 +71,17 @@ class Admin::ProductsController < ApplicationController
         redirect_to admin_products_url
     end
 
-    private #TODO: 似乎不生效?
+    private
+
     def preview
-        temp = params[:product]
-        category = Category.find_by_id(temp[:category].to_i)
-        district = District.find_by_id(temp[:district].to_i)
-        # 分类或区域不正确，跳到空的页面
-        if !category || !district
-            render :text => "Invaild Parameters!"
-            return
-        end
-        temp[:category] = category
-        temp[:district] = district
+        temp = params[:product].dup
+        category_id = temp[:category_id].to_i
+        district_id = temp[:district_id].to_i
+        temp.delete(:category_id)
+        temp.delete(:district_id)
         @product = Product.new(temp)
+        @product.category = Category.find_by_id(category_id)
+        @product.district = District.find_by_id(district_id)
         render "products/show"
     end
 end

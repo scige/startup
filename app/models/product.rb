@@ -31,8 +31,9 @@ class Product < ActiveRecord::Base
   attr_accessible :sale_count
   attr_accessible :overtime_at
   attr_accessible :content
-  attr_accessible :category
-  attr_accessible :district
+
+  validates :category_id, presence: true
+  validates :district_id, presence: true
 
   mount_uploader :image_path, ImageUploader
 end

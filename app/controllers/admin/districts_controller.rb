@@ -33,7 +33,6 @@ class Admin::DistrictsController < ApplicationController
     end
 
     def destroy
-        # TODO: 该分类下没有商品才能删除
         @district = District.find(params[:id])
         @district.destroy
         redirect_to admin_districts_url

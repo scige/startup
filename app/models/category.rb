@@ -11,7 +11,7 @@
 #
 
 class Category < ActiveRecord::Base
-  has_many :products
+  has_many :products, dependent: :destroy
 
   attr_accessible :cn_name
   attr_accessible :en_name

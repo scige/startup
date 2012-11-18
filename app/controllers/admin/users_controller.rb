@@ -33,7 +33,6 @@ class Admin::UsersController < ApplicationController
     end
 
     def destroy
-        # TODO: 该分类下没有商品才能删除
         @user = User.find(params[:id])
         @user.destroy
         redirect_to admin_users_url

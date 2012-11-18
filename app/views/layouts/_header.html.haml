@@ -1,10 +1,9 @@
 #site-top.cf
-  %h1= link_to image_tag("/assets/logo.png", :width=>"108", :height=>"66", :title=>"每天团购一次", :alt=>"每天团购一次"), "/"
+  %h1= link_to image_tag("/assets/logo.png", :width=>"108", :height=>"66", :title=>"天天优惠", :alt=>"天天优惠"), "/"
   .site-info
     %ul
       %li= link_to "邮件订阅", "/subscribe", {:class=>"subscribe"}
       %li= link_to "加入收藏夹", "javascript:void(0);", {:class=>"fav", :id=>"favorite"}
-      %li= link_to "下载手机版", "/mobile", {:class=>"mobile", :target=>"_blank"}
       %li= link_to "邀请好友", "/referrals", {:class=>"refer", :target=>"_blank"}
       %li= link_to "常见问题", "/faq", {:class=>"last"}
   .search.cf
@@ -20,7 +19,6 @@
       %li= link_to "电影", "/dianying/all"
       %li= link_to "生活", "/shenghuo/all"
       %li= link_to "酒店旅游", "/lvyou/all"
-      %li= link_to "手机版", "/mobile"
     %ul.user-info
       - if logined?
         %li.name= "欢迎您，#{current_user.name}"
