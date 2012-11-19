@@ -26,9 +26,7 @@ district.each do |d|
     )
 end
 
-c1 = Category.find_by_cn_name("美食");
-d1 = District.find_by_cn_name("朝阳区");
-Product.create(
+p1 = Product.new(
     :shop_name => "金源福城肥牛",
     :product_name => "仅售88元！最高价值252.4元的金源福城肥牛（远大路金源店）2-3人套餐。大厅消费赠送燕京特制啤酒、北京二锅头白酒无限畅饮，全场酸梅汤、豆浆、小布丁、口香糖免费，女士另赠银耳羹1份。",
     :image_path => "1.jpg",
@@ -38,13 +36,12 @@ Product.create(
     :sale_count => 308,
     :overtime_at => "2012-10-18",
     :content => "本单详情",
-    :category => c1,
-    :district => d1
 )
+p1.category = Category.find_by_cn_name("美食");
+p1.district = District.find_by_cn_name("朝阳区");
+p1.save
 
-c2 = Category.find_by_cn_name("酒店");
-d2 = District.find_by_cn_name("海淀区");
-Product.create(
+p2 = Product.new(
     :shop_name => "轻联富润酒店",
     :product_name => "仅售158元！价值328元的轻联富润酒店住宿1晚（标准双人间/标准大床房2选1），美团券可叠加使用。",
     :image_path => "2.jpg",
@@ -54,9 +51,10 @@ Product.create(
     :sale_count => 1641,
     :overtime_at => "2012-10-28",
     :content => "本单详情",
-    :category => c2,
-    :district => d2
 )
+p2.category = Category.find_by_cn_name("酒店");
+p2.district = District.find_by_cn_name("海淀区");
+p2.save
 
 User.create(
     :name => "scige",
