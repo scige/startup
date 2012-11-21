@@ -1,271 +1,4 @@
 @charset "utf-8";
-/* CSS Document */
-.green2{
-    color: #090;
-}
-.blue7{
-    color: #3399fe;
-}
-.paddingTop15 {
-	padding-top:15px;
-}
-.paddingLeft15 {
-	padding-left:15px;
-}
-.inlineBlock {
-	display:inline-block;
-}
-.percent {
-	width:100%;
-}
-.menuList .iconLink {
-	width:105px;
-}
-
-/*tb css 开始*/
-.displayLB {
-	display:inline-block;
-}
-.dispayI {
-	display:inline;
-}
-.adW140H140 {
-	width:140px;
-	height:140px;
-}
-.bFont {
-	font-weight:700;
-}
-.overH {
-	overflow:hidden;
-}
-.width300 {
-	width:300px;
-}
-.width580 {
-	width:580px;
-}
-.width280 {
-	width:280px;
-}
-.w140H214 {
-	width:140px;
-	height:214px;
-	overflow:hidden;
-}
-.width220 {
-	width:220px;
-}
-.width50 {
-	width:50px;
-}
-.businessPreferent {
-	width:670px;
-}
-.marginL23 {
-	margin-left:23px;
-}
-.marginLeft15{
-	margin-left:15px;
-}
-.marginL10 {
-	margin-left:10px;
-}
-.marginL20 {
-	margin-left:20px;
-}
-.padding12 {
-	padding:12px;
-}
-.paddingB16 {
-	padding-bottom:16px;
-}
-.paddingU19B15L20 {
-	padding:19px 0 15px 20px
-}
-.paddingRight5 {
-	padding-right:5px;
-}
-
-/*tb css 结束*/
-
-/*yym css 开始*/
-.width1 {
-	width:251px;
-}
-.width2 {
-	width:276px;
-}
-.width400 {
-	width:400px;
-}
-.discountP1 {
-	line-height:22px;
-	height:22px;
-	width:160px;
-	overflow:hidden;
-}
-.padding15 {
-	padding:15px 20px;
-}
-.discountHight1 {
-	height:192px;
-}
-.discountHight2 {
-	height:198px;
-}
-.discountHight3 {
-	height:352px;
-}
-.discountHight4 {
-	height:438px;
-	overflow:hidden;
-}
-.discountHight5 {
-	height:275px;
-	overflow:hidden;
-}
-.discountBanner1 {
-	width:300px;
-	height:250px;
-}
-/*yym css 结束*/
-
-/*王素芳*/
-.marginTop8 {
-	margin-top:8px;
-}
-.discountHead {
-	display:inline-block;
-	width:100%;
-}
-.orange3 {
-	color:#f90;
-}
-.padding10 {
-	padding:10px;
-}
-/* commentsWrap */
-.tabContentWrap {
-	border-top:1px solid #b1dff9;
-}
-.hotDiscountwrap .contentBody {
-	padding:12px 20px 10px 16px;
-	height:297px;
-	background:#fff;
-	width:554px;
-	display:inline-block;
-}
-.hotDiscountwrap .LSide {
-	width:370px;
-}
-.hotDiscountwrap .RSide {
-	width:160px;
-}
-.hotDiscountwrap .title {
-	display:inline-block;
-	width:370px;
-}
-.hotDiscountwrap .link {
-	max-width:294px;
- _width:expression(this.scrollWidth > 260 ? "260px" : "auto");
-}
-.tabTitleWrap {
-	/*modify by cx,display:inline-block will make 2px gap. */
-	//display:inline-block; 
-	padding:0px 5px;
-	height:auto;
-	overflow:hidden;
-}
-.tabList .tabTitle, .tabList .tabTitle span {
-	background-image:url(../../../images/0616/images/tabBg1.jpg);
-	background-repeat: no-repeat;
-	display:inline-block;
-	height:31px;
-}
-.tabList {
-	float:left;
-	margin-bottom:-1px;
-	margin-left:20px;
-}
-.tabList li {
-	float:left;
-	margin-right:2px;
-}
-.tabList .tabTitle {
-	padding-left:20px;
-	background-position:left top;
-}
-.tabList .tabTitle:hover {
-	text-decoration:none;
-}
-.tabList .tabTitle span {
-	padding-right:20px;
-	background-position:right top;
-	color:#666;
-	font-size:14px;
-	line-height:30px;
-	cursor:pointer;
-}
-.tabList .visited {
-	background:url(../../../images/0616/images/tabBg2.jpg) left top;
-}
-.tabList .visited span {
-	background:url(../../../images/0616/images/tabBg2.jpg) right top;
-}
-.hotSearchWord {
-	width:210px;
-}
-.hotSearchWord .background1 {
-	width:190px;
-	padding:15px 5px 15px 15px;
-	height:144px;
-}
-.hotSearchWord .searchWord {
-	height:143px;
-	width:190px;
-	overflow:hidden;
-}
-.hotSearchWord a {
-	white-space:nowrap;
-	padding-right:10px;
-	line-height:22px;
-}
-.preferentList .maskLayer{
-	width:140px;
-	height:140px;
-}
-.discountLink .becomeIcon{
-	background:url(../../../images/0616/images/bt.png) no-repeat left -96px;
-	height:42px;
-	display:inline-block;
-	width:93px;
-}
-.discountLink .publicIcon{
-	background:url(../../../images/0616/images/bt.png) no-repeat -93px -96px;
-	height:42px;
-	display:inline-block;
-	width:117px;
-}
-.discountLink .becomeIcon:hover{
-	background:url(../../../images/0616/images/bt.png) no-repeat left -138px;
-}
-.discountLink .publicIcon:hover{
-	background:url(../../../images/0616/images/bt.png) no-repeat -91px -138px;
-	width:119px;
-	margin-left:-2px;
-}
-.width225{
-	width:225px;
-}
-.crumbsWrap{height:20px; padding: 4px; line-height: 20px;}
-.fontFamily1{font-family: '宋体';}
-.fontBlue{
-    color: #006ab3;
-}
-.paddingLeft60{
-    padding-left: 60px;
-}
 .discountDetailsWrap .FLSide{
     width:710px;
 }
@@ -291,12 +24,7 @@
 .discountInfoWrap{
     margin-top: 25px;
 }
-.discountInfoWrap .discountInfoLSide .prev,.discountInfoLSide .next,.sendPhone,.wantComments,.storeUp,.diggBtn
-,.discountDetailsWrap .busOrTrive,.discountDetailsWrap .parting,.discountDetailsWrap .lookTotalGraph,.discountContentWrap #ckepop .jtico_jiathis
-{
-    background-image: url(/assets/discountMerge.png);
-}
-.discountInfoLSide  .infoImgSilde{
+.discountInfoLSide .infoImgSilde{
     height: 195px;
     overflow-y: hidden;
     width:260px;
@@ -363,37 +91,12 @@
     font-family: '微软雅黑';
     display: inline-block;
 }
-.sendPhone,.wantComments,.storeUp,.discountContentWrap #ckepop .jtico_jiathis{
-    color:#006ab3;
-    font-size: 12px;
-    height: 18px;
-    line-height: 18px;
-    float: left;
-}
 .discountContentWrap #ckepop .jtico_jiathis{
     background-position: -262px top;
     padding-left: 15px;
     height: 18px;
     width:50px;
     text-decoration: none;
-}
-.sendPhone{
-    background-position: left top;
-    padding-left: 15px;
-    margin-right: 10px;
-}
-.wantComments{
-    background-position: -89px top;
-    padding-left: 17px;
-    margin-right: 10px;
-}
-.wantComments span,.storeUp span{
-    color: #999;
-}
-.storeUp{
-    background-position: -188px top;
-    padding-left: 17px;
-    margin-right: 10px;
 }
 .discountDetailsInfo{
     margin-top: 35px;
@@ -415,112 +118,6 @@
 .discountDetailsInfo img{
     max-width: 648px;
     margin:22px 0;
-}
-.diggBtn,.stepOn,.diggBtnUnactive,.stepOnUnactive{
-    display: inline-block;
-    height: 50px;
-    line-height: 50px;
-    width:135px;
-    padding-left: 65px;
-    color: #f60;
-    font-family: '微软雅黑';
-    font-size: 14px;
-    text-indent: 0px;
-    text-align: left;
-    background-image: url(../../../images/0616/images/diggBtn.png);
-    background-repeat: no-repeat;
-}
-.diggBtn{
-    background-position:left top;
-}
-.diggBtn:hover{
-    background-position: left -64px;
-}
-.diggBtnUnactive{
-    background-position:left bottom;
-    color: #999;
-}
-.stepOn{
-    background-position:right top;
-}
-.stepOn:hover{
-    background-position: right -64px;
-}
-.stepOnUnactive{
-    background-position:right bottom;
-    color: #bebebe;
-}
-.storeTab .tabList{
-    margin-left: 0px;
-    margin-bottom: 0px;
-}
-.storeTab .tabTitleWrap{
-    padding: 0px;
-}
-.storeTab .tabContentWrap{
-    border-top: 1px solid #56c2ff;
-    margin-top: -1px;
-    padding-top: 23px;
-    background: #fff;
-    padding-left: 3px;
-    padding-bottom: 20px;
-}
-.storeTab .tabList .tabTitle{
-    background: url(../../../images/0616/images/tabBg4.png) no-repeat left top;
-    padding-left: 15px;
-    height: 28px;
-    line-height: 28px;
-}
-.storeTab .tabList .tabTitle span{
-    background: url(../../../images/0616/images/tabBg4.png) no-repeat right top;
-    padding-right: 15px;
-    height: 28px;
-    line-height: 28px;
-}
-.storeTab .tabList .visited{
-     background-image: url(../../../images/0616/images/tabBg3.png);
-}
-.storeTab .tabList .visited span{
-     background-image: url(../../../images/0616/images/tabBg3.png);
-}
-.storeTab .img{
-    display: block;
-    width:152px;
-    height: 144px;
-}
-.storeTab .maskWrap{
-    width:152px;
-    cursor: pointer;
-    float: left;
-    margin-left: 19px;
-}
-.storeTab .maskWrap span.title{
-   color: #0072bb;
-   line-height: 18px;
-   padding-top: 5px;
-   display: block;
-   font-size: 12px; 
-   height: 38px;
-   overflow: hidden;
-}
-.storeTab .maskImage:hover{
-    color: #0072bb;
-}
-.otherShopsDiscount .item{
-    background: url(../../../images/0616/images/dian2.png) no-repeat left center;
-    padding-left: 10px;
-    line-height: 24px;
-    height: 24px;
-}
-.otherShopsDiscount .background1{
-    padding: 12px 15px;
-}
-.otherShopsDiscount .discountList .link{
-    color: #0072bb;
-    height: 24px;
-    overflow: hidden;
-    width:420px;
-    float: left;
 }
 .discountDetailsWrap .areaLocation{
     background: #fff;
@@ -553,183 +150,13 @@
 .discountDetailsWrap .areaLink{
     padding: 10px 0;
 }
-.mapLink {
-    background: url("../../../images/0616/images/mapsearch.gif") no-repeat left top;
-    display: block;
-    height: 42px;
-    width: 260px;
-}
-.mapLink:hover {
-    background-image: url("../../../images/0616/images/mapsearchHover.gif");
-}
-.sameDiscountInfo,.sameDiscountInfo1,.browsingHistory{
-    width:260px;
-}
-.sameDiscountInfo .background1{
-    padding:4px 14px 14px;
-}
-.sameDiscountInfo .info{
-    margin-left: 8px;
-    width:144px;
-}
-.sameDiscountInfo .item{
-    padding: 10px 0;
-    border-bottom: 1px #e5e5e5 dashed;
-}
-.sameDiscountInfo .img{
-    width:80px;
-    display: block;
-    height: 60px;
-}
-.sameDiscountInfo p{
-    line-height: 20px;
-    height: 20px;
-}
-.sameDiscountInfo .subTitle,.sameDiscountInfo .address{
-    display: inline-block;
-    overflow: hidden;
-    height: 20px;
-}
-.sameDiscountInfo1 .background1{
-    padding: 10px 12px 16px;
-    width:236px;
-}
-.sameDiscountInfo1 .tabListContents{
-    height: 280px;
-    overflow: hidden;
-}
-.sameDiscountInfo1 .tabListContentsL{
-    height: 27px;
-    line-height: 28px;
-    display: block;
-    padding-left: 25px;
-    border-bottom: 1px solid #E5E5E5;
-    overflow: hidden;
-}
 .discountDetailsWrap .adsImg{
     width:260px;
     height: 200px;
     display: block;
 }
-.browsingHistory{
-    width:260px;
-}
-.browsingHistory .background1{
-    padding: 10px 12px 15px;
-}
-.browsingHistory .item{
-    height: 22px;
-    line-height: 22px;
-    overflow: hidden;
-}
-.browsingHistory .link{
-    width:185px;
-    float:left;
-    overflow: hidden;
-}
-.commentsWrap{
-    background: #fff;
-    padding: 20px 30px;
-    width:650px;
-}
-.commentsWrap .commentsInput{
-    color:#ccc;
-    font-size: 13px;
-    padding:10px;
-    border: 1px solid #dedede;
-    width:628px;
-    height: 70px;
-}
-.commentsWrap .commentsInputChange{
-    color: #000;
-}
-.commentsWrap  .commentsTip{
-    color: #999;
-    padding-left: 10px;
-}
-.commentsWrap  .commentsErrorTip{
-    color: #f00;
-}
-.commentsWrap .link{
-    padding-top: 2px;
-}
-.submitButton{
-    background: url("../../../images/0616/images/grayButton.gif") no-repeat left center;
-    display: block;
-    text-align: center;
-    height: 28px;
-    border: 0px none;
-    line-height: 28px;
-    color:#666;
-    font-size: 13px;
-    width:105px;
-}
-.commentsList{
-    margin-top: 35px;
-    border-top: 1px dashed #e5e5e5;
-}
-.commentsList .info{
-    margin-left: 12px;
-    width:578px;
-    padding-top: 2px;
-}
-.commentsList .item{
-    border-bottom: 1px #e5e5e5 dashed;
-    padding: 12px 0;
-}
-.commentsList .img{
-    display: block;
-    width:60px;
-    height: 60px;
-}
-.commentsList .details{
-    color: #666;
-    margin-top: 5px;
-    line-height: 18px;
-    overflow: hidden;
-    width: 560px;
-}
-.GlobleTabPages {
-    text-align: center;
-    padding-top:  45px;
-    padding-bottom: 60px;
-}
-.GlobleTabPages a {
-    border: 1px solid #CCCCCC;
-    color: #222222;
-    display: inline-block;
-    height: 24px;
-    line-height: 24px;
-    padding: 0 8px;
-    vertical-align: middle;
-}
-.GlobleTabPages a:hover, .GlobleTabPages a.current {
-    background-color: #FF6600;
-    border: 1px solid #FF6600;
-    color: #FFFFFF;
-    text-decoration: none;
-}
-.GlobleTabPages input.pageChange {
-    border: 1px solid #CCCCCC;
-    display: inline-block;
-    height: 24px;
-    line-height: 24px;
-    width: 35px;
-    vertical-align: middle;
-}
-.GlobleTabPages a.go {
-    background: url("../../../images/0616/images/go.png") repeat 0 0;
-    border: 0 none;
-    height: 26px;
-    padding: 0;
-    width: 36px;
-}
-.GlobleTabPages a.go:hover {
-    background: url("../../../images/0616/images/go.png") repeat 0 0;
-    font-size: 0;
-    padding: 0;
-    width: 36px;
-}
+
+/* from map */
 #mapbox {
     width: 208px;
     height: 200px;
@@ -741,4 +168,22 @@
     width: 930px;
     height: 350px;
     margin: 14px;border: 1px solid #CDCDCD;
+}
+
+/* from dldGlobal.css */
+.clearfix:before, .clearfix:after {  
+content:"";  
+display:table;  
+}  
+.clearfix:after {  
+clear:both;  
+}  
+.clearfix {  
+zoom:1;  
+} 
+.floatLeft {
+	float: left;
+}
+.floatRight {
+	float: right;
 }
