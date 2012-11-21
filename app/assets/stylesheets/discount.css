@@ -1,25 +1,19 @@
 @charset "utf-8";
-.discountDetailsWrap .FLSide{
-    width:710px;
-}
-.discountDetailsWrap .discountContentWrap{
+.discountContentWrap{
     width:650px;
     background: #fff;
     padding: 15px;
 }
-.discountDetailsWrap .globalTitle{
+.discountContentWrap .globalTitle{
     border-bottom: 1px dashed #ccc;
     text-align: center;
     padding-bottom: 20px;
 }
-.discountDetailsWrap .globalTitle .title{
+.discountContentWrap .globalTitle .title{
     font-size: 24px;
     font-weight: bold;
     font-family: '微软雅黑';
     color: #ff3300;
-}
-.discountDetailsWrap .globalTitle .subTitle{
-    margin-top: 15px;
 }
 .discountInfoWrap{
     margin-top: 25px;
@@ -91,13 +85,6 @@
     font-family: '微软雅黑';
     display: inline-block;
 }
-.discountContentWrap #ckepop .jtico_jiathis{
-    background-position: -262px top;
-    padding-left: 15px;
-    height: 18px;
-    width:50px;
-    text-decoration: none;
-}
 .discountDetailsInfo{
     margin-top: 35px;
     margin-bottom: 35px;
@@ -118,42 +105,6 @@
 .discountDetailsInfo img{
     max-width: 648px;
     margin:22px 0;
-}
-.discountDetailsWrap .areaLocation{
-    background: #fff;
-    width: 260px;
-}
-.discountDetailsWrap .areaWrap{
-    padding: 3px;
-}
-.discountDetailsWrap .busOrTrive{
-    background-position: left 73px;
-    padding-left: 15px;
-    color: #0072bb;
-    margin-left: 6px;
-    display: inline-block;
-}
-.discountDetailsWrap .parting{
-    background-position: -81px 71px;
-    padding-left: 14px;
-    display: inline-block;
-    margin-left: 15px;
-    color: #0072bb;
-}
-.discountDetailsWrap .lookTotalGraph{
-    background-position: -184px 70px;
-    padding-left: 15px;
-    color: #0072bb;
-    margin-right: 6px;
-    display: inline-block;
-}
-.discountDetailsWrap .areaLink{
-    padding: 10px 0;
-}
-.discountDetailsWrap .adsImg{
-    width:260px;
-    height: 200px;
-    display: block;
 }
 
 /* from map */
