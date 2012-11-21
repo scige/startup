@@ -4274,6 +4274,7 @@ to {
 	list-style-position:outside;
 	list-style-type:disc
 }
+/* by scige
 #deal-intro h1 {
 	padding:0 20px 20px;
 	font-size:24px;
@@ -4291,6 +4292,7 @@ to {
 	font-family:'Microsoft Yahei','黑体',Tahoma,Helvetica,arial,sans-serif;
 	color:#000
 }
+*/
 #deal-intro h2.deal-title {
 	padding:0 20px 20px 9px;
 	font-size:20px;
