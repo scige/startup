@@ -1,0 +1,101 @@
+@charset "utf-8";
+.couponContentWrap{
+    width:890px;
+    background: #fff;
+    padding: 15px;
+    margin-top: 10px;
+    border-top: 1px solid #DFDFDF;
+}
+.couponContentWrap .globalTitle{
+    padding-bottom: 20px;
+}
+.couponContentWrap .globalTitle .title{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: '微软雅黑';
+    color: #ff3300;
+}
+.couponInfoWrap{
+    margin-top: 10px;
+}
+.couponInfoLSide .infoImgSilde{
+    height: 195px;
+    overflow-y: hidden;
+    width:260px;
+}
+.couponInfoWrap .couponInfoRSide{
+    margin-left: 20px;
+    width:600px;
+    font-size: 14px;
+    color: #333;
+}
+.couponInfoWrap .listCol{
+    line-height: 32px;
+}
+.couponInfoWrap .listCol label{
+    width:70px;
+    text-align: right;
+    padding-right: 10px;
+}
+.couponInfoWrap .listCol .fRSide{
+    width:500px;
+}
+.couponInfoWrap .listCol .couponNum{
+    color:#c00;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: '微软雅黑';
+    display: inline-block;
+}
+.couponDetailsInfo{
+    margin-top: 15px;
+    margin-bottom: 35px;
+    line-height: 24px;
+    color: #666;
+}
+.couponDetailsInfo p{
+    color: #666;
+    line-height: 24px;
+}
+.couponDetailsInfo h2.title{
+    color:#666;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.couponDetailsInfo img{
+    max-width: 648px;
+    margin:22px 0;
+}
+
+/* from map */
+#mapbox {
+    width: 208px;
+    height: 200px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #CDCDCD;
+}
+#couponmap {
+    width: 930px;
+    height: 350px;
+    margin: 14px;border: 1px solid #CDCDCD;
+}
+
+/* from dldGlobal.css */
+.clearfix:before, .clearfix:after {  
+content:"";  
+display:table;  
+}  
+.clearfix:after {  
+clear:both;  
+}  
+.clearfix {  
+zoom:1;  
+} 
+.floatLeft {
+	float: left;
+}
+.floatRight {
+	float: right;
+}
