@@ -1,21 +1,41 @@
-#content.normal-deal-list.cf
-  - @products.each do |product|
-    %div{:class => cycle("item", "item odd")}
-      .cover
-        = link_to image_tag( product.image_path_url(:thumb), :width => "312", :height => "189", :title => "点击查看详情", :alt => product.cover_name ), product_path(product), { :target => "_blank" }
-      %h3= link_to "【#{product.district.cn_name}】#{product.cover_name}", product_path(product), { :target => "_blank" }
-      %p.detail
-        = link_to "去看看", product_path(product),
-                  { :target => "_blank",
-                    :hidefocus=>"true",
-                    :class=>"buy",
-                    :rel=>"nofollow" }
-        %em.price.num= "¥#{integer_of_value product.sale_price}"
-        %span.bypast
-          价值 
-          %span.num
-            %span= "¥#{integer_of_value product.original_price}"
-      %p.total
-        %strong.num= product.sale_count
-        人已购买
+#filter
+  #deal-intro.cf
+    .clearfix.discountDetailsWrap
+      - (0..3).each do ||
+        .discountContentWrap#discountContent
+          .discountInfoWrap.clearfix
+            .discountInfoLSide.floatLeft
+              %ul.infoImgSilde
+                %li
+                  %a{:href=>"#"}
+                    %img.img{:src=>"/assets/coffee.jpg", :height=>"195", :width=>"260"}
+            .discountInfoRSide.floatLeft
+              %ul
+                %li.listCol
+                  .globalTitle
+                    %h1.title 上岛咖啡，单点消费享全场9折
+                %li.listCol
+                  %label.floatLeft 打折时间：
+                  .floatLeft.fRSide
+                    %span#discount_time 2012年11月17日至2013年01月13日 
+                %li.listCol.clearfix
+                  %label.floatLeft 折扣范围：
+                  .floatLeft.fRSide
+                    %span.discountNum 9.0
+                    折
+                %li.listCol.clearfix
+                  %label.floatLeft 地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：
+                  .floatLeft.fRSide
+                    %span#discount_addr 北京市海淀区中关村南大街12号东方天作商城1楼北区
+                %li.listCol.clearfix
+                  %label.floatLeft 电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：
+                  .floatLeft.fRSide
+                    %span#discount_phone 82101245
+                %li.listCol.clearfix
+                  %label.floatLeft 用户印象：
+                  .floatLeft.fRSide
+                    %span#rate 暂无
+                %li.listCol.clearfix
+                  %a{:href=>"#"}
+                    %img.img{:src=>"/assets/shop_now_c.jpg", :height=>"44", :width=>"130"}
 
