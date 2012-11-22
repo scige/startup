@@ -54,6 +54,8 @@ ActiveRecord::Schema.define(:version => 20121105151723) do
     t.string   "address"
     t.string   "phone"
     t.integer  "sale_count"
+    t.float    "pos_x"
+    t.float    "pos_y"
     t.text     "content"
     t.integer  "category_id"
     t.integer  "district_id"

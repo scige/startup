@@ -9,6 +9,8 @@ class CreateProducts < ActiveRecord::Migration
       t.string   :address
       t.string   :phone
       t.integer  :sale_count
+      t.float    :pos_x
+      t.float    :pos_y
       t.text     :content
       t.references :category
       t.references :district

@@ -11,6 +11,8 @@
 #  address     :string(255)
 #  phone       :string(255)
 #  sale_count  :integer
+#  pos_x       :float
+#  pos_y       :float
 #  content     :text
 #  category_id :integer
 #  district_id :integer

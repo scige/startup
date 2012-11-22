@@ -11,6 +11,8 @@
 #  address     :string(255)
 #  phone       :string(255)
 #  sale_count  :integer
+#  pos_x       :float
+#  pos_y       :float
 #  content     :text
 #  category_id :integer
 #  district_id :integer
@@ -30,6 +32,8 @@ class Product < ActiveRecord::Base
   attr_accessible :address
   attr_accessible :phone
   attr_accessible :sale_count
+  attr_accessible :pos_x
+  attr_accessible :pos_y
   attr_accessible :content
 
   validates :category_id, presence: true
