@@ -2,11 +2,11 @@
   #admin-product-info
     %table#admin-products-table
       %tr
-        %td 商品名称：
-        %td= f.text_field :product_name, :size=>40
+        %td 名称：
+        %td= f.text_field :title, :size=>40
       %tr
-        %td 商家名称：
-        %td= f.text_field :shop_name, :size=>40
+        %td 折扣：
+        %td= f.text_field :discount, :size=>40
       %tr
         %td 分类：
         %td= f.select :category_id, @categories.map{|c| [c.cn_name, c.id]}, :selected => (@product.category==nil ? nil : @product.category.id)
@@ -14,29 +14,35 @@
         %td 区域：
         %td= f.select :district_id, @districts.map{|c| [c.cn_name, c.id]}, :selected => (@product.district==nil ? nil : @product.district.id)
       %tr
-        %td 封面名称：
-        %td= f.text_field :cover_name, :size=>40
+        %td 开始时间：
+        %td= f.text_field :begin_at, :size=>40
       %tr
-        %td 销售价格：
-        %td= f.text_field :sale_price, :size=>40
+        %td 结束时间：
+        %td= f.text_field :end_at, :size=>40
       %tr
-        %td 市场价格：
-        %td= f.text_field :original_price, :size=>40
+        %td 地址：
+        %td= f.text_field :address, :size=>40
+      %tr
+        %td 电话：
+        %td= f.text_field :phone, :size=>40
       %tr
         %td 销售数量：
         %td= f.text_field :sale_count, :size=>40
       %tr
-        %td 结束时间：
-        %td= f.text_field :overtime_at, :size=>40
+        %td 坐标X：
+        %td= f.text_field :pos_x, :size=>40
+      %tr
+        %td 坐标Y：
+        %td= f.text_field :pos_y, :size=>40
   #admin-product-image
     %table#admin-products-table
       %tr
         %td
-          = image_tag @product.image_path_url(:normal), :width => "440", :height => "267"
+          = image_tag @product.image_url(:normal), :width => "260", :height => "195"
       %tr
         %td
           上传图片：
-          = f.file_field :image_path
+          = f.file_field :image
   #admin-product-detail
     %table#admin-products-table
       %tr

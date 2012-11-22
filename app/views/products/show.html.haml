@@ -17,7 +17,7 @@
           .discountInfoLSide.floatLeft
             %ul.infoImgSilde
               %li
-                = image_tag( "/assets/coffee.jpg", :width => "260", :height => "195", :title => "点击查看详情", :alt => @product.title )
+                = image_tag( @product.image_url(:normal), :width => "260", :height => "195", :title => "点击查看详情", :alt => @product.title )
           .discountInfoRSide.floatLeft
             %ul
               %li.listCol

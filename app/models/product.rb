@@ -39,5 +39,5 @@ class Product < ActiveRecord::Base
   validates :category_id, presence: true
   validates :district_id, presence: true
 
-  mount_uploader :image_path, ImageUploader
+  mount_uploader :image, ImageUploader
 end

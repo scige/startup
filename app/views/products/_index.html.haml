@@ -7,7 +7,7 @@
             .couponInfoLSide.floatLeft
               %ul.infoImgSilde
                 %li
-                  = link_to image_tag( "/assets/coffee.jpg", :width => "260", :height => "195", :title => "点击查看详情", :alt => product.title ), product_path(product), { :target => "_blank" }
+                  = link_to image_tag( product.image_url(:thumb), :width => "195", :height => "146", :title => "点击查看详情", :alt => product.title ), product_path(product), { :target => "_blank" }
             .couponInfoRSide.floatLeft
               .globalTitle.title
                 = link_to product.title, product_path(product), { :target => "_blank" }
@@ -21,14 +21,6 @@
                   .floatLeft.fRSide
                     %span.couponNum= product.discount
                     折
-                %li.listCol.clearfix
-                  %label.floatLeft 地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：
-                  .floatLeft.fRSide
-                    %span= product.address
-                %li.listCol.clearfix
-                  %label.floatLeft 电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：
-                  .floatLeft.fRSide
-                    %span= product.phone
                 %li.listCol.clearfix
                   = link_to "去看看", product_path(product), { :target => "_blank", :hidefocus=>"true", :class=>"button", :rel=>"nofollow" }
 
