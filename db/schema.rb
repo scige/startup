@@ -46,19 +46,19 @@ ActiveRecord::Schema.define(:version => 20121105151723) do
   end
 
   create_table "products", :force => true do |t|
-    t.string   "shop_name"
-    t.string   "product_name"
-    t.string   "image_path"
-    t.string   "cover_name"
-    t.float    "sale_price"
-    t.float    "original_price"
+    t.string   "title"
+    t.string   "image"
+    t.float    "discount"
+    t.datetime "begin_at"
+    t.datetime "end_at"
+    t.string   "address"
+    t.string   "phone"
     t.integer  "sale_count"
-    t.datetime "overtime_at"
     t.text     "content"
     t.integer  "category_id"
     t.integer  "district_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|

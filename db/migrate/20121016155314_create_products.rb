@@ -1,14 +1,14 @@
 class CreateProducts < ActiveRecord::Migration
   def change
     create_table :products do |t|
-      t.string   :shop_name
-      t.string   :product_name
-      t.string   :image_path
-      t.string   :cover_name
-      t.float    :sale_price
-      t.float    :original_price
+      t.string   :title
+      t.string   :image
+      t.float    :discount
+      t.datetime :begin_at
+      t.datetime :end_at
+      t.string   :address
+      t.string   :phone
       t.integer  :sale_count
-      t.datetime :overtime_at
       t.text     :content
       t.references :category
       t.references :district

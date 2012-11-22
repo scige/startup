@@ -6,15 +6,6 @@
     margin-top: 10px;
     border-top: 1px solid #DFDFDF;
 }
-.couponContentWrap .globalTitle{
-    padding-bottom: 20px;
-}
-.couponContentWrap .globalTitle .title{
-    font-size: 24px;
-    font-weight: bold;
-    font-family: '微软雅黑';
-    color: #ff3300;
-}
 .couponInfoWrap{
     margin-top: 10px;
 }
@@ -47,25 +38,31 @@
     font-family: '微软雅黑';
     display: inline-block;
 }
-.couponDetailsInfo{
-    margin-top: 15px;
-    margin-bottom: 35px;
-    line-height: 24px;
-    color: #666;
-}
-.couponDetailsInfo p{
-    color: #666;
-    line-height: 24px;
-}
-.couponDetailsInfo h2.title{
-    color:#666;
+.couponInfoWrap .title{
+    padding-bottom: 20px;
+    font-size: 24px;
     font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 15px;
+    font-family: '微软雅黑';
 }
-.couponDetailsInfo img{
-    max-width: 648px;
-    margin:22px 0;
+.couponInfoWrap .title a {
+	display:block;
+    color: #ff3300;
+}
+.couponInfoWrap .title a:hover {
+	color:#399;
+	text-decoration:none
+}
+.couponInfoWrap .button {
+	float:left;
+	margin-top:6px;
+	width:83px;
+	height:33px;
+	line-height:99px;
+	overflow:hidden;
+	background:url(/assets/sp-deal.png?v=3) no-repeat
+}
+.couponInfoWrap .button:hover {
+	background-position:0 -35px
 }
 
 /* from map */

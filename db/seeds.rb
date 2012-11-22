@@ -26,31 +26,32 @@ district.each do |d|
     )
 end
 
+
 p1 = Product.new(
-    :shop_name => "金源福城肥牛",
-    :product_name => "仅售88元！最高价值252.4元的金源福城肥牛（远大路金源店）2-3人套餐。大厅消费赠送燕京特制啤酒、北京二锅头白酒无限畅饮，全场酸梅汤、豆浆、小布丁、口香糖免费，女士另赠银耳羹1份。",
-    :image_path => "1.jpg",
-    :cover_name => "2-3人套餐，食材心想，服务周到，交通便利",
-    :sale_price => 88,
-    :original_price => 252.4,
-    :sale_count => 308,
-    :overtime_at => "2012-10-18",
-    :content => "本单详情",
+    :title      => "老马富贵拉面 9折独享",
+    :image      => "1.jpg",
+    :discount   => 9.0,
+    :begin_at   => "2012-11-22",
+    :end_at     => "2012-12-31",
+    :address    => "北京市昌平区阳坊大都北侧",
+    :phone      => "010-58488600",
+    :sale_count => 300,
+    :content    => "纯正的清真风味，大盘鸡、囊包肉非常独特，烧烤很正宗，服务非常的周到，期待着您的光临。老马富贵拉面 9折（酒水、烧烤除外）；与店内其他优惠活动选一，详询商家58488600。"
 )
 p1.category = Category.find_by_cn_name("美食");
 p1.district = District.find_by_cn_name("朝阳区");
 p1.save
 
 p2 = Product.new(
-    :shop_name => "轻联富润酒店",
-    :product_name => "仅售158元！价值328元的轻联富润酒店住宿1晚（标准双人间/标准大床房2选1），美团券可叠加使用。",
-    :image_path => "2.jpg",
-    :cover_name => "轻联富润酒店：住宿1晚，美团券可叠加使用",
-    :sale_price => 158,
-    :original_price => 328,
-    :sale_count => 1641,
-    :overtime_at => "2012-10-28",
-    :content => "本单详情",
+    :title      => "星耀国际商务酒店9折独享优惠",
+    :image      => "2.jpg",
+    :discount   => 9.0,
+    :begin_at   => "2012-11-22",
+    :end_at     => "2012-12-31",
+    :address    => "北京市西城区阜成门796号",
+    :phone      => "010-8964132",
+    :sale_count => 200,
+    :content    => "星耀国际商务酒店9折优惠，酒店坐拥干将路优美之处，享受“两路夹一河”及“园林外移”的特色景观。周围小桥流水，粉墙黛瓦，尽显苏州城市的人文历史文化底蕴。酒店以超四星级标准、 五星酒店用品建造，现代专业团队管理，环境幽雅，地铁上盖，彰显现代迷人风格，是国内鲜见结合城市古今文化特色和价值的精品酒店。 "
 )
 p2.category = Category.find_by_cn_name("酒店");
 p2.district = District.find_by_cn_name("海淀区");
