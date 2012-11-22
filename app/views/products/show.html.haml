@@ -48,9 +48,9 @@
       .discountContentWrap
         .discountDetailsInfo
           %h2.title 详细信息
-          %p= "&nbsp;&nbsp;&nbsp;&nbsp;#{@product.content}".html_safe
-          %p= "&nbsp;&nbsp;&nbsp;&nbsp;电话：#{@product.phone}".html_safe
-          %p= "&nbsp;&nbsp;&nbsp;&nbsp;地址：#{@product.address}".html_safe
+          %p= @product.content.html_safe
+          %p= "电话：#{@product.phone}"
+          %p= "地址：#{@product.address}"
 
 #sidebar
   .side-single
