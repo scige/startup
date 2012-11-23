@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Startup
+    %title= "#{yield(:title)} | 吉林美打折网"
     = stylesheet_link_tag "application", :media=>"all"
     = javascript_include_tag "application"
     = csrf_meta_tags
