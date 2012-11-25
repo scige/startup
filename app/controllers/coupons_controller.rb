@@ -1,7 +1,8 @@
 # coding: utf-8
 
 class CouponsController < ApplicationController
-    before_filter :require_logined, :only => [:get, :create, :index, :show]
+    before_filter :require_logined, :only => [:get, :create, :index, :destroy]
+    before_filter :require_correct_user, :only => [:destroy]
 
     def get
         @coupon = Coupon.new
@@ -24,4 +25,19 @@ class CouponsController < ApplicationController
     def index
         @coupons = current_user.coupons
     end
+
+    def destroy
+        @coupon = Coupon.find(params[:id])
+        @coupon.destroy
+        redirect_to coupons_url
+    end
+
+    private
+
+        def require_correct_user
+            @user = Coupon.find(params[:id]).user
+            unless current_user?(@user)
+                redirect_to root_path
+            end
+        end
 end

@@ -22,7 +22,7 @@
           %td.unpay= coupon.password
           %td
             = link_to "发送短信", "#"
-            = link_to "不想要了", "#"
+            = link_to "不想要了", coupon_path(coupon), :method => :delete, :confirm => "删除后不可恢复，确定删除？"
 
 #sidebar
 

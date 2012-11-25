@@ -21,13 +21,6 @@ class ApplicationController < ActionController::Base
         end
     end
 
-    def require_correct_user
-        @user = User.find(params[:id])
-        unless current_user?(@user)
-            redirect_to root_path
-        end
-    end
-
     def require_admin_user
         unless current_user.admin?
             flash[:error] = "管理员才能使用管理后台。"

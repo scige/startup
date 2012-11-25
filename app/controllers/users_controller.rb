@@ -42,4 +42,13 @@ class UsersController < ApplicationController
             render "edit"
         end
     end
+
+    private
+
+        def require_correct_user
+            @user = User.find(params[:id])
+            unless current_user?(@user)
+                redirect_to root_path
+            end
+        end
 end
