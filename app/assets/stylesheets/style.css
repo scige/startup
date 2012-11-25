@@ -2692,7 +2692,7 @@ to {
 }
 #orders .coupons-table td,#orders .coupons-table th {
 	text-align:center;
-	padding:10px 5px
+	padding:10px 20px
 }
 #orders .coupons-table td {
 	font-size:12px
