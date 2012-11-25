@@ -24,6 +24,8 @@ class Product < ActiveRecord::Base
   belongs_to :category
   belongs_to :district
 
+  has_many :coupons, dependent: :destroy
+
   attr_accessible :title
   attr_accessible :image
   attr_accessible :discount

@@ -1,0 +1,8 @@
+%h2
+  - case action_name 
+  - when "index"
+    全部优惠券
+%uj.filter
+  %li{:class => (action_name == "index" ? "current" : nil)}
+    = link_to "全部", coupons_path
+

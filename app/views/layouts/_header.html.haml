@@ -26,7 +26,7 @@
         / 有了优惠券以后，去掉if判断，修改路由到coupon#index
         /  = link_to "我的信息", account_path, {:class=>"my-account"}
         - if logined?
-          = link_to "我的信息", user_path(current_user), {:class=>"my-account"}
+          = link_to "我的信息", coupons_path, {:class=>"my-account"}
         - else
           = link_to "我的信息", account_path, {:class=>"my-account"}
         %i.tri

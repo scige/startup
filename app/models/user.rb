@@ -21,6 +21,8 @@ class User < ActiveRecord::Base
   attr_accessible :email
   attr_accessible :mobile
 
+  has_many :coupons, dependent: :destroy
+
   has_secure_password
 
   validates :name,  :presence => true,

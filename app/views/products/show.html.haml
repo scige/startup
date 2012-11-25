@@ -43,7 +43,7 @@
                 .floatLeft.fRSide
                   %span 暂无
               %li.listCol.clearfix
-                = link_to image_tag( "/assets/shop_now_c.jpg", :width=>"130", :height=>"44" ), "#"
+                = link_to image_tag( "/assets/shop_now_c.jpg", :width=>"130", :height=>"44" ), get_coupon_path(@product)
   #deal-intro.cf
     .clearfix.floatLeft
       .discountContentWrap

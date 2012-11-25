@@ -1,10 +1,10 @@
 .dashboard
   %ul
-    %li{:class => (controller_name == "coupon" ? "current" : nil)}
-      = link_to "我的优惠券", user_path(@user)
+    %li{:class => (controller_name == "coupons" ? "current" : nil)}
+      = link_to "我的优惠券", coupons_path
       %span
 
     %li{:class => (controller_name == "users" ? "current" : nil)}
-      = link_to "账户设置", user_path(@user)
+      = link_to "账户设置", user_path(current_user)
       %span
 

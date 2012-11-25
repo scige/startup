@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121105151723) do
+ActiveRecord::Schema.define(:version => 20121125071700) do
 
   create_table "categories", :force => true do |t|
     t.string   "en_name"
@@ -36,6 +36,18 @@ ActiveRecord::Schema.define(:version => 20121105151723) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
+
+  create_table "coupons", :force => true do |t|
+    t.integer  "status",     :default => 0
+    t.string   "password"
+    t.integer  "user_id"
+    t.integer  "product_id"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
+  add_index "coupons", ["product_id"], :name => "index_coupons_on_product_id"
+  add_index "coupons", ["user_id"], :name => "index_coupons_on_user_id"
 
   create_table "districts", :force => true do |t|
     t.string   "en_name"
