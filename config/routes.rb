@@ -62,9 +62,7 @@ Startup::Application.routes.draw do
 
   resources :products, :only => [:show]
 
-  resources :coupons, :only => [:create, :index, :destroy] do
-    get :get, :on => :member
-  end
+  resources :coupons, :only => [:create, :index, :destroy]
 
   resources :filters, :only => [] do
     get :today, :on => :collection

@@ -43,7 +43,7 @@
                 .floatLeft.fRSide
                   %span 暂无
               %li.listCol.clearfix
-                = link_to image_tag( "/assets/shop_now_c.jpg", :width=>"130", :height=>"44" ), get_coupon_path(@product)
+                = link_to image_tag( "/assets/shop_now_c.jpg", :width=>"130", :height=>"44" ), "#", :onclick=>"showModal();"
   #deal-intro.cf
     .clearfix.floatLeft
       .discountContentWrap
@@ -71,3 +71,19 @@
       map.enableScrollWheelZoom();
     #maplink
       查看大图
+
+.alert_mask#alert_mask{:style=>"display: none; height: 1066px;"}
+  .alert_out#alert_out{:style=>"top: 200px;"}
+    = form_tag coupons_path do |f|
+      = hidden_field_tag :product_id, @product.id
+      = label_tag :title, @product.title
+      %br
+      = label_tag :mobile, "手机："
+      = text_field_tag :mobile, nil
+      %br
+      = label_tag :captcha, "验证码："
+      = text_field_tag :captcha, nil
+      %br
+      = submit_tag "确定"
+      %input{:type=>"button", :value=>"取消", :name=>"cancel", :onclick=>"hideModal();"}
+
