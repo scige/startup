@@ -73,7 +73,9 @@
       查看大图
 
 .alert_mask#alert_mask{:style=>"display: none; height: 1066px;"}
+  <!--[if lte IE 6]><iframe frameborder="0" src=""></iframe><![endif]-->
   .alert_out#alert_out{:style=>"top: 200px;"}
+    %h3 发送到手机
     = form_tag coupons_path do |f|
       = hidden_field_tag :product_id, @product.id
       = label_tag :title, @product.title
