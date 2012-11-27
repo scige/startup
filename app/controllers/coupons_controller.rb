@@ -10,10 +10,16 @@ class CouponsController < ApplicationController
         @product = Product.find(params[:product_id])
         @coupon.product = @product
         @coupon.status = 0
-        @coupon.password = Time.now.to_s
-        if @coupon.save
-            flash[:success] = "优惠券发送成功！您可以在我的优惠券中查看详细信息。"
+        @coupon.password = get_password
+        # 重复尝试5次，超过5次返回错误信息
+        (1..5).each do
+            if @coupon.save
+                flash[:success] = "优惠券发送成功！您可以在我的优惠券中查看详细信息。"
+                redirect_to product_path(@product)
+                return
+            end
         end
+        flash[:error] = "优惠券发送失败！请尝试重新发送。"
         redirect_to product_path(@product)
     end
 
@@ -34,5 +40,12 @@ class CouponsController < ApplicationController
             unless current_user?(@user)
                 redirect_to root_path
             end
+        end
+
+        def get_password
+            part1 = rand(1)
+            part2 = rand(1)
+            part3 = rand(1)
+            password = "%04d %04d %04d" % [part1, part2, part3]
         end
 end
