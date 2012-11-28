@@ -3,6 +3,7 @@
 # Table name: products
 #
 #  id          :integer          not null, primary key
+#  status      :integer          default(0)
 #  title       :string(255)
 #  image       :string(255)
 #  discount    :float
