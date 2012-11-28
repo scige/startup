@@ -6,8 +6,8 @@ function showMapBox(){
     var map = new BMap.Map("mapbox");
     var point = new BMap.Point(pos_x, pos_y);
     
-    var infoWindow1 = new BMap.InfoWindow(title);
-    marker1.addEventListener("click", function(){this.openInfoWindow(infoWindow1);});
+    var marker1 = new BMap.Marker(new BMap.Point(pos_x, pos_y));
+    map.addOverlay(marker1);
     
     map.centerAndZoom(point,15);
     map.enableScrollWheelZoom();

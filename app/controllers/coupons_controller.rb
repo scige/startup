@@ -65,9 +65,9 @@ class CouponsController < ApplicationController
         end
 
         def get_password
-            part1 = rand(1)
-            part2 = rand(1)
-            part3 = rand(1)
+            part1 = rand(10000)
+            part2 = rand(10000)
+            part3 = rand(10000)
             password = "%04d%04d%04d" % [part1, part2, part3]
         end
 end
