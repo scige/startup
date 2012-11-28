@@ -2,14 +2,18 @@
   - case action_name 
   - when "index"
     全部优惠券
+  - when "unuse"
+    未使用优惠券
+  - when "used"
+    已使用优惠券
 %uj.filter
   %li{:class => (action_name == "index" ? "current" : nil)}
     = link_to "全部", coupons_path
-  %li{:class => (action_name == "filter" ? "current" : nil)}
-    = link_to "未使用", "#"
+  %li{:class => (action_name == "unuse" ? "current" : nil)}
+    = link_to "未使用", unuse_coupons_path
+  %li{:class => (action_name == "used" ? "current" : nil)}
+    = link_to "已使用", used_coupons_path
   %li{:class => (action_name == "filter" ? "current" : nil)}
     = link_to "即将到期", "#"
-  %li{:class => (action_name == "filter" ? "current" : nil)}
-    = link_to "已使用", "#"
   %li{:class => (action_name == "filter" ? "current" : nil)}
     = link_to "已过期", "#"

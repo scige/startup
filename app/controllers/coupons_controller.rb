@@ -24,13 +24,35 @@ class CouponsController < ApplicationController
     end
 
     def index
-        @coupons = current_user.coupons
+        allcoupons = current_user.coupons
+        @coupons = allcoupons.select do |coupon|
+            coupon.status == COUPON_STATUS_UNUSE || coupon.status == COUPON_STATUS_USED
+        end
     end
 
+    # 不是真正删除，避免用户删除已使用优惠券的情况
     def destroy
         @coupon = Coupon.find(params[:id])
-        @coupon.destroy
+        # 不能重复删除
+        if @coupon and @coupon.status < COUPON_STATUS_DEL
+            @coupon.status += COUPON_STATUS_DEL
+            @coupon.save
+        end
         redirect_to coupons_url
+    end
+
+    def unuse
+        allcoupons = current_user.coupons
+        @coupons = allcoupons.select do |coupon|
+            coupon.status == COUPON_STATUS_UNUSE
+        end
+    end
+
+    def used
+        allcoupons = current_user.coupons
+        @coupons = allcoupons.select do |coupon|
+            coupon.status == COUPON_STATUS_USED
+        end
     end
 
     private

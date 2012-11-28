@@ -24,7 +24,7 @@
               %li.listCol
                 %label.floatLeft 打折时间：
                 .floatLeft.fRSide
-                  %span= "#{@product.begin_at.strftime('%Y年%m月%d日')}至#{@product.end_at.strftime('%Y年%m月%d日')}"
+                  %span= "#{get_format_time(@product.begin_at)}至#{get_format_time(@product.end_at)}"
               %li.listCol.clearfix
                 %label.floatLeft 折扣范围：
                 .floatLeft.fRSide

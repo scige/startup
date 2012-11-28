@@ -8,6 +8,7 @@
         %tr
           %th{:width=>"auto"} 编号
           %th{:width=>"50"} 名称
+          %th{:width=>"50"} 状态
           %th{:width=>"50"} 折扣
           %th{:width=>"50"} 分类
           %th{:width=>"50"} 区域
@@ -22,11 +23,12 @@
           %tr{:class => cycle("alt", "")}
             %td= product.id
             %td= product.title
+            %td= product.status == PRODUCT_STATUS_ON_SHELF ? "已上架" : "未上架"
             %td= product.discount
             %td= product.category.cn_name
             %td= product.district.cn_name
-            %td= product.begin_at.strftime('%Y年%m月%d日')
-            %td= product.end_at.strftime('%Y年%m月%d日')
+            %td= get_format_time(product.begin_at)
+            %td= get_format_time(product.end_at)
             %td= product.address
             %td= product.phone
             %td= product.sale_count

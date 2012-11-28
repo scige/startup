@@ -1,6 +1,7 @@
 class CreateProducts < ActiveRecord::Migration
   def change
     create_table :products do |t|
+      t.integer  :status, :default => PRODUCT_STATUS_OFF_SHELF
       t.string   :title
       t.string   :image
       t.float    :discount

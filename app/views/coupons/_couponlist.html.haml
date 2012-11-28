@@ -1,0 +1,21 @@
+%table#order-list.coupons-table{:cellpadding=>"0", :cellspacing=>"0", :border=>"0"}
+  %tr
+    %th{:width=>"auto"} 优惠券
+    %th{:width=>"50"} 状态
+    %th{:width=>"160"} 密码
+    %th{:width=>"60"} 操作
+  - @coupons.each do |coupon|
+    %tr{:class => cycle("alt", "")}
+      %td.deal
+        %table.deal-info
+          %tr
+            %td.pic
+              = link_to image_tag(coupon.product.image_url(:thumb), :width=>"75", :height=>"56"), product_path(coupon.product), {:target=>"_blank"}
+            %td.text
+              = link_to coupon.product.title, product_path(coupon.product), {:class=>"deal-title", :target=>"_blank"}
+      %td= coupon_status_string(coupon.status)
+      %td.unpay= coupon.password
+      %td
+        = link_to "发送短信", "#"
+        = link_to "不想要了", coupon_path(coupon), :method => :delete, :confirm => "删除后不可恢复，确定删除？"
+

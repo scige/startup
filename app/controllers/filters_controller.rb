@@ -11,7 +11,10 @@ class FiltersController < ApplicationController
         @districts = District.all
 
         category = Category.find_by_id(params[:id])
-        @products = category.products
+        allproducts = category.products
+        @products = allproducts.select do |product|
+            product.status == PRODUCT_STATUS_ON_SHELF
+        end
     end
 
     def district
@@ -19,6 +22,9 @@ class FiltersController < ApplicationController
         @districts = District.all
 
         district = District.find_by_id(params[:id])
-        @products = district.products
+        allproducts = district.products
+        @products = allproducts.select do |product|
+            product.status == PRODUCT_STATUS_ON_SHELF
+        end
     end
 end

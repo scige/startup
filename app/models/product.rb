@@ -26,6 +26,7 @@ class Product < ActiveRecord::Base
 
   has_many :coupons, dependent: :destroy
 
+  attr_accessible :status
   attr_accessible :title
   attr_accessible :image
   attr_accessible :discount
@@ -37,6 +38,9 @@ class Product < ActiveRecord::Base
   attr_accessible :pos_x
   attr_accessible :pos_y
   attr_accessible :content
+
+  validates :status, :presence => true,
+                     :numericality => {:only_integer => true}
 
   validates :category_id, presence: true
   validates :district_id, presence: true

@@ -5,6 +5,13 @@
         %td 名称：
         %td= f.text_field :title, :size=>40
       %tr
+        %td 状态：
+        %td
+          = f.label :status, "未上架"
+          = f.radio_button :status, PRODUCT_STATUS_OFF_SHELF, :checked => true
+          = f.label :status, "已上架"
+          = f.radio_button :status, PRODUCT_STATUS_ON_SHELF
+      %tr
         %td 折扣：
         %td= f.text_field :discount, :size=>40
       %tr

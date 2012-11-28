@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20121125071700) do
   end
 
   create_table "products", :force => true do |t|
+    t.integer  "status",      :default => 0
     t.string   "title"
     t.string   "image"
     t.float    "discount"
@@ -71,8 +72,8 @@ ActiveRecord::Schema.define(:version => 20121125071700) do
     t.text     "content"
     t.integer  "category_id"
     t.integer  "district_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   create_table "users", :force => true do |t|

@@ -28,6 +28,7 @@ end
 
 
 p1 = Product.new(
+    :status     => PRODUCT_STATUS_ON_SHELF,
     :title      => "老马富贵拉面 9折独享",
     :image      => "1.jpg",
     :discount   => 9.0,
@@ -45,6 +46,7 @@ p1.district = District.find_by_cn_name("朝阳区");
 p1.save
 
 p2 = Product.new(
+    :status     => PRODUCT_STATUS_ON_SHELF,
     :title      => "星耀国际商务酒店9折独享优惠",
     :image      => "2.jpg",
     :discount   => 9.0,
