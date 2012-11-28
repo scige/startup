@@ -1,0 +1,3 @@
+#coupon status
+COUPON_STATUS_UNUSE = 0
+COUPON_STATUS_USED = 1

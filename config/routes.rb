@@ -69,6 +69,12 @@ Startup::Application.routes.draw do
     get :district, :on => :member
   end
 
+  get 'checkcoupon' => 'companies#check_coupon', :as => :checkcoupon
+
+  resources :companies, :only => [] do
+    post :update_coupon, :on => :collection
+  end
+
   namespace :admin do
     root :to => 'products#index'
     resources :products, :except => [:show]

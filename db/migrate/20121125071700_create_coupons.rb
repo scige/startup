@@ -1,7 +1,7 @@
 class CreateCoupons < ActiveRecord::Migration
   def change
     create_table :coupons do |t|
-      t.integer :status, :default => 0
+      t.integer :status, :default => COUPON_STATUS_UNUSE
       t.string :password
       t.references :user
       t.references :product

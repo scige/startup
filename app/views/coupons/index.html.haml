@@ -18,7 +18,7 @@
                   = link_to image_tag(coupon.product.image_url(:thumb), :width=>"75", :height=>"56"), product_path(coupon.product), {:target=>"_blank"}
                 %td.text
                   = link_to coupon.product.title, product_path(coupon.product), {:class=>"deal-title", :target=>"_blank"}
-          %td= coupon.status==0 ? "未使用":"已使用"
+          %td= coupon.status==COUPON_STATUS_UNUSE ? "未使用":"已使用"
           %td.unpay= coupon.password
           %td
             = link_to "发送短信", "#"
