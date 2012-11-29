@@ -5,7 +5,10 @@
         <% @products.each do |product| %>
             var marker2 = new BMap.Marker(new BMap.Point(<%= product.pos_x %>, <%= product.pos_y %>));
             map.addOverlay(marker2);
-            var content = <%= '"'.html_safe %><%= "<a target='_blank' href='#{product_path(product)}'>#{product.title}</a>".html_safe %><%= '"'.html_safe %>
+            var content = <%= '"'.html_safe %> \
+                <%= "<h1><a target='_blank' href='#{product_path(product)}'>#{product.title}</a></h1>".html_safe %> \
+                <%= "折扣范围：<strong> #{product.discount} </strong>折".html_safe %> \
+                <%= '"'.html_safe %>
             var infoWindow2 = new BMap.InfoWindow(content);
             marker2.addEventListener("click", function(){this.openInfoWindow(infoWindow2);});
         <% end %>
