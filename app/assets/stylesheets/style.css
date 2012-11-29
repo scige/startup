@@ -1067,33 +1067,15 @@ to {
 	border-left:1px dotted #a5a5a5;
 	border-right:1px dotted #f7f7f7;
 	width:156px;
-	height:140px;
-	padding:20px 0 20px 25px
+	height:70px;
+	padding:20px 0 20px 30px
 }
 #ft .service {
-	padding-right:25px;
+	/*padding-right:20px;*/
 	width:176px;
 	border-right-color:#a5a5a5;
-	text-align:center;
 	font-family:'Microsoft Yahei',Helvetica,arial,sans-serif;
 	color:#666
-}
-#ft .service .hotline {
-	display:block;
-	margin:0 auto 10px auto;
-	width:64px;
-	height:50px;
-	background-position:-580px 0
-}
-#ft .service .desc {
-	font-size:14px
-}
-#ft .service .num {
-	font:20px/32px Helvetica,arial;
-	color:#555
-}
-#ft .service .time {
-	font-size:12px
 }
 #ft .ftbox h3 {
 	color:#3e4545;

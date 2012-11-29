@@ -3,7 +3,7 @@
 class ApplicationController < ActionController::Base
     protect_from_forgery
 
-    helper_method :logined?, :current_user
+    helper_method :logined?, :admin_user?, :current_user
 
     protected
 
@@ -38,6 +38,10 @@ class ApplicationController < ActionController::Base
 
     def logined?
         current_user != nil
+    end
+
+    def admin_user?
+        current_user.admin?
     end
 
     def login_as(user)
