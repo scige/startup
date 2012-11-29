@@ -18,7 +18,7 @@
           .discountInfoLSide.floatLeft
             %ul.infoImgSilde
               %li
-                = image_tag( @product.image_url(:normal), :width => "260", :height => "195", :title => "点击查看详情", :alt => @product.title )
+                = image_tag( @product.image_url(:normal), :width => "260", :height => "195", :title => @product.title, :alt => @product.title )
           .discountInfoRSide.floatLeft
             %ul
               %li.listCol
@@ -28,7 +28,7 @@
               %li.listCol.clearfix
                 %label.floatLeft 折扣范围：
                 .floatLeft.fRSide
-                  %span.couponNum= @product.discount
+                  %span.discountNum= @product.discount
                   折
               %li.listCol.clearfix
                 %label.floatLeft= "地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：".html_safe
@@ -62,6 +62,9 @@
 
     #maplink
       查看大图
+
+  .side-single
+    = render "hot_products"
 
 .alert_mask#alert_mask{:style=>"display: none; height: 1066px;"}
   <!--[if lte IE 6]><iframe frameborder="0" src=""></iframe><![endif]-->

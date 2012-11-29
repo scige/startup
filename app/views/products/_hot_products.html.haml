@@ -1,0 +1,16 @@
+.inner-blk.side-hot-deals
+  %h3 热门优惠券
+  %ul
+    - @hot_products.each do |product|
+      %li.deal
+        =link_to image_tag(product.image_url(:small), :width=>"208", :height=>"125", :title=>product.title, :class=>"lazyloaded"), product_path(product), {:class=>"pic", :rel=>"nofollow", :target=>"_blank"}
+        %h4
+          = link_to product.title, product_path(product), { :target => "_blank" }
+        .info
+          折扣范围：
+          %strong.price= product.discount
+          折
+          /%span.total
+          /  %span 14108
+          /  人已购买
+

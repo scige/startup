@@ -2,8 +2,12 @@ class FiltersController < ApplicationController
     def today
         @categories = Category.all
         @districts = District.all
-        # TODO: 选择日期为今天的Product
-        @products = Product.all
+        today_date = Time.now.strftime('%Y-%m-%d')
+        logger.debug "[DEBUG] #{today_date}"
+        @products = Product.find(:all, 
+                                 :conditions => "status=#{PRODUCT_STATUS_ON_SHELF}
+                                                 and Date(updated_at)='#{today_date}'",
+                                 :order => "updated_at DESC")
     end
 
     def category
@@ -15,6 +19,10 @@ class FiltersController < ApplicationController
         @products = allproducts.select do |product|
             product.status == PRODUCT_STATUS_ON_SHELF
         end
+
+        @products.sort! do |x, y|
+            y.updated_at <=> x.updated_at
+        end
     end
 
     def district
@@ -25,6 +33,10 @@ class FiltersController < ApplicationController
         allproducts = district.products
         @products = allproducts.select do |product|
             product.status == PRODUCT_STATUS_ON_SHELF
+        end
+
+        @products.sort! do |x, y|
+            y.updated_at <=> x.updated_at
         end
     end
 end

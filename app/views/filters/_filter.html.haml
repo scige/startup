@@ -5,10 +5,10 @@
       %li{:class => (action_name != "today" && action_name != "category" ? "current" : nil)}
         = link_to "全部", "/"
       %li{:class => (action_name == "today" ? "current" : nil)}
-        = link_to "今日新单<span>(#{@products.size})</span>".html_safe, today_filters_path
+        = link_to "今日新单<span>(#{today_product_count})</span>".html_safe, today_filters_path
       - @categories.each do |category|
         %li{:class => (action_name == "category" && params[:id].to_i == category.id ? "current" : nil)}
-          = link_to "#{category.cn_name}<span>(#{category.products.size})</span>".html_safe, category_filter_path(category)
+          = link_to "#{category.cn_name}<span>(#{on_shelf_count(category.products)})</span>".html_safe, category_filter_path(category)
   .filter-section
     %span.label 区域：
     %ul
@@ -16,5 +16,5 @@
         = link_to "全部", "/"
       - @districts.each do |district|
         %li{:class => (action_name == "district" && params[:id].to_i == district.id ? "current" : nil)}
-          = link_to "#{district.cn_name}<span>(#{district.products.size})</span>".html_safe, district_filter_path(district)
+          = link_to "#{district.cn_name}<span>(#{on_shelf_count(district.products)})</span>".html_safe, district_filter_path(district)
 
