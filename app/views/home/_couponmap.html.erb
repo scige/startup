@@ -13,7 +13,7 @@
             marker2.addEventListener("click", function(){this.openInfoWindow(infoWindow2);});
         <% end %>
 
-        var point = new BMap.Point(126.510998, 43.827587);
+        var point = new BMap.Point(<%= compute_map_center_x(@products) %>, <%= compute_map_center_y(@products) %>);
         map.centerAndZoom(point,16);
         // 禁止鼠标滚动，用户体验更好
         //map.enableScrollWheelZoom();
