@@ -1,4 +1,5 @@
 # coding: utf-8
+#require 'rest_client'
 
 class CouponsController < ApplicationController
     before_filter :require_logined, :only => [:create, :index, :destroy]
@@ -12,9 +13,9 @@ class CouponsController < ApplicationController
             return
         end
 
-        # TODO: 手机号码合法性检查
-        if !check_mobile?(params[:mobile])
-            flash[:error] = "您输入的手机号码 [#{params[:mobile]}] 有误，请重新输入。"
+        mobile = params[:mobile]
+        if !check_mobile?(mobile)
+            flash[:error] = "您输入的手机号码 [#{mobile}] 有误，请重新输入。"
             redirect_to product_path(@product)
             return
         end
@@ -27,12 +28,17 @@ class CouponsController < ApplicationController
         # 重复尝试5次，超过5次返回错误信息
         (1..5).each do
             if @coupon.save
-                flash[:success] = "优惠券发送成功！您可以在我的优惠券中查看详细信息。"
+                ret_code = send_to_mobile(mobile, @product.title, @coupon.password)
+                if ret_code == "0"
+                    flash[:success] = "优惠券已经成功发送到您的手机！同时您也可以在【我的信息】中查看到优惠券的详细信息。"
+                else
+                    flash[:success] = "优惠券已经发送到您的帐号中，您可以在【我的信息】中查看优惠券的详细信息，但是在发送到您的手机时发生了错误，您可以在【我的信息】中尝试重新发送。"
+                end
                 redirect_to product_path(@product)
                 return
             end
         end
-        flash[:error] = "优惠券发送失败！请尝试重新发送。"
+        flash[:error] = "优惠券发送失败！您可以尝试重新发送。"
         redirect_to product_path(@product)
     end
 
@@ -90,5 +96,23 @@ class CouponsController < ApplicationController
             end
 
             return false
+        end
+
+        def send_to_mobile(mobile, title, password)
+            head = "吉林美："
+            title = "您的优惠券『#{title}』，"
+            if password.size != 12
+                return "-1"
+            end
+            detail = "密码#{password[0..3]} #{password[4..7]} #{password[8..11]}"
+            tail = "【吉林美优惠网】"
+            content = head + title + detail + tail
+            ret_code = "0"
+            if SEND_COUPON_TO_MOBILE
+                ret_code = RestClient.get "http://www.smsbao.com/sms", {:params => {:u=>"scige", :p=>"d1075f8c19041c4209a70601ca3543b4", :m=>mobile, :c=>content}}
+            end
+            # TODO: 诡异的现象：ret_code是"0"的情况下，to_i竟然是200
+            logger.info "#{content} -- ret_code: [#{ret_code}]"
+            return ret_code
         end
 end

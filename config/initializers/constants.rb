@@ -6,3 +6,7 @@ COUPON_STATUS_DEL = 10
 #product status
 PRODUCT_STATUS_OFF_SHELF = 0
 PRODUCT_STATUS_ON_SHELF = 1
+
+#send coupon to mobile open
+SEND_COUPON_TO_MOBILE = false
+

@@ -107,6 +107,8 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     redcarpet (2.2.2)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec (2.8.0)
       rspec-core (~> 2.8.0)
       rspec-expectations (~> 2.8.0)
@@ -167,6 +169,7 @@ DEPENDENCIES
   mysql2
   rails (= 3.2.6)
   redcarpet
+  rest-client
   rspec-rails
   sass-rails (~> 3.2.3)
   sqlite3
