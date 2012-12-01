@@ -5,9 +5,22 @@ class CouponsController < ApplicationController
     before_filter :require_correct_user, :only => [:destroy]
 
     def create
+        @product = Product.find(params[:product_id])
+        if !simple_captcha_valid?
+            flash[:error] = "验证码错误，请重新输入。"
+            redirect_to product_path(@product)
+            return
+        end
+
+        # TODO: 手机号码合法性检查
+        if !check_mobile?(params[:mobile])
+            flash[:error] = "您输入的手机号码 [#{params[:mobile]}] 有误，请重新输入。"
+            redirect_to product_path(@product)
+            return
+        end
+
         @coupon = Coupon.new
         @coupon.user = current_user
-        @product = Product.find(params[:product_id])
         @coupon.product = @product
         @coupon.status = 0
         @coupon.password = get_password
@@ -69,5 +82,13 @@ class CouponsController < ApplicationController
             part2 = rand(10000)
             part3 = rand(10000)
             password = "%04d%04d%04d" % [part1, part2, part3]
+        end
+
+        def check_mobile?(mobile)
+            if mobile and mobile.size == 11 and mobile =~/^1[358][0-9]/
+                return true
+            end
+
+            return false
         end
 end

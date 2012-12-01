@@ -2382,6 +2382,27 @@ to {
 	vertical-align:top;
 	zoom:1
 }
+
+/* add by scige */
+.field-group input#mobile {
+	width:220px;
+	height:20px;
+	line-height:20px;
+	*margin:-1px auto;
+	padding:5px;
+	border:1px solid #ccc;
+	vertical-align:top
+}
+.field-group input#mobile:hover {
+	border-color:#b9b9b9
+}
+.field-group input#mobile:focus {
+	box-shadow:inset 0 1px 2px #cdcdcd;
+	border-color:#63c5c8;
+	outline:0
+}
+/* end */
+
 .field-group-type .inline-tip,.field-group-ok .inline-tip,.field-group-error .inline-tip {
 	padding:5px 8px 5px 24px;
 	color:#666;

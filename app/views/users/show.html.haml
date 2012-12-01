@@ -14,6 +14,9 @@
         %label 邮箱:
         = @user.email
       %li.field-group
+        %label 手机:
+        = @user.mobile ? @user.mobile : "未设置"
+      %li.field-group
         %label 注册时间:
         = @user.created_at.strftime("%Y年%m月%d日")
 

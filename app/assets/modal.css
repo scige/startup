@@ -45,3 +45,40 @@
 	padding:0 1em;
 	letter-spacing:1px;
 }
+.alert_out h3 b {
+	font-weight:400;
+	float:right;
+	cursor:pointer;
+}
+.alert_out h4 {
+	text-align:center;
+	color:#000;
+	padding:30px 15px;
+}
+.alert_out p.p_0 {
+	height:29px;
+	overflow:hidden;
+	text-align:center;
+}
+.alert_out p.p_0 a {
+	display:inline-block;
+	height:29px;
+	line-height:29px;
+	overflow:hidden;
+	*display:inline;
+	*zoom:1;
+	width:78px;
+	margin:0 10px;
+	background:url(../images/btn.png) 0 0 no-repeat;
+	color:#fff;
+}
+.alert_out p.p_0 a:hover {
+	background-position:0 -30px;
+}
+.alert_out input.i_0 {
+	position:absolute;
+	left:-999em;
+	top:0;
+	width:0;
+}
+
