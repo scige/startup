@@ -66,21 +66,5 @@
   .side-single
     = render "hot_products"
 
-.alert_mask#alert_mask{:style=>"display: none; height: 1066px;"}
-  <!--[if lte IE 6]><iframe frameborder="0" src=""></iframe><![endif]-->
-  .alert_out#alert_out{:style=>"top: 200px;"}
-    %h3 发送到手机
-    = form_tag coupons_path do |f|
-      .field-group
-        = hidden_field_tag :product_id, @product.id
-        = label_tag :title, @product.title
-      .field-group
-        = label_tag :mobile, "手机："
-        = text_field_tag :mobile, current_user ? current_user.mobile : ""
-      .field-group
-        = label_tag :captcha, "验证码："
-        = show_simple_captcha(:code_type=>"numeric")
-      .field-group
-        = submit_tag "确定"
-        %input{:type=>"button", :value=>"取消", :name=>"cancel", :onclick=>"hideModal();"}
+= render "send_coupon"
 
