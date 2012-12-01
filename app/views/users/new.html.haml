@@ -17,5 +17,8 @@
         = f.label :email, "邮箱"
         = f.text_field :email, :class=>"f-text"
       .field-group
+        = f.label :captcha, "验证码"
+        = show_simple_captcha(:code_type=>"numeric")
+      .field-group
         = f.submit "注册", :class=>"form-button"
 

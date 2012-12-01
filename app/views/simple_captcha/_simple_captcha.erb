@@ -1,0 +1,42 @@
+<style type="text/CSS">
+  .simple_captcha,
+  .simple_captcha div {
+      display: table;
+  }
+  .simple_captcha .simple_captcha_field {
+    float: left;
+  }
+  .simple_captcha .simple_captcha_image {
+    float: right;
+  }
+  .simple_captcha .simple_captcha_field input {
+    border: 1px solid #CCCCCC;
+    height: 20px;
+    width: 113px;
+    padding: 5px;
+  }
+  .simple_captcha .simple_captcha_field input:hover {
+    border-color: #b9b9b9;
+  }
+  .simple_captcha .simple_captcha_field input:focus {
+    box-shadow: inset 0 1px 2px #cdcdcd;
+    border-color: #63c5c8;
+    outline: 0;
+  }
+  .simple_captcha .simple_captcha_image img {
+    border: 1px solid #CCCCCC;
+    height: 30px;
+    width: 100px;
+    margin: 0px 0px 0px 5px;
+  }
+</style>
+
+<div class='simple_captcha'>
+  <div class='simple_captcha_field'>
+    <%= simple_captcha_options[:field] %>
+  </div>
+
+  <div class='simple_captcha_image'>
+    <%= simple_captcha_options[:image] %>
+  </div>
+</div>

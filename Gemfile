@@ -67,3 +67,5 @@ gem 'chinese_pinyin'
 # Schema Annotate
 gem 'annotate'
 
+# Captcha
+gem "galetahub-simple_captcha", :require => "simple_captcha"

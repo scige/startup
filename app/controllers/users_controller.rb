@@ -14,8 +14,15 @@ class UsersController < ApplicationController
 
     def create
         @user = User.new(params[:user])
+        if !simple_captcha_valid?
+            flash.now[:error] = "验证码错误，请重新输入。"
+            render "new"
+            return
+        end
+
         if @user.save
             login_as @user
+            flash[:success] = "用户注册成功。"
             redirect_back_or_default root_url
         else
             render "new"

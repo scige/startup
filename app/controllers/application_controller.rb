@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
     helper_method :logined?, :admin_user?, :current_user
 
+    include SimpleCaptcha::ControllerHelpers
+
     protected
 
     def require_not_logined
