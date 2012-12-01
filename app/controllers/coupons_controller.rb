@@ -8,7 +8,7 @@ class CouponsController < ApplicationController
     def create
         @product = Product.find(params[:product_id])
         if !simple_captcha_valid?
-            flash[:error] = "验证码错误，请重新输入。"
+            flash[:error] = "验证码错误，请您重新输入。"
             redirect_to product_path(@product)
             return
         end
@@ -30,15 +30,15 @@ class CouponsController < ApplicationController
             if @coupon.save
                 ret_code = send_to_mobile(mobile, @product.title, @coupon.password)
                 if ret_code == "0"
-                    flash[:success] = "优惠券已经成功发送到您的手机！同时您也可以在【我的信息】中查看到优惠券的详细信息。"
+                    flash[:success] = "优惠券已经发送到您的手机中！短信可能有延迟，请您耐心等待。您也可以在【我的信息】中查看优惠券的详细信息。"
                 else
-                    flash[:success] = "优惠券已经发送到您的帐号中，您可以在【我的信息】中查看优惠券的详细信息，但是在发送到您的手机时发生了错误，您可以在【我的信息】中尝试重新发送。"
+                    flash[:success] = "优惠券已经发送到您的帐号中，您可以在【我的信息】中查看优惠券的详细信息。可是在发送到您的手机时发生了错误，您可以在【我的信息】中尝试重新发送。"
                 end
                 redirect_to product_path(@product)
                 return
             end
         end
-        flash[:error] = "优惠券发送失败！您可以尝试重新发送。"
+        flash[:error] = "优惠券在发送到您的手机时发生了错误！您可以尝试重新发送。"
         redirect_to product_path(@product)
     end
 
