@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20121201153347) do
     t.datetime "updated_at",                :null => false
   end
 
+  add_index "coupons", ["password"], :name => "index_coupons_on_password"
   add_index "coupons", ["product_id"], :name => "index_coupons_on_product_id"
   add_index "coupons", ["user_id"], :name => "index_coupons_on_user_id"
 
@@ -76,6 +77,11 @@ ActiveRecord::Schema.define(:version => 20121201153347) do
     t.datetime "updated_at",                 :null => false
   end
 
+  add_index "products", ["category_id"], :name => "index_products_on_category_id"
+  add_index "products", ["district_id"], :name => "index_products_on_district_id"
+  add_index "products", ["status"], :name => "index_products_on_status"
+  add_index "products", ["updated_at"], :name => "index_products_on_updated_at"
+
   create_table "simple_captcha_data", :force => true do |t|
     t.string   "key",        :limit => 40
     t.string   "value",      :limit => 6
@@ -94,5 +100,7 @@ ActiveRecord::Schema.define(:version => 20121201153347) do
     t.datetime "created_at",                         :null => false
     t.datetime "updated_at",                         :null => false
   end
+
+  add_index "users", ["name"], :name => "index_users_on_name"
 
 end

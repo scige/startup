@@ -18,5 +18,10 @@ class CreateProducts < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :products, :status
+    add_index :products, :updated_at
+    add_index :products, :category_id
+    add_index :products, :district_id
   end
 end

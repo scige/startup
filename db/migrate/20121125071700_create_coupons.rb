@@ -9,6 +9,7 @@ class CreateCoupons < ActiveRecord::Migration
       t.timestamps
     end
 
+    add_index :coupons, :password
     add_index :coupons, :user_id
     add_index :coupons, :product_id
   end
