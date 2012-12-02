@@ -1,18 +1,18 @@
 %h2
   - case action_name 
   - when "index"
-    全部商品
+    = t('admin.products.index.title')
   - when "new"
-    新增商品
+    = t('admin.products.new.title')
   - when "create"
-    新增商品
+    = t('admin.products.new.title')
   - when "edit"
-    编辑商品
+    = t('admin.products.edit.title')
   - when "update"
-    编辑商品
+    = t('admin.products.edit.title')
 %uj.filter
   %li{:class => (action_name == "index" ? "current" : nil)}
-    = link_to "全部商品", admin_products_path
+    = link_to t('.index_button'), admin_products_path
   %li{:class => ((action_name == "new" or action_name == "create") ? "current" : nil)}
-    = link_to "新增商品", new_admin_product_path
+    = link_to t('.new_button'), new_admin_product_path
 

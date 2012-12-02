@@ -1,4 +1,4 @@
-- provide(:title, "商品管理")
+- provide(:title, t('.title'))
 #content.coupons-box
   #content-admin
     = render "admin/shared/dashboard"
@@ -6,24 +6,24 @@
       = render "subbar"
       %table#order-list.coupons-table{:cellpadding=>"0", :cellspacing=>"0", :border=>"0"}
         %tr
-          %th{:width=>"auto"} 编号
-          %th{:width=>"50"} 名称
-          %th{:width=>"50"} 状态
-          %th{:width=>"50"} 折扣
-          %th{:width=>"50"} 分类
-          %th{:width=>"50"} 区域
-          %th{:width=>"50"} 开始
-          %th{:width=>"50"} 结束
-          %th{:width=>"50"} 地址
-          %th{:width=>"50"} 电话
-          %th{:width=>"50"} 卖出
-          %th{:width=>"120"} 操作
+          %th{:width=>"auto"}= t('.head_id')
+          %th{:width=>"50"}= t('.head_title')
+          %th{:width=>"50"}= t('.head_status')
+          %th{:width=>"50"}= t('.head_discount')
+          %th{:width=>"50"}= t('.head_category')
+          %th{:width=>"50"}= t('.head_district')
+          %th{:width=>"50"}= t('.head_begin_at')
+          %th{:width=>"50"}= t('.head_end_at')
+          %th{:width=>"50"}= t('.head_address')
+          %th{:width=>"50"}= t('.head_phone')
+          %th{:width=>"50"}= t('.head_sale_count')
+          %th{:width=>"120"}= t('.head_operation')
 
         - @products.each do |product|
           %tr{:class => cycle("alt", "")}
             %td= product.id
             %td= product.title
-            %td= product.status == PRODUCT_STATUS_ON_SHELF ? "已上架" : "未上架"
+            %td= product.status == PRODUCT_STATUS_ON_SHELF ? t('.status_on_shelf') : t('.status_off_shelf')
             %td= product.discount
             %td= product.category.cn_name
             %td= product.district.cn_name
@@ -34,11 +34,11 @@
             %td= product.sale_count
             %td
               - #使用前台的products/show显示
-              = link_to "显示", product_path(product), { :target => "_blank" }
+              = link_to t('.show_button'), product_path(product), { :target => "_blank" }
               | 
-              = link_to "编辑", edit_admin_product_path(product)
+              = link_to t('.edit_button'), edit_admin_product_path(product)
               | 
-              = link_to "删除", admin_product_path(product), :method => :delete, :confirm => "删除后不可恢复，确定删除？"
+              = link_to t('.delete_button'), admin_product_path(product), :method => :delete, :confirm => t('.delete_confirm')
 
 #sidebar
 

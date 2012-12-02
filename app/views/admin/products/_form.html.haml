@@ -2,44 +2,44 @@
   #admin-product-info
     %table#admin-products-table
       %tr
-        %td 名称：
+        %td= t('.title')
         %td= f.text_field :title, :size=>40
       %tr
-        %td 状态：
+        %td= t('.status')
         %td
-          = f.label :status, "未上架"
+          = f.label :status, t('.status_off_shelf')
           = f.radio_button :status, PRODUCT_STATUS_OFF_SHELF, :checked => true
-          = f.label :status, "已上架"
+          = f.label :status, t('.status_on_shelf')
           = f.radio_button :status, PRODUCT_STATUS_ON_SHELF
       %tr
-        %td 折扣：
+        %td= t('.discount')
         %td= f.text_field :discount, :size=>40
       %tr
-        %td 分类：
+        %td= t('.category')
         %td= f.select :category_id, @categories.map{|c| [c.cn_name, c.id]}, :selected => (@product.category==nil ? nil : @product.category.id)
       %tr
-        %td 区域：
+        %td= t('.district')
         %td= f.select :district_id, @districts.map{|c| [c.cn_name, c.id]}, :selected => (@product.district==nil ? nil : @product.district.id)
       %tr
-        %td 开始时间：
+        %td= t('.begin_at')
         %td= f.text_field :begin_at, :size=>40
       %tr
-        %td 结束时间：
+        %td= t('.end_at')
         %td= f.text_field :end_at, :size=>40
       %tr
-        %td 地址：
+        %td= t('.address')
         %td= f.text_field :address, :size=>40
       %tr
-        %td 电话：
+        %td= t('.phone')
         %td= f.text_field :phone, :size=>40
       %tr
-        %td 销售数量：
+        %td= t('.sale_count')
         %td= f.text_field :sale_count, :size=>40
       %tr
-        %td 坐标X：
+        %td= t('.pos_x')
         %td= f.text_field :pos_x, :size=>40
       %tr
-        %td 坐标Y：
+        %td= t('.pos_y')
         %td= f.text_field :pos_y, :size=>40
   #admin-product-image
     %table#admin-products-table
@@ -48,18 +48,18 @@
           = image_tag @product.image_url(:normal), :width => "260", :height => "195"
       %tr
         %td
-          上传图片：
+          = t('.image')
           = f.file_field :image
   #admin-product-detail
     %table#admin-products-table
       %tr
-        %td 详细内容：
+        %td= t('.detail')
         %td
           = javascript_include_tag "ckeditor/init"
           = f.cktext_area :content
       %tr
         %td
         %td#admin-products-table-submit
-          = f.submit "提交"
-          = f.submit "预览", :name => "preview"
+          = f.submit t('.submit_button')
+          = f.submit t('.preview_button'), :name => "preview"
 
