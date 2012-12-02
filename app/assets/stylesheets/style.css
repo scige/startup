@@ -799,8 +799,8 @@ to {
 }
 #hd .site-nav .nav .hover,#hd .site-nav .nav .hover:hover {
 	z-index:1;
-	background-color:#3f66a0;
-	border-color:#3f66a0
+	background-color:#2288cc;
+	border-color:#2288cc
 }
 #hd .site-nav .user-info {
 	float:right;
@@ -1295,7 +1295,7 @@ to {
 }
 .mine .filter .current a {
 	padding:1px 7px;
-	background:#00c7c7;
+	background:#1daae2;
 	color:#fff;
 	border-radius:3px
 }
@@ -3425,7 +3425,7 @@ to {
 #filter .filter-section li a:hover {
 	color:#FFF;
 	text-decoration:none;
-	background-color:#00c7c7
+	background-color:#1daae2
 }
 #filter .filter-section li a span {
 	color:#999
@@ -3460,7 +3460,7 @@ to {
 }
 #filter .filter-section .current a {
 	color:#FFF;
-	background-color:#00c7c7
+	background-color:#1daae2
 }
 #filter .filter-section .current a span {
 	color:#FFF
