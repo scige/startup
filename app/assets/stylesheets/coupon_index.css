@@ -78,6 +78,17 @@
     height: 350px;
     margin: 14px;border: 1px solid #CDCDCD;
 }
+#couponmap-title {
+    border-bottom: 1px solid #CDCDCD;
+    color: #333333;
+    height: 26px;
+}
+#couponmap-title h3{
+    margin-top: 8px;
+    margin-left: 12px;
+    color: #666;
+    font-size: 16px;
+}
 
 /* from dldGlobal.css */
 .clearfix:before, .clearfix:after {  
@@ -96,3 +107,4 @@ zoom:1;
 .floatRight {
 	float: right;
 }
+

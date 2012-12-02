@@ -2,11 +2,10 @@
 =render "couponmap"
 
 #filter
+  #couponmap-title
+    %h3= t('.map_title')
   #couponmap
   = javascript_include_tag "http://api.map.baidu.com/api?v=1.3"
   :javascript
     showCouponMap();
-
-  #maplink
-    优惠地图
 

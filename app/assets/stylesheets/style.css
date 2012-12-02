@@ -63,7 +63,6 @@ html {
 body {
 	font:normal 14px/1.5 Tahoma,Helvetica,arial,sans-serif;
 	color:#000;
-	background:#d6e9ec
 }
 a {
 	color:#399;
@@ -668,16 +667,13 @@ to {
 	font-size:0;
 	border:3px dashed transparent
 }
-#hd {
-	background:#3e4141 url(/assets/sp-hd.png?v=1) repeat-x 0 -80px
-}
 #hd #site-top {
 	height:104px;
 	margin:0 auto;
 	width:960px
 }
 #hd .site-info .subscribe,#hd .site-info .fav,#hd .site-info .mobile,#hd .search {
-	background:url(/assets/sp-hd.png?v=1) no-repeat
+	background:#1daae2
 }
 #hd h1 {
 	float:left;
@@ -734,8 +730,9 @@ to {
 	padding-right:0
 }
 #hd .search {
-	margin:13px 0 0 282px;
-	height:34px
+	margin:35px 0 0 282px;
+	height:34px;
+	float:right;
 }
 #hd .search .s-text {
 	float:left;
@@ -764,12 +761,15 @@ to {
 	outline:0;
 	cursor:pointer
 }
+/*
 #hd .site-nav {
 	background:#0a9e9d url(/assets/sp-hd.png?v=1) repeat-x 0 -184px
 }
+  */
 #hd .site-nav .nav-wrapper {
 	width:960px;
-	margin:0 auto
+	margin:0 auto;
+	background:#1daae2
 }
 #hd .site-nav .nav {
 	float:left
@@ -794,13 +794,13 @@ to {
 	text-decoration:none
 }
 #hd .site-nav .nav a:hover {
-	background-color:#178e95;
-	border-color:#27acad
+	background-color:#0099cc;
+	border-color:#0099cc
 }
 #hd .site-nav .nav .hover,#hd .site-nav .nav .hover:hover {
 	z-index:1;
-	background-color:#147b81;
-	border-color:#0fb1b7
+	background-color:#3f66a0;
+	border-color:#3f66a0
 }
 #hd .site-nav .user-info {
 	float:right;
@@ -826,7 +826,7 @@ to {
 	text-align:center
 }
 #hd .site-nav .user-info a:hover {
-	background-color:#10636b;
+	background-color:#0099cc;
 	font-weight:bold;
 	text-decoration:none
 }
@@ -1051,7 +1051,7 @@ to {
 #ftw {
 	background:#e8e8e8;
 	padding-bottom:30px;
-	border-top:3px solid #3aa2a2;
+	border-top:3px solid #1daae2;
 	_height:100px
 }
 #ft {
@@ -7924,3 +7924,16 @@ body.yui-skin-sam .yui-panel .bd {
     margin-left: 10px;
 }
 
+.block-title{
+  height: 18px;
+  line-height: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.block-title h3{
+  color: #666;
+  font-size: 16px;
+}

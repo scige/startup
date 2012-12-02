@@ -6,10 +6,10 @@
   /    %li= link_to "加入收藏夹", "javascript:void(0);", {:class=>"fav", :id=>"favorite"}
   /    %li= link_to "邀请好友", "/referrals", {:class=>"refer", :target=>"_blank"}
   /    %li= link_to "常见问题", "/faq", {:class=>"last"}
-  /.search.cf
-  /  %form{:action=>"/s/", :name=>"searchForm", :method=>"get"}
-  /    %input.s-text{:name=>"w", :autocomplete=>"off", :placeholder=>"请输入商品名称、地址等", :type=>"text"}
-  /    %input.s-submit{:hidefocus=>"true", :value=>"搜索", :type=>"submit"}
+  .search.cf
+    %form{:action=>"/s/", :name=>"searchForm", :method=>"get"}
+      %input.s-text{:name=>"w", :autocomplete=>"off", :placeholder=>"请输入商品名称、地址等", :type=>"text"}
+      %input.s-submit{:hidefocus=>"true", :value=>"搜索", :type=>"submit"}
 .site-nav
   .nav-wrapper.cf
     %ul.nav
