@@ -1,18 +1,18 @@
 %h2
   - case action_name 
   - when "index"
-    全部用户
+    = t('admin.users.index.title')
   - when "new"
-    新增用户
+    = t('admin.users.new.title')
   - when "create"
-    新增用户
+    = t('admin.users.new.title')
   - when "edit"
-    编辑用户
+    = t('admin.users.edit.title')
   - when "update"
-    编辑用户
+    = t('admin.users.edit.title')
 %uj.filter
   %li{:class => (action_name == "index" ? "current" : nil)}
-    = link_to "全部用户", admin_users_path
+    = link_to t('.index_button'), admin_users_path
   %li{:class => ((action_name == "new" or action_name == "create") ? "current" : nil)}
-    = link_to "新增用户", new_admin_user_path
+    = link_to t('.new_button'), new_admin_user_path
 

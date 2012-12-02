@@ -1,4 +1,4 @@
-- provide(:title, "用户管理")
+- provide(:title, t('.title'))
 #content.coupons-box
   #content-admin
     = render "admin/shared/dashboard"
@@ -6,12 +6,12 @@
       = render "subbar"
       %table#order-list.coupons-table{:cellpadding=>"0", :cellspacing=>"0", :border=>"0"}
         %tr
-          %th{:width=>"auto"} 编号
-          %th{:width=>"100"} 用户名
-          %th{:width=>"100"} 邮箱
-          %th{:width=>"100"} 手机
-          %th{:width=>"100"} 管理权限
-          %th{:width=>"100"} 操作
+          %th{:width=>"auto"}= t('.head_id')
+          %th{:width=>"100"}= t('.head_name')
+          %th{:width=>"100"}= t('.head_email')
+          %th{:width=>"100"}= t('.head_mobile')
+          %th{:width=>"100"}= t('.head_admin')
+          %th{:width=>"100"}= t('.head_operation')
 
         - @users.each do |user|
           %tr{:class => cycle("alt", "")}
@@ -21,9 +21,9 @@
             %td= user.mobile
             %td= user.admin
             %td
-              = link_to "编辑", edit_admin_user_path(user)
+              = link_to t('.edit_button'), edit_admin_user_path(user)
               | 
-              = link_to "删除", admin_user_path(user), :method => :delete, :confirm => "删除后不可恢复，确定删除？"
+              = link_to t('.delete_button'), admin_user_path(user), :method => :delete, :confirm => t('.delete_confirm')
 
 #sidebar
 
