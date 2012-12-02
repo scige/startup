@@ -7937,3 +7937,7 @@ body.yui-skin-sam .yui-panel .bd {
   color: #666;
   font-size: 16px;
 }
+.radius-box-shadow { 
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.2);
+}
