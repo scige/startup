@@ -1,5 +1,5 @@
 #site-top.cf
-  %h1= link_to image_tag("/assets/logo.png", :width=>"108", :height=>"66", :title=>"天天优惠", :alt=>"天天优惠"), "/"
+  %h1= link_to image_tag("/assets/logo.png", :width=>"108", :height=>"66", :title=>t('.logo_title'), :alt=>t('.logo_title')), "/"
   /.site-info
   /  %ul
   /    %li= link_to "邮件订阅", "/subscribe", {:class=>"subscribe"}
@@ -20,26 +20,19 @@
       %li= link_to "酒店", category_filter_path(4)
     %ul.user-info
       - if logined?
-        %li.name= "欢迎您，#{current_user.name}"
+        %li.name= t('.welcome', :user_name=>current_user.name)
       %li.account
-        = link_to "我的信息", account_path, {:class=>"my-account"}
+        = link_to t('.my_info'), account_path, {:class=>"my-account"}
         %i.tri
-        .account-menu{:style=>"display:none"}
-          %ul.comment-info
-            %li= link_to "未使用", "/orders/list/unused", {:class=>"first"}
-            %li= link_to "待付款", "/orders/list/unpaid"
-            %li= link_to "待评价", "/rates"
-            %li= link_to "我的收藏", "/collections"
-            %li.space
-          %ul.base-info
-            %li= link_to "我的订单", "/orders/", {:class=>"first"}
-            %li= link_to "账户余额", "/account/credit"
-            %li= link_to "余额充值", "/account/charge"
-            %li= link_to "积分/邀请", "/account/points"
-            %li= link_to "账户设置", "/account/settings", {:class=>"last"}
+        %ul.account-menu{:style=>"display:none"}
+          %li= link_to "我的优惠券", "/orders/list/unused", {:class=>"first"}
+          %li= link_to "未使用", "/account/credit"
+          %li= link_to "已使用", "/account/credit"
+          %li= link_to "个人信息", "/account/credit"
+          %li= link_to "账户设置", "/account/settings", {:class=>"last"}
       - if logined?
-        %li.login= link_to "退出", logout_path, :method => :delete
+        %li.login= link_to t('.logout'), logout_path, :method => :delete
       - else
-        %li.login= link_to "登录", login_path
-        %li.login.last= link_to "注册", signup_path
+        %li.login= link_to t('.login'), login_path
+        %li.login.last= link_to t('.signup'), signup_path
 

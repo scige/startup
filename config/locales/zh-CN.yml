@@ -1,0 +1,44 @@
+zh-CN:
+  layouts:
+    application:
+      site_title: "吉林美打折网"
+    header:
+      logo_title: "天天优惠"
+      welcome: "欢迎您，%{user_name}"
+      my_info: "我的信息"
+      logout: "退出"
+      login: "登录"
+      signup: "注册"
+
+  home:
+    index:
+      title: "吉林市打折优惠信息 - 最快最全的打折信息聚合平台"
+
+  products:
+    show:
+      impression: "用户印象："
+
+  companies:
+    check_coupon:
+      title: "验证优惠券"
+      code_label: "请输入优惠券密码"
+      check_button: "验证"
+
+  coupons:
+    index:
+      title: "我的优惠券"
+    unuse:
+      title: "未使用的优惠券"
+    used:
+      title: "已使用的优惠券"
+    subbar:
+      all_button: "全部"
+      unuse_button: "未使用"
+      used_button: "已使用"
+    couponlist:
+      head_coupons: "优惠券"
+      head_status: "状态"
+      head_password: "密码"
+      head_operation: "操作"
+      delete: "删除"
+      delete_confirm: "删除后不可恢复，确定删除？"

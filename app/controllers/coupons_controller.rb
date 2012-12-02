@@ -31,8 +31,9 @@ class CouponsController < ApplicationController
                 ret_code = send_to_mobile(mobile, @product.title, @coupon.password)
                 if ret_code == "0"
                     flash[:success] = "优惠券已经发送到您的手机中！短信可能有延迟，请您耐心等待。您也可以在【我的信息】中查看优惠券的详细信息。"
+                    # TODO: 发送到手机以后，是否应该把手机保存到用户信息中？
                 else
-                    flash[:success] = "优惠券已经发送到您的帐号中，您可以在【我的信息】中查看优惠券的详细信息。可是在发送到您的手机时发生了错误，您可以在【我的信息】中尝试重新发送。"
+                    flash[:success] = "优惠券已经发送到您的账户中，您可以在【我的信息】中查看优惠券的详细信息。可是在发送到您的手机时发生了错误，您可以在【我的信息】中尝试重新发送。"
                 end
                 redirect_to product_path(@product)
                 return
@@ -112,7 +113,7 @@ class CouponsController < ApplicationController
                 ret_code = RestClient.get "http://www.smsbao.com/sms", {:params => {:u=>"scige", :p=>"d1075f8c19041c4209a70601ca3543b4", :m=>mobile, :c=>content}}
             end
             # TODO: 诡异的现象：ret_code是"0"的情况下，to_i竟然是200
-            logger.info "#{content} -- ret_code: [#{ret_code}]"
+            logger.info "#{content} -- mobile: [#{mobile}] -- ret_code: [#{ret_code}]"
             return ret_code
         end
 end

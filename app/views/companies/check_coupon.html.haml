@@ -1,12 +1,12 @@
-- provide(:title, "验证优惠券")
+- provide(:title, t('.title'))
 #content.pg-login
   .mainbox
-    %h2 验证优惠券
+    %h2= t('.title')
     .signup-section
       = form_tag update_coupon_companies_path, :method=>"post" do |f|
         .field-group
-          = label_tag :couponcode, "请输入优惠券密码"
+          = label_tag :couponcode, t('.code_label')
           = text_field_tag :couponcode, nil, :class=>"f-text"
         .field-group
-          = submit_tag "验证", :class=>"form-button"
+          = submit_tag t('.check_button'), :class=>"form-button"
 
