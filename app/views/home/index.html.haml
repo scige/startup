@@ -1,10 +1,8 @@
 - provide(:title, t('.title'))
 = render "map"
 .block-title
-  %h3= t('.filters_title')
-= render "filters/filter"
-.block-title
   %h3= t('.products_title')
+= render "filters/filter"
 = render "products/index"
 #sidebar
 
