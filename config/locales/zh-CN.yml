@@ -151,3 +151,27 @@ zh-CN:
         parent_id: "父类编号："
         submit_button: "提交"
 
+    districts:
+      new:
+        title: "新增区域"
+      edit:
+        title: "编辑区域"
+      index:
+        title: "全部区域"
+        head_id: "编号"
+        head_cn_name: "中文区域"
+        head_en_name: "英文区域"
+        head_parent_id: "父类编号"
+        head_operation: "操作"
+        edit_button: "编辑"
+        delete_button: "删除"
+        delete_confirm: "删除后不可恢复，确定删除？"
+      subbar:
+        index_button: "全部区域"
+        new_button: "新增区域"
+      form:
+        cn_name: "中文区域："
+        en_name: "英文区域："
+        parent_id: "父类编号："
+        submit_button: "提交"
+

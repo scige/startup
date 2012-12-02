@@ -1,18 +1,18 @@
 %h2
   - case action_name 
   - when "index"
-    全部区域
+    = t('admin.districts.index.title')
   - when "new"
-    新增区域
+    = t('admin.districts.new.title')
   - when "create"
-    新增区域
+    = t('admin.districts.new.title')
   - when "edit"
-    编辑区域
+    = t('admin.districts.edit.title')
   - when "update"
-    编辑区域
+    = t('admin.districts.edit.title')
 %uj.filter
   %li{:class => (action_name == "index" ? "current" : nil)}
-    = link_to "全部区域", admin_districts_path
+    = link_to t('.index_button'), admin_districts_path
   %li{:class => ((action_name == "new" or action_name == "create") ? "current" : nil)}
-    = link_to "新增区域", new_admin_district_path
+    = link_to t('.new_button'), new_admin_district_path
 
