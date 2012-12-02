@@ -96,8 +96,6 @@ zh-CN:
       signup_button: "免费注册"
 
   users:
-    error_messages:
-      messages_head: "您的注册信息不满足以下要求："
     new:
       title: "注册"
       name: "用户名"
@@ -106,6 +104,8 @@ zh-CN:
       email: "邮箱"
       captcha: "验证码"
       signup_button: "注册"
+    error_messages:
+      messages_head: "您的注册信息不满足以下要求："
     show:
       title: "个人信息"
       user_number: "第 %{id} 位会员"
