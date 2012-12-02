@@ -1,26 +1,25 @@
 - @products.each do |product|
   #filter
-    #deal-intro.cf
-      .clearfix
-        .couponContentWrap
-          .couponInfoWrap.clearfix
-            .couponInfoLSide.floatLeft
-              %ul.infoImgSilde
-                %li
-                  = link_to image_tag( product.image_url(:small), :width => "195", :height => "146", :title => t('.image_title'), :alt => product.title ), product_path(product), { :target => "_blank" }
-            .couponInfoRSide.floatLeft
-              .globalTitle.title
-                = link_to product.title, product_path(product), { :target => "_blank" }
-              %ul
-                %li.listCol
-                  %label.floatLeft= t('.time')
-                  .floatLeft.fRSide
-                    %span= "#{get_format_time(product.begin_at)}至#{get_format_time(product.end_at)}"
-                %li.listCol.clearfix
-                  %label.floatLeft= t('.discount')
-                  .floatLeft.fRSide
-                    %span.couponNum= product.discount
-                    = t('.discount_word')
-                %li.listCol.clearfix
-                  = link_to t('.detail_button'), product_path(product), { :target => "_blank", :hidefocus=>"true", :class=>"button", :rel=>"nofollow" }
+    .clearfix
+      .couponContentWrap
+        .couponInfoWrap.clearfix
+          .couponInfoLSide.floatLeft
+            %ul.infoImgSilde
+              %li
+                = link_to image_tag( product.image_url(:small), :width => "195", :height => "146", :title => t('.image_title'), :alt => product.title ), product_path(product), { :target => "_blank" }
+          .couponInfoRSide.floatLeft
+            .globalTitle.title
+              = link_to product.title, product_path(product), { :target => "_blank" }
+            %ul
+              %li.listCol
+                %label.floatLeft= t('.time')
+                .floatLeft.fRSide
+                  %span= "#{get_format_time(product.begin_at)}至#{get_format_time(product.end_at)}"
+              %li.listCol.clearfix
+                %label.floatLeft= t('.discount')
+                .floatLeft.fRSide
+                  %span.couponNum= product.discount
+                  = t('.discount_word')
+              %li.listCol.clearfix
+                = link_to t('.detail_button'), product_path(product), { :target => "_blank", :hidefocus=>"true", :class=>"button", :rel=>"nofollow" }
 

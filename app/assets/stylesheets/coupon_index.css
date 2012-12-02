@@ -2,12 +2,7 @@
 .couponContentWrap{
     width:890px;
     background: #fff;
-    padding: 15px;
-    margin-top: 10px;
-    border-top: 1px solid #DFDFDF;
-}
-.couponInfoWrap{
-    margin-top: 10px;
+    padding: 20px;
 }
 .couponInfoLSide .infoImgSilde{
     width:195px;
@@ -76,7 +71,8 @@
 #couponmap {
     width: 930px;
     height: 350px;
-    margin: 14px;border: 1px solid #CDCDCD;
+    margin: 14px;
+    border: 1px solid #CDCDCD;
 }
 #couponmap-title {
     border-bottom: 1px solid #CDCDCD;
