@@ -1,4 +1,4 @@
-- provide(:title, "分类管理")
+- provide(:title, t('.title'))
 #content.coupons-box
   #content-admin
     = render "admin/shared/dashboard"
@@ -6,11 +6,11 @@
       = render "subbar"
       %table#order-list.coupons-table{:cellpadding=>"0", :cellspacing=>"0", :border=>"0"}
         %tr
-          %th{:width=>"auto"} 编号
-          %th{:width=>"100"} 中文分类
-          %th{:width=>"100"} 英文分类
-          %th{:width=>"100"} 父类编号
-          %th{:width=>"100"} 操作
+          %th{:width=>"auto"}= t('.head_id')
+          %th{:width=>"100"}= t('.head_cn_name')
+          %th{:width=>"100"}= t('.head_en_name')
+          %th{:width=>"100"}= t('.head_parent_id')
+          %th{:width=>"100"}= t('.head_operation')
 
         - @categories.each do |category|
           %tr{:class => cycle("alt", "")}
@@ -19,9 +19,9 @@
             %td= category.en_name
             %td= category.parent_id
             %td
-              = link_to "编辑", edit_admin_category_path(category)
+              = link_to t('.edit_button'), edit_admin_category_path(category)
               | 
-              = link_to "删除", admin_category_path(category), :method => :delete, :confirm => "删除后不可恢复，确定删除？"
+              = link_to t('.delete_button'), admin_category_path(category), :method => :delete, :confirm => t('.delete_confirm')
 
 #sidebar
 

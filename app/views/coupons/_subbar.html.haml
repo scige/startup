@@ -8,7 +8,7 @@
     = t('coupons.used.title')
 %uj.filter
   %li{:class => (action_name == "index" ? "current" : nil)}
-    = link_to t('.all_button'), coupons_path
+    = link_to t('.index_button'), coupons_path
   %li{:class => (action_name == "unuse" ? "current" : nil)}
     = link_to t('.unuse_button'), unuse_coupons_path
   %li{:class => (action_name == "used" ? "current" : nil)}

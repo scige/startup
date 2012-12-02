@@ -1,18 +1,18 @@
 %h2
   - case action_name 
   - when "index"
-    全部分类
+    = t('admin.categories.index.title')
   - when "new"
-    新增分类
+    = t('admin.categories.new.title')
   - when "create"
-    新增分类
+    = t('admin.categories.new.title')
   - when "edit"
-    编辑分类
+    = t('admin.categories.edit.title')
   - when "update"
-    编辑分类
+    = t('admin.categories.edit.title')
 %uj.filter
   %li{:class => (action_name == "index" ? "current" : nil)}
-    = link_to "全部分类", admin_categories_path
+    = link_to t('.index_button'), admin_categories_path
   %li{:class => ((action_name == "new" or action_name == "create") ? "current" : nil)}
-    = link_to "新增分类", new_admin_category_path
+    = link_to t('.new_button'), new_admin_category_path
 

@@ -2,16 +2,16 @@
   #admin-product-info
     %table#admin-products-table
       %tr
-        %td 中文分类：
+        %td= t('.cn_name')
         %td= f.text_field :cn_name, :size=>40
       %tr
-        %td 英文分类：
+        %td= t('.en_name')
         %td= f.text_field :en_name, :size=>40
       %tr
-        %td 父类编号：
+        %td= t('.parent_id')
         %td= f.text_field :parent_id, :size=>40
       %tr
         %td
         %td#admin-products-table-submit
-          = f.submit "提交"
+          = f.submit t('.submit_button')
 
