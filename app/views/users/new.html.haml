@@ -1,24 +1,24 @@
-- provide(:title, "注册")
+- provide(:title, t('.title'))
 = render "error_messages"
 #content
   .mainbox
-    %h2 注册
+    %h2= t('.title')
     = form_for @user do |f|
       .field-group
-        = f.label :name, "用户名"
+        = f.label :name, t('.name')
         = f.text_field :name, :class=>"f-text"
       .field-group
-        = f.label :password, "创建密码"
+        = f.label :password, t('.password')
         = f.password_field :password, :class=>"f-text"
       .field-group
-        = f.label :password_confirmation, "确认密码"
+        = f.label :password_confirmation, t('.password_confirm')
         = f.password_field :password_confirmation, :class=>"f-text"
       .field-group
-        = f.label :email, "邮箱"
+        = f.label :email, t('.email')
         = f.text_field :email, :class=>"f-text"
       .field-group
-        = f.label :captcha, "验证码"
+        = f.label :captcha, t('.captcha')
         = show_simple_captcha(:code_type=>"numeric")
       .field-group
-        = f.submit "注册", :class=>"form-button"
+        = f.submit t('.signup_button'), :class=>"form-button"
 

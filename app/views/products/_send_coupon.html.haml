@@ -1,17 +1,17 @@
 .alert_mask#alert_mask
   <!--[if lte IE 6]><iframe frameborder="0" src=""></iframe><![endif]-->
   .alert_out#alert_out
-    %h3 发送到手机
+    %h3= t('.window_title')
     = form_tag coupons_path do |f|
       .field-group
         = hidden_field_tag :product_id, @product.id
       .field-group
-        = label_tag :mobile, "手机："
+        = label_tag :mobile, t('.mobile')
         = text_field_tag :mobile, current_user ? current_user.mobile : ""
       .field-group
-        = label_tag :captcha, "验证码："
+        = label_tag :captcha, t('.captcha')
         = show_simple_captcha(:code_type=>"numeric")
       .field-group
-        = submit_tag "确定"
-        %input{:type=>"button", :value=>"取消", :name=>"cancel", :onclick=>"hideModal();"}
+        = submit_tag t('.confirm')
+        %input{:type=>"button", :value=>t('.cancel'), :name=>"cancel", :onclick=>"hideModal();"}
 

@@ -1,6 +1,6 @@
 - provide(:title, @product.title)
 .bread-nav
-  = link_to "今日优惠", "/"
+  = link_to t('.today'), root_path
   %span> »
   = link_to "#{@product.district.cn_name}", district_filter_path(@product.district)
   %span> »
@@ -22,36 +22,34 @@
           .discountInfoRSide.floatLeft
             %ul
               %li.listCol
-                %label.floatLeft 打折时间：
+                %label.floatLeft= t('.time')
                 .floatLeft.fRSide
                   %span= "#{get_format_time(@product.begin_at)}至#{get_format_time(@product.end_at)}"
               %li.listCol.clearfix
-                %label.floatLeft 折扣范围：
+                %label.floatLeft= t('.discount')
                 .floatLeft.fRSide
                   %span.discountNum= @product.discount
-                  折
+                  = t('.discount_word')
               %li.listCol.clearfix
-                %label.floatLeft= "地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：".html_safe
+                %label.floatLeft= t('.address').html_safe
                 .floatLeft.fRSide
                   %span= @product.address
               %li.listCol.clearfix
-                %label.floatLeft= "电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：".html_safe
+                %label.floatLeft= t('.phone').html_safe
                 .floatLeft.fRSide
                   %span= @product.phone
               %li.listCol.clearfix
                 %label.floatLeft= t('.impression')
                 .floatLeft.fRSide
-                  %span 暂无
+                  %span= t('.noimpression')
               %li.listCol.clearfix
                 = link_to image_tag( "/assets/shop_now_c.jpg", :width=>"130", :height=>"44" ), "#", :onclick=>"showModal();"
   #deal-intro.cf
     .clearfix.floatLeft
       .discountContentWrap
         .discountDetailsInfo
-          %h2.title 详细信息
+          %h2.title= t('.detail')
           %p= @product.content.html_safe
-          %p= "&nbsp;&nbsp;&nbsp;&nbsp;电话：".html_safe + @product.phone
-          %p= "&nbsp;&nbsp;&nbsp;&nbsp;地址：".html_safe + @product.address
 
 #sidebar
   .side-single

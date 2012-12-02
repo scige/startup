@@ -1,25 +1,25 @@
-- provide(:title, "修改个人信息")
+- provide(:title, t('.title'))
 #content.coupons-box
   = render "shared/dashboard"
   .mainbox.mine
     = render "subbar"
     = form_for @user do |f|
       .field-group
-        = f.label :name, "用户名"
+        = f.label :name, t('.name')
         = f.text_field :name, :class=>"f-text"
       .field-group
-        = f.label :email, "邮箱"
+        = f.label :email, t('.email')
         = f.text_field :email, :class=>"f-text"
       .field-group
-        = f.label :mobile, "手机"
+        = f.label :mobile, t('.mobile')
         = f.text_field :mobile, :class=>"f-text"
       .field-group
-        = f.label :password, "密码"
+        = f.label :password, t('.password')
         = f.password_field :password, :class=>"f-text"
       .field-group
-        = f.label :password_confirmation, "确认密码"
+        = f.label :password_confirmation, t('.password_confirm')
         = f.password_field :password_confirmation, :class=>"f-text"
       .field-group
-        = f.submit "更新信息", :class=>"form-button"
+        = f.submit t('.update_button'), :class=>"form-button"
 #sidebar
 

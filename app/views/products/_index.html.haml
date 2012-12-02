@@ -7,20 +7,20 @@
             .couponInfoLSide.floatLeft
               %ul.infoImgSilde
                 %li
-                  = link_to image_tag( product.image_url(:small), :width => "195", :height => "146", :title => "点击查看详情", :alt => product.title ), product_path(product), { :target => "_blank" }
+                  = link_to image_tag( product.image_url(:small), :width => "195", :height => "146", :title => t('.image_title'), :alt => product.title ), product_path(product), { :target => "_blank" }
             .couponInfoRSide.floatLeft
               .globalTitle.title
                 = link_to product.title, product_path(product), { :target => "_blank" }
               %ul
                 %li.listCol
-                  %label.floatLeft 打折时间：
+                  %label.floatLeft= t('.time')
                   .floatLeft.fRSide
                     %span= "#{get_format_time(product.begin_at)}至#{get_format_time(product.end_at)}"
                 %li.listCol.clearfix
-                  %label.floatLeft 折扣范围：
+                  %label.floatLeft= t('.discount')
                   .floatLeft.fRSide
                     %span.couponNum= product.discount
-                    折
+                    = t('.discount_word')
                 %li.listCol.clearfix
-                  = link_to "去看看", product_path(product), { :target => "_blank", :hidefocus=>"true", :class=>"button", :rel=>"nofollow" }
+                  = link_to t('.detail_button'), product_path(product), { :target => "_blank", :hidefocus=>"true", :class=>"button", :rel=>"nofollow" }
 

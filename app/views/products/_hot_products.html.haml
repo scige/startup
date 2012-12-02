@@ -1,5 +1,5 @@
 .inner-blk.side-hot-deals
-  %h3 热门优惠券
+  %h3= t('.hot')
   %ul
     - @hot_products.each do |product|
       %li.deal
@@ -7,9 +7,9 @@
         %h4
           = link_to product.title, product_path(product), { :target => "_blank" }
         .info
-          折扣范围：
+          = t('.discount')
           %strong.price= product.discount
-          折
+          = t('.discount_word')
           /%span.total
           /  %span 14108
           /  人已购买

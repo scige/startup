@@ -14,10 +14,6 @@ zh-CN:
     index:
       title: "吉林市打折优惠信息 - 最快最全的打折信息聚合平台"
 
-  products:
-    show:
-      impression: "用户印象："
-
   companies:
     check_coupon:
       title: "验证优惠券"
@@ -42,3 +38,91 @@ zh-CN:
       head_operation: "操作"
       delete: "删除"
       delete_confirm: "删除后不可恢复，确定删除？"
+
+  filters:
+    today:
+      title: "吉林今天打折优惠信息"
+    category:
+      title: "吉林%{category}打折优惠信息"
+    district:
+      title: "吉林%{district}打折优惠信息"
+    filter:
+      category: "分类："
+      district: "区域："
+      all: "全部"
+      today: "今日新单"
+      
+  products:
+    index:
+      image_title: 
+      time: "折扣范围："
+      discount: "打折时间："
+      discount_word: "折"
+      detail_button: "去看看"
+    show:
+      today: "今日优惠"
+      time: "折扣范围："
+      discount: "打折时间："
+      discount_word: "折"
+      address: "地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址："
+      phone: "电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话："
+      impression: "用户印象："
+      noimpression: "暂无"
+      detail: "详细信息"
+    hot_products:
+      hot: "热门优惠券"
+      discount: "打折时间："
+      discount_word: "折"
+    send_coupon:
+      window_title: "发送到手机"
+      mobile: "手机："
+      captcha: "验证码："
+      confirm: "确定"
+      cancel: "取消"
+
+  shared:
+    dashboard:
+      my_coupons: "我的优惠券"
+      my_account: "账户设置"
+
+  user_sessions:
+    new:
+      login: "登录"
+      name: "账号"
+      password: "密码"
+      auto_login: "下次自动登录"
+      login_button: "登录"
+      no_signup: "尚未注册？"
+      signup_button: "免费注册"
+
+  users:
+    error_messages:
+      messages_head: "您的注册信息不满足以下要求："
+    new:
+      title: "注册"
+      name: "用户名"
+      password: "创建密码"
+      password_confirm: "确认密码"
+      email: "邮箱"
+      captcha: "验证码"
+      signup_button: "注册"
+    show:
+      title: "个人信息"
+      user_number: "第 %{id} 位会员"
+      name: "用户名:"
+      email: "邮箱:"
+      mobile: "手机:"
+      no_mobile: "未设置"
+      create_time: "注册时间:"
+    edit:
+      title: "修改个人信息"
+      name: "用户名"
+      email: "邮箱"
+      mobile: "手机"
+      password: "密码"
+      password_confirm: "确认密码"
+      update_button: "更新信息"
+    subbar:
+      show_button: "查看个人信息"
+      edit_button: "修改个人信息"
+
