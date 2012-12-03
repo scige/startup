@@ -1,5 +1,8 @@
 #site-top.cf
-  %h1= link_to image_tag("/assets/logo.png", :width=>"108", :height=>"66", :title=>t('.logo_title'), :alt=>t('.logo_title')), root_path
+  .site-logo
+    %h1= link_to image_tag("/assets/logo.png", :width=>"128", :height=>"66", :title=>t('.logo_title'), :alt=>t('.logo_title')), root_path
+  .site-slogn
+    = image_tag("/assets/slogn.png", :width=>"203", :height=>"41", :title=>t('.logo_title'), :alt=>t('.logo_title'))
   /.site-info
   /  %ul
   /    %li= link_to "邮件订阅", "/subscribe", {:class=>"subscribe"}

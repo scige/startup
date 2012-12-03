@@ -672,6 +672,14 @@ to {
 	margin:0 auto;
 	width:960px
 }
+#site-top .site-logo {
+  float:left;
+}
+#site-top .site-slogn {
+  float:left;
+	margin-top:25px;
+	margin-left:80px;
+}
 #hd .site-info .subscribe,#hd .site-info .fav,#hd .site-info .mobile,#hd .search {
 	background:#1daae2
 }
@@ -730,7 +738,7 @@ to {
 	padding-right:0
 }
 #hd .search {
-	margin:35px 0 0 282px;
+	margin-top:35px;
 	height:34px;
 	float:right;
 }
@@ -738,7 +746,7 @@ to {
 	float:left;
 	margin:1px;
 	padding:6px 7px;
-	width:372px;
+	width:250px;
 	height:20px;
 	line-height:normal;
 	line-height:20px\9;
