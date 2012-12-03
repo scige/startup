@@ -1,0 +1,12 @@
+- provide(:title, t('.title', :keywords=>params[:keywords]))
+#search
+  .search-tip.radius-box-shadow
+    %p
+      找到
+      %span.keyword= t('.keyword', :keyword=>params[:keywords])
+      相关的优惠券共
+      %span.count= @products.size
+      个
+= render "products/index"
+#sidebar
+

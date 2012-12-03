@@ -5,6 +5,8 @@ zh-CN:
     header:
       logo_title: "天天优惠"
       welcome: "欢迎您，%{user_name}"
+      keyword_background: "请输入商品名称、地址等"
+      search_button: "搜索"
       my_info: "我的信息"
       logout: "退出"
       login: "登录"
@@ -54,7 +56,10 @@ zh-CN:
       district: "区域："
       all: "全部"
       today: "今日新单"
-      
+    search:
+      title: "%{keywords}_吉林美搜索"
+      keyword: "\"%{keyword}\""
+
   products:
     index:
       image_title: 

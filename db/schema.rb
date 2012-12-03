@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121201153347) do
+ActiveRecord::Schema.define(:version => 20121203141340) do
 
   create_table "categories", :force => true do |t|
     t.string   "en_name"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(:version => 20121201153347) do
   add_index "products", ["category_id"], :name => "index_products_on_category_id"
   add_index "products", ["district_id"], :name => "index_products_on_district_id"
   add_index "products", ["status"], :name => "index_products_on_status"
+  add_index "products", ["title"], :name => "index_products_on_title"
   add_index "products", ["updated_at"], :name => "index_products_on_updated_at"
 
   create_table "simple_captcha_data", :force => true do |t|

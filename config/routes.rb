@@ -70,6 +70,7 @@ Startup::Application.routes.draw do
     get :today, :on => :collection
     get :category, :on => :member
     get :district, :on => :member
+    post :search, :on => :collection
   end
 
   get 'checkcoupon' => 'companies#check_coupon', :as => :checkcoupon

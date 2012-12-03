@@ -11,8 +11,9 @@
   /    %li= link_to "常见问题", "/faq", {:class=>"last"}
   .search.cf.radius-box-shadow
     %form{:action=>"/s/", :name=>"searchForm", :method=>"get"}
-      %input.s-text{:name=>"w", :autocomplete=>"off", :placeholder=>"请输入商品名称、地址等", :type=>"text"}
-      %input.s-submit{:hidefocus=>"true", :value=>"搜索", :type=>"submit"}
+    = form_tag search_filters_path, :method=>"post" do |f|
+      = text_field_tag :keywords, nil, {:class=>"s-text", :autocomplete=>"off", :placeholder=>t('.keyword_background')}
+      = submit_tag t('.search_button'), {:class=>"s-submit", :hidefocus=>"true"}
 .site-nav
   .nav-wrapper.cf.radius-box-shadow
     %ul.nav
