@@ -7,15 +7,19 @@
       .field-group
         = f.label :name, t('.name')
         = f.text_field :name, :class=>"f-text"
+        = t('.name_info').html_safe
       .field-group
         = f.label :password, t('.password')
         = f.password_field :password, :class=>"f-text"
+        = t('.pass_info').html_safe
       .field-group
         = f.label :password_confirmation, t('.password_confirm')
         = f.password_field :password_confirmation, :class=>"f-text"
+        = t('.passconfirm_info').html_safe
       .field-group
         = f.label :email, t('.email')
         = f.text_field :email, :class=>"f-text"
+        = t('.email_info').html_safe
       .field-group
         = f.label :captcha, t('.captcha')
         = show_simple_captcha(:code_type=>"numeric")

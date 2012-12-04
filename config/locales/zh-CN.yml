@@ -63,14 +63,14 @@ zh-CN:
   products:
     index:
       image_title: 
-      time: "折扣范围："
-      discount: "打折时间："
+      time: "打折时间："
+      discount: "折扣范围："
       discount_word: "折"
       detail_button: "去看看"
     show:
       today: "今日优惠"
-      time: "折扣范围："
-      discount: "打折时间："
+      time: "打折时间："
+      discount: "折扣范围："
       discount_word: "折"
       address: "地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址："
       phone: "电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话："
@@ -110,8 +110,13 @@ zh-CN:
       password: "创建密码"
       password_confirm: "确认密码"
       email: "邮箱"
+      mobile: "手机"
       captcha: "验证码"
       signup_button: "注册"
+      name_info: "&nbsp;&nbsp;(*必填，4-16个字符)"
+      pass_info: "&nbsp;&nbsp;(*必填，6-32个字符)"
+      passconfirm_info: "&nbsp;&nbsp;(*必填，请再次输入密码)"
+      email_info: "&nbsp;&nbsp;(*必填，推荐QQ邮箱)"
     error_messages:
       messages_head: "您的注册信息不满足以下要求："
     show:

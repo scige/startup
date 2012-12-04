@@ -28,12 +28,14 @@ class User < ActiveRecord::Base
   validates :name,  :presence => true,
                     :uniqueness => {:case_sensitive => false},
                     :format => {:with => /\A\w+\z/},
-                    :length => {:in => 3..20}
+                    :length => {:in => 4..16}
   validates :email, :presence => true,
                     :uniqueness => {:case_sensitive => false},
                     :format => {:with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/}
+  #validates :mobile,:format => {:with => /^1[358][0-9]/},
+  #                  :length => {:is => 11}
   validates :password, :presence => true,
-                       :length => {:minimum => 6}
+                       :length => {:in => 6..32}
   validates :password_confirmation, :presence => true
 
   before_save { self.email.downcase! }
