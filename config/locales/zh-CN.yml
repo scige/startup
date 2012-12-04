@@ -62,7 +62,6 @@ zh-CN:
 
   products:
     index:
-      image_title: 
       time: "打折时间："
       discount: "折扣范围："
       discount_word: "折"
