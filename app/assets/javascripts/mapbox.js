@@ -10,5 +10,7 @@ function showMapBox(){
     map.addOverlay(marker1);
     
     map.centerAndZoom(point,15);
-    map.enableScrollWheelZoom();
+    //map.enableScrollWheelZoom();
+    map.addControl(new BMap.NavigationControl({type: BMAP_NAVIGATION_CONTROL_ZOOM}));
+    //map.addControl(new BMap.OverviewMapControl());
 };
