@@ -9,7 +9,7 @@ function showMapBox(){
     var marker1 = new BMap.Marker(new BMap.Point(pos_x, pos_y));
     map.addOverlay(marker1);
     
-    map.centerAndZoom(point,15);
+    map.centerAndZoom(point,16);
     //map.enableScrollWheelZoom();
     map.addControl(new BMap.NavigationControl({type: BMAP_NAVIGATION_CONTROL_ZOOM}));
     //map.addControl(new BMap.OverviewMapControl());
