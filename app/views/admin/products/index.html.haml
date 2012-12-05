@@ -9,6 +9,7 @@
           %th{:width=>"auto"}= t('.head_id')
           %th{:width=>"50"}= t('.head_title')
           %th{:width=>"50"}= t('.head_status')
+          %th{:width=>"50"}= t('.head_discount_type')
           %th{:width=>"50"}= t('.head_discount')
           %th{:width=>"50"}= t('.head_category')
           %th{:width=>"50"}= t('.head_district')
@@ -24,6 +25,7 @@
             %td= product.id
             %td= product.title
             %td= product.status == PRODUCT_STATUS_ON_SHELF ? t('.status_on_shelf') : t('.status_off_shelf')
+            %td= DISCOUNT_TYPE_NAME[product.discount_type]
             %td= product.discount
             %td= product.category.cn_name
             %td= product.district.cn_name

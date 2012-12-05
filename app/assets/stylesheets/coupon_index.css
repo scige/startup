@@ -26,13 +26,6 @@
 .couponInfoWrap .listCol .fRSide{
     width:500px;
 }
-.couponInfoWrap .listCol .couponNum{
-    color:#c00;
-    font-size: 24px;
-    font-weight: bold;
-    font-family: '微软雅黑';
-    display: inline-block;
-}
 .couponInfoWrap .title{
     padding-bottom: 10px;
     font-size: 20px;

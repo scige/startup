@@ -1,0 +1,12 @@
+%label.floatLeft= t('.discount')
+.floatLeft.fRSide
+  - case product.discount_type
+  - when DISCOUNT_TYPE_DISCOUNT
+    %span.discountWord= "直享"
+    %span.discountNum= product.discount
+    %span.discountWord= "折"
+  - when DISCOUNT_TYPE_PRICE
+    %span.discountWord= "最低"
+    %span.discountNum= product.discount
+    %span.discountWord= "元"
+

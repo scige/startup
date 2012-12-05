@@ -63,14 +63,10 @@ zh-CN:
   products:
     index:
       time: "打折时间："
-      discount: "折扣范围："
-      discount_word: "折"
       detail_button: "去看看"
     show:
       today: "今日优惠"
       time: "打折时间："
-      discount: "折扣范围："
-      discount_word: "折"
       address: "地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址："
       phone: "电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话："
       impression: "用户印象："
@@ -87,6 +83,8 @@ zh-CN:
       captcha: "验证码："
       confirm: "确定"
       cancel: "取消"
+    discount_type:
+      discount: "优惠方式："
 
   shared:
     dashboard:
@@ -225,6 +223,7 @@ zh-CN:
         head_id: "编号"
         head_title: "名称"
         head_status: "状态"
+        head_discount_type: "优惠类型"
         head_discount: "折扣"
         head_category: "分类"
         head_district: "区域"
@@ -246,7 +245,10 @@ zh-CN:
       form:
         title: "名称："
         status: "状态："
+        discount_type: "优惠类型："
         discount: "折扣："
+        price: "原价"
+        specific: "特殊"
         category: "分类："
         district: "区域："
         begin_at: "开始时间："

@@ -2,23 +2,26 @@
 #
 # Table name: products
 #
-#  id          :integer          not null, primary key
-#  status      :integer          default(0)
-#  title       :string(255)
-#  image       :string(255)
-#  discount    :float
-#  begin_at    :datetime
-#  end_at      :datetime
-#  address     :string(255)
-#  phone       :string(255)
-#  sale_count  :integer
-#  pos_x       :float
-#  pos_y       :float
-#  content     :text
-#  category_id :integer
-#  district_id :integer
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id            :integer          not null, primary key
+#  status        :integer          default(0)
+#  title         :string(255)
+#  image         :string(255)
+#  discount      :float
+#  begin_at      :datetime
+#  end_at        :datetime
+#  address       :string(255)
+#  phone         :string(255)
+#  sale_count    :integer
+#  pos_x         :float
+#  pos_y         :float
+#  content       :text
+#  category_id   :integer
+#  district_id   :integer
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  discount_type :integer          default(0)
+#  price         :float
+#  specific      :string(255)
 #
 
 class Product < ActiveRecord::Base
@@ -30,7 +33,10 @@ class Product < ActiveRecord::Base
   attr_accessible :status
   attr_accessible :title
   attr_accessible :image
+  attr_accessible :discount_type
   attr_accessible :discount
+  attr_accessible :price
+  attr_accessible :specific
   attr_accessible :begin_at
   attr_accessible :end_at
   attr_accessible :address

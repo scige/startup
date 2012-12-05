@@ -12,8 +12,20 @@
           = f.label :status, t('.status_on_shelf')
           = f.radio_button :status, PRODUCT_STATUS_ON_SHELF
       %tr
+        %td= t('.discount_type')
+        %td
+          - DISCOUNT_TYPE_NAME.each do |key, value|
+            = f.label :discount_type, value
+            = f.radio_button :discount_type, key
+      %tr
         %td= t('.discount')
         %td= f.text_field :discount, :size=>40
+      %tr
+        %td= t('.price')
+        %td= f.text_field :price, :size=>40
+      %tr
+        %td= t('.specific')
+        %td= f.text_field :specific, :size=>40
       %tr
         %td= t('.category')
         %td= f.select :category_id, @categories.map{|c| [c.cn_name, c.id]}, :selected => (@product.category==nil ? nil : @product.category.id)
