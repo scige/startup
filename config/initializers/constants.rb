@@ -21,9 +21,13 @@ SEND_COUPON_TO_MOBILE = false
 #买二送一               discount, price
 #买商品送赠品           discount, specific
 #免费赠送，免费体验     specific
+#新品                   specific
 DISCOUNT_TYPE_DISCOUNT = 0
 DISCOUNT_TYPE_PRICE = 1
+DISCOUNT_TYPE_NEW = 2
 
 DISCOUNT_TYPE_NAME = {}
 DISCOUNT_TYPE_NAME[DISCOUNT_TYPE_DISCOUNT] = "打折"
 DISCOUNT_TYPE_NAME[DISCOUNT_TYPE_PRICE] = "优惠价"
+DISCOUNT_TYPE_NAME[DISCOUNT_TYPE_NEW] = "新品"
+
