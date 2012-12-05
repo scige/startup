@@ -23,6 +23,17 @@
     overflow-y: hidden;
     width:260px;
 }
+.discountInfoRSide .button a {
+	  float:left;
+	  width:106px;
+	  height:40px;
+	  text-indent:-9999px;
+	  outline:0;
+    background: url("/assets/send_to_mobile.png?v=1") no-repeat scroll 0 -82px transparent;
+}
+.discountInfoRSide .button a:hover {
+	background-position:0 -123px
+}
 .discountInfoWrap .discountInfoRSide{
     margin-left: 20px;
     width:368px;

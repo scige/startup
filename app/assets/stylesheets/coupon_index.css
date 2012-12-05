@@ -54,7 +54,7 @@
 	height:33px;
 	line-height:99px;
 	overflow:hidden;
-	background:url(/assets/sp-deal.png?v=3) no-repeat
+	background:url("/assets/sp-deal.png?v=3") no-repeat
 }
 .couponInfoWrap .button:hover {
 	background-position:0 -35px

@@ -43,7 +43,8 @@
                 .floatLeft.fRSide
                   %span= t('.noimpression')
               %li.listCol.clearfix
-                = link_to image_tag( "/assets/shop_now_c.jpg", :width=>"130", :height=>"44" ), "#", :onclick=>"showModal();"
+                .button
+                  = link_to t('.send_button'), "#", :onclick=>"showModal();"
   #deal-intro.cf.radius-box-shadow
     .clearfix.floatLeft
       .discountContentWrap
