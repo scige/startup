@@ -23,7 +23,8 @@ zh-CN:
       source: "名字由来"
       goal: "我们的目标"
       team: "我们的团队"
-      contact: "联系我们"
+    contact:
+      title: "联系我们"
 
   companies:
     check_coupon:

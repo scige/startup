@@ -59,8 +59,12 @@ Startup::Application.routes.draw do
   resources :users, :only => [:create, :show, :edit, :update]
   resources :user_sessions, :only => [:create]
 
+  get 'about' => 'home#about', :as => :about
+  get 'contact' => 'home#contact', :as => :contact
+
   resources :home, :only => [] do
     get :about, :on => :collection
+    get :contact, :on => :collection
   end
 
   resources :products, :only => [:show]
