@@ -1,7 +1,7 @@
 zh-CN:
   layouts:
     application:
-      site_title: "吉林美打折网"
+      site_title: "吉林美优惠网"
     header:
       logo_title: "天天优惠"
       welcome: "欢迎您，%{user_name}"
@@ -14,7 +14,7 @@ zh-CN:
 
   home:
     index:
-      title: "吉林市打折优惠信息 - 最快最全的打折信息聚合平台"
+      title: "吉林市打折优惠信息 - 最快最全的打折优惠信息聚合平台"
       products_title: "热门优惠券"
     map:
       map_title: "优惠地图"
@@ -78,7 +78,8 @@ zh-CN:
       discount: "打折时间："
       discount_word: "折"
     send_coupon:
-      window_title: "发送到手机"
+      window_title: "免费发送到手机"
+      sub_title: "发送优惠券密码到手机，本条短信不收信息费"
       mobile: "手机："
       captcha: "验证码："
       confirm: "确定"

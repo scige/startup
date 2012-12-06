@@ -1,5 +1,6 @@
 %label.floatLeft= t('.discount')
 .floatLeft.fRSide
+  %span.discountName= "[#{DISCOUNT_TYPE_NAME[product.discount_type]}]"
   - case product.discount_type
   - when DISCOUNT_TYPE_DISCOUNT
     %span.discountWord= "直享"

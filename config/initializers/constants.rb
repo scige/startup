@@ -13,21 +13,21 @@ PRODUCT_STATUS_ON_SHELF = 1
 SEND_COUPON_TO_MOBILE = false
 
 #product discount type
-#打折                   discount
-#代金券20               discount
-#满100减20              discount, price
-#满100返20              discount, price
-#优惠价28，原价25       discount, price
-#买二送一               discount, price
-#买商品送赠品           discount, specific
-#免费赠送，免费体验     specific
-#新品                   specific
+#打折券，打折                   discount
+#代金券，代金券20               discount
+#满减券，满100减20              discount, price
+#满返券，满100返20              discount, price
+#优惠券，优惠价28，原价25       discount, price
+#买送券，买二送一               discount, price
+#买赠券，买商品送赠品           discount, specific
+#免费券，免费赠送，免费体验     specific
+#新品券，新品                   specific
 DISCOUNT_TYPE_DISCOUNT = 0
 DISCOUNT_TYPE_PRICE = 1
 DISCOUNT_TYPE_NEW = 2
 
 DISCOUNT_TYPE_NAME = {}
-DISCOUNT_TYPE_NAME[DISCOUNT_TYPE_DISCOUNT] = "打折"
-DISCOUNT_TYPE_NAME[DISCOUNT_TYPE_PRICE] = "优惠价"
-DISCOUNT_TYPE_NAME[DISCOUNT_TYPE_NEW] = "新品"
+DISCOUNT_TYPE_NAME[DISCOUNT_TYPE_DISCOUNT] = "打折券"
+DISCOUNT_TYPE_NAME[DISCOUNT_TYPE_PRICE] = "优惠券"
+DISCOUNT_TYPE_NAME[DISCOUNT_TYPE_NEW] = "新品券"
 
