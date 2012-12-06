@@ -18,6 +18,12 @@ zh-CN:
       products_title: "热门优惠券"
     map:
       map_title: "优惠地图"
+    about:
+      title: "关于我们"
+      source: "名字由来"
+      goal: "我们的目标"
+      team: "我们的团队"
+      contact: "联系我们"
 
   companies:
     check_coupon:

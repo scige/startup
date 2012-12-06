@@ -863,38 +863,31 @@ to {
 	position:absolute;
 	right:0;
 	top:36px;
-	padding-top:12px;
-	width:206px;
-	height:183px;
+	width:96px;
 	z-index:10;
-	background-color:#147b81
+	background-color:#0099cc;
 }
 #hd .site-nav .user-info .account-menu a {
-	display:block;
-	margin:0 8px;
-	padding:6px 0;
-	height:21px;
-	width:86px;
-	height:21px;
-	line-height:21px;
-	font-size:14px;
-	border-top:1px dotted #126a6f;
-	border-bottom:1px dotted #189299;
-	text-decoration:none
+  border-top: 1px dotted #0F5F64;
+  display: block;
+  font-size: 14px;
+  height: 21px;
+  line-height: 21px;
+  padding: 6px 0;
+  text-decoration: none;
+  width: 96px;
 }
 #hd .site-nav .user-info .account-menu .first {
-	border-top:0
+	border-top:0;
 }
 #hd .site-nav .user-info .account-menu .last {
-	border-bottom:0
+  box-shadow: none;
 }
 #hd .site-nav .user-info .account-menu a:hover {
-	position:relative;
-	margin:-1px 8px;
-	height:23px;
-	line-height:23px;
-	font-weight:normal;
-	border-color:#147b81
+  background-color: #2288cc;
+  border-color: #2288cc;
+  box-shadow: 0 -1px #2288cc;
+  font-weight: normal;
 }
 #hd .site-nav .user-info .comment-info {
 	position:absolute;
@@ -1207,9 +1200,30 @@ to {
 	font-size:14px;
 	font-weight:normal
 }
-#content .mainbox p.tip {
-	margin-bottom:5px
+#content .mainbox h3 {
+	font-size:24px;
+	border-bottom:1px solid #DEF;
+	margin-bottom:10px;
+	padding-bottom:10px
 }
+#content .mainbox h3 span {
+	font-size:14px
+}
+#content .mainbox h3 span.charge {
+	padding-left:10px;
+	font-weight:normal
+}
+#content .mainbox h3 span.op-area {
+	position:absolute;
+	top:40px;
+	right:20px;
+	font-size:14px;
+	font-weight:normal
+}
+#content .mainbox p {
+  margin: 10px;
+}
+
 #content .box-topic h2 {
 	background:url(/assets/content-title-bg.png) 0 center repeat-x;
 	border-bottom:1px solid #e5e5e5;

@@ -1,7 +1,7 @@
 .ftbox
   %h3 用户帮助
   %ul
-    %li= link_to "常见问题", "/help/faq"
+    %li= link_to "常见问题", root_path
     /%li= link_to "反诈骗公告", "/about/anticheat"
 .ftbox
   %h3 获取更新
@@ -12,25 +12,25 @@
 .ftbox
   %h3 商务合作
   %ul
-    %li= link_to "提供优惠信息", "/feedback/seller"
+    /%li= link_to "提供优惠信息", root_path
     %li= link_to "验证优惠券", checkcoupon_path
     - if logined? and admin_user?
       %li= link_to "管理后台", admin_products_path
 .ftbox
   %h3 公司信息
   %ul
-    %li= link_to "关于我们", "/about/"
-    %li= link_to "我们承诺", "/commitment/"
+    %li= link_to "关于我们", about_home_index_path
+    /%li= link_to "我们承诺", root_path
     /%li= link_to "加入我们", "/about/job"
 .ftbox.service
-  %h3 客服电话
+  %h3 客户服务
   %ul
     %li 15944279050
-    %li 0432-64822789
+    %li jilinmei@gmail.com
 .copyright
   %p
     ©2012 吉林美打折网 jilinmei.com
-    京ICP证100001号 京公网安备100000000001号
+    吉ICP证100001号 吉公网安备100000000001号
 %div{:style=>"display:none"}
   %script{:src=>"http://s23.cnzz.com/stat.php?id=4669675&web_id=4669675&show=pic", :language=>"JavaScript"}
   :javascript

@@ -21,19 +21,21 @@
       %li= link_to "美食", category_filter_path(1)
       %li= link_to "娱乐", category_filter_path(2)
       %li= link_to "电影", category_filter_path(3)
-      %li= link_to "酒店", category_filter_path(4)
+      %li= link_to "生活", category_filter_path(4)
+      %li= link_to "酒店", category_filter_path(5)
     %ul.user-info
       - if logined?
         %li.name= t('.welcome', :user_name=>current_user.name)
       %li.account
         = link_to t('.my_info'), account_path, {:class=>"my-account"}
         %i.tri
-        %ul.account-menu{:style=>"display:none"}
-          %li= link_to "我的优惠券", "/orders/list/unused", {:class=>"first"}
-          %li= link_to "未使用", "/account/credit"
-          %li= link_to "已使用", "/account/credit"
-          %li= link_to "个人信息", "/account/credit"
-          %li= link_to "账户设置", "/account/settings", {:class=>"last"}
+        - if logined?
+          %ul.account-menu{:style=>"display:none"}
+            %li= link_to "我的优惠券", coupons_path, {:class=>"first"}
+            %li= link_to "未使用", unuse_coupons_path
+            %li= link_to "已使用", used_coupons_path
+            %li= link_to "个人信息", user_path(current_user)
+            %li= link_to "账户设置", edit_user_path(current_user), {:class=>"last"}
       - if logined?
         %li.login= link_to t('.logout'), logout_path, :method => :delete
       - else

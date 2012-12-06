@@ -59,6 +59,10 @@ Startup::Application.routes.draw do
   resources :users, :only => [:create, :show, :edit, :update]
   resources :user_sessions, :only => [:create]
 
+  resources :home, :only => [] do
+    get :about, :on => :collection
+  end
+
   resources :products, :only => [:show]
 
   resources :coupons, :only => [:create, :index, :destroy] do
