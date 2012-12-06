@@ -7,16 +7,16 @@
       %tr
         %td= t('.status')
         %td
-          = f.label :status, t('.status_off_shelf')
           = f.radio_button :status, PRODUCT_STATUS_OFF_SHELF, :checked => true
-          = f.label :status, t('.status_on_shelf')
+          = f.label :status, t('.status_off_shelf')
           = f.radio_button :status, PRODUCT_STATUS_ON_SHELF
+          = f.label :status, t('.status_on_shelf')
       %tr
         %td= t('.discount_type')
         %td
           - DISCOUNT_TYPE_NAME.each do |key, value|
-            = f.label :discount_type, value
             = f.radio_button :discount_type, key
+            = f.label :discount_type, value
       %tr
         %td= t('.discount')
         %td= f.text_field :discount, :size=>40
