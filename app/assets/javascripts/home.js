@@ -1,5 +1,5 @@
 $(function(){
-  $("#map-container").toggle(function(){
+  $("#couponmap-title").toggle(function(){
     $("#couponmap").slideUp(1000);
     $("#couponmap-title #tips").html("点击这里可以<b>展开</b>优惠地图");
   },function(){
