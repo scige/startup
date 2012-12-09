@@ -1,7 +1,9 @@
 - if @user.errors.any?
-  .common-tip
-    = t('.messages_head')
-    %ul
-      - @user.errors.full_messages.each do |msg|
-        %li= "* #{msg}"
+  .sysmsgw#sysmsg-error.radius-box-shadow
+    .sysmsg
+      = t('.messages_head')
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= "* #{msg}"
+      %span.close= t('.close')
 
