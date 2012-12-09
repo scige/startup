@@ -11,6 +11,8 @@ zh-CN:
       logout: "退出"
       login: "登录"
       signup: "注册"
+    flash_messages:
+      close: "关闭"
 
   home:
     index:

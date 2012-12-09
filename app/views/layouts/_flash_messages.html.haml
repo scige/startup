@@ -4,15 +4,15 @@
       .sysmsgw#sysmsg-error.radius-box-shadow
         .sysmsg
           = value
-          %span.close 关闭
+          %span.close= t('.close')
     - elsif :success == key
       .sysmsgw#sysmsg-success.radius-box-shadow
         .sysmsg
           = value
-          %span.close 关闭
+          %span.close= t('.close')
     - else
       .sysmsgw.radius-box-shadow
         .sysmsg
           = value
-          %span.close 关闭
+          %span.close= t('.close')
 
