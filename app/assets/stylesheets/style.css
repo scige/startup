@@ -490,9 +490,10 @@ to {
 }
 .sysmsg {
 	position:relative;
-	width:930px;
+	width:910px;
 	margin:auto;
-  padding-left:30px
+  padding-left:30px;
+  padding-right:10px;
 }
 .sysmsg .close {
 	position:absolute;

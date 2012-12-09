@@ -6,5 +6,9 @@ $(function(){
     $("#couponmap").slideDown(1000);
     $("#couponmap-title #tips").html("点击这里可以<b>折叠</b>优惠地图");
   });
+
+  $(".sysmsg .close").click(function(){
+    $(".sysmsgw").hide(0);
+  });
 });
 

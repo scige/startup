@@ -2,10 +2,17 @@
   - flash.each do |key, value|
     - if :error == key
       .sysmsgw#sysmsg-error.radius-box-shadow
-        .sysmsg= value
+        .sysmsg
+          = value
+          %span.close 关闭
     - elsif :success == key
       .sysmsgw#sysmsg-success.radius-box-shadow
-        .sysmsg= value
+        .sysmsg
+          = value
+          %span.close 关闭
     - else
       .sysmsgw.radius-box-shadow
-        .sysmsg= value
+        .sysmsg
+          = value
+          %span.close 关闭
+
