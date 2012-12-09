@@ -1,5 +1,8 @@
 <script>
+    // 解决baidu地图有时候没有响应的问题，加载DOM完成后再加载地图
+    // jquery风格的不好使，不知道为什么？只能使用javascript原生的
     //$(function(){
+    window.onload = function(){
         var map = new BMap.Map("couponmap");
         var point = new BMap.Point(<%= compute_map_center_x(@products) %>, <%= compute_map_center_y(@products) %>);
         map.centerAndZoom(point,14);
@@ -26,5 +29,6 @@
                 <%= '</div>"'.html_safe %>;
             addMarkerContent(point, content);
         <% end %>
+    };
     //});
 </script>
