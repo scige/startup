@@ -1,5 +1,5 @@
 <script>
-$(function(){
+//$(function(){
     function showCouponMap(){
         var map = new BMap.Map("couponmap");
         var point = new BMap.Point(<%= compute_map_center_x(@products) %>, <%= compute_map_center_y(@products) %>);
@@ -28,5 +28,5 @@ $(function(){
             addMarkerContent(point, content);
         <% end %>
     };
-});
+//});
 </script>
