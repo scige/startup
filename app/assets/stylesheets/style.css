@@ -447,7 +447,8 @@ button.formbutton {
 to {
 	opacity:1
 }
-}@-webkit-keyframes pop-in {
+}
+@-webkit-keyframes pop-in {
 	from {
 	opacity:0;
 	-webkit-transform:scale(0.8) translateY(5px)
@@ -459,7 +460,8 @@ to {
 to {
 	-webkit-transform:scale(1)
 }
-}@-webkit-keyframes slide-up {
+}
+@-webkit-keyframes slide-up {
 	from {
 	opacity:0;
 	-webkit-transform:translateY(15px)
@@ -468,7 +470,8 @@ to {
 	opacity:1;
 	-webkit-transform:translateY(0)
 }
-}@-webkit-keyframes drop-in {
+}
+@-webkit-keyframes drop-in {
 	from {
 	-webkit-transform:translateY(-15px);
 	opacity:0
@@ -477,17 +480,19 @@ to {
 	-webkit-transform:translateY(0);
 	opacity:1
 }
-}.sysmsgw {
-	clear:both;
-	padding:8px 0 10px 37px;
-	color:#000;
-	font-size:14px
+}
+.sysmsgw {
+  clear:both;
+  padding:8px 0 10px 20px;
+  margin-bottom: 10px;
+  color:#000;
+  font-size:14px
 }
 .sysmsg {
 	position:relative;
 	width:930px;
 	margin:auto;
-	padding-left:30px
+  padding-left:30px
 }
 .sysmsg .close {
 	position:absolute;
@@ -508,8 +513,7 @@ to {
 	color:#d01e5e
 }
 #sysmsg-success {
-	border-top:2px solid #690;
-	border-bottom:2px solid #690;
+	border:1px solid #690;
 	background:#edfeda;
 	color:#690
 }

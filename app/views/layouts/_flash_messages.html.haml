@@ -1,5 +1,11 @@
 - if flash and flash.any?
-  .common-tip.radius-box-shadow
-    - flash.each do |key, value|
-      = value
-
+  - flash.each do |key, value|
+    - if :error == key
+      .sysmsgw#sysmsg-error.radius-box-shadow
+        .sysmsg= value
+    - elsif :success == key
+      .sysmsgw#sysmsg-success.radius-box-shadow
+        .sysmsg= value
+    - else
+      .sysmsgw.radius-box-shadow
+        .sysmsg= value
