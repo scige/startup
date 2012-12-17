@@ -57,8 +57,11 @@
             .standard-table tr.normal { background-color:#fff; color:#666; }
           :css
             .standard-center { text-align:center; }
-            .standard-bar { background-color:#37adb1; padding:2px 6px; color:#fff; border-radius:3px; font-weight:bold; }
-            .standard-list-title { margin:5px 0; }
+            .standard-bar { background-color:#1daae2; padding:2px 6px; color:#fff; border-radius:3px; font-weight:bold; }
+            .standard-list-ul { margin:10px 0 15px; padding-left:15px; }
+            .standard-list-ul-li { list-style:disc outside none; margin-bottom:5px;}
+            .square-list-ul { margin:10px 0 15px; padding-left:15px; }
+            .square-list-ul-li { list-style:square outside none; margin-bottom:5px;}
             .standard-image { display:block; margin:10px auto; }
             .standard-image-wrap { display:block; width:100%; }
           %p= @product.content.html_safe
