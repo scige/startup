@@ -7,6 +7,8 @@
         %h4
           = link_to product.title, product_path(product), { :target => "_blank" }
         .info
+          = render "discount_type", :product => product
+        -#
           = t('.discount')
           %strong.price= product.discount
           = t('.discount_word')

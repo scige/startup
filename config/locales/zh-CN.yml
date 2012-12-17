@@ -72,11 +72,11 @@ zh-CN:
 
   products:
     index:
-      time: "打折时间："
+      time: "优惠时间："
       detail_button: "去看看"
     show:
       today: "今日优惠"
-      time: "打折时间："
+      time: "优惠时间："
       address: "地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址："
       phone: "电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话："
       impression: "用户印象："
@@ -85,7 +85,7 @@ zh-CN:
       send_button: "发送到手机"
     hot_products:
       hot: "热门优惠券"
-      discount: "打折时间："
+      discount: "优惠方式："
       discount_word: "折"
     send_coupon:
       window_title: "免费发送到手机"
