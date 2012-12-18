@@ -9,29 +9,19 @@ class FiltersController < ApplicationController
                                  :order => "updated_at DESC")
     end
 
-    def category
+    def select
         @categories = Category.all
         @districts = District.all
 
-        category = Category.find_by_id(params[:id])
-        allproducts = category.products
+        # params[:c_id] == all时，category为nil
+        # params[:d_id] == all时，district为nil
+        category = Category.find_by_id(params[:c_id])
+        district = District.find_by_id(params[:d_id])
+        allproducts = Product.all
         @products = allproducts.select do |product|
-            product.status == PRODUCT_STATUS_ON_SHELF
-        end
-
-        @products.sort! do |x, y|
-            y.updated_at <=> x.updated_at
-        end
-    end
-
-    def district
-        @categories = Category.all
-        @districts = District.all
-
-        district = District.find_by_id(params[:id])
-        allproducts = district.products
-        @products = allproducts.select do |product|
-            product.status == PRODUCT_STATUS_ON_SHELF
+            product.status == PRODUCT_STATUS_ON_SHELF and
+            (!category or product.category == category) and
+            (!district or product.district == district)
         end
 
         @products.sort! do |x, y|

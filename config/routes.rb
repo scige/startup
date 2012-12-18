@@ -74,10 +74,9 @@ Startup::Application.routes.draw do
     get :used, :on => :collection
   end
 
+  match '/filters/select/:c_id/:d_id', :controller=>'filters', :action=>'select'
   resources :filters, :only => [] do
     get :today, :on => :collection
-    get :category, :on => :member
-    get :district, :on => :member
     post :search, :on => :collection
   end
 

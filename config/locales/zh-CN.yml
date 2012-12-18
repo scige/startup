@@ -16,7 +16,7 @@ zh-CN:
 
   home:
     index:
-      title: "吉林市打折优惠信息 - 最快最全的打折优惠信息聚合平台"
+      title: "吉林打折优惠信息 - 最快最全的打折优惠信息聚合平台"
       products_title: "热门优惠券"
     map:
       map_title: "优惠地图"
@@ -57,15 +57,18 @@ zh-CN:
   filters:
     today:
       title: "吉林今天打折优惠信息"
-    category:
-      title: "吉林%{category}打折优惠信息"
-    district:
-      title: "吉林%{district}打折优惠信息"
     filter:
       category: "分类："
       district: "区域："
       all: "全部"
       today: "今日新单"
+    home_filter:
+      category: "分类："
+      district: "区域："
+      all: "全部"
+      today: "今日新单"
+    select:
+      title: "吉林%{condition}打折优惠信息"
     search:
       title: "%{keywords}_吉林美搜索"
       keyword: "\"%{keyword}\""
