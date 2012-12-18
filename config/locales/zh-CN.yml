@@ -72,11 +72,11 @@ zh-CN:
 
   products:
     index:
-      time: "优惠时间："
+      time: "结束时间："
       detail_button: "去看看"
     show:
       today: "今日优惠"
-      time: "优惠时间："
+      time: "结束时间："
       address: "地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址："
       phone: "电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话："
       impression: "用户印象："

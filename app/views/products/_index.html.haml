@@ -14,7 +14,7 @@
               %li.listCol
                 %label.floatLeft= t('.time')
                 .floatLeft.fRSide
-                  %span= "#{get_format_time(product.begin_at)}至#{get_format_time(product.end_at)}"
+                  %span= get_format_time(product.end_at)
               %li.listCol.clearfix
                 = render "products/discount_type", :product => product
               %li.listCol.clearfix
