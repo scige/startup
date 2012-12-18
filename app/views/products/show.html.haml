@@ -9,62 +9,70 @@
   = @product.title
 
 #content
-  #deal-intro.cf.radius-box-shadow
-    .clearfix.floatLeft
-      .discountContentWrap
-        .globalTitle
-          %h1.title= @product.title
-        .discountInfoWrap.clearfix
-          .discountInfoLSide.floatLeft
-            %ul.infoImgSilde
-              %li
-                = image_tag( @product.image_url(:normal), :width => "260", :height => "195", :title => @product.title, :alt => @product.title )
-          .discountInfoRSide.floatLeft
-            %ul
-              %li.listCol
-                %label.floatLeft= t('.time')
-                .floatLeft.fRSide
-                  %span= "#{get_format_time(@product.begin_at)}至#{get_format_time(@product.end_at)}"
-              %li.listCol.clearfix
-                = render "discount_type", :product => @product
-              %li.listCol.clearfix
-                %label.floatLeft= t('.address').html_safe
-                .floatLeft.fRSide
-                  %span= @product.address
-              %li.listCol.clearfix
-                %label.floatLeft= t('.phone').html_safe
-                .floatLeft.fRSide
-                  %span= @product.phone
-              %li.listCol.clearfix
-                %label.floatLeft= t('.impression')
-                .floatLeft.fRSide
-                  %span= t('.noimpression')
-              %li.listCol.clearfix
-                .button
-                  = link_to t('.send_button'), "#"
-  #deal-intro.cf.radius-box-shadow
-    .clearfix.floatLeft
-      .discountContentWrap
-        .discountDetailsInfo
-          %h2.title= t('.detail')
-          :css
-            .standard-table { background-color:#c0dcf3; width:100%; border:0; border-collapse:separate; border-spacing:1px; table-layout:fixed; margin-top:5px; }
-            .standard-table .center { text-align:center; }
-            .standard-table .right { text-align:right; }
-            .standard-table th { padding:3px 5px; background-color:#d2e8f9; color:#333; }
-            .standard-table td { padding:3px 5px; word-break:break-all; word-wrap:break-word; }
-            .standard-table tr.comment { background-color:#edf6fd; color:#666; font-weight:bold; }
-            .standard-table tr.normal { background-color:#fff; color:#666; }
-          :css
-            .standard-center { text-align:center; }
-            .standard-bar { background-color:#1daae2; padding:2px 6px; color:#fff; border-radius:3px; font-weight:bold; }
-            .standard-list-ul { margin:10px 0 15px; padding-left:15px; }
-            .standard-list-ul-li { list-style:disc outside none; margin-bottom:5px;}
-            .square-list-ul { margin:10px 0 15px; padding-left:15px; }
-            .square-list-ul-li { list-style:square outside none; margin-bottom:5px;}
-            .standard-image { display:block; margin:10px auto; }
-            .standard-image-wrap { display:block; width:100%; }
-          %p= @product.content.html_safe
+  #discountBox.cf.radius-box-shadow
+    .discountContentWrap
+      .globalTitle
+        %h1.title= @product.title
+      .discountInfoWrap.clearfix
+        .discountInfoLSide.floatLeft
+          %ul.infoImgSilde
+            %li
+              = image_tag( @product.image_url(:normal), :width => "260", :height => "195", :title => @product.title, :alt => @product.title )
+        .discountInfoRSide.floatLeft
+          %ul
+            %li.listCol
+              %label.floatLeft= t('.time')
+              .floatLeft.fRSide
+                %span= "#{get_format_time(@product.begin_at)}至#{get_format_time(@product.end_at)}"
+            %li.listCol.clearfix
+              = render "discount_type", :product => @product
+            %li.listCol.clearfix
+              %label.floatLeft= t('.address').html_safe
+              .floatLeft.fRSide
+                %span= @product.address
+            %li.listCol.clearfix
+              %label.floatLeft= t('.phone').html_safe
+              .floatLeft.fRSide
+                %span= @product.phone
+            %li.listCol.clearfix
+              %label.floatLeft= t('.impression')
+              .floatLeft.fRSide
+                %span= t('.noimpression')
+            %li.listCol.clearfix
+              .sendMobileButton
+                = link_to t('.send_button'), "#"
+  #discountBox.cf.radius-box-shadow
+    .discountContentWrap
+      .discountDetailsInfo
+        %h2.title= t('.detail')
+        :css
+          .standard-table { background-color:#c0dcf3; width:100%; border:0; border-collapse:separate; border-spacing:1px; table-layout:fixed; margin-top:5px; }
+          .standard-table .center { text-align:center; }
+          .standard-table .right { text-align:right; }
+          .standard-table th { padding:3px 5px; background-color:#d2e8f9; color:#333; }
+          .standard-table td { padding:3px 5px; word-break:break-all; word-wrap:break-word; }
+          .standard-table tr.comment { background-color:#edf6fd; color:#666; font-weight:bold; }
+          .standard-table tr.normal { background-color:#fff; color:#666; }
+        :css
+          .standard-center { text-align:center; }
+          .standard-bar { background-color:#1daae2; padding:2px 6px; color:#fff; border-radius:3px; font-weight:bold; }
+          .standard-list-ul { margin:10px 0 15px; padding-left:15px; }
+          .standard-list-ul-li { list-style:disc outside none; margin-bottom:5px;}
+          .square-list-ul { margin:10px 0 15px; padding-left:15px; }
+          .square-list-ul-li { list-style:square outside none; margin-bottom:5px;}
+          .standard-image { display:block; margin:10px auto; }
+          .standard-image-wrap { display:block; width:100%; }
+        %p= @product.content.html_safe
+    .discountDetailsBottom
+      %ul
+        %li.listCol
+          %label.floatLeft= t('.time')
+          .floatLeft.fRSide
+            %span= "#{get_format_time(@product.begin_at)}至#{get_format_time(@product.end_at)}"
+        %li.listCol.clearfix
+          = render "discount_type", :product => @product
+      .sendMobileButton
+        = link_to t('.send_button'), "#"
 
 #sidebar
   .side-single.radius-box-shadow

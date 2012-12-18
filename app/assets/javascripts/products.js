@@ -13,7 +13,7 @@ $(function(){
   map.addControl(new BMap.NavigationControl({type: BMAP_NAVIGATION_CONTROL_ZOOM}));
   //map.addControl(new BMap.OverviewMapControl());
   
-  $(".discountInfoRSide .button").click(function(){
+  $(".sendMobileButton").click(function(){
     $(".alert_mask").show(0);
     $(".alert_out").show(0);
   });

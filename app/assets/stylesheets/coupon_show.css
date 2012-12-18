@@ -1,8 +1,15 @@
 @charset "utf-8";
+#discountBox {
+	  clear:both;
+    border:1px solid #D4D4D4;
+	  background:#fff;
+	  margin-bottom:10px;
+}
 .discountContentWrap{
-    width:650px;
+    width:640px;
     background: #fff;
-    padding: 15px;
+	  padding:30px 25px 30px 25px;
+    margin: 0 5px 0 5px;
 }
 .discountContentWrap .globalTitle{
     border-bottom: 1px dashed #ccc;
@@ -23,7 +30,7 @@
     overflow-y: hidden;
     width:260px;
 }
-.discountInfoRSide .button a {
+.discountInfoRSide .sendMobileButton a {
 	  float:left;
 	  width:106px;
 	  height:40px;
@@ -31,12 +38,12 @@
 	  outline:0;
     background: url("/assets/send_to_mobile.png?v=1") no-repeat scroll 0 -83px transparent;
 }
-.discountInfoRSide .button a:hover {
+.discountInfoRSide .sendMobileButton a:hover {
 	background-position:0 -123px
 }
 .discountInfoWrap .discountInfoRSide{
     margin-left: 20px;
-    width:368px;
+    width:360px;
     font-size: 14px;
     color: #333;
 }
@@ -89,6 +96,26 @@
 }
 .discountDetailsInfo img{
     max-width: 648px;
+}
+.discountDetailsBottom{
+    background-color: #F5F4F4;
+    border: 1px solid #EEECEC;
+    clear: both;
+    padding: 30px 55px 70px 55px;
+}
+.discountDetailsBottom ul {
+	  float:left;
+}
+.discountDetailsBottom .sendMobileButton a {
+	  float:right;
+	  width:106px;
+	  height:40px;
+	  text-indent:-9999px;
+	  outline:0;
+    background: url("/assets/send_to_mobile.png?v=1") no-repeat scroll 0 -83px transparent;
+}
+.discountDetailsBottom .sendMobileButton a:hover {
+	background-position:0 -123px
 }
 
 /* from map */
