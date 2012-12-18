@@ -18,11 +18,11 @@
   .nav-wrapper.cf.radius-box-shadow
     %ul.nav
       %li= link_to "今日优惠", root_path, {:class=>"hover"}
-      %li= link_to "美食", category_filter_path(1)
-      %li= link_to "娱乐", category_filter_path(2)
-      %li= link_to "电影", category_filter_path(3)
-      %li= link_to "生活", category_filter_path(4)
-      %li= link_to "酒店", category_filter_path(5)
+      %li= link_to "美食", "/filters/select/1/all/"
+      %li= link_to "娱乐", "/filters/select/2/all/"
+      %li= link_to "电影", "/filters/select/3/all/"
+      %li= link_to "生活", "/filters/select/4/all/"
+      %li= link_to "酒店", "/filters/select/5/all/"
     %ul.user-info
       - if logined?
         %li.name= t('.welcome', :user_name=>current_user.name)
