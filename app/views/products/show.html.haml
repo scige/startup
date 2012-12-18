@@ -2,9 +2,9 @@
 .bread-nav
   = link_to t('.today'), root_path
   %span> »
-  = link_to "#{@product.district.cn_name}", district_filter_path(@product.district)
+  = link_to "#{@product.district.cn_name}", "/filters/select/all/#{@product.district.id}/"
   %span> »
-  = link_to "#{@product.category.cn_name}", category_filter_path(@product.category)
+  = link_to "#{@product.category.cn_name}", "/filters/select/#{@product.category.id}/#{@product.district.id}/"
   %span> »
   = @product.title
 
