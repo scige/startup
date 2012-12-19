@@ -1,9 +1,11 @@
 - provide(:title, t('.title'))
-= render "error_messages"
+/= render "error_messages"
+= devise_error_messages!
+
 #content
   .mainbox.radius-box-shadow
     %h2= t('.title')
-    = form_for @user do |f|
+    = form_for(resource, :as=>resource_name, :url=>registration_path(resource_name)) do |f|
       .field-group
         = f.label :name, t('.name')
         = f.text_field :name, :class=>"f-text"
@@ -18,11 +20,8 @@
         = t('.passconfirm_info').html_safe
       .field-group
         = f.label :email, t('.email')
-        = f.text_field :email, :class=>"f-text"
+        = f.email_field :email, :class=>"f-text"
         = t('.email_info').html_safe
-      .field-group
-        = f.label :captcha, t('.captcha')
-        = show_simple_captcha(:code_type=>"numeric")
       .field-group
         = f.submit t('.signup_button'), :class=>"form-button"
 

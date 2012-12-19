@@ -24,21 +24,21 @@
       %li= link_to "生活", "/filters/select/4/all/"
       %li= link_to "酒店", "/filters/select/5/all/"
     %ul.user-info
-      - if logined?
+      - if user_signed_in?
         %li.name= t('.welcome', :user_name=>current_user.name)
       %li.account
         = link_to t('.my_info'), account_path, {:class=>"my-account"}
         %i.tri
-        - if logined?
+        - if user_signed_in?
           %ul.account-menu{:style=>"display:none"}
             %li= link_to "我的优惠券", coupons_path, {:class=>"first"}
             %li= link_to "未使用", unuse_coupons_path
             %li= link_to "已使用", used_coupons_path
-            %li= link_to "个人信息", user_path(current_user)
-            %li= link_to "账户设置", edit_user_path(current_user), {:class=>"last"}
-      - if logined?
-        %li.login= link_to t('.logout'), logout_path, :method => :delete
+            %li= link_to "个人信息", "#"
+            %li= link_to "账户设置", edit_user_registration_path(current_user), {:class=>"last"}
+      - if user_signed_in?
+        %li.login= link_to t('.logout'), destroy_user_session_path, :method => :delete
       - else
-        %li.login= link_to t('.login'), login_path
-        %li.login.last= link_to t('.signup'), signup_path
+        %li.login= link_to t('.login'), new_user_session_path
+        %li.login.last= link_to t('.signup'), new_user_registration_path
 

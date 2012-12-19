@@ -2,7 +2,7 @@
 #require 'rest_client'
 
 class CouponsController < ApplicationController
-    before_filter :require_logined, :only => [:create, :index, :destroy]
+    before_filter :authenticate_user!, :only => [:create, :index, :destroy]
     before_filter :require_correct_user, :only => [:destroy]
 
     def create
@@ -79,7 +79,7 @@ class CouponsController < ApplicationController
 
         def require_correct_user
             @user = Coupon.find(params[:id]).user
-            unless current_user?(@user)
+            unless current_user == @user
                 redirect_to root_path
             end
         end

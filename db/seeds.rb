@@ -63,16 +63,16 @@ p2.category = Category.find_by_cn_name("酒店");
 p2.district = District.find_by_cn_name("昌邑区");
 p2.save
 
-User.create(
-    :name => "scige",
-    :email => "scige@163.com",
-    :password => "dddddd",
-    :password_confirmation => "dddddd"
-)
-
-User.create(
-    :name => "aspring",
-    :email => "apsring@163.com",
-    :password => "dddddd",
-    :password_confirmation => "dddddd"
-)
+#User.create(
+#    :name => "scige",
+#    :email => "scige@163.com",
+#    :password => "dddddd",
+#    :password_confirmation => "dddddd"
+#)
+#
+#User.create(
+#    :name => "aspring",
+#    :email => "apsring@163.com",
+#    :password => "dddddd",
+#    :password_confirmation => "dddddd"
+#)

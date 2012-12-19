@@ -73,3 +73,6 @@ gem "galetahub-simple_captcha", :require => "simple_captcha"
 # Http Client
 gem 'rest-client'
 
+# user
+gem 'devise'
+

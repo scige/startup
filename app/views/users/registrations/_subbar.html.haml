@@ -1,14 +1,14 @@
 %h2
   - case action_name 
   - when "show"
-    = t('users.show.title')
+    = t('users.registrations.show.title')
   - when "edit"
-    = t('users.edit.title')
+    = t('users.registrations.edit.title')
   - when "update"
-    = t('users.edit.title')
+    = t('users.registrations.edit.title')
 %uj.filter
   %li{:class => (action_name == "show" ? "current" : nil)}
-    = link_to t('.show_button'), user_path(@user)
+    = link_to t('.show_button'), "#"
   %li{:class => ((action_name == "edit" or action_name == "update") ? "current" : nil)}
-    = link_to t('.edit_button'), edit_user_path(@user)
+    = link_to t('.edit_button'), "#"
 

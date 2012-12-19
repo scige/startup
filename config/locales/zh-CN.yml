@@ -105,30 +105,45 @@ zh-CN:
       my_coupons: "我的优惠券"
       my_account: "账户设置"
 
-  user_sessions:
-    new:
-      login: "登录"
-      name: "账号"
-      password: "密码"
-      auto_login: "下次自动登录"
-      login_button: "登录"
-      no_signup: "尚未注册？"
-      signup_button: "免费注册"
-
   users:
-    new:
-      title: "注册"
-      name: "用户名"
-      password: "创建密码"
-      password_confirm: "确认密码"
-      email: "邮箱"
-      mobile: "手机"
-      captcha: "验证码"
-      signup_button: "注册"
-      name_info: "&nbsp;&nbsp;(*必填，4-16个字符)"
-      pass_info: "&nbsp;&nbsp;(*必填，6-32个字符)"
-      passconfirm_info: "&nbsp;&nbsp;(*必填，请再次输入密码)"
-      email_info: "&nbsp;&nbsp;(*必填，推荐QQ邮箱)"
+    registrations:
+      new:
+        title: "注册"
+        name: "用户名"
+        password: "创建密码"
+        password_confirm: "确认密码"
+        email: "邮箱"
+        mobile: "手机"
+        captcha: "验证码"
+        signup_button: "注册"
+        name_info: "&nbsp;&nbsp;(*必填，4-16个字符)"
+        pass_info: "&nbsp;&nbsp;(*必填，6-32个字符)"
+        passconfirm_info: "&nbsp;&nbsp;(*必填，请再次输入密码)"
+        email_info: "&nbsp;&nbsp;(*必填，推荐QQ邮箱)"
+      edit:
+        title: "修改个人信息"
+        name: "用户名"
+        email: "邮箱"
+        mobile: "手机"
+        password: "新密码"
+        password_confirm: "确认新密码"
+        current_password: "当前密码"
+        password_info: "&nbsp;&nbsp;(如果不想修改密码请保持空白)"
+        current_password_info: "&nbsp;&nbsp;(请输入当前密码确认上述修改)"
+        update_button: "更新信息"
+        back_button: "返回上页"
+      subbar:
+        show_button: "查看个人信息"
+        edit_button: "修改个人信息"
+    sessions:
+      new:
+        login: "登录"
+        name: "账号"
+        password: "密码"
+        auto_login: "下次自动登录"
+        login_button: "登录"
+        no_signup: "尚未注册？"
+        signup_button: "免费注册"
     error_messages:
       messages_head: "您的注册信息不满足以下要求："
       close: "关闭"
@@ -140,17 +155,6 @@ zh-CN:
       mobile: "手机:"
       no_mobile: "未设置"
       create_time: "注册时间:"
-    edit:
-      title: "修改个人信息"
-      name: "用户名"
-      email: "邮箱"
-      mobile: "手机"
-      password: "密码"
-      password_confirm: "确认密码"
-      update_button: "更新信息"
-    subbar:
-      show_button: "查看个人信息"
-      edit_button: "修改个人信息"
 
   admin:
     categories:
