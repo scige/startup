@@ -3,7 +3,7 @@
 # Table name: supers
 #
 #  id                     :integer          not null, primary key
-#  email                  :string(255)      default(""), not null
+#  name                   :string(255)      default(""), not null
 #  encrypted_password     :string(255)      default(""), not null
 #  reset_password_token   :string(255)
 #  reset_password_sent_at :datetime
@@ -22,10 +22,13 @@ class Super < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   #devise :database_authenticatable, :registerable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  devise :database_authenticatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
-  # attr_accessible :title, :body
+  attr_accessible :name, :password, :password_confirmation, :remember_me
+
+  validates :name,  :presence => true,
+                    :uniqueness => {:case_sensitive => false},
+                    :format => {:with => /\A\w+\z/},
+                    :length => {:in => 4..16}
 end

@@ -2,7 +2,7 @@ class DeviseCreateSupers < ActiveRecord::Migration
   def change
     create_table(:supers) do |t|
       ## Database authenticatable
-      t.string :email,              :null => false, :default => ""
+      t.string :name,               :null => false, :default => ""
       t.string :encrypted_password, :null => false, :default => ""
 
       ## Recoverable
@@ -37,7 +37,7 @@ class DeviseCreateSupers < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :supers, :email,                :unique => true
+    add_index :supers, :name,                 :unique => true
     add_index :supers, :reset_password_token, :unique => true
     # add_index :supers, :confirmation_token,   :unique => true
     # add_index :supers, :unlock_token,         :unique => true
