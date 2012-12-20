@@ -1,6 +1,5 @@
 class Admin::UsersController < ApplicationController
     before_filter :authenticate_super!
-    #before_filter :require_admin_user
 
     def index
         @users = User.all

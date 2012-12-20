@@ -10,7 +10,6 @@
           %th{:width=>"100"}= t('.head_name')
           %th{:width=>"100"}= t('.head_email')
           %th{:width=>"100"}= t('.head_mobile')
-          %th{:width=>"100"}= t('.head_admin')
           %th{:width=>"100"}= t('.head_operation')
 
         - @users.each do |user|
@@ -19,7 +18,6 @@
             %td= user.name
             %td= user.email
             %td= user.mobile
-            %td= user.admin
             %td
               = link_to t('.edit_button'), edit_admin_user_path(user)
               | 
