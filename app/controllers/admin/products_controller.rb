@@ -1,7 +1,7 @@
 # coding: utf-8
 
 class Admin::ProductsController < ApplicationController
-    before_filter :authenticate_user!
+    before_filter :authenticate_super!
     #before_filter :require_admin_user
 
     def index

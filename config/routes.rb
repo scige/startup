@@ -52,13 +52,15 @@ Startup::Application.routes.draw do
   # just remember to delete public/index.html.
   root :to => 'home#index'
 
-  get 'signup' => 'users#new', :as => :signup
-  get 'login' => 'user_sessions#new', :as => :login
-  get 'account' => 'coupons#index', :as => :account
-  delete 'logout' => 'user_sessions#destroy', :as => :logout
+  #get 'signup' => 'users#new', :as => :signup
+  #get 'login' => 'user_sessions#new', :as => :login
+  #get 'account' => 'coupons#index', :as => :account
+  #delete 'logout' => 'user_sessions#destroy', :as => :logout
 
   devise_for :users
   resources :profiles, :only => [:show]
+
+  devise_for :supers
 
   get 'about' => 'home#about', :as => :about
   get 'contact' => 'home#contact', :as => :contact

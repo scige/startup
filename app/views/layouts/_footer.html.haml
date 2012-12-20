@@ -16,7 +16,7 @@
     %li= link_to "商家登录", root_path
     /%li= link_to "验证优惠券", checkcoupon_path
     /- if logined? and admin_user?
-    - if user_signed_in?
+    - if super_signed_in?
       %li= link_to "管理后台", admin_products_path
 .ftbox
   %h3 公司信息

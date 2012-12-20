@@ -27,7 +27,7 @@
       - if user_signed_in?
         %li.name= t('.welcome', :user_name=>current_user.name)
       %li.account
-        = link_to t('.my_info'), account_path, {:class=>"my-account"}
+        = link_to t('.my_info'), coupons_path, {:class=>"my-account"}
         %i.tri
         - if user_signed_in?
           %ul.account-menu{:style=>"display:none"}

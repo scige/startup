@@ -24,3 +24,7 @@
       = link_to t('.districts'), admin_districts_path
       %span
 
+    %li
+      = link_to t('.sign_out'), destroy_super_session_path, :method => :delete
+      %span
+
