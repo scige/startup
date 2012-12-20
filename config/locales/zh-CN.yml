@@ -147,14 +147,20 @@ zh-CN:
     error_messages:
       messages_head: "您的注册信息不满足以下要求："
       close: "关闭"
+
+  profiles:
     show:
       title: "个人信息"
-      user_number: "第 %{id} 位会员"
       name: "用户名:"
       email: "邮箱:"
       mobile: "手机:"
       no_mobile: "未设置"
+      signin_count: "登陆次数:"
+      last_signin_time: "上次登陆:"
       create_time: "注册时间:"
+    subbar:
+      show_button: "查看个人信息"
+      edit_button: "修改个人信息"
 
   admin:
     categories:

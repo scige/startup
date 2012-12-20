@@ -2,7 +2,7 @@
 #require 'rest_client'
 
 class CouponsController < ApplicationController
-    before_filter :authenticate_user!, :only => [:create, :index, :destroy]
+    before_filter :authenticate_user!
     before_filter :require_correct_user, :only => [:destroy]
 
     def create

@@ -34,7 +34,7 @@
             %li= link_to "我的优惠券", coupons_path, {:class=>"first"}
             %li= link_to "未使用", unuse_coupons_path
             %li= link_to "已使用", used_coupons_path
-            %li= link_to "个人信息", "#"
+            %li= link_to "个人信息", profile_path(current_user)
             %li= link_to "账户设置", edit_user_registration_path, {:class=>"last"}
       - if user_signed_in?
         %li.login= link_to t('.logout'), destroy_user_session_path, :method => :delete

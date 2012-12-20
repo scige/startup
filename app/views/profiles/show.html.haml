@@ -1,0 +1,27 @@
+- provide(:title, t('.title'))
+#content.coupons-box
+  = render "shared/dashboard"
+  .mainbox.mine
+    = render "subbar"
+    %ul
+      %li.field-group
+        %label= t('.name')
+        %strong= @user.name
+      %li.field-group
+        %label= t('.email')
+        = @user.email
+      %li.field-group
+        %label= t('.mobile')
+        = @user.mobile and @user.mobile != "" ? @user.mobile : t('.no_mobile')
+      %li.field-group
+        %label= t('.signin_count')
+        = @user.sign_in_count
+      %li.field-group
+        %label= t('.last_signin_time')
+        = @user.last_sign_in_at.strftime("%Y-%m-%d %H:%M:%S")
+      %li.field-group
+        %label= t('.create_time')
+        = @user.created_at.strftime("%Y-%m-%d %H:%M:%S")
+
+#sidebar
+

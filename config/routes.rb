@@ -1,6 +1,4 @@
 Startup::Application.routes.draw do
-  devise_for :users
-
   mount Ckeditor::Engine => '/ckeditor'
 
   # The priority is based upon order of creation:
@@ -58,6 +56,9 @@ Startup::Application.routes.draw do
   get 'login' => 'user_sessions#new', :as => :login
   get 'account' => 'coupons#index', :as => :account
   delete 'logout' => 'user_sessions#destroy', :as => :logout
+
+  devise_for :users
+  resources :profiles, :only => [:show]
 
   get 'about' => 'home#about', :as => :about
   get 'contact' => 'home#contact', :as => :contact

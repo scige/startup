@@ -499,6 +499,7 @@ to {
 	position:absolute;
 	top:0;
 	right:20px;
+	padding-top:2px;
 	padding-right:16px;
 	background:url(/assets/bg-sysmsg-close.gif) 100% 50% no-repeat;
 	font-size:12px;
