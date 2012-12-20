@@ -1,11 +1,11 @@
 - if flash and flash.any?
   - flash.each do |key, value|
-    - if :error == key
+    - if :alert == key
       .sysmsgw#sysmsg-error.radius-box-shadow
         .sysmsg
           = value
           %span.close= t('.close')
-    - elsif :success == key
+    - elsif :notice == key
       .sysmsgw#sysmsg-success.radius-box-shadow
         .sysmsg
           = value

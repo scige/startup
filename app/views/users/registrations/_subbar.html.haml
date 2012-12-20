@@ -10,5 +10,5 @@
   %li{:class => (action_name == "show" ? "current" : nil)}
     = link_to t('.show_button'), "#"
   %li{:class => ((action_name == "edit" or action_name == "update") ? "current" : nil)}
-    = link_to t('.edit_button'), "#"
+    = link_to t('.edit_button'), edit_user_registration_path
 
