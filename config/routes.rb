@@ -1,6 +1,54 @@
 Startup::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
+  root :to => 'home#index'
+
+  #get 'signup' => 'users#new', :as => :signup
+  #get 'login' => 'user_sessions#new', :as => :login
+  #get 'account' => 'coupons#index', :as => :account
+  #delete 'logout' => 'user_sessions#destroy', :as => :logout
+
+  devise_for :users
+  resources :profiles, :only => [:show]
+
+  devise_for :supers
+
+  devise_for :dealers
+
+  get 'about' => 'home#about', :as => :about
+  get 'contact' => 'home#contact', :as => :contact
+
+  resources :home, :only => [] do
+    get :about, :on => :collection
+    get :contact, :on => :collection
+  end
+
+  resources :products, :only => [:show]
+
+  resources :coupons, :only => [:create, :index, :destroy] do
+    get :unuse, :on => :collection
+    get :used, :on => :collection
+  end
+
+  match '/filters/select/:c_id/:d_id', :controller=>'filters', :action=>'select'
+  resources :filters, :only => [] do
+    get :today, :on => :collection
+    post :search, :on => :collection
+  end
+
+  resources :companies, :only => [] do
+    get :check_coupon , :on => :collection
+    post :update_coupon, :on => :collection
+  end
+
+  namespace :admin do
+    root :to => 'products#index'
+    resources :products, :except => [:show]
+    resources :categories, :except => [:show]
+    resources :districts, :except => [:show]
+    resources :users, :except => [:show]
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -47,55 +95,6 @@ Startup::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  root :to => 'home#index'
-
-  #get 'signup' => 'users#new', :as => :signup
-  #get 'login' => 'user_sessions#new', :as => :login
-  #get 'account' => 'coupons#index', :as => :account
-  #delete 'logout' => 'user_sessions#destroy', :as => :logout
-
-  devise_for :users
-  resources :profiles, :only => [:show]
-
-  devise_for :supers
-
-  get 'about' => 'home#about', :as => :about
-  get 'contact' => 'home#contact', :as => :contact
-
-  resources :home, :only => [] do
-    get :about, :on => :collection
-    get :contact, :on => :collection
-  end
-
-  resources :products, :only => [:show]
-
-  resources :coupons, :only => [:create, :index, :destroy] do
-    get :unuse, :on => :collection
-    get :used, :on => :collection
-  end
-
-  match '/filters/select/:c_id/:d_id', :controller=>'filters', :action=>'select'
-  resources :filters, :only => [] do
-    get :today, :on => :collection
-    post :search, :on => :collection
-  end
-
-  get 'checkcoupon' => 'companies#check_coupon', :as => :checkcoupon
-
-  resources :companies, :only => [] do
-    post :update_coupon, :on => :collection
-  end
-
-  namespace :admin do
-    root :to => 'products#index'
-    resources :products, :except => [:show]
-    resources :categories, :except => [:show]
-    resources :districts, :except => [:show]
-    resources :users, :except => [:show]
-  end
 
   # See how all your routes lay out with "rake routes"
 

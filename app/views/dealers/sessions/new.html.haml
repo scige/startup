@@ -1,0 +1,16 @@
+- provide(:title, t('.login'))
+
+#content.pg-login
+  .mainbox.radius-box-shadow
+    %h2= t('.login') 
+    .signup-section
+      = form_for(resource, :as=>resource_name, :url=>session_path(resource_name)) do |f|
+        .field-group
+          = f.label :name, t('.name')
+          = f.text_field :name, :class=>"f-text"
+        .field-group
+          = f.label :password, t('.password')
+          = f.password_field :password, :class=>"f-text"
+        .field-group
+          = f.submit t('.login_button'), :class=>"form-button"
+

@@ -1,0 +1,13 @@
+.dashboard
+  %ul
+    %li{:class => (controller_name == "companies" ? "current" : nil)}
+      = link_to t('.dealer_coupons'), check_coupon_companies_path
+      %span
+
+    %li{:class => (controller_name == "registrations" ? "current" : nil)}
+      = link_to t('.dealer_account'), edit_dealer_registration_path
+      %span
+
+    %li
+      = link_to t('.sign_out'), destroy_dealer_session_path, :method => :delete
+      %span

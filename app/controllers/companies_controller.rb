@@ -1,6 +1,11 @@
 # coding: utf-8
 
 class CompaniesController < ApplicationController
+    before_filter :authenticate_dealer!
+
+    def check_coupon
+    end
+
     def update_coupon
         logger.debug "[DEBUG] #{params}"
         coupon = Coupon.find_by_password(params[:couponcode])
