@@ -4,16 +4,16 @@
       = link_to t('.products'), admin_products_path
       %span
 
-    %li{:class => (controller_name == "shops" ? "current" : nil)}
-      = link_to t('.shops'), admin_products_path
-      %span
-
     %li{:class => (controller_name == "coupons" ? "current" : nil)}
       = link_to t('.coupons'), admin_products_path
       %span
 
     %li{:class => (controller_name == "users" ? "current" : nil)}
       = link_to t('.users'), admin_users_path
+      %span
+
+    %li{:class => (controller_name == "dealers" ? "current" : nil)}
+      = link_to t('.dealers'), admin_dealers_path
       %span
 
     %li{:class => (controller_name == "categories" ? "current" : nil)}

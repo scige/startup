@@ -1,0 +1,27 @@
+- provide(:title, t('.title'))
+#content.coupons-box
+  #content-admin
+    = render "admin/shared/dashboard"
+    .mainbox.mine
+      = render "subbar"
+      %table#order-list.coupons-table{:cellpadding=>"0", :cellspacing=>"0", :border=>"0"}
+        %tr
+          %th{:width=>"auto"}= t('.head_id')
+          %th{:width=>"100"}= t('.head_name')
+          %th{:width=>"100"}= t('.head_email')
+          %th{:width=>"100"}= t('.head_mobile')
+          %th{:width=>"100"}= t('.head_operation')
+
+        - @dealers.each do |dealer|
+          %tr{:class => cycle("alt", "")}
+            %td= dealer.id
+            %td= dealer.name
+            %td= dealer.email
+            %td= dealer.mobile
+            %td
+              = link_to t('.edit_button'), edit_admin_dealer_path(dealer)
+              | 
+              = link_to t('.delete_button'), admin_dealer_path(dealer), :method => :delete, :confirm => t('.delete_confirm')
+
+#sidebar
+

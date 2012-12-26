@@ -1,0 +1,18 @@
+%h2
+  - case action_name 
+  - when "index"
+    = t('admin.dealers.index.title')
+  - when "new"
+    = t('admin.dealers.new.title')
+  - when "create"
+    = t('admin.dealers.new.title')
+  - when "edit"
+    = t('admin.dealers.edit.title')
+  - when "update"
+    = t('admin.dealers.edit.title')
+%uj.filter
+  %li{:class => (action_name == "index" ? "current" : nil)}
+    = link_to t('.index_button'), admin_dealers_path
+  %li{:class => ((action_name == "new" or action_name == "create") ? "current" : nil)}
+    = link_to t('.new_button'), new_admin_dealer_path
+

@@ -47,6 +47,7 @@ Startup::Application.routes.draw do
     resources :categories, :except => [:show]
     resources :districts, :except => [:show]
     resources :users, :except => [:show]
+    resources :dealers, :except => [:show]
   end
 
   # The priority is based upon order of creation:

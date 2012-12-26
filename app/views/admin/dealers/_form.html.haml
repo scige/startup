@@ -1,0 +1,23 @@
+= form_for [:admin, @dealer] do |f|
+  #admin-product-info
+    %table#admin-products-table
+      %tr
+        %td= t('.name')
+        %td= f.text_field :name, :size=>40
+      %tr
+        %td= t('.email')
+        %td= f.text_field :email, :size=>40
+      %tr
+        %td= t('.mobile')
+        %td= f.text_field :mobile, :size=>40
+      %tr
+        %td= t('.password')
+        %td= f.password_field :password, :size=>40
+      %tr
+        %td= t('.password_confirm')
+        %td= f.password_field :password_confirmation, :size=>40
+      %tr
+        %td
+        %td#admin-products-table-submit
+          = f.submit t('.submit_button')
+
