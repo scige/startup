@@ -13,7 +13,10 @@ Startup::Application.routes.draw do
 
   devise_for :supers
 
-  devise_for :dealers
+  devise_for :dealers, :skip => [:registrations] do
+    get 'dealers/edit' => 'devise/registrations#edit', :as => 'edit_dealer_registration'
+    put 'dealers' => 'devise/registrations#update', :as => 'dealer_registration'
+  end
 
   get 'about' => 'home#about', :as => :about
   get 'contact' => 'home#contact', :as => :contact
