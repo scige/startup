@@ -20,11 +20,20 @@
 
         <% @products.each do |product| %>
             var point = new BMap.Point(<%= product.pos_x %>, <%= product.pos_y %>);
+            <% discount_string = "" %>
+            <% case product.discount_type %>
+            <% when DISCOUNT_TYPE_DISCOUNT %>
+                <% discount_string = "直享<strong> #{product.discount} </strong>折" %>
+            <% when DISCOUNT_TYPE_PRICE %>
+                <% discount_string = "最低<strong> #{product.discount} </strong>元" %>
+            <% when DISCOUNT_TYPE_NEW %>
+                <% discount_string = "<strong> #{product.specific} </strong>" %>
+            <% end %>
             var content = <%= '"'.html_safe %> \
                 <%= "<div style='color:#666;line-height:20px;'>".html_safe %> \
                 <%= "<h3 style='font-size:16px;'>吉林美优惠网</h3>".html_safe %> \
                 <%= "#{product.title}<br/>".html_safe %> \
-                <%= "折扣范围：<strong> #{product.discount} </strong>折<br/>".html_safe %> \
+                <%= "优惠方式：#{discount_string}<br/>".html_safe %> \
                 <%= "<a target='_blank' href='#{product_path(product)}'>详情 »</a>".html_safe %> \
                 <%= '</div>"'.html_safe %>;
             addMarkerContent(point, content);
