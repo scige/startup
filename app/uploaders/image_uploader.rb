@@ -35,11 +35,20 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   version :small do
-    process :resize_to_fit => [195, 146]
+    process :scale_image => [195, 146]
   end
 
   version :normal do
-    process :resize_to_fit => [260, 195]
+    process :scale_image => [260, 195]
+  end
+
+  def scale_image(width, height)
+    image = MiniMagick::Image.open(model.send(mounted_as).path)
+    if image[:width] > image[:height]
+      resize_to_limit(width, nil)
+    else
+      resize_to_limit(nil, height)
+    end
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

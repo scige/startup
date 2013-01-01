@@ -6,7 +6,7 @@
           .couponInfoLSide.floatLeft
             %ul.infoImgSilde
               %li
-                = link_to image_tag( product.image_url(:small), :width => "195", :height => "146", :title => product.title, :alt => product.title ), product_path(product), { :target => "_blank" }
+                = link_to image_tag( product.image_url(:small), :title => product.title, :alt => product.title ), product_path(product), { :target => "_blank" }
           .couponInfoRSide.floatLeft
             .globalTitle.title
               = link_to product.title, product_path(product), { :target => "_blank" }

@@ -26,9 +26,10 @@
     margin-top: 25px;
 }
 .discountInfoLSide .infoImgSilde{
+    width: 260px;
     height: 195px;
+    text-align: center;
     overflow-y: hidden;
-    width:260px;
 }
 .discountInfoRSide .sendMobileButton a {
 	  float:left;

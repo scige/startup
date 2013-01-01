@@ -5,8 +5,9 @@
     padding: 20px;
 }
 .couponInfoLSide .infoImgSilde{
-    width:195px;
+    width: 195px;
     height: 146px;
+    text-align: center;
     overflow-y: hidden;
 }
 .couponInfoWrap .couponInfoRSide{
