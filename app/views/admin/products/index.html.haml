@@ -8,6 +8,7 @@
         %tr
           %th{:width=>"auto"}= t('.head_id')
           %th{:width=>"50"}= t('.head_title')
+          %th{:width=>"50"}= t('.head_shop_name')
           %th{:width=>"50"}= t('.head_status')
           %th{:width=>"50"}= t('.head_discount_type')
           %th{:width=>"50"}= t('.head_discount')
@@ -24,6 +25,7 @@
           %tr{:class => cycle("alt", "")}
             %td= product.id
             %td= product.title
+            %td= product.shop_name
             %td= product.status == PRODUCT_STATUS_ON_SHELF ? t('.status_on_shelf') : t('.status_off_shelf')
             %td= DISCOUNT_TYPE_NAME[product.discount_type]
             %td= product.discount_part1+product.discount_part2+product.discount_part3+product.discount_part4+product.discount_part5

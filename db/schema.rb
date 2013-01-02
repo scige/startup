@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130102081423) do
+ActiveRecord::Schema.define(:version => 20130102090227) do
 
   create_table "categories", :force => true do |t|
     t.string   "en_name"
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(:version => 20130102081423) do
     t.string   "discount_part3", :default => ""
     t.string   "discount_part4", :default => ""
     t.string   "discount_part5", :default => ""
+    t.string   "shop_name",      :default => ""
   end
 
   add_index "products", ["category_id"], :name => "index_products_on_category_id"

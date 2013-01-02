@@ -5,6 +5,9 @@
         %td= t('.title')
         %td= f.text_field :title, :size=>40
       %tr
+        %td= t('.shop_name')
+        %td= f.text_field :shop_name, :size=>40
+      %tr
         %td= t('.status')
         %td
           = f.radio_button :status, PRODUCT_STATUS_OFF_SHELF, :checked => true

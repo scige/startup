@@ -310,6 +310,7 @@ zh-CN:
         title: "全部商品"
         head_id: "编号"
         head_title: "名称"
+        head_shop_name: "商家"
         head_status: "状态"
         head_discount_type: "优惠类型"
         head_discount: "折扣"
@@ -332,6 +333,7 @@ zh-CN:
         new_button: "新增商品"
       form:
         title: "名称："
+        shop_name: "商家"
         status: "状态："
         discount_type: "优惠类型："
         discount_part1: "优惠信息："

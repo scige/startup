@@ -34,6 +34,7 @@ class Product < ActiveRecord::Base
 
   attr_accessible :status
   attr_accessible :title
+  attr_accessible :shop_name
   attr_accessible :image
   attr_accessible :discount_type
   attr_accessible :discount_part1
