@@ -20,15 +20,7 @@
 
         <% @products.each do |product| %>
             var point = new BMap.Point(<%= product.pos_x %>, <%= product.pos_y %>);
-            <% discount_string = "" %>
-            <% case product.discount_type %>
-            <% when DISCOUNT_TYPE_DISCOUNT %>
-                <% discount_string = "直享<strong> #{product.discount} </strong>折" %>
-            <% when DISCOUNT_TYPE_PRICE %>
-                <% discount_string = "最低<strong> #{product.discount} </strong>元" %>
-            <% when DISCOUNT_TYPE_NEW %>
-                <% discount_string = "<strong> #{product.specific} </strong>" %>
-            <% end %>
+            <% discount_string = "#{product.discount_part1} <strong> #{product.discount_part2} </strong> #{product.discount_part3} <strong> #{product.discount_part4} </strong> #{product.discount_part5}" %>
             var content = <%= '"'.html_safe %> \
                 <%= "<div style='color:#666;line-height:20px;'>".html_safe %> \
                 <%= "<h3 style='font-size:16px;'>吉林美优惠网</h3>".html_safe %> \

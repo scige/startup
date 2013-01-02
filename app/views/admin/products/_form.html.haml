@@ -18,14 +18,20 @@
             = f.radio_button :discount_type, key
             = f.label :discount_type, value
       %tr
-        %td= t('.discount')
-        %td= f.text_field :discount, :size=>40
+        %td= t('.discount_part1')
+        %td= f.text_field :discount_part1, :size=>40
       %tr
-        %td= t('.price')
-        %td= f.text_field :price, :size=>40
+        %td= t('.discount_part2')
+        %td= f.text_field :discount_part2, :size=>40
       %tr
-        %td= t('.specific')
-        %td= f.text_field :specific, :size=>40
+        %td= t('.discount_part3')
+        %td= f.text_field :discount_part3, :size=>40
+      %tr
+        %td= t('.discount_part4')
+        %td= f.text_field :discount_part4, :size=>40
+      %tr
+        %td= t('.discount_part5')
+        %td= f.text_field :discount_part5, :size=>40
       %tr
         %td= t('.category')
         %td= f.select :category_id, @categories.map{|c| [c.cn_name, c.id]}, :selected => (@product.category==nil ? nil : @product.category.id)

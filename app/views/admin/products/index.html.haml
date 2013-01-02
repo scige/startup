@@ -26,7 +26,7 @@
             %td= product.title
             %td= product.status == PRODUCT_STATUS_ON_SHELF ? t('.status_on_shelf') : t('.status_off_shelf')
             %td= DISCOUNT_TYPE_NAME[product.discount_type]
-            %td= product.discount
+            %td= product.discount_part1+product.discount_part2+product.discount_part3+product.discount_part4+product.discount_part5
             %td= product.category.cn_name
             %td= product.district.cn_name
             %td= get_format_time(product.begin_at)
