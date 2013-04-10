@@ -10,7 +10,7 @@ PRODUCT_STATUS_OFF_SHELF = 0
 PRODUCT_STATUS_ON_SHELF = 1
 
 #send coupon to mobile open
-SEND_COUPON_TO_MOBILE = false
+SEND_COUPON_TO_MOBILE = true
 
 #product discount type
 #打折券，打折                   discount
