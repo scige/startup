@@ -24,6 +24,7 @@
 #  discount_part3 :string(255)      default("")
 #  discount_part4 :string(255)      default("")
 #  discount_part5 :string(255)      default("")
+#  shop_name      :string(255)      default("")
 #
 
 class Product < ActiveRecord::Base

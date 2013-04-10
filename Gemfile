@@ -9,6 +9,15 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'capybara'
+
+  gem 'pry-rails'
+  gem 'pry-debugger'
+  gem 'pry-stack_explorer'
+  #gem 'pry-exception_explorer'
+
+  gem 'better_errors'
+  gem 'quiet_assets'
+  gem 'thin'
 end
 
 group :production do

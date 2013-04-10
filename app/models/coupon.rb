@@ -9,19 +9,21 @@
 #  product_id :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  mobile     :string(255)
 #
 
 class Coupon < ActiveRecord::Base
   belongs_to :user
   belongs_to :product
 
-  attr_accessible :status, :password
+  attr_accessible :status, :password, :mobile
 
   validates :status, :presence => true,
                      :numericality => {:only_integer => true}
   validates :password, :presence => true,
                        :uniqueness => {:case_sensitive => false}
+  validates :mobile, :presence => true
 
-  validates :user_id, presence: true
+  #validates :user_id, presence: true
   validates :product_id, presence: true
 end

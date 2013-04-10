@@ -2,7 +2,7 @@
 #require 'rest_client'
 
 class CouponsController < ApplicationController
-    before_filter :authenticate_user!
+    #before_filter :authenticate_user!
     before_filter :require_correct_user, :only => [:destroy]
 
     def create
@@ -25,6 +25,7 @@ class CouponsController < ApplicationController
         @coupon.product = @product
         @coupon.status = 0
         @coupon.password = get_password
+        @coupon.mobile = mobile
         # 重复尝试5次，超过5次返回错误信息
         (1..5).each do
             if @coupon.save
