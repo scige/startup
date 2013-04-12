@@ -1,6 +1,6 @@
 @charset "utf-8";
 .couponContentWrap{
-    width:890px;
+    width:710px;
     background: #fff;
     padding: 20px;
 }
@@ -12,7 +12,7 @@
 }
 .couponInfoWrap .couponInfoRSide{
     margin-left: 20px;
-    width:600px;
+    width:420px;
     font-size: 14px;
     color: #333;
 }
@@ -25,7 +25,7 @@
     padding-right: 10px;
 }
 .couponInfoWrap .listCol .fRSide{
-    width:500px;
+    width:320px;
 }
 .couponInfoWrap .title{
     padding-bottom: 10px;
@@ -86,6 +86,25 @@
     color: #666;
     font-size: 14px;
     padding-right: 12px;
+}
+
+#content-index {
+    float:left;
+    width:750px;
+    _display:inline;
+    padding:0
+}
+
+#sidebar-taobao {
+    float:right;
+    width:192px;
+    _display:inline
+}
+
+#sidebar-taobao .side-single {
+    padding:15px;
+    border:1px solid #d4d4d4;
+    background:#FFF
 }
 
 /* from dldGlobal.css */
