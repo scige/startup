@@ -3,7 +3,9 @@ jQuery(document).ready(function($) {
         animtype    : 'slide',
         width       : 960,
         height      : 382,
-        responsive  : true,
-        randomstart : true
+        prevtext    : '‹',
+        nexttext    : '›',
+        showmarkers : false,
+        responsive  : true
     });
 });
