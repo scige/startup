@@ -38,7 +38,7 @@ Startup::Application.routes.draw do
   match '/filters/select/:c_id/:d_id', :controller=>'filters', :action=>'select'
   resources :filters, :only => [] do
     get :today, :on => :collection
-    post :search, :on => :collection
+    get :search, :on => :collection
   end
 
   resources :companies, :only => [] do

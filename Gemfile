@@ -85,3 +85,5 @@ gem 'rest-client'
 # user
 gem 'devise'
 
+gem 'kaminari'
+

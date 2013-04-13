@@ -389,6 +389,14 @@ button.formbutton {
 	padding-right:15px;
 	background:#FFF url(/assets/sp-deal.png?v=3) no-repeat right -70px
 }
+.page-nav-wrapper {
+	clear:both;
+	padding-top:30px;
+	text-align:center
+}
+.page-nav {
+	margin:0 auto
+}
 .button-strip {
 	position:relative;
 	font-size:0;

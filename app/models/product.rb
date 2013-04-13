@@ -28,6 +28,8 @@
 #
 
 class Product < ActiveRecord::Base
+  paginates_per 30
+
   belongs_to :category
   belongs_to :district
 
