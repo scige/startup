@@ -1,5 +1,12 @@
 - provide(:title, t('.title'))
-= render "map"
+%div#sliders-show
+  %ul.bjqs
+    %li
+      = image_tag "slider_1.jpg", :title=>"slider 1"
+    %li
+      = image_tag "slider_2.jpg", :title=>"slider 2"
+    %li
+      = image_tag "slider_3.jpg", :title=>"slider 3"
 .block-title
   %h3= t('.products_title')
 = render "filters/home_filter"
