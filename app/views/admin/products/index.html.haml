@@ -44,5 +44,8 @@
               | 
               = link_to t('.delete_button'), admin_product_path(product), :method => :delete, :confirm => t('.delete_confirm')
 
+      .page-nav-wrapper
+        = paginate @products
+
 #sidebar
 
