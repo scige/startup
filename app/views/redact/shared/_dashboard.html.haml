@@ -1,0 +1,10 @@
+.dashboard
+  %ul
+    %li{:class => (controller_name == "products" ? "current" : nil)}
+      = link_to t('.products'), redact_products_path
+      %span
+
+    %li
+      = link_to t('.sign_out'), destroy_writer_session_path, :method => :delete
+      %span
+

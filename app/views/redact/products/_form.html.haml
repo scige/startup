@@ -1,0 +1,86 @@
+= form_for [:redact, @product] do |f|
+  #admin-product-info
+    %table#admin-products-table
+      %tr
+        %td= t('.title')
+        %td= f.text_field :title, :size=>40
+      %tr
+        %td= t('.shop_name')
+        %td= f.text_field :shop_name, :size=>40
+      %tr
+        %td= t('.status')
+        %td
+          = f.radio_button :status, PRODUCT_STATUS_OFF_SHELF, :checked => true
+          = f.label :status, t('.status_off_shelf')
+          = f.radio_button :status, PRODUCT_STATUS_ON_SHELF
+          = f.label :status, t('.status_on_shelf')
+      %tr
+        %td= t('.discount_type')
+        %td
+          - DISCOUNT_TYPE_NAME.each do |key, value|
+            = f.radio_button :discount_type, key
+            = f.label :discount_type, value
+      %tr
+        %td= t('.discount_part1')
+        %td= f.text_field :discount_part1, :size=>40
+      %tr
+        %td= t('.discount_part2')
+        %td= f.text_field :discount_part2, :size=>40
+      %tr
+        %td= t('.discount_part3')
+        %td= f.text_field :discount_part3, :size=>40
+      %tr
+        %td= t('.discount_part4')
+        %td= f.text_field :discount_part4, :size=>40
+      %tr
+        %td= t('.discount_part5')
+        %td= f.text_field :discount_part5, :size=>40
+      %tr
+        %td= t('.category')
+        %td= f.select :category_id, @categories.map{|c| [c.cn_name, c.id]}, :selected => (@product.category==nil ? nil : @product.category.id)
+      %tr
+        %td= t('.district')
+        %td= f.select :district_id, @districts.map{|c| [c.cn_name, c.id]}, :selected => (@product.district==nil ? nil : @product.district.id)
+      %tr
+        %td= t('.begin_at')
+        %td= f.text_field :begin_at, :size=>40
+      %tr
+        %td= t('.end_at')
+        %td= f.text_field :end_at, :size=>40
+      %tr
+        %td= t('.address')
+        %td= f.text_field :address, :size=>40
+      %tr
+        %td= t('.phone')
+        %td= f.text_field :phone, :size=>40
+      %tr
+        %td= t('.sale_count')
+        %td= f.text_field :sale_count, :size=>40
+      %tr
+        %td= t('.pos_x')
+        %td= f.text_field :pos_x, :size=>40
+      %tr
+        %td= t('.pos_y')
+        %td= f.text_field :pos_y, :size=>40
+  #admin-product-image
+    %table#admin-products-table
+      %tr
+        %td
+          = image_tag @product.image_url(:normal), :width => "260", :height => "195"
+      %tr
+        %td
+          = t('.image')
+          = f.file_field :image
+  #admin-product-detail
+    %table#admin-products-table
+      %tr
+        %td= t('.detail')
+        %td
+          = javascript_include_tag "ckeditor/init"
+          = f.cktext_area :content
+      %tr
+        %td
+        %td#admin-products-table-submit
+          = f.submit t('.submit_button')
+          = f.submit t('.preview_button'), :name => "preview"
+

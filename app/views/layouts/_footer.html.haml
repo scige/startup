@@ -19,6 +19,8 @@
       %li= link_to "商家后台", check_coupon_companies_path
     - if super_signed_in?
       %li= link_to "管理后台", admin_products_path
+    - if writer_signed_in?
+      %li= link_to "编辑后台", redact_products_path
 .ftbox
   %h3 公司信息
   %ul

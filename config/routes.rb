@@ -1,6 +1,4 @@
 Startup::Application.routes.draw do
-  devise_for :writers
-
   mount Ckeditor::Engine => '/ckeditor'
 
   root :to => 'home#index'
@@ -14,6 +12,8 @@ Startup::Application.routes.draw do
   resources :profiles, :only => [:show]
 
   devise_for :supers
+
+  devise_for :writers
 
   devise_for :dealers, :skip => [:registrations] do
     get 'dealers/edit' => 'devise/registrations#edit', :as => 'edit_dealer_registration'
@@ -53,6 +53,11 @@ Startup::Application.routes.draw do
     resources :districts, :except => [:show]
     resources :users, :except => [:show]
     resources :dealers, :except => [:show]
+  end
+
+  namespace :redact do
+    root :to => 'products#index'
+    resources :products, :except => [:show]
   end
 
   # The priority is based upon order of creation:
