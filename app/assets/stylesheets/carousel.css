@@ -1,0 +1,62 @@
+#carousel-show {
+  width: 960px;
+  height: 350px;
+  background: url(carousel_bg.jpg);
+  border: 1px #d4d4d4 solid;
+  overflow: scroll;
+}
+
+#da-vinci-title {
+	display:none;	
+	color:#f90;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:17px;
+	font-weight:bold;
+	margin:20px;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	margin-bottom:10px;
+	width:80%;
+}
+#da-vinci-alt{
+	display:none;	
+	color:#ddd;
+	margin:20px;
+	margin-top:0px;
+	font-size:14px;
+	font-weight:bold;
+}
+
+#left-button {
+  position:absolute;
+  top:20px;
+  right:64px;
+}
+#right-button {
+  position:absolute;
+  top:20px;
+  right:20px;
+}
+
+.carouselLeft {	
+	display:none;
+	background:url(rotate-left.png);	
+	width:40px; height:40px;
+	background-position: 0px 0px;
+}
+.carouselLeft:hover {		
+	width:40px; height:40px;
+	background-position: 0px 40px;
+	cursor:auto;
+}
+.carouselRight {
+	display:none;
+	background:url(rotate-right.png);	
+	width:40px; height:40px;
+	background-position: 0px 0px;
+}
+.carouselRight:hover {	
+	width:40px; height:40px;
+	background-position: 0px 40px;
+}
+

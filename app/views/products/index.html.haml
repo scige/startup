@@ -1,12 +1,11 @@
 - provide(:title, t('.title'))
-%div#carousel-show{:style=>"width:960px; height:200px;background:#eee;overflow:scroll;"}
-  = image_tag "carousel_1.jpg", :title=>"Flag 1 Title", :width=>100, :class=>"cloudcarousel"
-  = image_tag "carousel_2.jpg", :title=>"Flag 2 Title", :width=>100, :class=>"cloudcarousel"
-  = image_tag "carousel_3.jpg", :title=>"Flag 3 Title", :width=>100, :class=>"cloudcarousel"
-<input id="left-but"  type="button" value="Left" />
-<input id="right-but" type="button" value="Right" />
-<p id="title-text"></p>
-<p id="alt-text"></p>
+%div#carousel-show.radius-box-shadow
+  - @carousel_products.each do |product|
+    = link_to image_tag(product.image, :title=>product.shop_name, :alt=>product.title, :width=>100, :class=>"cloudcarousel"), product_path(product), { :target => "_blank" }
+  #da-vinci-title
+  #da-vinci-alt
+  #left-button.carouselLeft
+  #right-button.carouselRight
 .block-title
   %h3= t('.products_title')
 = render "filters/home_filter"

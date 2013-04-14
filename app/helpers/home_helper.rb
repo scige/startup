@@ -12,4 +12,8 @@ module HomeHelper
         points.sort!
         (points[0] + points[-1]) / 2
     end
+
+    def active_channel?(current_controller, current_action)
+      controller_name == current_controller and action_name == current_action
+    end
 end
