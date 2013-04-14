@@ -28,7 +28,7 @@
 #
 
 class Product < ActiveRecord::Base
-  paginates_per 30
+  paginates_per 20
 
   belongs_to :category
   belongs_to :district

@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
   $("#carousel-show").CloudCarousel({
     xPos: 480,
-    yPos: 100,
+    yPos: 120,
     xRadius:450,
     yRadius:100,
     buttonLeft: $("#left-button"),
@@ -12,6 +12,6 @@ jQuery(document).ready(function($) {
     reflGap:2,
     speed:0.15,
     autoRotate: 'right',
-    autoRotateDelay: 4000
+    autoRotateDelay: 6000
   });
 });

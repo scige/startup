@@ -1,7 +1,7 @@
 - provide(:title, t('.title'))
 %div#carousel-show.radius-box-shadow
   - @carousel_products.each do |product|
-    = link_to image_tag(product.image, :title=>product.shop_name, :alt=>product.title, :width=>100, :class=>"cloudcarousel"), product_path(product), { :target => "_blank" }
+    = link_to image_tag(product.image, :title=>product.shop_name, :alt=>product.title, :width=>150, :class=>"cloudcarousel"), product_path(product), { :target => "_blank" }
   #da-vinci-title
   #da-vinci-alt
   #left-button.carouselLeft

@@ -25,7 +25,7 @@ Startup::Application.routes.draw do
   get 'about' => 'home#about', :as => :about
   get 'contact' => 'home#contact', :as => :contact
 
-  resources :home, :only => [] do
+  resources :home, :only => [:index] do
     get :map, :on => :collection
     get :about, :on => :collection
     get :contact, :on => :collection
