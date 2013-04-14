@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
     xPos: 480,
     yPos: 100,
     xRadius:450,
-    yRadius:40,
+    yRadius:100,
     buttonLeft: $("#left-button"),
     buttonRight: $("#right-button"),
     titleBox: $('#da-vinci-title'),
