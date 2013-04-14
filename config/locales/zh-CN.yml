@@ -19,8 +19,9 @@ zh-CN:
       title: "吉林市打折优惠信息 - 最快最全的打折优惠信息聚合平台"
       products_title: "热门优惠券"
     map:
-      map_title: "优惠地图"
-      map_tips: "点击这里可以<b>折叠</b>优惠地图"
+      title: "附近打折优惠信息"
+      map_title: "我附近的优惠"
+      map_tips: "点击左侧按钮 <b>缩小</b>/<b>放大</b> 优惠地图"
     about:
       title: "关于我们"
       source: "名字由来"
@@ -75,6 +76,8 @@ zh-CN:
 
   products:
     index:
+      title: "商家打折优惠信息"
+      products_title: "热门优惠券"
       time: "结束时间："
       detail_button: "去看看"
     show:

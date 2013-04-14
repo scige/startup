@@ -17,6 +17,8 @@
   .nav-wrapper.cf.radius-box-shadow
     %ul.nav
       %li= link_to "今日优惠", root_path, {:class=>"hover"}
+      %li= link_to "商家优惠", products_path
+      %li= link_to "附近优惠", "/map"
       %li= link_to "美食", "/filters/select/1/all/"
       %li= link_to "购物", "/filters/select/2/all/"
       %li= link_to "丽人", "/filters/select/3/all/"

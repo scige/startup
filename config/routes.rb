@@ -20,15 +20,17 @@ Startup::Application.routes.draw do
     put 'dealers' => 'devise/registrations#update', :as => 'dealer_registration'
   end
 
+  get 'map' => 'home#map', :as => :map
   get 'about' => 'home#about', :as => :about
   get 'contact' => 'home#contact', :as => :contact
 
   resources :home, :only => [] do
+    get :map, :on => :collection
     get :about, :on => :collection
     get :contact, :on => :collection
   end
 
-  resources :products, :only => [:show]
+  resources :products, :only => [:index, :show]
 
   resources :coupons, :only => [:create, :index, :destroy] do
     get :unuse, :on => :collection
