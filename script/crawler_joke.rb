@@ -26,6 +26,8 @@ list_page_id.each do |id|
 
   list_link = "http://gaoguai.net/manhua/yj/list26#{id}.html"
   logger.info "list page: #{list_link}"
+
+  #抓取list page
   retry_times = 0
   begin
     doc = Nokogiri::HTML(open(list_link))
@@ -38,6 +40,7 @@ list_page_id.each do |id|
     logger.error "download list page error: #{list_link}"
     next
   end
+
   sub_count = 0
   doc.css('.picList2 li').each do |li|
     sub_count += 1
@@ -63,6 +66,8 @@ list_page_id.each do |id|
     item['create_time'] = create_time
 
     logger.info "content page: #{content_link}"
+
+    #抓取thumbnail image
     retry_times = 0
     begin
       thumb = RestClient.get(thumbnail_link)
@@ -80,6 +85,7 @@ list_page_id.each do |id|
     thumb_file.syswrite(thumb)
     thumb_file.close
 
+    #抓取content page
     retry_times = 0
     begin
       content = Nokogiri::HTML(open(content_link))
@@ -103,6 +109,7 @@ list_page_id.each do |id|
     end
     item['image_link'] = image_link
 
+    #抓取image
     retry_times = 0
     begin
       image = RestClient.get(image_link)

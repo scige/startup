@@ -8,6 +8,7 @@ page.open('http://www.meilishuo.com/guang/report/', function (status) {
         //page.scrollPosition = { top: page.scrollPosition + 3000, left: 0 };
 
         var _innerFun = function() {
+            //滚动到当前网页底部
             var height = page.evaluate(function () {
                 window.scrollTo(0, document.documentElement.offsetHeight);
                 return document.documentElement.offsetHeight;
@@ -15,6 +16,7 @@ page.open('http://www.meilishuo.com/guang/report/', function (status) {
 
             console.log(height);
 
+            //等待滚动后的网页内容渲染完成以后
             window.setTimeout(function() {
                 // Check if we've hit the bottom
                 var hit_bottom = page.evaluate(function() {
@@ -32,11 +34,13 @@ page.open('http://www.meilishuo.com/guang/report/', function (status) {
                 }
                 else
                 {
+                    //没有到达网页底部，再次执行本函数
                     _innerFun();
                 }
             }, 1000);
         };
       
+        //第一次滚动要等待网页渲染完成以后
         window.setTimeout(_innerFun, 1000);
     }
 });

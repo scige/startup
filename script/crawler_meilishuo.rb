@@ -26,6 +26,7 @@ content_page = []
 
     logger.info "list page: #{list_link}"
 
+    #抓取list page
     retry_times = 0
     begin
       list_data = RestClient.get list_link
@@ -64,6 +65,7 @@ content_page = []
 
       logger.info "content page: #{content_link}"
 
+      #抓取content page
       retry_times = 0
       begin
         content = Nokogiri::HTML(open(content_link))
@@ -92,6 +94,7 @@ content_page = []
       item['content_title'] = content_title
       item['create_time'] = create_time
 
+      #抓取thumbnail image
       retry_times = 0
       begin
         thumb = RestClient.get(thumbnail_link)
@@ -109,6 +112,7 @@ content_page = []
       thumb_file.syswrite(thumb)
       thumb_file.close
 
+      #抓取image
       retry_times = 0
       begin
         image = RestClient.get(image_link)
