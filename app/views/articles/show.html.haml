@@ -1,0 +1,20 @@
+- provide(:title, @article.title)
+.bread-nav
+  = link_to t('.today'), root_path
+  %span> »
+  = link_to "穿衣打扮", articles_path
+  %span> »
+  = @article.title
+
+#content
+  #discountBox.cf.radius-box-shadow
+    .discountContentWrap
+      .globalTitle
+        %h1.title= @article.title
+      .discountDetailsInfo
+        = image_tag( @article.image, :title => @article.title, :alt => @article.title )
+        %p= @article.content
+
+#sidebar
+  .side-single.radius-box-shadow
+

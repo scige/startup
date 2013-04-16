@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130413025049) do
+ActiveRecord::Schema.define(:version => 20130416141434) do
+
+  create_table "articles", :force => true do |t|
+    t.integer  "status",       :default => 1
+    t.integer  "raw_id"
+    t.integer  "category"
+    t.string   "title"
+    t.string   "content"
+    t.string   "thumb"
+    t.integer  "thumb_width"
+    t.integer  "thumb_height"
+    t.string   "image"
+    t.integer  "like_count"
+    t.integer  "click_count"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "en_name"
