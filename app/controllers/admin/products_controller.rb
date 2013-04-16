@@ -4,7 +4,7 @@ class Admin::ProductsController < ApplicationController
     before_filter :authenticate_super!
 
     def index
-        @products = Product.page(params[:page])
+        @products = Product.order("id DESC").page(params[:page])
     end
 
     def new
