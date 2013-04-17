@@ -19,6 +19,8 @@
 #
 
 class Article < ActiveRecord::Base
+  paginates_per 24
+
   attr_accessible :status
   attr_accessible :raw_id
   attr_accessible :category

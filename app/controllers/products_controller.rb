@@ -11,7 +11,8 @@ class ProductsController < ApplicationController
         # 按购买人数排序，同时增加一些随机
         @hot_products = Product.find(:all, 
                                      :conditions => "status=#{PRODUCT_STATUS_ON_SHELF}",
-                                     :order => "RANDOM()",
+                                     #:order => "RANDOM()",    #sqlite
+                                     :order => "rand()",       #mysql
                                      :limit => 5)
     end
 end
