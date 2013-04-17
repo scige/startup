@@ -7,14 +7,22 @@
   = @article.title
 
 #content
-  #discountBox.cf.radius-box-shadow
-    .discountContentWrap
-      .globalTitle
-        %h1.title= @article.title
-      .discountDetailsInfo
-        = image_tag( @article.image, :title => @article.title, :alt => @article.title )
-        %p= @article.content
+  #articleBox.cf.radius-box-shadow
+    .articleContentWrap
+      .articleTitleInfo
+        .title
+          %h2= @article.title
+        .subTitle
+          %span= "发布时间: #{get_all_format_time(@article.updated_at)}"
+          %span.space
+          %span= "本文共#{@article.click_count}人看过"
+
+      .articleDetailsInfo
+        .picture
+          = image_tag( @article.image, :title => @article.title, :alt => @article.title )
+        .content
+          %p= @article.content
 
 #sidebar
-  .side-single.radius-box-shadow
+  = render "hot_products"
 

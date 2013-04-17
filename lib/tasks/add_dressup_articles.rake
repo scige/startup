@@ -18,7 +18,7 @@ namespace :db do
           :thumb_width => item["thumbnail_width"],
           :thumb_height => item["thumbnail_height"],
           :image => item["content_image"],
-          :like_count => 1,
+          :like_count => 10,
           :click_count => 1
         }
       )
