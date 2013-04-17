@@ -2,7 +2,8 @@ class HomeController < ApplicationController
     def index
         @categories = Category.all
         @districts = District.all
-        @products = Product.where(:status=>PRODUCT_STATUS_ON_SHELF).order("updated_at DESC").page(params[:page])
+        @products = Product.where(:status=>PRODUCT_STATUS_ON_SHELF).order("updated_at DESC").limit(6)
+        @articles = Article.where(:status=>ARTICLE_STATUS_ON).order("updated_at DESC").limit(8)
     end
 
     def map

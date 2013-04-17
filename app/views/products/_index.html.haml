@@ -21,8 +21,9 @@
                 %li.listCol.clearfix
                   = link_to t('.detail_button'), product_path(product), { :target => "_blank", :hidefocus=>"true", :class=>"button", :rel=>"nofollow" }
 
-  .page-nav-wrapper
-    = paginate @products
+  - if controller_name == "products"
+    .page-nav-wrapper
+      = paginate @products
 
 #sidebar-taobao
   .side-single.radius-box-shadow
@@ -32,3 +33,4 @@
     alimama_height=600;
     </script>
     <script src="http://a.alimama.cn/inf.js" type="text/javascript"></script>
+

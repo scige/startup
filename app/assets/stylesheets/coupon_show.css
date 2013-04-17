@@ -127,11 +127,6 @@
     margin-bottom: 15px;
     border: 1px solid #CDCDCD;
 }
-#couponmap {
-    width: 930px;
-    height: 350px;
-    margin: 14px;border: 1px solid #CDCDCD;
-}
 
 /* from dldGlobal.css */
 .clearfix:before, .clearfix:after {  

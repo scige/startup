@@ -7960,17 +7960,18 @@ body.yui-skin-sam .yui-panel .bd {
 }
 
 .block-title{
-  height: 18px;
-  line-height: 18px;
+  width: 960px;
+  height: 20px;
+  line-height: 20px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 12px;
+  margin-top: 15px;
   margin-bottom: 12px;
   overflow: hidden;
 }
 .block-title h3{
   color: #666;
-  font-size: 16px;
+  font-size: 20px;
 }
 .radius-box-shadow { 
   border-radius: 4px 4px 4px 4px;

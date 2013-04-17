@@ -5,8 +5,9 @@
         = link_to image_tag( article.thumb, :title => article.title, :alt => article.title, :width=>"200", :height=>article.thumb_height>300 ? 300:article.thumb_height ), article_path(article), { :target => "_blank" }
         %h4= link_to article.title, article_path(article), { :target => "_blank" }
 
-  .page-nav-wrapper
-    = paginate @articles
+  - if controller_name == "articles"
+    .page-nav-wrapper
+      = paginate @articles
 
 -#
   #sidebar-taobao
