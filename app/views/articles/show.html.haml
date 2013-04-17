@@ -1,0 +1,28 @@
+- provide(:title, @article.title)
+.bread-nav
+  = link_to t('.today'), root_path
+  %span> »
+  = link_to "穿衣打扮", articles_path
+  %span> »
+  = @article.title
+
+#content
+  #articleBox.cf.radius-box-shadow
+    .articleContentWrap
+      .articleTitleInfo
+        .title
+          %h2= @article.title
+        .subTitle
+          %span= "发布时间: #{get_all_format_time(@article.updated_at)}"
+          %span.space
+          %span= "本文共#{@article.click_count}人看过"
+
+      .articleDetailsInfo
+        .picture
+          = image_tag( @article.image, :title => @article.title, :alt => @article.title )
+        .content
+          %p= @article.content
+
+#sidebar
+  = render "hot_products"
+

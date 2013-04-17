@@ -33,6 +33,8 @@ Startup::Application.routes.draw do
 
   resources :products, :only => [:index, :show]
 
+  resources :articles, :only => [:index, :show]
+
   resources :coupons, :only => [:create, :index, :destroy] do
     get :unuse, :on => :collection
     get :used, :on => :collection

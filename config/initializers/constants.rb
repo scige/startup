@@ -9,6 +9,13 @@ COUPON_STATUS_DEL = 10
 PRODUCT_STATUS_OFF_SHELF = 0
 PRODUCT_STATUS_ON_SHELF = 1
 
+#article status
+ARTICLE_STATUS_OFF = 0
+ARTICLE_STATUS_ON = 1
+
+#article category
+ARTICLE_CATEGORY_DRESSUP = 0
+
 #send coupon to mobile open
 SEND_COUPON_TO_MOBILE = true
 
