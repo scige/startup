@@ -52,6 +52,22 @@
     margin-bottom: 15px;
 }
 
+/* articles/index */
+#article-index {
+    float:left;
+    width:968px;
+    _display:inline;
+    padding:0
+}
+.articleIndexWrap li {
+    float: left;
+    display: inline;
+    width: 200px;
+    padding: 14px;
+    margin: 0 14px 14px 0;
+    background: #fff;
+}
+
 /* from dldGlobal.css */
 .clearfix:before, .clearfix:after {  
 content:"";  

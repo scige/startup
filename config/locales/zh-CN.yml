@@ -103,6 +103,10 @@ zh-CN:
     discount_type:
       discount: "优惠方式："
 
+  articles:
+    index:
+      title: "衣妆达人 - 秀出漂亮的自己"
+
   shared:
     dashboard:
       my_coupons: "我的优惠券"
