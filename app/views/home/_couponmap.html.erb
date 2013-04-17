@@ -12,7 +12,8 @@
         //map.addControl(new BMap.NavigationControl({type: BMAP_NAVIGATION_CONTROL_ZOOM}));
 
         function addMarkerContent(point, content){
-            var marker = new BMap.Marker(point);
+            var myIcon = new BMap.Icon("/assets/map_mark.png", new BMap.Size(11,18));
+            var marker = new BMap.Marker(point, {icon: myIcon});
             map.addOverlay(marker);
             var infoWindow = new BMap.InfoWindow(content);
             marker.addEventListener("click", function(){this.openInfoWindow(infoWindow);});
