@@ -1,18 +1,21 @@
 - provide(:title, t('.title'))
-%div#slider-show.radius-box-shadow
-  %ul.bjqs
-    %li
-      = image_tag "slider_1.jpg", :title=>"slider 1"
-    %li
-      = image_tag "slider_2.jpg", :title=>"slider 2"
-    %li
-      = image_tag "slider_3.jpg", :title=>"slider 3"
+.radius-box-shadow
+  #slider-show
+    %ul.bjqs
+      %li
+        = link_to image_tag("slider_1.jpg"), "/map", {:target => "_blank"}
+      %li
+        = link_to image_tag("slider_2.jpg"), products_path, {:target => "_blank"}
 .block-title
-  %h3= t('.products_title')
+  %span.title= t('.products_title')
+  %span.space
+  = link_to t('.more_products'), products_path
 = render "filters/home_filter"
 = render "products/index"
 .block-title
-  %h3= t('.articles_title')
+  %span.title= t('.articles_title')
+  %span.space
+  = link_to t('.more_articles'), articles_path
 = render "articles/index"
 #sidebar
 

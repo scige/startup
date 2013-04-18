@@ -1,8 +1,7 @@
 Startup::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
-  #root :to => 'home#index'
-  root :to => 'products#index'
+  root :to => 'home#index'
 
   #get 'signup' => 'users#new', :as => :signup
   #get 'login' => 'user_sessions#new', :as => :login

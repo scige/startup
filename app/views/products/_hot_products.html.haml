@@ -1,18 +1,18 @@
-.inner-blk.side-hot-deals
-  %h3= t('.hot')
-  %ul
-    - @hot_products.each do |product|
-      %li.deal
-        =link_to image_tag(product.image_url(:small), :width=>"208", :height=>"125", :title=>product.title, :class=>"lazyloaded"), product_path(product), {:class=>"pic", :rel=>"nofollow", :target=>"_blank"}
-        %h4
-          = link_to product.title, product_path(product), { :target => "_blank" }
-        .info
-          = render "discount_type", :product => product
-        -#
-          = t('.discount')
-          %strong.price= product.discount
-          = t('.discount_word')
-          /%span.total
-          /  %span 14108
-          /  人已购买
+- @hot_products.each do |product|
+  .side-single.radius-box-shadow
+    .inner-blk.side-hot-deals
+      %ul
+        %li.deal
+          =link_to image_tag(product.image_url(:small), :width=>"208", :height=>"125", :title=>product.title, :class=>"lazyloaded"), product_path(product), {:class=>"pic", :rel=>"nofollow", :target=>"_blank"}
+          %h4
+            = link_to product.title, product_path(product), { :target => "_blank" }
+          .info
+            = render "discount_type", :product => product
+          -#
+            = t('.discount')
+            %strong.price= product.discount
+            = t('.discount_word')
+            /%span.total
+            /  %span 14108
+            /  人已购买
 

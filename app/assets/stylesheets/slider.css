@@ -1,7 +1,7 @@
 /* copy from bootstrap and modify somthing */
 
 .bjqs-caption {
-	background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.5);
   font-size: 18px;
   font-weight: bold;
   color: #fff;
@@ -10,7 +10,7 @@
 .bjqs-prev a,
 .bjqs-next a {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 15px;
   width: 40px;
   height: 40px;

@@ -16,7 +16,7 @@
 .site-nav
   .nav-wrapper.cf.radius-box-shadow
     %ul.nav
-      /%li= link_to "今日优惠", root_path, {:class=>active_channel?("home", "index") ? "hover":nil}
+      %li= link_to "今日优惠", root_path, {:class=>active_channel?("home", "index") ? "hover":nil}
       %li= link_to "商家优惠", products_path, {:class=>active_channel?("products", "index") ? "hover":nil}
       %li= link_to "附近优惠", "/map", {:class=>active_channel?("home", "map") ? "hover":nil}
       %li= link_to "衣妆达人", articles_path, {:class=>active_channel?("articles", "index") ? "hover":nil}

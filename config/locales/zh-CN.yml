@@ -19,6 +19,8 @@ zh-CN:
       title: "吉林市打折优惠信息 - 最快最全的打折优惠信息聚合平台"
       products_title: "热门优惠券"
       articles_title: "衣妆达人"
+      more_products: "更多优惠 »"
+      more_articles: "更多搭配 »"
     map:
       title: "附近打折优惠信息"
       map_title: "我附近的优惠"
@@ -77,7 +79,7 @@ zh-CN:
 
   products:
     index:
-      title: "吉林市打折优惠信息 - 最快最全的打折优惠信息聚合平台"
+      title: "商家打折优惠信息"
       products_title: "热门优惠券"
       time: "结束时间："
       detail_button: "去看看"

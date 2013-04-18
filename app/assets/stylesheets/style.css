@@ -7969,9 +7969,13 @@ body.yui-skin-sam .yui-panel .bd {
   margin-bottom: 12px;
   overflow: hidden;
 }
-.block-title h3{
+.block-title .title{
   color: #666;
   font-size: 20px;
+  font-weight: bold;
+}
+.block-title .space{
+  margin-left: 20px;
 }
 .radius-box-shadow { 
   border-radius: 4px 4px 4px 4px;
