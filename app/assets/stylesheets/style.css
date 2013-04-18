@@ -1901,6 +1901,20 @@ to {
 #sidebar .side-consult a {
 	line-height:25px
 }
+#sidebar .side-hot-articles {
+	padding-bottom:0;
+	background:#FFF
+}
+#sidebar .side-hot-articles .deal {
+	font-size:12px
+}
+#sidebar .side-hot-articles .deal h4 {
+	margin-top:7px
+}
+#sidebar .side-hot-articles .deal h4 a {
+	font-weight:normal;
+	color:#666
+}
 #sidebar .side-hot-deals {
 	padding-bottom:0;
 	background:#FFF

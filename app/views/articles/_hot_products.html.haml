@@ -1,6 +1,6 @@
 - @hot_articles.each do |article|
   .side-single.radius-box-shadow
-    .inner-blk.side-hot-deals
+    .inner-blk.side-hot-articles
       %ul
         %li.deal
           =link_to image_tag(article.thumb, :width=>article.thumb_width, :height=>article.thumb_height, :title=>article.title, :class=>"lazyloaded"), article_path(article), {:class=>"pic", :rel=>"nofollow", :target=>"_blank"}
