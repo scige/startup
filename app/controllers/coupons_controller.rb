@@ -107,7 +107,7 @@ class CouponsController < ApplicationController
                 return "-1"
             end
             detail = "密码#{password[0..3]} #{password[4..7]} #{password[8..11]}"
-            tail = "【吉林美优惠网】"
+            tail = "【吉林美打折网】"
             content = head + title + detail + tail
             ret_code = "0"
             if SEND_COUPON_TO_MOBILE

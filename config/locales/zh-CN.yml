@@ -1,7 +1,7 @@
 zh-CN:
   layouts:
     application:
-      site_title: "吉林美优惠网"
+      site_title: "吉林美打折网"
     header:
       logo_title: "天天优惠"
       welcome: "欢迎您，%{user_name}"
