@@ -4,7 +4,7 @@ class Redact::ProductsController < ApplicationController
     before_filter :authenticate_writer!
 
     def index
-        @products = Product.page(params[:page])
+        @products = Product.order("id DESC").page(params[:page])
     end
 
     def new
