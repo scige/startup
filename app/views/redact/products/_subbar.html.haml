@@ -10,9 +10,17 @@
     = t('redact.products.edit.title')
   - when "update"
     = t('redact.products.edit.title')
+  - when "on_shelf"
+    = t('redact.products.on_shelf.title')
+  - when "off_shelf"
+    = t('redact.products.off_shelf.title')
 %uj.filter
   %li{:class => (action_name == "index" ? "current" : nil)}
     = link_to t('.index_button'), redact_products_path
+  %li{:class => (action_name == "on_shelf" ? "current" : nil)}
+    = link_to t('.on_shelf_button'), on_shelf_redact_products_path
+  %li{:class => (action_name == "off_shelf" ? "current" : nil)}
+    = link_to t('.off_shelf_button'), off_shelf_redact_products_path
   %li{:class => ((action_name == "new" or action_name == "create") ? "current" : nil)}
     = link_to t('.new_button'), new_redact_product_path
 

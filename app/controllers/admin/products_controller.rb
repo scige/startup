@@ -7,6 +7,14 @@ class Admin::ProductsController < ApplicationController
         @products = Product.order("id DESC").page(params[:page])
     end
 
+    def on_shelf
+        @products = Product.where(:status=>PRODUCT_STATUS_ON_SHELF).order("id DESC").page(params[:page])
+    end
+
+    def off_shelf
+        @products = Product.where(:status=>PRODUCT_STATUS_OFF_SHELF).order("id DESC").page(params[:page])
+    end
+
     def new
         @product = Product.new
         @categories = Category.all

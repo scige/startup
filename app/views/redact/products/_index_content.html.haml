@@ -1,0 +1,43 @@
+%table#order-list.coupons-table{:cellpadding=>"0", :cellspacing=>"0", :border=>"0"}
+  %tr
+    %th{:width=>"auto"}= t('.head_id')
+    %th{:width=>"50"}= t('.head_title')
+    %th{:width=>"50"}= t('.head_shop_name')
+    %th{:width=>"50"}= t('.head_status')
+    %th{:width=>"50"}= t('.head_discount_type')
+    %th{:width=>"50"}= t('.head_discount')
+    %th{:width=>"50"}= t('.head_category')
+    %th{:width=>"50"}= t('.head_district')
+    %th{:width=>"50"}= t('.head_begin_at')
+    %th{:width=>"50"}= t('.head_end_at')
+    %th{:width=>"50"}= t('.head_address')
+    %th{:width=>"50"}= t('.head_phone')
+    %th{:width=>"50"}= t('.head_sale_count')
+    %th{:width=>"120"}= t('.head_operation')
+
+  - @products.each do |product|
+    %tr{:class => cycle("alt", "")}
+      %td= product.id
+      %td= product.title
+      %td= product.shop_name
+      %td= product.status == PRODUCT_STATUS_ON_SHELF ? t('.status_on_shelf') : t('.status_off_shelf')
+      %td= DISCOUNT_TYPE_NAME[product.discount_type]
+      %td= product.discount_part1+product.discount_part2+product.discount_part3+product.discount_part4+product.discount_part5
+      %td= product.category.cn_name
+      %td= product.district.cn_name
+      %td= get_format_time(product.begin_at)
+      %td= get_format_time(product.end_at)
+      %td= product.address
+      %td= product.phone
+      %td= product.sale_count
+      %td
+        - #使用前台的products/show显示
+        = link_to t('.show_button'), product_path(product), { :target => "_blank" }
+        | 
+        = link_to t('.edit_button'), edit_redact_product_path(product)
+        | 
+        = link_to t('.delete_button'), redact_product_path(product), :method => :delete, :confirm => t('.delete_confirm')
+
+.page-nav-wrapper
+  = paginate @products
+

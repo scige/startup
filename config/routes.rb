@@ -52,7 +52,10 @@ Startup::Application.routes.draw do
 
   namespace :admin do
     root :to => 'products#index'
-    resources :products, :except => [:show]
+    resources :products, :except => [:show] do
+      get :on_shelf, :on => :collection
+      get :off_shelf, :on => :collection
+    end
     resources :categories, :except => [:show]
     resources :districts, :except => [:show]
     resources :users, :except => [:show]
@@ -61,7 +64,10 @@ Startup::Application.routes.draw do
 
   namespace :redact do
     root :to => 'products#index'
-    resources :products, :except => [:show]
+    resources :products, :except => [:show] do
+      get :on_shelf, :on => :collection
+      get :off_shelf, :on => :collection
+    end
   end
 
   # The priority is based upon order of creation:

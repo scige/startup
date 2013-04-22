@@ -318,6 +318,11 @@ zh-CN:
         title: "编辑商品"
       index:
         title: "全部商品"
+      on_shelf:
+        title: "已上架商品"
+      off_shelf:
+        title: "未上架商品"
+      index_content:
         head_id: "编号"
         head_title: "名称"
         head_shop_name: "商家"
@@ -340,6 +345,8 @@ zh-CN:
         delete_confirm: "删除后不可恢复，确定删除？"
       subbar:
         index_button: "全部商品"
+        on_shelf_button: "已上架商品"
+        off_shelf_button: "未上架商品"
         new_button: "新增商品"
       form:
         title: "名称："
@@ -385,6 +392,11 @@ zh-CN:
         title: "编辑商品"
       index:
         title: "全部商品"
+      on_shelf:
+        title: "已上架商品"
+      off_shelf:
+        title: "未上架商品"
+      index_content:
         head_id: "编号"
         head_title: "名称"
         head_shop_name: "商家"
@@ -407,6 +419,8 @@ zh-CN:
         delete_confirm: "删除后不可恢复，确定删除？"
       subbar:
         index_button: "全部商品"
+        on_shelf_button: "已上架商品"
+        off_shelf_button: "未上架商品"
         new_button: "新增商品"
       form:
         title: "名称："
