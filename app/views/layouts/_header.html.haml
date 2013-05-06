@@ -18,7 +18,7 @@
     %ul.nav
       %li= link_to "今日优惠", root_path, {:class=>active_channel?("home", "index") ? "hover":nil}
       /%li= link_to "商家优惠", products_path, {:class=>active_channel?("products", "index") ? "hover":nil}
-      %li= link_to "附近优惠", "/map", {:class=>active_channel?("home", "map") ? "hover":nil}
+      %li= link_to "附近优惠", "/map", {:class=>active_channel?("home", "map") ? "hover":nil, :rel=>"nofollow"}
       %li= link_to "衣妆达人", articles_path, {:class=>active_channel?("articles", "index") ? "hover":nil}
       /%li= link_to "美食", "/filters/select/1/all/"
       /%li= link_to "购物", "/filters/select/2/all/"
@@ -29,18 +29,11 @@
       - if user_signed_in?
         %li.name= t('.welcome', :user_name=>current_user.name)
       %li.account
-        = link_to t('.my_info'), coupons_path, {:class=>"my-account"}
+        = link_to t('.my_info'), coupons_path, {:class=>"my-account", :rel=>"nofollow"}
         %i.tri
-        - if user_signed_in?
-          %ul.account-menu{:style=>"display:none"}
-            %li= link_to "我的优惠券", coupons_path, {:class=>"first"}
-            %li= link_to "未使用", unuse_coupons_path
-            %li= link_to "已使用", used_coupons_path
-            %li= link_to "个人信息", profile_path(current_user)
-            %li= link_to "账户设置", edit_user_registration_path, {:class=>"last"}
       - if user_signed_in?
-        %li.login= link_to t('.logout'), destroy_user_session_path, :method => :delete
+        %li.login= link_to t('.logout'), destroy_user_session_path, {:method=>:delete, :rel=>"nofollow"}
       - else
-        %li.login= link_to t('.login'), new_user_session_path
-        %li.login.last= link_to t('.signup'), new_user_registration_path
+        %li.login= link_to t('.login'), new_user_session_path, {:rel=>"nofollow"}
+        %li.login.last= link_to t('.signup'), new_user_registration_path, {:rel=>"nofollow"}
 
