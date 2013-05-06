@@ -3,7 +3,7 @@ zh-CN:
     application:
       site_title: "吉林美打折网"
     header:
-      logo_title: "天天优惠"
+      logo_title: "吉林美打折网"
       welcome: "欢迎您，%{user_name}"
       keyword_background: "请输入商品名称、地址等"
       search_button: "搜索"
@@ -16,7 +16,7 @@ zh-CN:
 
   home:
     index:
-      title: "吉林市打折优惠信息 - 最快最全的打折优惠信息聚合平台"
+      title: "吉林美打折网 - 吉林市最权威的打折优惠信息聚合平台"
       products_title: "热门优惠券"
       articles_title: "衣妆达人"
       more_products: "更多优惠 »"

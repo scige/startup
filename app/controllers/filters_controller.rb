@@ -28,6 +28,8 @@ class FiltersController < ApplicationController
 
     def search
         # 使用多个字段进行搜索，并且对输入Query做切分用AND语法搜索
-        @products = Product.where("status=#{PRODUCT_STATUS_ON_SHELF} and title like '%s'" % "%#{params[:keywords]}%").order("updated_at DESC").page(params[:page])
+        # 以下代码有数据库注入的危险 !!!
+        #@products = Product.where("status=#{PRODUCT_STATUS_ON_SHELF} and title like '%s'" % "%#{params[:keywords]}%").order("updated_at DESC").page(params[:page])
+        @products = Product.where(:status=>PRODUCT_STATUS_ON_SHELF).order("updated_at DESC").limit(10)
     end
 end

@@ -1,7 +1,7 @@
 .ftbox
   %h3 用户帮助
   %ul
-    %li= link_to "常见问题", root_path
+    %li= link_to "常见问题", root_path, {:rel=>"nofollow"}
     /%li= link_to "反诈骗公告", "/about/anticheat"
 .ftbox
   %h3 获取更新
@@ -12,20 +12,20 @@
 .ftbox
   %h3 商务合作
   %ul
-    %li= link_to "提供优惠信息", root_path
+    %li= link_to "提供优惠信息", root_path, {:rel=>"nofollow"}
     - if !dealer_signed_in?
-      %li= link_to "商家登录", new_dealer_session_path
+      %li= link_to "商家登录", new_dealer_session_path, {:rel=>"nofollow"}
     - if dealer_signed_in?
-      %li= link_to "商家后台", check_coupon_companies_path
+      %li= link_to "商家后台", check_coupon_companies_path, {:rel=>"nofollow"}
     - if super_signed_in?
-      %li= link_to "管理后台", admin_products_path
+      %li= link_to "管理后台", admin_products_path, {:rel=>"nofollow"}
     - if writer_signed_in?
-      %li= link_to "编辑后台", redact_products_path
+      %li= link_to "编辑后台", redact_products_path, {:rel=>"nofollow"}
 .ftbox
   %h3 公司信息
   %ul
-    %li= link_to "关于我们", about_path
-    %li= link_to "联系我们", contact_path
+    %li= link_to "关于我们", about_path, {:rel=>"nofollow"}
+    %li= link_to "联系我们", contact_path, {:rel=>"nofollow"}
     /%li= link_to "我们承诺", root_path
     /%li= link_to "加入我们", "/about/job"
 .ftbox.service

@@ -21,9 +21,8 @@
                 %li.listCol.clearfix
                   = link_to t('.detail_button'), product_path(product), { :target => "_blank", :hidefocus=>"true", :class=>"button", :rel=>"nofollow" }
 
-  - if controller_name == "products"
-    .page-nav-wrapper
-      = paginate @products
+  .page-nav-wrapper
+    = paginate @products
 
 #sidebar-taobao
   .side-single.radius-box-shadow

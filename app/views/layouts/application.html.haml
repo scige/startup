@@ -1,7 +1,10 @@
 !!!
 %html
   %head
-    %title= "#{yield(:title)} | #{t('.site_title')}"
+    - if controller_name == "home" and action_name == "index"
+      %title= "#{yield(:title)}"
+    - else
+      %title= "#{yield(:title)} | #{t('.site_title')}"
     = stylesheet_link_tag "application", :media=>"all"
     = javascript_include_tag "application"
     = csrf_meta_tags
