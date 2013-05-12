@@ -10,14 +10,6 @@
         = image_tag("slider_3.jpg", :title=>"吉林美打折网：白领消费观，购物新风尚！快开始新的消费体验吧")
 .block-title
   %span.title= t('.products_title')
-  /%span.space
-  /= link_to t('.more_products'), products_path
 = render "filters/home_filter"
 = render "products/index"
-/.block-title
-/  %span.title= t('.articles_title')
-/  %span.space
-/  = link_to t('.more_articles'), articles_path
-/= render "articles/index"
-/#sidebar
 

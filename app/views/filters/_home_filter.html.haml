@@ -4,8 +4,6 @@
     %ul
       %li{:class => "current"}
         = link_to t('.all'), "/filters/select/all/all/"
-      /%li{:class => (action_name == "today" ? "current" : nil)}
-      /  = link_to "#{t('.today')}<span>(#{today_product_count})</span>".html_safe, today_filters_path
       - @categories.each do |category|
         %li
           = link_to "#{category.cn_name}<span>(#{on_shelf_count(category.products)})</span>".html_safe, "/filters/select/#{category.id}/all/"

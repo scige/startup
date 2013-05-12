@@ -3,12 +3,6 @@
     %h1= link_to image_tag("/assets/logo.png", :width=>"154", :height=>"80", :title=>t('.logo_title'), :alt=>t('.logo_title')), root_path
   .site-slogn
     = image_tag("/assets/slogn.png", :width=>"238", :height=>"95", :title=>t('.logo_title'), :alt=>t('.logo_title'))
-  /.site-info
-  /  %ul
-  /    %li= link_to "邮件订阅", "/subscribe", {:class=>"subscribe"}
-  /    %li= link_to "加入收藏夹", "javascript:void(0);", {:class=>"fav", :id=>"favorite"}
-  /    %li= link_to "邀请好友", "/referrals", {:class=>"refer", :target=>"_blank"}
-  /    %li= link_to "常见问题", "/faq", {:class=>"last"}
   .search.cf.radius-box-shadow
     = form_tag search_filters_path, :method=>"get" do |f|
       = text_field_tag :keywords, nil, {:class=>"s-text", :autocomplete=>"off", :placeholder=>t('.keyword_background')}
@@ -17,14 +11,8 @@
   .nav-wrapper.cf.radius-box-shadow
     %ul.nav
       %li= link_to "今日优惠", root_path, {:class=>active_channel?("home", "index") ? "hover":nil}
-      /%li= link_to "商家优惠", products_path, {:class=>active_channel?("products", "index") ? "hover":nil}
       %li= link_to "附近优惠", "/map", {:class=>active_channel?("home", "map") ? "hover":nil, :rel=>"nofollow"}
       %li= link_to "衣妆达人", articles_path, {:class=>active_channel?("articles", "index") ? "hover":nil}
-      /%li= link_to "美食", "/filters/select/1/all/"
-      /%li= link_to "购物", "/filters/select/2/all/"
-      /%li= link_to "丽人", "/filters/select/3/all/"
-      /%li= link_to "生活", "/filters/select/4/all/"
-      /%li= link_to "酒店", "/filters/select/5/all/"
     %ul.user-info
       - if user_signed_in?
         %li.name= t('.welcome', :user_name=>current_user.name)
