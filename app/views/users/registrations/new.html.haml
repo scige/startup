@@ -23,5 +23,9 @@
         = f.email_field :email, :class=>"f-text"
         = t('.email_info').html_safe
       .field-group
+        = f.label :mobile, t('.mobile')
+        = f.text_field :mobile, :class=>"f-text"
+        = t('.mobile_info').html_safe
+      .field-group
         = f.submit t('.signup_button'), :class=>"form-button"
 

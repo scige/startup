@@ -1,3 +1,5 @@
+# coding: utf-8
+
 # == Schema Information
 #
 # Table name: users
@@ -31,13 +33,13 @@ class User < ActiveRecord::Base
 
   has_many :coupons, dependent: :destroy
 
-  validates :name,  :presence => true,
-                    :uniqueness => {:case_sensitive => false},
-                    :format => {:with => /\A\w+\z/},
-                    :length => {:in => 4..16}
-  validates :email, :presence => true,
-                    :uniqueness => {:case_sensitive => false},
-                    :format => {:with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/}
-  #validates :mobile,:format => {:with => /^1[358][0-9]/},
-  #                  :length => {:is => 11}
+  validates :name,  :presence => {:message=>"请输入用户名"},
+                    :uniqueness => {:case_sensitive => false, :message=>"您输入的用户名已经存在"},
+                    :format => {:with => /\A\w+\z/, :message=>"请输入字母和数字组成的用户名"},
+                    :length => {:in => 4..16, :message=>"请输入4-16个字符的用户名"}
+  validates :email, :presence => {:message=>"请输入邮箱"},
+                    :uniqueness => {:case_sensitive => false, :message=>"您输入的邮箱已经存在"},
+                    :format => {:with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/, :message=>"您输入的邮箱格式有误"}
+  validates :mobile,:format => {:with => /^1[358][0-9]/, :message=>"请输入国内手机号码"},
+                    :length => {:is => 11, :message=>"请输入11位手机号码"}
 end
