@@ -5,6 +5,7 @@ User-Agent: *
 Disallow: /users/
 Disallow: /coupons/
 Disallow: /profiles/
+Disallow: /articles/
 Disallow: /supers/
 Disallow: /admin/
 Disallow: /writers/
